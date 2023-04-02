@@ -1,0 +1,21 @@
+@use "./shared.scss";
+
+.brandContainer {
+    @include shared.brandcontainer;
+}
+
+.brandLogo {
+    @include shared.brandlogo;
+}
+
+.brandTextLogo {
+    @include shared.brandtextlogo
+}
+
+.loginBtn {
+    @include shared.basicGrassGreenBtn;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 50px;
+}

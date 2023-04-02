@@ -1,5 +1,43 @@
+// Colors
+$alicegreen: #E1FFEE;
+$weirdgreen: #D7F277;
+$springgreen: #00F566;
+$grassgreen: #0FD160;
+$darkspringgreen: #2C6E49;
+$newagebeige: #F2E9BB;
+$soilbrown: #591902;
+$pumpkinorange: #F29D52;
+$lightgray: #827D7D;
+$white: #FFFFFF;
+
+// Fonts
+$font-nunito: "Nunito";
+$font-poppins: "Poppins";
+
+// Font Sizes
+$extralarge-3: 52px;
+$extralarge-2: 48px;
+$extralarge: 44px;
+$large-3: 40px;
+$large-2: 36px;
+$large-1: 32px;
+$medium-3: 28px;
+$medium-2: 24px;
+$medium-1: 20px;
+$small-3: 16px;
+$small-2: 12px;
+$small-1: 8px;
+
+// Roundnesses
+
+$realround: 25px;
+$highround: 20px;
+$midround: 15px;
+$lowround: 10px;
+
 .App {
   text-align: center;
+  font-family: $font-nunito;
 }
 
 .App-logo {
@@ -36,3 +74,5 @@
     transform: rotate(360deg);
   }
 }
+
+
