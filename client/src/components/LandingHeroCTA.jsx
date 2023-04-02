@@ -1,3 +1,4 @@
+import LandingBar from "./LandingBar";
 import styles from "./LandingHeroCTA.module.scss"
 
 const LandingHeroCTA = () => {

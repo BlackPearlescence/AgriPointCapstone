@@ -1,25 +1,25 @@
 @use "../App.scss";
 
-// Brand Mixin
-@mixin brandcontainer() {
-  position:absolute;
-  display:flex;
-  align-items: center;
-  top: 0;
-  left: 0;
-  padding: 20px;
-}
+// // Brand Mixin
+// @mixin brandcontainer() {
+//   position:absolute;
+//   display:flex;
+//   align-items: center;
+//   top: 0;
+//   left: 0;
+//   padding: 20px;
+// }
 
-@mixin brandlogo() {
-  width: 100px;
-  height:100%;
-  margin-left: 10px;
-}
+// @mixin brandlogo() {
+//   width: 100px;
+//   height:100%;
+//   margin-left: 10px;
+// }
 
-@mixin brandtextlogo() {
-  width: 300px;
-  margin-left: 10px;
-}
+// @mixin brandtextlogo() {
+//   width: 300px;
+//   margin-left: 10px;
+// }
 
 // Button Mixins
 @mixin basicGrassGreenBtn() {

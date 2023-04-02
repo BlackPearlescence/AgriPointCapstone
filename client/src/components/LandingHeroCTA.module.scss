@@ -2,12 +2,12 @@
 @use "../App.scss";
 
 .ctaContainer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 40%;
+    z-index: 1;
 }
 
 .heroHeading {

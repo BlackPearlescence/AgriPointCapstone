@@ -1,21 +1,48 @@
 @use "./shared.scss";
 
-.brandContainer {
-    @include shared.brandcontainer;
+.landingBarContainer {
+    position: absolute;
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    margin-top: 15px;
+
 }
 
+.landingBarContainer button {
+    // margin-left:100px;
+}
+
+.brandContainer {
+    display: flex;
+    flex-grow: 3;
+    z-index: 100;
+    justify-content: flex-start;
+    align-items: center;
+    // margin-right: 375px;
+    // margin-left: 100px;
+    // padding-right:900px;
+    // padding-left: 15px;
+}
+
+
 .brandLogo {
-    @include shared.brandlogo;
+    max-height: 125px;
+    max-width: 75px;
+    padding-right:5px;
+    
 }
 
 .brandTextLogo {
-    @include shared.brandtextlogo
+    max-height: 25px;
+    max-width: 200px;
+    padding-left: 10px;
 }
 
 .loginBtn {
     @include shared.basicGrassGreenBtn;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 50px;
+    padding: 10px
 }
