@@ -22,17 +22,27 @@
 // }
 
 // Button Mixins
-@mixin basicGrassGreenBtn() {
-  width: 218px;
-  height: 68px;
+@mixin basebtn1() {
   border-radius: App.$midround;
   font-size: App.$medium-3;
-  font-weight: 400;
   color: App.$white;
+  font-weight: 400;
+}
+@mixin basicgrassgreenbtn() {
+  @include basebtn1();
   background-color: App.$grassgreen;
   border-color: App.$grassgreen;
 }
 
-@mixin basicDarkSpringGreenBtn() {
+@mixin basicdarkspringgreenbtn() {
+  @include basebtn1();
+  background-color: App.$darkspringgreen;
+  border-color: App.$darkspringgreen;
+}
 
+// Heading Mixins
+@mixin extralargeheading() {
+  font-size: App.$extralarge-2;
+  color: App.$darkspringgreen;
+  font-weight: 1000;
 }

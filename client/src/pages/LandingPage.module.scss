@@ -1,0 +1,16 @@
+@use "../components/shared.scss";
+@use "../App.scss";
+
+
+.testHeading {
+    font-size: App.$large-3;
+    color: App.$darkspringgreen;
+    font-family: App.$font-nunito;
+    width: 1078px;
+}
+
+.landingPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

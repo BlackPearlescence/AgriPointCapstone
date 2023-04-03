@@ -1,13 +1,25 @@
+@use "../App.scss";
+@use "./shared.scss";
+
 .landingHeroContainer{
     position:relative;
     display: flex;
     justify-content: center;
+    // align-items: center;
+    background-image: url("../images/landingHeroImg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    width:100%;
+    height:100vh;
+    object-fit: cover;
 }
 
-.landingHeroContainer img {
-    width:100%;
-    height:auto;
-}
+// .landingHeroContainer img {
+//     width:100%;
+//     height:827px;
+// }
 
 .landingHeroMask {
     position:absolute;
@@ -15,3 +27,132 @@
     height: 100%;
     background: rgba(0,0,0,0.005);
 }
+
+
+
+.ctaContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+}
+
+.ctaContainer a{
+    font-size: App.$large-1;
+    color: App.$darkspringgreen;
+    text-decoration: underline;
+}
+
+.heroHeading {
+    @include shared.extralargeheading;
+    width: 809px;
+    height: 185px;
+    line-height: 65px;
+}
+
+.ctaBtnContainer {
+    // margin-top: 50px;
+    // bottom: 50px;
+    // margin-bottom: 50px;
+}
+
+.ctaBtnContainer button {
+    @include shared.basicdarkspringgreenbtn;
+    width: 294px;
+    height: 69px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.landingBarContainer {
+    position: absolute;
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    margin-top: 15px;
+
+}
+
+.brandContainer {
+    display: flex;
+    flex-grow: 3;
+    z-index: 100;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.brandLogo {
+    max-height: 100px;
+    max-width: 75px;
+    padding-right:5px;
+    
+}
+
+.brandTextLogo {
+    max-height: 25px;
+    max-width: 200px;
+    padding-left: 10px;
+}
+
+.loginBtn {
+    @include shared.basicgrassgreenbtn;
+    width: 218px;
+    height: 68px;
+    padding: 10px;
+}
+
+// @media screen and (max-width: 768px){
+//     .landingHeroContainer{
+//         background-position: center  top;
+//         align-content: center;
+//         justify-content: center;
+//         background-color: App.$springgreen;
+//     }
+//     .ctaContainer{
+//         justify-content: center;
+//     }
+
+//     .ctaBtnContainer {
+//         display:flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .heroHeading{
+//         height: 200px;
+//         width: 4vh;
+//         font-size: 3vh;
+//     }
+
+//     .landingBarContainer{
+//         flex-direction: column;
+//         justify-content: space-around;
+//     }
+//     .loginBtn{
+//     }
+// }
+
+// @media screen and (max-height: 1000px){
+//     .heroHeading{
+//         margin-top:20px;
+//         height: 200px;
+//         width: 500px;
+//         font-size: App.$medium-3
+//     }
+
+//     .ctaBtnContainer {
+//         margin-top: -40px;
+//         padding-bottom: 15px;
+//         margin-bottom:15px
+//     }
+// }
