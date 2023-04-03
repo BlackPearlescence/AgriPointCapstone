@@ -46,6 +46,10 @@
     text-decoration: underline;
 }
 
+.ctaContainer a:hover{
+    color: App.$darkspringgreen
+}
+
 .heroHeading {
     @include shared.extralargeheading;
     width: 809px;
@@ -67,7 +71,14 @@
     margin-right: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover{
+        background-color: App.$white;
+        color: App.$darkspringgreen
+    }
 }
+
 
 
 
@@ -110,6 +121,12 @@
     width: 218px;
     height: 68px;
     padding: 10px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+        background-color: App.$white;
+        color: App.$grassgreen;
+    }
 }
 
 // @media screen and (max-width: 768px){
