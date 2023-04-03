@@ -8,6 +8,19 @@
     align-items: center;
 }
 
+.testimonialCard {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    }
+}
+
+
 // .cardAvatar {
 //     width:80px;
 //     height: 80px;

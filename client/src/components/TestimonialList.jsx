@@ -19,6 +19,9 @@ const TestimonialList = () => {
                 <Grid item>
                     <TestimonialCard />
                 </Grid>
+                <Grid item>
+                    <TestimonialCard />
+                </Grid>
             </Grid>
         </div>
     )

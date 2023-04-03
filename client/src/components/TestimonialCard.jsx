@@ -7,7 +7,7 @@ import "../App.scss"
 const TestimonialCard = () => {
 
     return(
-        <Card variant="outlined" sx={{ width: 280 }}>
+        <Card variant="outlined" className={styles.testimonialCard} sx={{ width: 280 }}>
             <Grid container spacing={1} sx={{ alignItems: "center", flexDirection: "column"}}>
                 <Grid item xs={7.5}>
                     <Avatar sx={{...baseDarkText,"--Avatar-size" : "100px"}}>SB</Avatar>
