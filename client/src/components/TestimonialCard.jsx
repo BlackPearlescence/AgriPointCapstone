@@ -1,4 +1,5 @@
 import { Avatar, Card, Divider, Grid, Typography } from "@mui/joy";
+import  Rating from "@mui/material/Rating"
 import styles from "./TestimonialCard.module.scss";
 import { baseDarkText } from "./MaterialStyles";
 import { ImQuotesLeft } from "react-icons/im"
@@ -15,6 +16,9 @@ const TestimonialCard = () => {
                 <Grid item xs={9}>
                     <Typography sx={{...baseDarkText, fontWeight: "800",fontSize : "18px"}}>Sam B.</Typography>
                 </Grid>
+                {/* <Grid item xs={9}> */}
+                    <Rating name="read-only" defaultValue={5} max={5} readOnly/>
+                {/* </Grid> */}
                 <Grid item xs={9}>
                     <ImQuotesLeft color="2C6E49" size={32} />
                 </Grid>
