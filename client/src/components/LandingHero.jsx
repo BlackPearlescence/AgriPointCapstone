@@ -1,9 +1,15 @@
+import { useState } from "react";
 import styles from "./LandingHero.module.scss"
+import classNames from "classnames";
 
 const LandingHero = () => {
+    const [heroItemsLoaded, setHeroItemsLoaded] = useState(false)
 
+    const handleHeroItemsLoad = () => {
+        setHeroItemsLoaded(true)
+    }
     return(
-        <div className={styles.landingHeroContainer}>
+        <div className={styles.landingHeroContainer} onLoad={handleHeroItemsLoad}>
             <div className={styles.landingHeroMask}></div>
             <div className={styles.landingBarContainer}>
                 <div className={styles.brandContainer}>
@@ -13,15 +19,15 @@ const LandingHero = () => {
                 <button className={styles.loginBtn}>Log In</button>
             </div>
             <div className={styles.ctaContainer}>
-                <div className={styles.heroHeading}>
+                <div className={heroItemsLoaded ?  styles.heroHeadingShow : styles.heroHeading}>
                     One big happy family of cultivators ready to 
                     deliver farm freshness to your doorstep.
                 </div>
-                <div className={styles.ctaBtnContainer}>
+                <div className={heroItemsLoaded ? styles.ctaBtnContainerShow : styles.ctaBtnContainer}>
                     <button>Explore Products</button>
                     <button>Learn More</button>
                 </div>
-                <a href="#">I'm a farmer!</a>
+                <a href="#" className={heroItemsLoaded ? styles.farmerLinkShow : styles.farmerLink}>I'm a farmer!</a>
             </div>
         </div>
     )

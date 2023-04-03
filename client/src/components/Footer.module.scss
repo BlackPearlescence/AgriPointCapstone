@@ -1,0 +1,108 @@
+@use "../App.scss";
+@use "./shared.scss";
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: App.$darkspringgreen;
+    color: App.$white;
+    width:100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.subscribeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscribeContainer *{
+    padding:10px;
+}
+
+.subscribeContainer h3 {
+    font-size: App.$medium-3;
+}
+
+.subscribeContainer span {
+    width: 280px;
+    font-size: App.$medium-1;
+    padding-bottom: 10px;
+
+}
+
+
+.subscribeEmail {
+    width: 181px;
+    height: 39px;
+}
+
+.subscribeSubmit {
+    width: 98px;
+    height: 39px;
+    border-radius: 10px;
+    background-color: App.$pumpkinorange;
+    border-color: App.$pumpkinorange;
+    color: App.$white;
+    margin-left: 10px;
+    font-weight: 300;
+
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover{
+        background-color: App.$white;
+        color: App.$pumpkinorange;
+    }
+}
+
+
+
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.contactContainer h3 {
+    font-size:  App.$medium-3;
+}
+.contactContainer span {
+    width: 378px;
+    font-size: App.$medium-1;
+    padding: 10px;
+}
+
+.footerLinksContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerSiteContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: App.$medium-1;
+}
+
+.footerSiteContainer a {
+    padding-bottom: 30px;
+    text-decoration: none;
+    color: App.$white;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: App.$springgreen;
+    }
+}
+
+.footerSocialContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerSocialContainer *{
+    padding: 5px;
+}

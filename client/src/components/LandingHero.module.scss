@@ -46,8 +46,19 @@
     text-decoration: underline;
 }
 
+
 .ctaContainer a:hover{
     color: App.$darkspringgreen
+}
+
+.farmerLink {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.farmerLinkShow {
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
 }
 
 .heroHeading {
@@ -55,15 +66,50 @@
     width: 809px;
     height: 185px;
     line-height: 65px;
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.heroHeadingShow {
+    @include shared.extralargeheading;
+    width: 809px;
+    height: 185px;
+    line-height: 65px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
 }
 
 .ctaBtnContainer {
     // margin-top: 50px;
     // bottom: 50px;
     // margin-bottom: 50px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.ctaBtnContainerShow {
+    transition: opacity 1s ease-in-out;
+    opacity:1;
 }
 
 .ctaBtnContainer button {
+    @include shared.basicdarkspringgreenbtn;
+    width: 294px;
+    height: 69px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover{
+        background-color: App.$white;
+        color: App.$darkspringgreen
+    }
+}
+
+.ctaBtnContainerShow button {
     @include shared.basicdarkspringgreenbtn;
     width: 294px;
     height: 69px;
