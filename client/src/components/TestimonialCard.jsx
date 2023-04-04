@@ -16,9 +16,9 @@ const TestimonialCard = () => {
                 <Grid item xs={9}>
                     <Typography sx={{...baseDarkText, fontWeight: "800",fontSize : "18px"}}>Sam B.</Typography>
                 </Grid>
-                {/* <Grid item xs={9}> */}
+                <Grid item xs={9}>
                     <Rating name="read-only" defaultValue={5} max={5} readOnly/>
-                {/* </Grid> */}
+                </Grid>
                 <Grid item xs={9}>
                     <ImQuotesLeft color="2C6E49" size={32} />
                 </Grid>
