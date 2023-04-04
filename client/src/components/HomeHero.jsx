@@ -6,8 +6,8 @@ const HomeHero = () => {
         <div className={styles.homeHeroContainer}>
             <div className={styles.homeHeroMask}></div>
             <div className={styles.homeHeroHeadingContainer}>
-                <h2>Hi there! We have fresh new produce to show you.</h2>
-                <h4>All new tomatoes, carrots, and fresh apples straight from the orchard.</h4>
+                <h2>Hi there! We have some <a href="#">new produce</a> to show you.</h2>
+                <h4>All new <a href="#">tomatoes</a>, <a href="#">carrots</a>, and <a href="#">fresh apples</a> straight from the orchard.</h4>
             </div>
         </div>
     )
