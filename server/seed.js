@@ -29,7 +29,7 @@ const seed = async () => {
 
         const testimonial = new Testimonial({
             title: faker.lorem.words(3),
-            description: faker.lorem.paragraph(sentenceCount = 3),
+            description: faker.lorem.words(10),
             rating: faker.datatype.number({min: 4, max: 5}),
             customer: customer._id,
         })
