@@ -1,0 +1,55 @@
+@use "../App.scss";
+
+.topContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigationBrandContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px
+}
+
+.brandLogo {
+    max-height: 100px;
+    max-width: 75px;
+    padding-right:5px;
+}
+
+.brandTextLogo {
+    max-height: 25px;
+    max-width: 200px;
+    padding-left: 10px;
+}
+
+.searchBarContainer {
+    display: flex;
+}
+.searchBarContainer input {
+    flex: 1;
+    min-width: 0;
+}
+
+.topLinksContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topLinksContainer a {
+    padding: 10px;
+    margin-right: 20px;
+    font-size: App.$medium-3;
+    color: App.$darkspringgreen;
+    transition: color 0.5s ease-in-out;
+
+    &:hover{
+        color: App.$grassgreen;
+    }
+}

@@ -1,12 +1,13 @@
-import NavigationBar from "./NavigationBar";
-
+import TopNavigationBar from "./TopNavigationBar";
+import styles from "./Header.module.scss";
+import BottomNavigationBar from "./BottomNavigationBar";
 
 const Header = () => {
 
     return(
-        <div>
-            
-            <NavigationBar />
+        <div className={styles.headerContainer}>
+            <TopNavigationBar />
+            <BottomNavigationBar />
         </div>
     )
 }
