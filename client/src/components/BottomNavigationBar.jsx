@@ -3,6 +3,7 @@ import styles from "./BottomNavigationBar.module.scss";
 import { Drawer, ListItemIcon, ListItemText } from "@mui/material";
 import { Divider, List, ListItem, ListItemButton, Typography } from "@mui/joy";
 import { GiFruitBowl } from "react-icons/gi";
+import { FaUserCircle } from "react-icons/fa";
 
 const BottomNavigationBar = () => {
     const [sidebarState, setSidebarState] = useState(false)
@@ -20,6 +21,7 @@ const BottomNavigationBar = () => {
             <Drawer sx={{ display: "flex", justifyContent: "center"}} anchor="left" open={sidebarState} onClose={() => setSidebarState(false)}>
                 <div className={styles.sidebarContainer}>
                     <div className={styles.sidebarHeaderContainer}>
+                        <FaUserCircle color="white" />
                         <span>Hello, Me</span>
                     </div>
                     <ul>
@@ -37,22 +39,23 @@ const BottomNavigationBar = () => {
                         <li><a href="#">Goat Milk</a></li>
                         <li><a href="#">Camel Milk</a></li>
                         <li><a href="#">Cheeses</a></li>
+                        <li><div>Flowers</div></li>
+                        <li><a href="#">Roses</a></li>
+                        <li><a href="#">Lilies</a></li>
+                        <li><a href="#">Daisies</a></li>
+                        <li><a href="#">Rhododenrons</a></li>
+                        <li><a href="#">Tulips</a></li>
+                        <li><div>Eggs</div></li>
+                        <li><a href="#">Chicken Eggs</a></li>
+                        <li><a href="#">Quail Eggs</a></li>
+                        <li><a href="#">Ostrich Eggs</a></li>
+                        <li><div>Edible Seeds</div></li>
+                        <li><a href="#">Sunflower Seeds</a></li>
+                        <li><a href="#">Pumpkin Seeds</a></li>
+                        <li><div>Help & Settings</div></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Sign Out</a></li>
                     </ul>
-                    <div>
-                        <h1>Dairy Products</h1>
-                    </div>
-                    <div>
-                        <h1>Flowers</h1>
-                    </div>
-                    <div>
-                        <h1>Eggs</h1>
-                    </div>
-                    <div>
-                        <h1>Edible Seeds</h1>
-                    </div>
-                    <div>
-                        <h1>My Account</h1>
-                    </div>
                 </div>
             </Drawer>
         </div>

@@ -30,7 +30,7 @@ const TopNavigationBar = () => {
                 endDecorator={
                     <React.Fragment>
                         <Divider orientation="vertical"/>
-                        <IconButton sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0, backgroundColor: "#0FD160", color: "white"}} type="submit"><GrSearch /></IconButton>
+                        <IconButton sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0, backgroundColor: "#0FD160", color: "white"}} type="submit"><GrSearch/></IconButton>
                     </React.Fragment>
                 }/>
             </form>
