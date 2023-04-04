@@ -38,7 +38,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />  
         </Route>
         <Route path="/home" element={<MainSiteLayout />}>
-            <Route path="/home" element={<HomePage />} />
+            <Route path="/home" element={<LandingPage />} />
         </Route>
       </Routes>
     </div>

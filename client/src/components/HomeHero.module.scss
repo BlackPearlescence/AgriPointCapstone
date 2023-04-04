@@ -24,22 +24,27 @@
 .homeHeroHeadingContainer {
     z-index: 11;
     width: 65rem;
-}
 
-.homeHeroHeadingContainer a {
-    text-decoration: none;
-    color: App.$white;
-    transition: color 0.2s ease-in-out;
-    &:hover {
-        color: App.$springgreen
+    a {
+        text-decoration: none;
+        color: App.$white;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+            color: App.$springgreen
+        }
+        
     }
+
+    h2 {
+        font-size: App.$large-3;
+        font-family: App.$font-poppins;
+        word-spacing: 3px;
+    }
+
 }
 
-.homeHeroHeadingContainer h2 {
-    font-size: App.$large-3;
-    font-family: App.$font-poppins;
-    word-spacing: 3px;
-}
+ 
+
 
 .homeHeroHeadingContainer h4 {
     font-size: App.$large-1;

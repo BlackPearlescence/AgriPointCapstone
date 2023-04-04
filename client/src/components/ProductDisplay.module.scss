@@ -1,0 +1,22 @@
+
+.productDisplayContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 100px;
+    border: 1px solid gray;
+}
+
+.productItemsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:10px;
+}
+
+.productItemsGrid img {
+    max-width: 200px;
+}
