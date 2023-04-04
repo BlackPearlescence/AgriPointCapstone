@@ -29,6 +29,9 @@ const LandingHero = () => {
                 </div>
                 <a href="#" className={heroItemsLoaded ? styles.farmerLinkShow : styles.farmerLink}>I'm a farmer!</a>
             </div>
+            <div>
+                <a className={styles.heroImageAttribution} href="https://www.freepik.com/free-vector/fruit-vegetables-background_7351193.htm#query=fruits%20and%20vegetables%20background&position=18&from_view=search&track=ais">Freepik</a>
+            </div>
         </div>
     )
 }

@@ -12,7 +12,6 @@ const LandingPage = () => {
             <TestimonialList />
             <h3 className={styles.testHeading}>And to the farmer, please join our loving family. We are on your side for eternity.</h3>
             <TestimonialList />
-            <Footer />
         </div>
     )
 }
