@@ -1,0 +1,27 @@
+@use "../App.scss";
+
+.bottomNavigationContainer{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: App.$darkspringgreen;
+}
+
+.bottomNavigationContainer a {
+    text-decoration: none;
+    color: App.$white;
+    font-size: App.$medium-1;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    padding: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    &:hover {
+        background-color: App.$white;
+        color: App.$darkspringgreen
+    }
+}
