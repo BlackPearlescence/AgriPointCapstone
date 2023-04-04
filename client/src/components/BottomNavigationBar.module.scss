@@ -60,6 +60,11 @@
 
 .sidebarContainer li {
     padding: 10px;
+    background-color: white;
+}
+
+.sidebarContainer li, a {
+    
 }
 
 .sidebarHeaderContainer {
@@ -78,4 +83,14 @@
 .sidebarContainer a {
     text-decoration: none;
     color: App.$lighterdarkspringgreen;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    // padding-left: 10px;
+    // padding-right: 100px;
+    font-size: App.$small-3;
+    transition: color 0.2s ease;
+    &:hover {
+        color: App.$darkspringgreen;
+    }
+    padding: white
 }
