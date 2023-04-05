@@ -31,14 +31,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<MainSiteLayout />}>
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<LandingLayout />}>
           <Route path="/" element={<LandingPage />} />  
         </Route>
         <Route path="/home" element={<MainSiteLayout />}>
-            <Route path="/home" element={<LandingPage />} />
+            <Route path="/home" element={<HomePage />} />
         </Route>
       </Routes>
     </div>

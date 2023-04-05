@@ -1,0 +1,74 @@
+@use "../App.scss";
+
+// .productDisplayListContainer {
+//     display: flex;
+//     justify-content: space-around;
+//     // grid-area: span;
+// }
+
+// .productDisplayListContainer div{
+    // padding-left: 10px;
+    // padding-right: 10px;
+    // margin-left: 10px;
+// }
+
+.productWrapper{
+    margin:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 400px);
+    grid-template-areas:
+                    "a b" 
+                    "a c"
+                    "d d"
+                    "f e"
+                    "g e"
+                    "h h"
+                    "h h";
+    grid-gap: 10px;
+}
+
+.productWrapper div {
+    border: 3px solid black;
+}
+
+.productWrapper div:nth-child(1) {
+    background-color: red;
+    width:auto;
+    grid-area: a;
+}
+.productWrapper div:nth-child(2) {
+    background-color: orange;
+    width:auto;
+    grid-area: b;
+}
+.productWrapper div:nth-child(3) {
+    background-color: yellow;
+    width:auto;
+    grid-area: c;
+}
+.productWrapper div:nth-child(4) {
+    background-color: green;
+    width:auto;
+    grid-area: d;
+}
+.productWrapper div:nth-child(5) {
+    background-color: blue;
+    width:auto;
+    grid-area: e;
+}
+.productWrapper div:nth-child(6) {
+    background-color: purple;
+    width:auto;
+    grid-area: f;
+}
+.productWrapper div:nth-child(7) {
+    background-color: pink;
+    width:auto;
+    grid-area: g;
+}
+.productWrapper div:nth-child(8) {
+    background-color: cyan;
+    width:auto;
+    grid-area: h;
+}

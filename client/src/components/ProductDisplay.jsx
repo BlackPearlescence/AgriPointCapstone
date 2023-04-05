@@ -3,7 +3,7 @@ import styles from "./ProductDisplay.module.scss"
 const ProductDisplay = () => {
 
     return(
-        <div className={styles.productDisplayContainer}>
+        <div className={styles.productWrapper}>
             <h4>PRODUCT DISPLAY TITLE</h4>
             <div className={styles.productItemsGrid}>
                 <img src="http://via.placeholder.com/640x360" />
