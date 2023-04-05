@@ -1,0 +1,38 @@
+@use "../App.scss";
+
+
+.filterBox {
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    background-color: rgb(186, 180, 180);
+    cursor: pointer;
+}
+
+.filterOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+    background-color: rgb(234, 217, 217);
+
+}
+
+.filterOptionsContainerShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 10px;
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 1s ease-out;
+    background-color: rgb(234, 217, 217);
+}
+
+.filterOptionsContainerShow * {
+    margin: 1px;
+}
+
+// style={{ maxHeight: isOpen ? "500px" : "0", transition: "max-height 0.5s ease-in-out"}}
