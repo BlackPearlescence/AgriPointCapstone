@@ -2,16 +2,17 @@ import { Divider, IconButton, Input, Option, Select } from "@mui/joy";
 import styles from "./TopNavigationBar.module.scss";
 import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const TopNavigationBar = () => {
+
+    const navigate = useNavigate()
     return(
         <div className={styles.topContainer}>
-            <a href="#">
-                <div className={styles.navigationBrandContainer}>
-                    <img className={styles.brandLogo} src={require("../images/IconOnly_Transparent_NoBuffer.png")} />
-                    <img className={styles.brandTextLogo} src={require("../images/FullLogo_Transparent_NoBuffer (2).png")} />
-                </div>
-            </a>
+            <div className={styles.navigationBrandContainer} onClick={() => navigate("/home")}>
+                <img className={styles.brandLogo} src={require("../images/IconOnly_Transparent_NoBuffer.png")} />
+                <img className={styles.brandTextLogo} src={require("../images/FullLogo_Transparent_NoBuffer (2).png")} />
+            </div>
            
             <form className={styles.searchBarContainer}>
                 {/** Select is for search by department */}

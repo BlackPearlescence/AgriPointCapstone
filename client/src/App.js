@@ -7,6 +7,7 @@ import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductsPage from './pages/ProductsPage';
+import ProductViewPage from './pages/ProductViewPage';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<MainSiteLayout />}>
             <Route path="/home" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:productId" element={<ProductViewPage />} />
         </Route>
       </Routes>
     </div>

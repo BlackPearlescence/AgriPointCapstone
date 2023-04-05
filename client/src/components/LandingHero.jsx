@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styles from "./LandingHero.module.scss"
 import classNames from "classnames";
+import { useNavigate } from "react-router-dom";
 
 const LandingHero = () => {
     const [heroItemsLoaded, setHeroItemsLoaded] = useState(false)
+    const navigate = useNavigate()
 
     const handleHeroItemsLoad = () => {
         setHeroItemsLoaded(true)
@@ -12,7 +14,7 @@ const LandingHero = () => {
         <div className={styles.landingHeroContainer} onLoad={handleHeroItemsLoad}>
             <div className={styles.landingHeroMask}></div>
             <div className={styles.landingBarContainer}>
-                <div className={styles.brandContainer}>
+                <div className={styles.brandContainer} onClick={() => navigate("/")}>
                     <img className={styles.brandLogo} src={require("../images/IconOnly_Transparent_NoBuffer.png")} />
                     <img className={styles.brandTextLogo} src={require("../images/FullLogo_Transparent_NoBuffer (2).png")} />
                 </div>
@@ -24,7 +26,7 @@ const LandingHero = () => {
                     deliver farm freshness to your doorstep.
                 </div>
                 <div className={heroItemsLoaded ? styles.ctaBtnContainerShow : styles.ctaBtnContainer}>
-                    <button>Explore Products</button>
+                    <button onClick={() => navigate("/products")}>Explore Products</button>
                     <button>Learn More</button>
                 </div>
                 <a href="#" className={heroItemsLoaded ? styles.farmerLinkShow : styles.farmerLink}>I'm a farmer!</a>

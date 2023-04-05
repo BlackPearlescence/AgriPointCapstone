@@ -1,0 +1,44 @@
+@use "../App.scss";
+
+.productViewWrapper {
+    z-index: 10;
+    margin: 100px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, calc(100vh/5));
+    grid-template-areas:
+                        "a a"
+                        "c b"
+                        "c d"
+                        "c d"
+                        "c e";
+    grid-gap: 10px;
+    
+    background-color: white;
+    border: 1px solid lightgrey;
+
+    border-radius: 20px;
+}
+
+.productViewWrapper > div {
+    border: 1px solid lightgrey;
+}
+
+.productViewWrapper > div:nth-child(1) {
+    grid-area: a;
+}
+.productViewWrapper > div:nth-child(2) {
+    grid-area: b;
+}
+.productViewWrapper > div:nth-child(3) {
+    grid-area: c;
+}
+.productViewWrapper > div:nth-child(4) {
+    grid-area: d;
+}
+.productViewWrapper > div:nth-child(5) {
+    grid-area: e;
+}
