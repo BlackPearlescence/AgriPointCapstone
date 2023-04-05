@@ -8,6 +8,34 @@
     cursor: pointer;
 }
 
+.filterHeading > span {
+    font-family: App.$font-nunito;
+    font-size: App.$medium-1;
+}
+
+.filterHeadingShow > span {
+    font-family: App.$font-nunito;
+    font-size: App.$medium-1;
+}
+
+.filterHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, white, #a0ffc9);
+}
+
+.filterHeadingShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #a0ffc9;
+}
+
+
+
 .filterOptionsContainer {
     display: flex;
     flex-direction: column;

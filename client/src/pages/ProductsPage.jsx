@@ -63,6 +63,42 @@ const ProductsPage = () => {
                     name="type-filter"
                     label="d"/>
                 </FilterAccordion>
+                <FilterAccordion>
+                    <Radio checked={false}
+                    value="a"
+                    name="type-filter"
+                    label="a"/>
+                    <Radio checked={false}
+                    value="b"
+                    name="type-filter"
+                    label="b"/>
+                    <Radio checked={false}
+                    value="c"
+                    name="type-filter"
+                    label="c"/>
+                    <Radio checked={false}
+                    value="d"
+                    name="type-filter"
+                    label="d"/>
+                </FilterAccordion>
+                <FilterAccordion>
+                    <Radio checked={false}
+                    value="a"
+                    name="type-filter"
+                    label="a"/>
+                    <Radio checked={false}
+                    value="b"
+                    name="type-filter"
+                    label="b"/>
+                    <Radio checked={false}
+                    value="c"
+                    name="type-filter"
+                    label="c"/>
+                    <Radio checked={false}
+                    value="d"
+                    name="type-filter"
+                    label="d"/>
+                </FilterAccordion>
             </FilterSidebar>
             <ProductContainer>
             </ProductContainer>

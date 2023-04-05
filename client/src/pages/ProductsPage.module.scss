@@ -5,9 +5,10 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1000px;
 
-    div:nth-child(1) {
+    > div:nth-child(1) {
     }
-    div:nth-child(2) {
-        
+    > div:nth-child(2) {
+        background: linear-gradient(135deg, white, #a0ffc9);
+
     }
 }
