@@ -1,0 +1,65 @@
+@use "../App.scss";
+.productCardContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    height: 280px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border: 0.5px solid rgb(224, 224, 224);
+    overflow:hidden;
+    margin: 20px;
+    margin-top: 0px;
+
+    * {
+        font-family: App.$font-nunito;
+    }
+
+    span {
+        color: App.$lighterdarkspringgreen;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 10px;
+    }
+    
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit:cover;
+        max-width:100%;
+    }
+
+    a {
+        color: App.$darkspringgreen;
+        padding: 5px;
+    }
+}
+
+
+.addToCartContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    button {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: App.$darkspringgreen;
+        color: App.$white;
+        border-color: green;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    input {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: 1px solid black;
+        width: 95px;
+    }
+}

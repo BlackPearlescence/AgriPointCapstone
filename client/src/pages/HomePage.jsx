@@ -1,4 +1,6 @@
+import ContentDisplaySection from "../components/ContentDisplaySection";
 import HomeHero from "../components/HomeHero";
+import ProductCard from "../components/ProductCard";
 import ProductDisplayContainer from "../components/ProductDisplayContainer";
 import styles from "./HomePage.module.scss";
 
@@ -8,14 +10,48 @@ const HomePage = () => {
         <div>
             <HomeHero />
             <ProductDisplayContainer>
-                <div className={styles.gridItem1}></div>
-                <div className={styles.gridItem2}></div>
-                <div className={styles.gridItem3}></div>
-                <div className={styles.gridItem4}></div>
-                <div className={styles.gridItem5}></div>
-                <div className={styles.gridItem6}></div>
-                <div className={styles.gridItem7}></div>
-                <div className={styles.gridItem8}></div>
+                <ContentDisplaySection heading={"In Season!"}>
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"Things you might be interested in..."}>
+                    <ProductCard />
+                    <ProductCard />
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"New Products"}>
+                    <ProductCard />
+                    <ProductCard />
+
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"Vendor Spotlight"}>
+
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"Great Deals!"}>
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"Bouquets"}>
+                    <ProductCard />
+                    <ProductCard />
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"Cheeses"}>
+                    <ProductCard />
+                    <ProductCard />
+                </ContentDisplaySection>
+
+                <ContentDisplaySection heading={"New Vendors"}>
+
+                </ContentDisplaySection>
             </ProductDisplayContainer>
         </div>
     )
