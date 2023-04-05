@@ -12,6 +12,13 @@
     overflow:hidden;
     margin: 20px;
     margin-top: 10px;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+        cursor: pointer;
+    }
 
     * {
         font-family: App.$font-nunito;

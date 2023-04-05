@@ -1,11 +1,21 @@
 @use "../App.scss";
 
 
+// .contentContainer {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+// }
+
 .contentContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "a b c"
+                        "d e f"
+                        "g h i"
 }
 
 .sectionContainer h2 {
@@ -17,4 +27,9 @@
     color: App.$darkspringgreen;
     font-size: App.$large-2;
     font-family: App.$font-nunito;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
 }

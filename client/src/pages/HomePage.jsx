@@ -15,9 +15,12 @@ const HomePage = () => {
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Things you might be interested in..."}>
+                    <ProductCard />
                     <ProductCard />
                     <ProductCard />
                 </ContentDisplaySection>
@@ -25,7 +28,7 @@ const HomePage = () => {
                 <ContentDisplaySection heading={"New Products"}>
                     <ProductCard />
                     <ProductCard />
-
+                    <ProductCard />
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Vendor Spotlight"}>
@@ -37,14 +40,18 @@ const HomePage = () => {
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
                 </ContentDisplaySection>
 
-                <ContentDisplaySection heading={"Bouquets"}>
+                <ContentDisplaySection heading={"Bouquets for all!"}>
+                    <ProductCard />
                     <ProductCard />
                     <ProductCard />
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Cheeses"}>
+                    <ProductCard />
                     <ProductCard />
                     <ProductCard />
                 </ContentDisplaySection>
