@@ -1,7 +1,7 @@
 import ContentDisplaySection from "../components/ContentDisplaySection";
 import HomeHero from "../components/HomeHero";
 import ProductCard from "../components/ProductCard";
-import ProductDisplayContainer from "../components/ProductDisplayContainer";
+import ContentDisplayContainer from "../components/ContentDisplayContainer";
 import VendorCard from "../components/VendorCard";
 import styles from "./HomePage.module.scss";
 
@@ -10,7 +10,7 @@ const HomePage = () => {
     return (
         <div>
             <HomeHero />
-            <ProductDisplayContainer>
+            <ContentDisplayContainer>
                 <ContentDisplaySection heading={"In Season!"}>
                     <ProductCard />
                     <ProductCard />
@@ -67,7 +67,7 @@ const HomePage = () => {
                     <VendorCard />
                     <VendorCard />
                 </ContentDisplaySection>
-            </ProductDisplayContainer>
+            </ContentDisplayContainer>
         </div>
     )
 }

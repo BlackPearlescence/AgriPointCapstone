@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
+import ProductsPage from './pages/ProductsPage';
 
 function App() {
 
@@ -37,8 +38,9 @@ function App() {
         <Route path="/" element={<LandingLayout />}>
           <Route path="/" element={<LandingPage />} />  
         </Route>
-        <Route path="/home" element={<MainSiteLayout />}>
+        <Route path="/" element={<MainSiteLayout />}>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
         </Route>
       </Routes>
     </div>
