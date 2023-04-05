@@ -3,11 +3,13 @@ import './App.scss';
 import LandingPage from './pages/LandingPage';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { Outlet, Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
+
+  const navigate = useNavigate()
 
   const MainSiteLayout = () => {
     return (

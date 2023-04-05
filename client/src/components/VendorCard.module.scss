@@ -1,0 +1,51 @@
+@use "../App.scss";
+
+.vendorCardContainer {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    max-height: 240px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border: 0.5px solid rgb(224, 224, 224);
+    overflow:hidden;
+    margin: 20px;
+    margin-top: 10px;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+        cursor: pointer;
+    }
+
+    * {
+        font-family: App.$font-nunito;
+    }
+
+    span {
+        color: App.$lighterdarkspringgreen;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 10px;
+    }
+    
+    img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        object-fit:cover;
+        width: 250px;
+        max-height:100%;
+    }
+
+    a {
+        color: App.$darkspringgreen;
+        padding: 5px;
+    }
+
+    .vendorInformation {
+        padding: 10px;
+    }
+}

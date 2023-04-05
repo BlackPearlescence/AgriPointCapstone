@@ -2,6 +2,7 @@ import ContentDisplaySection from "../components/ContentDisplaySection";
 import HomeHero from "../components/HomeHero";
 import ProductCard from "../components/ProductCard";
 import ProductDisplayContainer from "../components/ProductDisplayContainer";
+import VendorCard from "../components/VendorCard";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
@@ -32,7 +33,9 @@ const HomePage = () => {
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Vendor Spotlight"}>
-
+                    <VendorCard />
+                    <VendorCard />
+                    <VendorCard />
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Great Deals!"}>
@@ -57,7 +60,12 @@ const HomePage = () => {
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"New Vendors"}>
-
+                    <VendorCard />
+                    <VendorCard />
+                    <VendorCard />
+                    <VendorCard />
+                    <VendorCard />
+                    <VendorCard />
                 </ContentDisplaySection>
             </ProductDisplayContainer>
         </div>

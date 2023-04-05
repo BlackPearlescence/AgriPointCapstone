@@ -1,4 +1,3 @@
-import ProductDisplay from "./ProductDisplay";
 import styles from "./ProductDisplayContainer.module.scss";
 
 const ProductDisplayContainer = ({ children }) => {

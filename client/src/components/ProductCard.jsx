@@ -4,7 +4,7 @@ const ProductCard = ({ product }) => {
 
     return(
         <div className={styles.productCardContainer}>
-                <img src="http://via.placeholder.com/640x360" alt="a product image" />
+            <img src="http://via.placeholder.com/640x360" alt="a product image" />
             <span>Granny Smith Apples</span>
             <div className={styles.addToCartContainer}>
                 <button>Add to Cart</button>
