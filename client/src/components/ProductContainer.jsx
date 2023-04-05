@@ -1,9 +1,9 @@
-
+import styles from "./ProductContainer.module.scss";
 
 const ProductContainer = ({ children }) => {
 
     return (
-        <div>
+        <div className={styles.productCardWrapper}>
             {children}
         </div>
     )
