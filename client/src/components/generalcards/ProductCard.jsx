@@ -11,6 +11,7 @@ const ProductCard = ({ product }) => {
                 <input type="number" placeholder="Quantity" min={0}/>
             </div>
             <a href="#">Shop Burpee Gardens</a>
+            <a>Add to List</a>
         </div>
     )
 }

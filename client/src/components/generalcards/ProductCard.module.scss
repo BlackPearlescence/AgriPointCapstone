@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
-    height: 280px;
+    height: 288px;
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -40,7 +40,7 @@
 
     a {
         color: App.$darkspringgreen;
-        padding: 5px;
+        padding: 1px;
     }
 }
 
@@ -61,6 +61,13 @@
         border-color: green;
         border-style: solid;
         border-width: 1px;
+        transition: color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            color: App.$darkspringgreen;
+            background-color: App.$white;
+
+        }
     }
 
     input {

@@ -3,6 +3,7 @@ import styles from "./TopNavigationBar.module.scss";
 import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { LoginModal } from "../modals/LoginModal"
 
 const TopNavigationBar = () => {
 
