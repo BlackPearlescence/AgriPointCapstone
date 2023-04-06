@@ -31,10 +31,10 @@ const ProductViewLayout = ({ children, product }) => {
                 <div className={styles.sizeContainer}>
                     <span>Sizes</span>
                     <div className={styles.sizeOptionsWrapper}>
-                        <div>6 ct</div>
-                        <div>12 ct</div>
-                        <div>24 ct</div>
-                        <div>48 ct</div>
+                        <button>6 ct</button>
+                        <button>12 ct</button>
+                        <button>24 ct</button>
+                        <button>48 ct</button>
                     </div>
                 </div>
                 <div className={styles.qtyContainer}>
