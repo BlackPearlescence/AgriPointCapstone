@@ -1,4 +1,4 @@
-import ContentDisplaySection from "../components/ContentDisplaySection";
+import ContentDisplaySection from "../components/home/ContentDisplaySection";
 import HomeHero from "../components/home/HomeHero";
 import ProductCard from "../components/generalcards/ProductCard";
 import ContentDisplayContainer from "../components/home/ContentDisplayContainer";
