@@ -103,6 +103,7 @@
                 display: flex;
                 flex-direction: row;
                 align-content: space-around;
+                align-items: center;
                 padding: 20px;
                 padding-left: 25px;
                 padding-right: 30px;
@@ -116,17 +117,22 @@
                 color: #ffffff;
             }
 
+            button :first-child{
+                font-size: 20px;
+
+            }
+
             button span {
                 color: #ffffff;
                 margin-left: 10px;
             }
 
             .cartBtn {
-                background-color: App.$grassgreen;
+                background-color: App.$darkergrassgreen;
             }
 
             .listBtn {
-                background-color: App.$pumpkinorange;
+                background-color: App.$darkerpumpkinorange;
             }
         }
 
