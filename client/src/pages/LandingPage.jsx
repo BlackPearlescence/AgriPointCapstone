@@ -1,6 +1,5 @@
-import Footer from "../components/Footer";
-import LandingHero from "../components/LandingHero";
-import TestimonialList from "../components/TestimonialList";
+import LandingHero from "../components/landing/LandingHero";
+import TestimonialList from "../components/landing/TestimonialList";
 import styles from "./LandingPage.module.scss"
 
 const LandingPage = () => {

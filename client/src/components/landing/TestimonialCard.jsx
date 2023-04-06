@@ -1,9 +1,9 @@
 import { Avatar, Card, Divider, Grid, Typography } from "@mui/joy";
 import  Rating from "@mui/material/Rating"
 import styles from "./TestimonialCard.module.scss";
-import { baseDarkText } from "./MaterialStyles";
+import { baseDarkText } from "../MaterialStyles";
 import { ImQuotesLeft } from "react-icons/im"
-import "../App.scss"
+import "../../App.scss"
 
 const TestimonialCard = () => {
 

@@ -1,8 +1,8 @@
 import ContentDisplaySection from "../components/ContentDisplaySection";
-import HomeHero from "../components/HomeHero";
-import ProductCard from "../components/ProductCard";
-import ContentDisplayContainer from "../components/ContentDisplayContainer";
-import VendorCard from "../components/VendorCard";
+import HomeHero from "../components/home/HomeHero";
+import ProductCard from "../components/generalcards/ProductCard";
+import ContentDisplayContainer from "../components/home/ContentDisplayContainer";
+import VendorCard from "../components/generalcards/VendorCard";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {

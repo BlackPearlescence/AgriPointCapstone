@@ -1,12 +1,12 @@
-@use "../App.scss";
-@use "./shared.scss";
+@use "../../App.scss";
+@use "../shared.scss";
 
 .landingHeroContainer {
     position:relative;
     display: flex;
     justify-content: center;
     // align-items: center;
-    background-image: url("../images/landingHeroImg.jpg");
+    background-image: url("../../images/landingHeroImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

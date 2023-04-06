@@ -1,4 +1,4 @@
-import ProductViewLayout from "../components/ProductViewLayout";
+import ProductViewLayout from "../components/productview/ProductViewLayout";
 import styles from "./ProductViewPage.module.scss";
 
 

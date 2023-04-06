@@ -1,8 +1,8 @@
-@use "../App.scss";
+@use "../../App.scss";
 
 .homeHeroContainer {
     position:relative;
-    background-image: url("../images/fruits-vegetables.jpg");
+    background-image: url("../../images/fruits-vegetables.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

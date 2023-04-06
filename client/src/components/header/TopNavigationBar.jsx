@@ -10,8 +10,8 @@ const TopNavigationBar = () => {
     return(
         <div className={styles.topContainer}>
             <div className={styles.navigationBrandContainer} onClick={() => navigate("/home")}>
-                <img className={styles.brandLogo} src={require("../images/IconOnly_Transparent_NoBuffer.png")} />
-                <img className={styles.brandTextLogo} src={require("../images/FullLogo_Transparent_NoBuffer (2).png")} />
+                <img className={styles.brandLogo} src={require("../../images/IconOnly_Transparent_NoBuffer.png")} />
+                <img className={styles.brandTextLogo} src={require("../../images/FullLogo_Transparent_NoBuffer (2).png")} />
             </div>
            
             <form className={styles.searchBarContainer}>

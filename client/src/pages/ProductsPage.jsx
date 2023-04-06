@@ -1,9 +1,9 @@
 import { Radio, RadioGroup } from "@mui/joy";
-import FilterAccordion from "../components/FilterAccordion";
-import FilterSidebar from "../components/FilterSidebar";
-import ProductContainer from "../components/ProductContainer";
+import FilterAccordion from "../components/filter/FilterAccordion";
+import FilterSidebar from "../components/filter/FilterSidebar";
+import ProductContainer from "../components/products/ProductContainer";
 import styles from "./ProductsPage.module.scss";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/generalcards/ProductCard";
 
 const ProductsPage = () => {
 

@@ -8,6 +8,9 @@
     justify-content: space-around;
     align-items: center;
     background-color: App.$darkspringgreen;
+    * {
+        font-family: App.$font-nunito;
+    }
 }
 
 .bottomNavigationContainer a {
