@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const loginModalSlice = createSlice({
-    name: "loginmodal",
+    name: "loginModal",
     initialState: {
         shown: false
     },
@@ -15,4 +15,4 @@ export const loginModalSlice = createSlice({
 export const { showModal, hideModal } = loginModalSlice.actions;
 
 export default loginModalSlice.reducer;
-export const selectShown = state => state.loginmodal.shown;
+export const selectShown = state => state.loginModal.shown;
