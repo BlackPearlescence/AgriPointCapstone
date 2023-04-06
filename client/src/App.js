@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductViewPage from './pages/ProductViewPage';
+import LoginModal from './components/modals/LoginModal';
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/products/:productId" element={<ProductViewPage />} />
         </Route>
       </Routes>
+      <LoginModal />
     </div>
   );
 }
