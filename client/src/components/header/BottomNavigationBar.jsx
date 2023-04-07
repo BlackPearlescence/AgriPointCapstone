@@ -15,7 +15,7 @@ const BottomNavigationBar = () => {
             <a href="#">Dairy</a>
             <a href="#">Eggs</a>
             <a href="#">Flowers</a>
-            <a href="#">Edible Seeds</a>
+            <a href="#">Rewards</a>
             <a href="#">Deals</a>
             <a href="#">Vendors</a>
             <Drawer sx={{ display: "flex", justifyContent: "center"}} anchor="left" open={sidebarState} onClose={() => setSidebarState(false)}>

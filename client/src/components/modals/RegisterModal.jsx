@@ -1,7 +1,7 @@
 import styles from "./RegisterModal.module.scss"
 import { Modal } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { hideRegister, selectRegisterShown, showRegister, switchToLogin } from "../../reducers/login/loginSlice";
+import { hideRegister, selectRegisterShown, showRegister, switchToLogin } from "../../reducers/loginSlice";
 
 
 const RegisterModal = () => {

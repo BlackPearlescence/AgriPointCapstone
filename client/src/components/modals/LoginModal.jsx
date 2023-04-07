@@ -1,8 +1,8 @@
 import styles from "./LoginModal.module.scss";
 import { Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { selectLoginShown } from "../../reducers/login/loginSlice";
-import { showLogin, hideLogin, switchToRegister } from "../../reducers/login/loginSlice";
+import { selectLoginShown } from "../../reducers/loginSlice";
+import { showLogin, hideLogin, switchToRegister } from "../../reducers/loginSlice";
 
 const LoginModal = () => {
 

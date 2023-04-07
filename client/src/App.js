@@ -10,6 +10,7 @@ import ProductsPage from './pages/ProductsPage';
 import ProductViewPage from './pages/ProductViewPage';
 import LoginModal from './components/modals/LoginModal';
 import RegisterModal from './components/modals/RegisterModal';
+import CartSidebar from './components/cart/CartSidebar';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
       </Routes>
       <LoginModal />
       <RegisterModal />
+      <CartSidebar />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import styles from "./LandingHero.module.scss"
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { showLogin } from "../../reducers/login/loginSlice";
+import { showLogin } from "../../reducers/loginSlice";
 
 const LandingHero = () => {
     const [heroItemsLoaded, setHeroItemsLoaded] = useState(false)

@@ -4,8 +4,9 @@ import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
-import { showLogin } from "../../reducers/login/loginSlice";
+import { showLogin } from "../../reducers/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { showCart } from "../../reducers/cartSlice";
 
 const TopNavigationBar = () => {
 
@@ -43,7 +44,7 @@ const TopNavigationBar = () => {
                 <a href="#" onClick={() => dispatch(showLogin())}>Log In</a>
                 <a href="#" >Orders</a>
                 <a href="#"><GrNotification size="30"/></a>
-                <a href="#"><GrCart size="30"/></a>
+                <a href="#" onClick={() => dispatch(showCart())}><GrCart size="30"/></a>
             </div>
         </div>
     )
