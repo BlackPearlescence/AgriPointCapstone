@@ -9,6 +9,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductViewPage from './pages/ProductViewPage';
 import LoginModal from './components/modals/LoginModal';
+import RegisterModal from './components/modals/RegisterModal';
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
         </Route>
       </Routes>
       <LoginModal />
+      <RegisterModal />
     </div>
   );
 }
