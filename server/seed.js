@@ -1,5 +1,26 @@
-const { Customer, Testimonial } = require("./schema.js")
-const { faker, SystemModule } = require("@faker-js/faker")
+const { 
+    Customer,
+    Testimonial,
+    Phone,
+    Contact,
+    RewardTrack,
+    Benefit,
+    Address,
+    ShoppingList,
+    Vendor,
+    Product,
+    Tag,
+    Cart,
+    Order,
+    Transaction,
+    ProductReview,
+    VendorReview,
+    RewardsProgram,
+    RewardsTransaction,
+    BlogPost, } = require("./schema.js")
+
+
+const { faker } = require("@faker-js/faker")
 const mongoose = require("mongoose");
 const async = require("async");
 require("dotenv").config();
