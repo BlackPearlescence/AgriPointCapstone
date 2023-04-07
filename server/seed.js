@@ -62,6 +62,52 @@ const seed = async () => {
     await RewardsTransaction.deleteMany({})
     // Delete BlogPosts
     await BlogPost.deleteMany({})
+    // Delete Stocks
+    await Stock.deleteMany({})
+
+
+    // Create a customer and a testimonial to go along with it
+    for(let i = 0; i < 50; i++){
+        const phoneNumbers = []
+        const numberOfNumbersToGenerate = faker.datatype.number({ min: 1, max:3 })
+        const phone = new Phone({
+            number_type: faker.lorem.word(),
+            number: faker.phone.number()
+        })
+        phoneNumbers.push(phone)
+
+        const contact = new Contact({
+            phone_book: phoneNumbers,
+            email: faker.internet.email()
+        })
+
+        const address = new Address({
+            address_one: faker.address.streetAddress(),
+            address_two: faker.address.secondaryAddress(),
+            city: faker.address.city(),
+            state: faker.address.state(),
+            zip: faker.address.zipCode()
+        })
+        
+        const customer = new Customer({
+            first_name: faker.name.firstName(),
+            last_name: faker.name.lastName(),
+            password: faker.internet.password(),
+            joined_at: faker.date.between('2020-01-01', '2023-03-23'),
+            contact: contact,
+            address: address,
+            avatar_url: faker.image.avatar(),
+        })
+        await customer.save()
+
+        const testimonial = new Testimonial({
+            title: faker.lorem.words(3),
+            description: faker.lorem.paragraph(sentenceCount = 3),
+            rating: faker.datatype.number({min: 4, max: 5}),
+            customer: customer._id,
+        })
+        await testimonial.save()
+    }
 
     for(let i = 0; i < 5; i++){
         // Generate the benefits for the program
@@ -113,7 +159,7 @@ const seed = async () => {
 
         // Collect a random number of tags for the product 
         // and make an empty array for the tags to assign
-        const numberOfTagsToAssign = faker.datatype.number({ min: 1, max: 20})
+        const numberOfTagsToAssign = faker.datatype.number({ min: 1, max: 20 })
         const tagsToAssign = []
         
         // Copy the list of tags
@@ -125,6 +171,7 @@ const seed = async () => {
             // Remove the tag so it isn't assigned twice
             copyOfTags = copyOfTags.filter(tag => tag != randomTag)
         }
+        
         // Generate products
         const product = new Product({
             name: faker.commerce.product(),
@@ -137,26 +184,56 @@ const seed = async () => {
         })
 
         await product.save()
+
+        // Create a random number of reviews and assign them to random products.
+        const numberOfReviews = faker.datatype.number({ min: 0, max: 40 })
+        const hasImage = faker.datatype.number({ min:0, max:1 })
+        let reviewImage = null;
+        if(hasImage){
+            reviewImage = faker.image.business()
+        } 
+        for(let i = 0; i < numberOfReviews; i++){
+            const randomCustomer = Customer.aggregate().sample(1)
+            const randomProduct = Product.aggregate().sample(1)
+
+            const productReview = new ProductReview({
+                customer: randomCustomer._id,
+                product: randomProduct._id,
+                rating: faker.datatype.number({ min: 0, max: 5}),
+                title: faker.lorem.sentence(),
+                description: faker.lorem.paragraph(),
+                image_url: reviewImage
+            })
+            await productReview.save()
+        }
+
+        // Generate Vendors
+        for(let i = 0; i < 30; i++){
+            for(let i = 0; i < numberOfNumbersToGenerate; i++){
+                const phone = new Phone({
+                    number_type: faker.lorem.word(),
+                    number: faker.phone.number()
+                })
+                phoneNumbers.push(phone)
+            }
+    
+            const contact = new Contact({
+                phone_book: phoneNumbers,
+                email: faker.internet.email()
+            })
+    
+            const address = new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode()
+            })
+        }
+        
     }
 
-    // Create a customer and a testimonial to go along with it
-    // for(let i = 0; i < 50; i++){
-    //     const customer = new Customer({
-    //         first_name: faker.name.firstName(),
-    //         last_name: faker.name.lastName(),
-    //         email: faker.internet.email(),
-    //         password: faker.internet.password(),
-    //     })
-    //     await customer.save()
-
-    //     const testimonial = new Testimonial({
-    //         title: faker.lorem.words(3),
-    //         description: faker.lorem.paragraph(sentenceCount = 3),
-    //         rating: faker.datatype.number({min: 4, max: 5}),
-    //         customer: customer._id,
-    //     })
-    //     await testimonial.save()
-    // }
+    
     await mongoose.disconnect()
 }
 

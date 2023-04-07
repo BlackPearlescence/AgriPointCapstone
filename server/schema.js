@@ -27,6 +27,8 @@ const contactSchema = new Schema({
         type: phoneSchema,
         required: true,
     }],
+
+    // REMINDER: SET EMAIL FIELD TO UNIQUE AFTER TESTING
     email: {
         type: String,
         required: true,
@@ -139,11 +141,6 @@ const customerSchema = new Schema({
         type: String,
         required: true
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
     joined_at: {
         type: Date,
         required: true,
@@ -166,12 +163,16 @@ const customerSchema = new Schema({
     },
     reward_track: {
         type: rewardTrackSchema,
-        required: true,
+        required: false,
     },
     shopping_lists: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "ShoppingList"
     }],
+    cart : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Cart"
+    }
 });
 
 const shopppingListSchema = new Schema({
@@ -215,6 +216,11 @@ const vendorSchema = new Schema({
     },
     address: {
         type: addressSchema,
+        required: true,
+    },
+
+    image_url: {
+        type: String,
         required: true,
     },
     products: [{
@@ -369,6 +375,10 @@ const productReviewSchema = new Schema({
         type: String,
         required: true,
     },
+    image_url: {
+        type: String,
+        required: false,
+    },
 })
 
 const vendorReviewSchema = new Schema({
@@ -435,11 +445,11 @@ const rewardsTransactionSchema = new Schema({
         required: true,
     },
     shipping_address: {
-        type: String,
+        type: addressSchema,
         required: true,
     },
     billing_address: {
-        type: String,
+        type: addressSchema,
         required: true,
     },
     notes: {
