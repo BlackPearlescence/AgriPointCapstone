@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose
+const { Schema, Decimal128 } = mongoose
 require("dotenv").config();
 
 
@@ -65,7 +65,7 @@ const benefitSchema = new Schema({
     },
     description: {
         type: String,
-        required,
+        required: true,
     },
 })
 
@@ -88,6 +88,21 @@ const addressSchema = new Schema({
     },
     zip: {
         type: String,
+        required: true,
+    }
+})
+
+const stockSchema = new Schema({
+    size_name: {
+        type: String,
+        required: true,
+    },
+    size_quantity: {
+        type: Number,
+        required: true,
+    },
+    size_stock: {
+        type: Number,
         required: true,
     }
 })
@@ -229,10 +244,10 @@ const productSchema = new Schema({
         type: Decimal128,
         required: true
     },
-    stock: {
-        type: Number,
+    stock: [{
+        type: stockSchema,
         required: true
-    },
+    }],
     image_url: {
         type: String,
         required: true,
@@ -253,11 +268,7 @@ const tagSchema = new Schema ({
     name: {
         type: String,
         required: true,
-    },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }]
+    }
 })
 
 const cartSchema = new Schema ({
@@ -392,6 +403,10 @@ const rewardsProgramSchema = new Schema({
         type: benefitSchema,
         required: true,
     }],
+    tier_card_url: {
+        type: String,
+        required: true,
+    },
 })
 
 const rewardsTransactionSchema = new Schema({
@@ -461,6 +476,7 @@ const blogPostSchema = new Schema({
 
 const Customer = mongoose.model("Customer",customerSchema)
 const Testimonial = mongoose.model("Testimonial",testimonialSchema)
+const Stock = mongoose.model("Stock",stockSchema)
 const Phone = mongoose.model("Phone",phoneSchema)
 const Contact = mongoose.model("Contact",contactSchema)
 const RewardTrack = mongoose.model("RewardTrack",rewardTrackSchema)
@@ -481,6 +497,7 @@ const BlogPost = mongoose.model("BlogPost",blogPostSchema)
 module.exports = {
     Customer,
     Testimonial,
+    Stock,
     Phone,
     Contact,
     RewardTrack,
