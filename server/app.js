@@ -2,6 +2,7 @@ const express = require("express");
 const { Customer, Testimonial } = require("./schema.js")
 const mongoose = require("mongoose");
 const morgan = require("morgan")
+const { handleInternalServerError } = require("./errorhandling/errors.js");
 require("dotenv").config()
 
 const { MONGO_CONNECTION_STRING } = process.env
@@ -65,6 +66,16 @@ process.on("SIGINT", () => {
         console.log("Database connection closed!")
         process.exit(0)
     })
+})
+
+// Final Error Handling Middleware
+app.use((err, req, res, next) => {
+    handleInternalServerError(err);
+    res.status(err.statusCode).json({"error": {
+        "code": err.statusCode,
+        "name": err.name,
+        "message": err.message
+    }});
 })
 
 
