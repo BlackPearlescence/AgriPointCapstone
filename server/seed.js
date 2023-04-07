@@ -69,7 +69,6 @@ const seed = async () => {
     // Create a customer and a testimonial to go along with it
     for(let i = 0; i < 50; i++){
         const phoneNumbers = []
-        const numberOfNumbersToGenerate = faker.datatype.number({ min: 1, max:3 })
         const phone = new Phone({
             number_type: faker.lorem.word(),
             number: faker.phone.number()
@@ -193,8 +192,9 @@ const seed = async () => {
             reviewImage = faker.image.business()
         } 
         for(let i = 0; i < numberOfReviews; i++){
-            const randomCustomer = Customer.aggregate().sample(1)
-            const randomProduct = Product.aggregate().sample(1)
+            const randomCustomer = await Customer.aggregate().sample(1)
+            const randomProduct = await Product.aggregate().sample(1)
+
 
             const productReview = new ProductReview({
                 customer: randomCustomer._id,
@@ -209,6 +209,8 @@ const seed = async () => {
 
         // Generate Vendors
         for(let i = 0; i < 30; i++){
+            const numberOfNumbersToGenerate = faker.datatype.number({ min: 1, max:3 })
+            const phoneNumbers = []
             for(let i = 0; i < numberOfNumbersToGenerate; i++){
                 const phone = new Phone({
                     number_type: faker.lorem.word(),
@@ -229,6 +231,24 @@ const seed = async () => {
                 state: faker.address.state(),
                 zip: faker.address.zipCode()
             })
+
+            // Get random sample of products
+
+            const numberOfProducts = faker.datatype.number({min: 2, max: 10})
+            const randomProducts = await Product.aggregate().sample(numberOfProducts).project("_id").exec()
+
+            const vendor = new Vendor({
+                name: faker.company.name() + " " + faker.company.companySuffix(),
+                slogan: faker.company.bs(),
+                description: faker.lorem.paragraph(),
+                joined_at: faker.date.between('2020-01-01', '2023-03-23'),
+                contact: contact,
+                address: address,
+                image_url: faker.image.nature(),
+                products: randomProducts,
+            })
+
+            await vendor.save()
         }
         
     }
