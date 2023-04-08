@@ -1327,3 +1327,958 @@ Timestamp: 2023-04-08T12:46:50.594Z
 Level: info
 Message: Request received for /products
 
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T15:46:04.992Z'
+}
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T16:28:52.076Z'
+}
+Timestamp: 2023-04-08T16:29:00.665Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:29:01.363Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:29:02.024Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:29:02.732Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:29:22.729Z
+Level: info
+Message: Request received for /products/64319596a8936a4d0d2e2a5e
+
+Timestamp: 2023-04-08T16:30:40.486Z
+Level: info
+Message: Request received for /products/64319596a8936a4d0d2e2a5e
+
+Timestamp: 2023-04-08T16:31:08.736Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T16:31:08.769Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T16:31:32.940Z
+Level: info
+Message: Request received for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:31:33.000Z
+Level: info
+Message: Successfully sent response for /customers/64319595a8936a4d0d2e29a8
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T16:32:31.059Z'
+}
+Timestamp: 2023-04-08T16:32:32.554Z
+Level: info
+Message: Request received for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:32:33.175Z
+Level: info
+Message: Successfully sent response for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:32:34.667Z
+Level: info
+Message: Request received for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:32:34.702Z
+Level: info
+Message: Successfully sent response for /customers/64319595a8936a4d0d2e29a8
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T16:41:01.467Z'
+}
+Timestamp: 2023-04-08T16:41:04.214Z
+Level: info
+Message: Request received for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:41:04.253Z
+Level: info
+Message: Successfully sent response for /customers/64319595a8936a4d0d2e29a8
+
+Timestamp: 2023-04-08T16:41:11.448Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T16:41:11.492Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T16:41:24.931Z
+Level: info
+Message: Request received for /customers/643198e4d8ac1db0ed145b9d
+
+Timestamp: 2023-04-08T16:41:25.007Z
+Level: info
+Message: Successfully sent response for /customers/643198e4d8ac1db0ed145b9d
+
+Timestamp: 2023-04-08T16:41:42.872Z
+Level: info
+Message: Request received for /customers/643198e5d8ac1db0ed145ba8
+
+Timestamp: 2023-04-08T16:41:42.940Z
+Level: info
+Message: Successfully sent response for /customers/643198e5d8ac1db0ed145ba8
+
+Timestamp: 2023-04-08T16:44:19.004Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:44:19.188Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:44:47.563Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:44:47.828Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:48:28.556Z
+Level: info
+Message: Request received for /products
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T16:51:12.986Z'
+}
+Timestamp: 2023-04-08T16:51:13.783Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:51:14.935Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T16:51:20.514Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T16:51:20.558Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T16:51:28.437Z
+Level: info
+Message: Request received for /customers/643198e4d8ac1db0ed145b9d
+
+Timestamp: 2023-04-08T16:51:28.503Z
+Level: info
+Message: Successfully sent response for /customers/643198e4d8ac1db0ed145b9d
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:01:33.223Z'
+}
+Timestamp: 2023-04-08T17:01:35.054Z
+Level: info
+Message: Request received for /customers/643198e4d8ac1db0ed145b9d
+
+Timestamp: 2023-04-08T17:01:35.085Z
+Level: info
+Message: Successfully sent response for /customers/643198e4d8ac1db0ed145b9d
+
+Timestamp: 2023-04-08T17:01:39.464Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:01:39.507Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T17:01:52.172Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:01:52.303Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:03:01.972Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:03:02.040Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:03:09.331Z'
+}
+Timestamp: 2023-04-08T17:03:12.721Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:03:12.773Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T17:03:24.027Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:03:24.083Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:03:43.560Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:03:43.701Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:06:24.349Z'
+}
+Timestamp: 2023-04-08T17:06:25.871Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:25.918Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:30.304Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:30.334Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:06:40.780Z'
+}
+Timestamp: 2023-04-08T17:06:41.814Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:41.866Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:44.313Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:44.373Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:49.616Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:49.644Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:06:52.796Z'
+}
+Timestamp: 2023-04-08T17:06:53.602Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:06:54.073Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:08:00.039Z'
+}
+Timestamp: 2023-04-08T17:08:01.171Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:08:01.220Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:08:25.624Z'
+}
+Timestamp: 2023-04-08T17:08:26.442Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:08:26.492Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:08:40.593Z'
+}
+Timestamp: 2023-04-08T17:08:41.298Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:08:41.591Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:09:12.656Z'
+}
+Timestamp: 2023-04-08T17:09:14.625Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:14.666Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:09:39.015Z'
+}
+Timestamp: 2023-04-08T17:09:39.964Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:40.029Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:41.392Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:41.428Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:42.601Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:09:42.635Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:12:35.598Z'
+}
+Timestamp: 2023-04-08T17:12:37.467Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:12:37.605Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:12:39.009Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:12:39.092Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:14:03.800Z'
+}
+Timestamp: 2023-04-08T17:14:04.764Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:14:04.827Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:15:06.254Z'
+}
+Timestamp: 2023-04-08T17:15:08.052Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:15:08.124Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:17:45.610Z'
+}
+Timestamp: 2023-04-08T17:17:46.980Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:17:47.047Z
+Level: info
+Message: Successfully sent response for /customers/64319d9fb3e4e9cb1d99aaf1
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:18:07.990Z'
+}
+Timestamp: 2023-04-08T17:18:08.765Z
+Level: info
+Message: Request received for /customers/64319d9fb3e4e9cb1d99aaf1
+
+Timestamp: 2023-04-08T17:18:08.815Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:50:06.421Z'
+}
+Timestamp: 2023-04-08T17:50:13.396Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:50:13.483Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:53:15.898Z'
+}
+Timestamp: 2023-04-08T17:53:16.850Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:53:17.084Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T17:53:18.329Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:53:18.384Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T17:53:30.631Z
+Level: info
+Message: Request received for /customers/6431a919d40e4c3b4add3376
+
+Timestamp: 2023-04-08T17:53:30.662Z
+Level: info
+Message: Successfully sent response for /customers/6431a919d40e4c3b4add3376
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:54:25.238Z'
+}
+Timestamp: 2023-04-08T17:54:28.605Z
+Level: info
+Message: Request received for /customers/6431a919d40e4c3b4add3376
+
+Timestamp: 2023-04-08T17:54:28.681Z
+Level: info
+Message: Successfully sent response for /customers/6431a919d40e4c3b4add3376
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T17:55:03.874Z'
+}
+Timestamp: 2023-04-08T17:55:06.916Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T17:55:06.986Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T19:46:06.603Z'
+}
+Timestamp: 2023-04-08T19:46:19.439Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T19:46:19.515Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T19:47:21.782Z'
+}
+Timestamp: 2023-04-08T19:47:23.137Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T19:47:23.189Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T19:47:31.412Z'
+}
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T19:47:38.155Z'
+}
+Timestamp: 2023-04-08T19:47:39.638Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T19:47:40.313Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T19:47:41.203Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T19:47:41.265Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T19:47:41.839Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T19:47:41.878Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:16:33.325Z'
+}
+Timestamp: 2023-04-08T21:16:49.057Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:16:49.169Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:17:58.729Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:17:58.902Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:18:04.567Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:18:04.713Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:18:48.322Z'
+}
+Timestamp: 2023-04-08T21:18:49.495Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:18:49.568Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:19:14.708Z'
+}
+Timestamp: 2023-04-08T21:19:15.741Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:19:16.896Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:19:18.754Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:19:18.799Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:19:36.308Z'
+}
+Timestamp: 2023-04-08T21:19:37.392Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:19:37.437Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:19:38.688Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:19:38.826Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:20:45.970Z'
+}
+Timestamp: 2023-04-08T21:20:48.368Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:20:48.435Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:21:13.237Z'
+}
+Timestamp: 2023-04-08T21:21:14.312Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:21:21.431Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:21:24.327Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:21:31.442Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:21:34.592Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:22:00.348Z'
+}
+Timestamp: 2023-04-08T21:22:01.753Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:22:01.824Z
+Level: info
+Message: Successfully sent response for /customers/6431d9a3e994f8b0bf9a88b3
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:22:33.565Z'
+}
+Timestamp: 2023-04-08T21:22:34.962Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:22:35.023Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:22:36.060Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:22:36.107Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:22:42.616Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:22:42.669Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:22:44.319Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:22:44.437Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:22:54.290Z'
+}
+Timestamp: 2023-04-08T21:22:55.478Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:22:55.545Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:23:24.255Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:23:24.626Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:28:53.700Z'
+}
+Timestamp: 2023-04-08T21:28:55.668Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:28:55.710Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:29:25.218Z'
+}
+Timestamp: 2023-04-08T21:29:25.707Z
+Level: info
+Message: Request received for /customers/6431d9a3e994f8b0bf9a88b3
+
+Timestamp: 2023-04-08T21:29:26.393Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:31:12.474Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:31:15.150Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:31:17.089Z
+Level: info
+Message: Request received for /products
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:34:13.452Z'
+}
+Timestamp: 2023-04-08T21:34:15.480Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:34:17.258Z
+Level: info
+Message: Request received for /products
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:34:28.761Z'
+}
+Timestamp: 2023-04-08T21:34:29.978Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:34:30.908Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:34:35.162Z
+Level: info
+Message: Request received for /products
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:38:16.888Z'
+}
+Timestamp: 2023-04-08T21:38:17.995Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:38:25.572Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:38:25.604Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:38:31.192Z
+Level: info
+Message: Request received for /customers/6431dec18a52b55ee688e359
+
+Timestamp: 2023-04-08T21:38:31.257Z
+Level: info
+Message: Successfully sent response for /customers/6431dec18a52b55ee688e359
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:40:54.387Z'
+}
+Timestamp: 2023-04-08T21:40:55.615Z
+Level: info
+Message: Request received for /customers/6431dec18a52b55ee688e359
+
+Timestamp: 2023-04-08T21:40:55.659Z
+Level: info
+Message: Successfully sent response for /customers/6431dec18a52b55ee688e359
+
+Timestamp: 2023-04-08T21:40:59.356Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:40:59.399Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:41:16.010Z
+Level: info
+Message: Request received for /customers/6431df627d62c185b660f180
+
+Timestamp: 2023-04-08T21:41:16.102Z
+Level: info
+Message: Successfully sent response for /customers/6431df627d62c185b660f180
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:42:41.988Z'
+}
+Timestamp: 2023-04-08T21:42:43.584Z
+Level: info
+Message: Request received for /customers/6431df627d62c185b660f180
+
+Timestamp: 2023-04-08T21:42:43.619Z
+Level: info
+Message: Successfully sent response for /customers/6431df627d62c185b660f180
+
+Timestamp: 2023-04-08T21:42:50.688Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T21:42:56.889Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:42:56.920Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:43:21.529Z'
+}
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:46:15.921Z'
+}
+Timestamp: 2023-04-08T21:46:19.091Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:46:29.107Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T21:46:32.625Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:46:42.633Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T21:47:42.209Z'
+}
+Timestamp: 2023-04-08T21:47:43.778Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T21:47:43.822Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T21:47:52.579Z
+Level: info
+Message: Request received for /customers/6431e0a4ffcfb86fa2ecbeec
+
+Timestamp: 2023-04-08T21:47:52.667Z
+Level: info
+Message: Successfully sent response for /customers/6431e0a4ffcfb86fa2ecbeec
+

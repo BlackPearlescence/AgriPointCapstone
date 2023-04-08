@@ -1,3 +1,5 @@
+import { getRandomItem } from "../seedfunctions.js"
+
 class Gardeny{
     constructor() {
         this.fruits = [
@@ -220,7 +222,223 @@ class Gardeny{
         ]
 
         this.peaLinks = [
-            
+            "https://i.imgur.com/GB52lap.jpg",
+            "https://i.imgur.com/3hDPi6P.jpg",
+            "https://i.imgur.com/41wHcMf.jpg",
+            "https://i.imgur.com/BsfuWCu.png",
+            "https://i.imgur.com/8KL8kAn.jpg",
+            "https://i.imgur.com/CVuGDeo.jpg",
+            "https://i.imgur.com/s8E2800.jpg",
+            "https://i.imgur.com/Cez9GAb.jpg",
+            "https://i.imgur.com/c4vPuig.jpg",
+            "https://i.imgur.com/6faUG4x.jpg",
+        ]
+
+        this.pearLinks = [
+            "https://i.imgur.com/5kuw4cJ.jpg",
+            "https://i.imgur.com/2d0nDmu.jpg",
+            "https://i.imgur.com/qdu6hWP.jpg",
+            "https://i.imgur.com/Byv2kiQ.jpg",
+            "https://i.imgur.com/TEMO03X.jpg",
+            "https://i.imgur.com/Ds3ClWT.jpg",
+            "https://i.imgur.com/QUYjTAV.jpg",
+            "https://i.imgur.com/4TKTpMO.jpg",
+            "https://i.imgur.com/LNULrfV.jpg",
+            "https://i.imgur.com/GdtWcYN.jpg",
+        ]
+
+        this.cabbageLinks = [
+            "https://i.imgur.com/NoxtrwR.jpg",
+            "https://i.imgur.com/6fmXrB8.jpg",
+            "https://i.imgur.com/1TWggzh.jpg",
+            "https://i.imgur.com/n25wpW0.jpg",
+            "https://i.imgur.com/g9nYL56.jpg",
+            "https://i.imgur.com/M2eJ2aQ.jpg",
+            "https://i.imgur.com/dbIZtL6.jpg",
+            "https://i.imgur.com/CedWWhk.jpg",
+            "https://i.imgur.com/VL8Xy5P.jpg",
+            "https://i.imgur.com/M6b51Qu.jpg",
+        ]
+
+        this.grapeLinks = [
+            "https://i.imgur.com/Bt38caa.jpg",
+            "https://i.imgur.com/YDJx1dI.jpg",
+            "https://i.imgur.com/8nzq0wc.jpg",
+            "https://i.imgur.com/Uc1oidx.jpg",
+            "https://i.imgur.com/4yEZjvg.jpg",
+            "https://i.imgur.com/vWTwIxd.jpg",
+            "https://i.imgur.com/VXq3mFz.jpg",
+            "https://i.imgur.com/AvFymLl.jpg",
+            "https://i.imgur.com/coYhPNj.jpg",
+            "https://i.imgur.com/MYwUt85.jpg",
+        ]
+
+        this.pomegranateLinks = [
+            "https://i.imgur.com/0wTLZvC.jpg",
+            "https://i.imgur.com/DYo1jlb.jpg",
+            "https://i.imgur.com/hvJZWwj.jpg",
+            "https://i.imgur.com/wAsZaf0.jpg",
+            "https://i.imgur.com/XV5LEgr.jpg",
+            "https://i.imgur.com/n7Bemwj.jpg",
+            "https://i.imgur.com/K4so7Z1.jpg",
+            "https://i.imgur.com/aMRa3V7.jpg",
+            "https://i.imgur.com/Xe617H4.jpg",
+            "https://i.imgur.com/9coTW0s.jpg",
+        ]
+
+        this.carrotLinks = [
+            "https://i.imgur.com/61Vytsk.jpg",
+            "https://i.imgur.com/jb3hOFR.jpg",
+            "https://i.imgur.com/FXyLK2Q.jpg",
+            "https://i.imgur.com/XDiOqDn.jpg",
+            "https://i.imgur.com/hs2ICmP.jpg",
+            "https://i.imgur.com/6mM95P3.jpg",
+            "https://i.imgur.com/Uj10gH3.jpg",
+            "https://i.imgur.com/JRWZRwr.jpg",
+            "https://i.imgur.com/7lmYJyP.jpg",
+            "https://i.imgur.com/mJ4evex.jpg",
+        ]
+
+        this.watermelonLinks = [
+            "https://i.imgur.com/og1GFJq.jpg",
+            "https://i.imgur.com/zrBDDYG.jpg",
+            "https://i.imgur.com/UVsJSq6.jpg",
+            "https://i.imgur.com/0VHJTv2.jpg",
+            "https://i.imgur.com/W0UCQ6u.jpg",
+            "https://i.imgur.com/exlHfFf.jpg",
+            "https://i.imgur.com/4L4wq6c.jpg",
+            "https://i.imgur.com/Ao4SUuZ.jpg",
+            "https://i.imgur.com/Y4JeZQp.jpg",
+            "https://i.imgur.com/Y38WLjl.jpg",
+        ]
+
+        this.potatoLinks = [
+            "https://i.imgur.com/oCCpZZv.jpg",
+            "https://i.imgur.com/Bt4FVY0.jpg",
+            "https://i.imgur.com/4XeB01s.jpg",
+            "https://i.imgur.com/4ObgmdJ.jpg",
+            "https://i.imgur.com/MZnSqgZ.jpg",
+            "https://i.imgur.com/8iGn9nX.jpg",
+            "https://i.imgur.com/w5EbRuk.jpg",
+            "https://i.imgur.com/kMuRt45.jpg",
+            "https://i.imgur.com/AJxoTTw.jpg",
+            "https://i.imgur.com/sGRJrGC.jpg",
+        ]
+
+        this.spinachLinks = [
+            "https://i.imgur.com/nzCmBoA.jpg",
+            "https://i.imgur.com/aCv1O7E.jpg",
+            "https://i.imgur.com/vVdIPKe.jpg",
+            "https://i.imgur.com/QBRs4cW.jpg",
+            "https://i.imgur.com/ePp6wRW.jpg",
+            "https://i.imgur.com/Jj7cc4D.jpg",
+            "https://i.imgur.com/gnrmtJU.jpg",
+            "https://i.imgur.com/yvqjHNv.jpg",
+            "https://i.imgur.com/n0oewu7.jpg",
+            "https://i.imgur.com/hHfxNaC.jpg",
+        ]
+
+        this.mangoLinks = [
+            "https://i.imgur.com/F8gc3vU.jpg",
+            "https://i.imgur.com/Yfx7KHN.jpg",
+            "https://i.imgur.com/RvqV4HF.png",
+            "https://i.imgur.com/2P8FMTu.jpg",
+            "https://i.imgur.com/eITl4Av.jpg",
+            "https://i.imgur.com/34Qe7PL.jpg",
+            "https://i.imgur.com/u7Rexa8.jpg",
+            "https://i.imgur.com/XD1Bz7I.jpg",
+            "https://i.imgur.com/1WQrTmA.jpg",
+            "https://i.imgur.com/ET9zJ9b.jpg",
+        ]
+
+        this.onionLinks = [
+            "https://i.imgur.com/PjACob7.jpg",
+            "https://i.imgur.com/nzpWSt7.jpg",
+            "https://i.imgur.com/vHnsMFS.jpg",
+            "https://i.imgur.com/MncSplH.jpg",
+            "https://i.imgur.com/a2tw3qv.jpg",
+            "https://i.imgur.com/d4JXJ2r.jpg",
+            "https://i.imgur.com/1zpFS6b.jpg",
+            "https://i.imgur.com/6NN7R0g.jpg",
+            "https://i.imgur.com/QA6z4TE.jpg",
+            "https://i.imgur.com/D5IPSCJ.jpg",
+        ]
+
+        this.lettuceLinks = [
+            "https://i.imgur.com/JJicSPm.jpg",
+            "https://i.imgur.com/JY8OCA4.jpg",
+            "https://i.imgur.com/5p9Q2Zi.jpg",
+            "https://i.imgur.com/OSkCvLz.jpg",
+            "https://i.imgur.com/UQtTrtO.jpg",
+            "https://i.imgur.com/Q7L8W4M.jpg",
+            "https://i.imgur.com/MF2J7e5.jpg",
+            "https://i.imgur.com/FKfPEKL.jpg",
+            "https://i.imgur.com/q5EPAiV.jpg",
+            "https://i.imgur.com/CCAixI8.jpg",
+        ]
+
+        this.pineappleLinks = [
+            "https://i.imgur.com/aKxYU9C.jpg",
+            "https://i.imgur.com/bg6PeFK.jpg",
+            "https://i.imgur.com/2y0lUsW.jpg",
+            "https://i.imgur.com/16IpxIe.jpg",
+            "https://i.imgur.com/47DWnuy.jpg",
+            "https://i.imgur.com/T8SoknO.jpg",
+            "https://i.imgur.com/yzi6LBP.jpg",
+            "https://i.imgur.com/syYhPSR.jpg",
+            "https://i.imgur.com/KQfRpcv.jpg",
+            "https://i.imgur.com/Aa7uMuq.jpg",
+        ]
+
+        this.cornLinks = [
+            "https://i.imgur.com/C5uz801.jpg",
+            "https://i.imgur.com/rfpgfLb.jpg",
+            "https://i.imgur.com/FtFpooY.jpg",
+            "https://i.imgur.com/soMhqJ4.jpg",
+            "https://i.imgur.com/3TrqEAO.jpg",
+            "https://i.imgur.com/FTBGfsX.jpg",
+            "https://i.imgur.com/oom40GJ.jpg",
+            "https://i.imgur.com/rqmlyU1.jpg",
+            "https://i.imgur.com/GgDuYte.jpg",
+            "https://i.imgur.com/7x8mN2h.jpg",
+
+        ]
+
+        this.cheeseLinks = [
+            "https://i.imgur.com/Tg6vuou.jpg",
+            "https://i.imgur.com/4LIIWUx.jpg",
+            "https://i.imgur.com/RHs7PCK.jpg",
+            "https://i.imgur.com/UgijZCQ.jpg",
+            "https://i.imgur.com/tQpFlf5.jpg",
+            "https://i.imgur.com/qgvZL3Q.jpg",
+            "https://i.imgur.com/VkacEsV.jpg",
+            "https://i.imgur.com/11dYsZr.jpg",
+            "https://i.imgur.com/d1glHJD.jpg",
+            "https://i.imgur.com/Ja8YloV.jpg",
+            "https://i.imgur.com/QXE0j80.jpg",
+            "https://i.imgur.com/1uYKWJX.jpg",
+            "https://i.imgur.com/iGc33h3.jpg",
+        ]
+
+        this.milkLinks = [
+            "https://i.imgur.com/0JIayhl.jpg",
+            "https://i.imgur.com/YCa0n2I.jpg",
+            "https://i.imgur.com/PvNsXm2.jpg",
+            "https://i.imgur.com/eeEM5BM.jpg",
+            "https://i.imgur.com/IUG8zAo.jpg",
+            "https://i.imgur.com/YyS4ngd.jpg",
+            "https://i.imgur.com/2WvlAjE.jpg",
+            "https://i.imgur.com/XYg1bvF.jpg",
+            "https://i.imgur.com/UiU7vEy.jpg",
+            "https://i.imgur.com/xa85ogT.jpg",
+            "https://i.imgur.com/ggxqzSa.jpg",
+            "https://i.imgur.com/hPLfUpm.jpg",
+            "https://i.imgur.com/63ezTRY.jpg",
+            "https://i.imgur.com/NNHG5an.jpg",
+            "https://i.imgur.com/oODQYGU.jpg",
+            "https://i.imgur.com/bac3reN.jpg",
+            "https://i.imgur.com/VKpNZ23.jpg",
+            "https://i.imgur.com/BcwniqH.jpg",
         ]
 
         this.eggs = [
@@ -256,5 +474,14 @@ class Gardeny{
             "Cortland",
             "Braeburn",
         ]
+
+        // These are the quantites that small products
+        this.smallProductStocks = [
+            {
+                size_name: ""
+            }
+        ]
     }
+
+    getAppleLink() { return getRandomItem(this.appleLinks()) }
 }
