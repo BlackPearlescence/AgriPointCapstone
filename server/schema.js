@@ -316,7 +316,12 @@ const productSchema = new Schema({
     carts: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Customer"
-    }]
+    }],
+
+    vendor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Vendor"
+    }
 })
 
 // productSchema.virtual('cartItems', {
