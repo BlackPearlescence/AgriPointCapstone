@@ -87,6 +87,7 @@ const seed = async () => {
             state: faker.address.state(),
             zip: faker.address.zipCode()
         })
+
         
         const customer = new Customer({
             first_name: faker.name.firstName(),
@@ -183,6 +184,21 @@ const seed = async () => {
         })
 
         await product.save()
+
+        // Add items to the carts of a random customer
+        const randomCustomer = await Customer.findOne({})
+        for(let i = 0; i < 10; i++){
+            const randomProduct = await Product.aggregate().sample(1)
+            const newCartItem = new Cart({
+                product: randomProduct._id,
+                customer: randomCustomer._id,
+                quantity: faker.datatype.number({ min: 2, max: 10})
+            })
+            const cart = await Cart.create(newCartItem)
+            randomCustomer.cart = cart._id;
+        }
+        await randomCustomer.save()
+        
 
         // Create a random number of reviews and assign them to random products.
         const numberOfReviews = faker.datatype.number({ min: 0, max: 40 })

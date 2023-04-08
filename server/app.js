@@ -3,6 +3,8 @@ const { Customer, Testimonial } = require("./schema.js")
 const mongoose = require("mongoose");
 const morgan = require("morgan")
 const { handleInternalServerError } = require("./errorhandling/errors.js");
+const productRouter = require("./routers/productRouter.js")
+const customerRouter = require("./routers/customerRouter.js")
 require("dotenv").config()
 
 const { MONGO_CONNECTION_STRING } = process.env
@@ -15,26 +17,13 @@ mongoose.connect(MONGO_CONNECTION_STRING,{
     useUnifiedTopology: true,
 })
 
-// Get all customers
-app.get("/customers", async (req, res) => {
-    try {
-        const customers = await Customer.find({}).exec()
-        res.status(200).json(customers)
-    } catch (err) {
-        res.status(404).json({"error":"No customers."})
-    }
+app.get("/", async (req, res) => {
+    res.status(200).send("Welcome to the AgriPoint REST API!")
 })
 
-// Get customer by id
-app.get("/customers/:id", async (req,res) => {
-    const customerId = req.params.id;
-    try {
-        const customer = await Customer.findById(customerId)
-        res.status(200).json(customer)
-    } catch(err) {
-        res.status(404).json({"error":"No such customer."})
-    }
-})
+// Routers
+app.use("/products", productRouter);
+app.use("/customers", customerRouter);
 
 
 // Get all testimonials
@@ -70,7 +59,7 @@ process.on("SIGINT", () => {
 
 // Final Error Handling Middleware
 app.use((err, req, res, next) => {
-    handleInternalServerError(err);
+    handleInternalServerError(err, req, res, next);
     res.status(err.statusCode).json({"error": {
         "code": err.statusCode,
         "name": err.name,

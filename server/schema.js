@@ -175,6 +175,8 @@ const customerSchema = new Schema({
     }
 });
 
+
+
 const shopppingListSchema = new Schema({
     title: {
         type: String,
@@ -268,6 +270,14 @@ const productSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "ProductReview"
     }],
+})
+
+productSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "tags reviews", options: { _recursed: true } });
+    next();
 })
 
 const tagSchema = new Schema ({

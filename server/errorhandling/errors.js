@@ -4,16 +4,34 @@ const { StatusCodes } = require("http-status-codes")
 // 404s
 const handleProductNotFoundError = (req, res, next) => {
     const err = new Error("Product not found");
-    err.name = "ProductNotFoundError"
+    err.name = "ProductNotFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
-    next(err)
+    err.stack = new Error().stack;
+    next(err);
 }
 
 const handleNoProductsFoundError = (req, res, next) => {
     const err = new Error("Products not found");
+    err.name = "NoProductsFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
-    err.stack = new Error().stack()
-    next(err)
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleCustomerNotFoundError = (req, res, next) => {
+    const err = new Error("Customer not found");
+    err.name = "CustomerNotFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleNoCustomersFoundError = (req, res, next) => {
+    const err = new Error("Customers not found");
+    err.name = "NoCustomersFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
 }
 
 
@@ -26,5 +44,9 @@ const handleInternalServerError = (err, req, res, next) => {
 }
 
 module.exports = {
-    handleInternalServerError
+    handleInternalServerError,
+    handleProductNotFoundError,
+    handleNoProductsFoundError,
+    handleCustomerNotFoundError,
+    handleNoCustomersFoundError,
 }
