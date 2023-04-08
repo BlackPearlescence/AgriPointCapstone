@@ -99,7 +99,7 @@ const stockSchema = new Schema({
         type: String,
         required: true,
     },
-    size_quantity: {
+    size_item_count: {
         type: Number,
         required: true,
     },
@@ -272,7 +272,7 @@ const customerSchema = new Schema({
 
     stock: [{
         type: stockSchema,
-        required: true
+        required: true,
     }],
 
     // tags: [{

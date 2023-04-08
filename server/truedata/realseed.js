@@ -1,5 +1,7 @@
+import { faker } from "@faker-js/faker";
 import { getRandomItem } from "../seedfunctions.js"
 
+// Gardeny is a class that contains all the data needed to seed the database
 class Gardeny{
     constructor() {
         this.fruits = [
@@ -475,13 +477,53 @@ class Gardeny{
             "Braeburn",
         ]
 
-        // These are the quantites that small products
+        // These are the quantites that small products such as apples, bottles of milk, eggs etc. will be sold in.
         this.smallProductStocks = [
             {
-                size_name: ""
-            }
+                size_name: "Half Dozen",
+                size_item_count: 6,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+            {
+                size_name: "Dozen",
+                size_item_count: 12,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+            {
+                size_name: "Two Dozen",
+                size_item_count: 24,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+            {
+                size_name: "Three Dozen",
+                size_item_count: 36,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
         ]
+
+        // These are the quantites that large products such as watermelons, pumpkins, etc. will be sold in.
+        this.largeProductStocks = [
+            {
+                size_name: "Small Crate",
+                size_item_count: 2,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+            {
+                size_name: "Medium Crate",
+                size_item_count: 4,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+            {
+                size_name: "Large Crate",
+                size_item_count: 6,
+                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+            },
+        ]
+
     }
 
     getAppleLink() { return getRandomItem(this.appleLinks()) }
+    getWatermelonLink() { return getRandomItem(this.watermelonLinks()) }
+    getCheeseLink() { return getRandomItem(this.cheeseLinks()) }
+    getMilkLink() { return getRandomItem(this.milkLinks()) }
 }

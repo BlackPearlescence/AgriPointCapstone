@@ -78,7 +78,7 @@ const createProductStocks = async (num) => {
     for (let i = 0; i < num; i++) {
         const stock = new Stock({
             size_name: faker.commerce.productAdjective(),
-            size_quantity: faker.datatype.number(),
+            size_item_count: faker.datatype.number(),
             size_stock: faker.datatype.number(),
         })
         stocks.push(stock)
@@ -88,7 +88,7 @@ const createProductStocks = async (num) => {
 
 const createProducts = async (num) => {
     const products = [];
-    const stocks = await createProductStocks(num);
+    const stocks = await createProductStocks(4);
     for (let i = 0; i < num; i++) {
         const product = new Product({
             name: faker.commerce.productName(),
@@ -96,7 +96,7 @@ const createProducts = async (num) => {
             description: faker.commerce.productDescription(),
             price: faker.commerce.price(),
             image_url: faker.image.imageUrl(),
-            carts: [],
+            stock: stocks,
         })
         products.push(product)
     }
