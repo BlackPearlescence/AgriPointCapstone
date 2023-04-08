@@ -4,8 +4,21 @@ import FilterSidebar from "../components/filter/FilterSidebar";
 import ProductContainer from "../components/products/ProductContainer";
 import styles from "./ProductsPage.module.scss";
 import ProductCard from "../components/generalcards/ProductCard";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const ProductsPage = () => {
+
+    const [ products, setProducts ] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios.get("/products")
+            console.log(result.data)
+            setProducts(result.data)
+        }
+        fetchData();
+    }, [])
 
     return (
         <div className={styles.productsPageWrapper}>
@@ -39,39 +52,7 @@ const ProductsPage = () => {
                 </FilterAccordion>
             </FilterSidebar>
             <ProductContainer>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {products ? products.map(product => <ProductCard key={product._id} product={product}/>) : null}
             </ProductContainer>
         </div>
     )
