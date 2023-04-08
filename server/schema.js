@@ -241,6 +241,10 @@ const vendorSchema = new Schema({
         type: String,
         required: true,
     },
+    specialities: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Specialty"
+    }],
     
     joined_at: {
         type: Date,
@@ -281,6 +285,17 @@ vendorSchema.pre("find", async (next) => {
     next()
 })
 
+const specialitySchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    vendor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Vendor"
+    }
+})
+
 const productSchema = new Schema({
     name: {
         type: String,
@@ -290,8 +305,12 @@ const productSchema = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+        required: true,
+    },
     price: {
-        type: Decimal128,
+        type: Number,
         required: true
     },
     stock: [{

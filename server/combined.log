@@ -1282,3 +1282,48 @@ Timestamp: 2023-04-08T11:50:13.576Z
 Level: info
 Message: Request received for /products
 
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T12:43:03.620Z'
+}
+Timestamp: 2023-04-08T12:43:09.728Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:43:09.973Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:43:12.148Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:43:12.592Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:44:05.925Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:44:06.041Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:46:16.443Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:46:16.584Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:46:50.497Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-08T12:46:50.594Z
+Level: info
+Message: Request received for /products
+
