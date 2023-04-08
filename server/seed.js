@@ -68,6 +68,8 @@ const seed = async () => {
     await Product.deleteMany({})
 
 
+
+
     // Create a customer and a testimonial to go along with it
     for(let i = 0; i < 10; i++){
         const phoneNumbers = []
@@ -191,18 +193,28 @@ const seed = async () => {
         const randomCustomer = await Customer.findOne({})
         for(let i = 0; i < 10; i++){
             const randomProduct = await Product.findOne({})
-            randomProduct.carts.push(randomCustomer._id)
-            const newCartItem = new Cart({
-                product: randomProduct._id,
-                // customer: randomCustomer._id,
-                quantity: faker.datatype.number({ min: 2, max: 10})
-            })
-            // await Customer.updateOne(
-            //     {_id: randomCustomer._id},
-            //     { $push: {cart: newCartItem}}
-            // )
-            const cart = await Cart.create(newCartItem)
-            randomCustomer.cart.push(newCartItem)
+            if(!randomProduct.carts.some(c => c._id.equals(randomCustomer._id))){
+                randomProduct.carts.push(randomCustomer._id)
+                randomProduct.save()
+            }
+            const cartItem = randomCustomer.cart.find(item => item.product.equals(randomProduct._id));
+            if(cartItem){
+                randomCustomer.$inc("cartItem.quantity",1)
+                await randomCustomer.save()
+                console.log(randomCustomer)
+
+            } else {
+                const newCartItem = new Cart({
+                    product: randomProduct._id,
+                    quantity: faker.datatype.number({ min: 2, max: 10})
+                })
+                // await Customer.updateOne(
+                //     {_id: randomCustomer._id},
+                //     { $push: {cart: newCartItem}}
+                // )
+                randomCustomer.cart.push(newCartItem)
+            }
+            
         }
         await randomCustomer.save()
         

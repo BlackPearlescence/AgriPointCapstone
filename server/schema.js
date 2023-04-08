@@ -195,13 +195,13 @@ const customerSchema = new Schema({
     }]
 });
 
-customerSchema.pre("findById",  function(next){
-    if(this.options._recursed) {
-        return next();
-    }
-    this.populate("cart.product").exec()
-    next()
-})
+// customerSchema.pre("findById",  function(next){
+//     if(this.options._recursed) {
+//         return next();
+//     }
+//     this.populate({path: "cart.product", select: "name price", options: {_recursed: true}}).exec()
+//     next()
+// })
 
 const shopppingListSchema = new Schema({
     title: {
@@ -315,15 +315,21 @@ const productSchema = new Schema({
 
     carts: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Cart"
+        ref: "Customer"
     }]
 })
 
-// productSchema.pre("find", async (next) => {
+// productSchema.virtual('cartItems', {
+//     ref: 'Customer',
+//     localField: '_id',
+//     foreignField: 'cart.product'
+// });
+
+// productSchema.pre("findById", async (next) => {
 //     if(this.options._recursed) {
 //         return next()
 //     }
-//     this.populate({ path: "tags reviews", options: { _recursed: true } });
+//     this.populate({ path: "cart", options: { _recursed: true }});
 //     next();
 // })
 

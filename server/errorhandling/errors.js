@@ -1,33 +1,34 @@
-const { StatusCodes } = require("http-status-codes")
+const { StatusCodes } = require("http-status-codes");
+const { consoleLogger } = require("./logger");
 
 
 // 404s
-const handleProductNotFoundError = (req, res, next) => {
-    const err = new Error("Product not found");
+const handleProductNotFoundError = (err, req, res, next) => {
+    err.message = "Product not found"
     err.name = "ProductNotFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
     err.stack = new Error().stack;
     next(err);
 }
 
-const handleNoProductsFoundError = (req, res, next) => {
-    const err = new Error("Products not found");
+const handleNoProductsFoundError = (err, req, res, next) => {
+    err.message = "No products found"
     err.name = "NoProductsFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
     err.stack = new Error().stack;
     next(err);
 }
 
-const handleCustomerNotFoundError = (req, res, next) => {
-    const err = new Error("Customer not found");
+const handleCustomerNotFoundError = (err, req, res, next) => {
+    err.message = "Customer not found"
     err.name = "CustomerNotFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
     err.stack = new Error().stack;
     next(err);
 }
 
-const handleNoCustomersFoundError = (req, res, next) => {
-    const err = new Error("Customers not found");
+const handleNoCustomersFoundError = (err, req, res, next) => {
+    err.message = "No customers fround"
     err.name = "NoCustomersFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
     err.stack = new Error().stack;
@@ -38,8 +39,8 @@ const handleNoCustomersFoundError = (req, res, next) => {
 
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
-    const statusCode = err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;
-    const message = err.message || "Internal Server Error"
+    err.statusCode = err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;
+    err.message = err.message || "Internal Server Error"
     next(err)
 }
 
