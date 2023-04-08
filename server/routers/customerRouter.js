@@ -1,6 +1,6 @@
 const express = require("express");
 const logger = require("../errorhandling/logger");
-const { Customer } = require("../schema.js");
+const { Customer, Cart, Product } = require("../schema.js");
 const mongoose = require("mongoose");
 const router = express.Router();
 const { handleCustomerNotFoundError, handleNoCustomersFoundError } = require("../errorhandling/errors.js");
@@ -12,7 +12,7 @@ const { StatusCodes } = require("http-status-codes");
 router.get("/", async (req, res, next) => {
     try {
         logger.info("Request received for /customers")
-        const customers = await Customer.find({}).exec();
+        const customers = await Customer.find({});
         res.status(StatusCodes.OK).json(customers);
         logger.info(customers);
     } catch (err) {
@@ -26,15 +26,7 @@ router.get("/:id", async (req, res, next) => {
     const { id } = req.params;
     try {
         logger.info(`Request received for /customers/${id}`);
-        const customerById = await Customer.findById(id)
-                                    .populate("shopping_lists")
-                                    .populate({
-                                        path: "cart",
-                                        populate: {
-                                            path: "product"
-                                        }
-                                    })
-                                    .exec()
+        const customerById = await Customer.findById(id).populate("cart.product").exec()
         res.status(StatusCodes.OK).json(customerById);
         logger.info(customerById);
     } catch (err) {

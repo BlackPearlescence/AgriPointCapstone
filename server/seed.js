@@ -64,10 +64,12 @@ const seed = async () => {
     await BlogPost.deleteMany({})
     // Delete Stocks
     await Stock.deleteMany({})
+    // Delete Products
+    await Product.deleteMany({})
 
 
     // Create a customer and a testimonial to go along with it
-    for(let i = 0; i < 50; i++){
+    for(let i = 0; i < 10; i++){
         const phoneNumbers = []
         const phone = new Phone({
             number_type: faker.lorem.word(),
@@ -132,7 +134,7 @@ const seed = async () => {
     }
 
     // Generate Tags
-    for(let i = 0; i < 50; i++){
+    for(let i = 0; i < 20; i++){
         const tag = new Tag({
             name: faker.lorem.word()
         })
@@ -142,7 +144,7 @@ const seed = async () => {
     // Get the list of Tags
     const tags =  await Tag.find({});
 
-    for(let i = 0; i < 50; i++) {
+    for(let i = 0; i < 10; i++) {
         // Generate product stocks with their associated sizes
         const sizeNumber = faker.datatype.number({ min: 1, max: 5})
         const stocks = []
@@ -159,7 +161,7 @@ const seed = async () => {
 
         // Collect a random number of tags for the product 
         // and make an empty array for the tags to assign
-        const numberOfTagsToAssign = faker.datatype.number({ min: 1, max: 20 })
+        const numberOfTagsToAssign = faker.datatype.number({ min: 1, max: 5 })
         const tagsToAssign = []
         
         // Copy the list of tags
@@ -188,14 +190,19 @@ const seed = async () => {
         // Add items to the carts of a random customer
         const randomCustomer = await Customer.findOne({})
         for(let i = 0; i < 10; i++){
-            const randomProduct = await Product.aggregate().sample(1)
+            const randomProduct = await Product.findOne({})
+            randomProduct.carts.push(randomCustomer._id)
             const newCartItem = new Cart({
                 product: randomProduct._id,
-                customer: randomCustomer._id,
+                // customer: randomCustomer._id,
                 quantity: faker.datatype.number({ min: 2, max: 10})
             })
+            // await Customer.updateOne(
+            //     {_id: randomCustomer._id},
+            //     { $push: {cart: newCartItem}}
+            // )
             const cart = await Cart.create(newCartItem)
-            randomCustomer.cart = cart._id;
+            randomCustomer.cart.push(newCartItem)
         }
         await randomCustomer.save()
         
@@ -224,7 +231,7 @@ const seed = async () => {
         }
 
         // Generate Vendors
-        for(let i = 0; i < 30; i++){
+        for(let i = 0; i < 5; i++){
             const numberOfNumbersToGenerate = faker.datatype.number({ min: 1, max:3 })
             const phoneNumbers = []
             for(let i = 0; i < numberOfNumbersToGenerate; i++){

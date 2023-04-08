@@ -109,6 +109,17 @@ const stockSchema = new Schema({
     }
 })
 
+const cartSchema = new Schema ({
+    product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product"
+    },
+    quantity: {
+        type: Number,
+        required: true,
+    },
+})
+
 
 // Main Schemas
 
@@ -130,6 +141,14 @@ const testimonialSchema = new Schema({
         ref: "Customer"
     }
 });
+
+testimonialSchema.pre("find", async (next) => {
+    if (this.options._recursed){
+        return next()
+    }
+    this.populate({ path: "customer", options: {_recursed: true } });
+    next();
+})
 
 
 const customerSchema = new Schema({
@@ -169,13 +188,20 @@ const customerSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "ShoppingList"
     }],
-    cart : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Cart"
-    }
+    cart : [{
+        type: cartSchema,
+        required: true,
+        default: []
+    }]
 });
 
-
+customerSchema.pre("findById",  function(next){
+    if(this.options._recursed) {
+        return next();
+    }
+    this.populate("cart.product").exec()
+    next()
+})
 
 const shopppingListSchema = new Schema({
     title: {
@@ -190,6 +216,14 @@ const shopppingListSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Customer"
     }
+})
+
+shopppingListSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populates({ path: "items customer", options: {_recursed: true} })
+    next()
 })
 
 
@@ -239,6 +273,14 @@ const vendorSchema = new Schema({
     }],
 })
 
+vendorSchema.pre("find", async (next) => {
+    if(this.options._recursed){
+        return next()
+    }
+    this.populates({ path: "products reviews blog_posts", options: {_recursed: true}})
+    next()
+})
+
 const productSchema = new Schema({
     name: {
         type: String,
@@ -270,15 +312,20 @@ const productSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "ProductReview"
     }],
+
+    carts: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Cart"
+    }]
 })
 
-productSchema.pre("find", async (next) => {
-    if(this.options._recursed) {
-        return next()
-    }
-    this.populate({ path: "tags reviews", options: { _recursed: true } });
-    next();
-})
+// productSchema.pre("find", async (next) => {
+//     if(this.options._recursed) {
+//         return next()
+//     }
+//     this.populate({ path: "tags reviews", options: { _recursed: true } });
+//     next();
+// })
 
 const tagSchema = new Schema ({
     name: {
@@ -287,20 +334,15 @@ const tagSchema = new Schema ({
     }
 })
 
-const cartSchema = new Schema ({
-    product: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    },
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Customer"
-    },
-    quantity: {
-        type: Number,
-        required: true,
-    },
-})
+
+
+// cartSchema.pre("find", async (next) => {
+//     if(this.options._recursed) {
+//         return next()
+//     }
+//     this.populate({ path: "product customer", options: {__recursed: true}})
+//     next()
+// })
 
 const orderSchema = new Schema ({
     products: [{
@@ -319,6 +361,14 @@ const orderSchema = new Schema ({
         type: String,
         required: true,
     }
+})
+
+orderSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "products customer", options: {__recursed: true}})
+    next()
 })
 
 const transactionSchema = new Schema ({
@@ -364,6 +414,14 @@ const transactionSchema = new Schema ({
     }
 })
 
+transactionSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "order products customer", options: {__recursed: true}})
+    next()
+})
+
 const productReviewSchema = new Schema({
     customer: {
         type: mongoose.Schema.Types.ObjectId,
@@ -391,6 +449,14 @@ const productReviewSchema = new Schema({
     },
 })
 
+productReviewSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "product customer", options: {__recursed: true}})
+    next()
+})
+
 const vendorReviewSchema = new Schema({
     customer: {
         type: mongoose.Schema.Types.ObjectId,
@@ -412,6 +478,14 @@ const vendorReviewSchema = new Schema({
         type: String,
         required: true,
     },
+})
+
+vendorReviewSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "vendor customer", options: {__recursed: true}})
+    next()
 })
 
 const rewardsProgramSchema = new Schema({
@@ -466,6 +540,14 @@ const rewardsTransactionSchema = new Schema({
         type: String,
         required: false,
     }
+})
+
+rewardsTransactionSchema.pre("find", async (next) => {
+    if(this.options._recursed) {
+        return next()
+    }
+    this.populate({ path: "products customer order", options: {__recursed: true}})
+    next()
 })
 
 const blogPostSchema = new Schema({
