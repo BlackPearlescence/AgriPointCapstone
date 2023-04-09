@@ -28,13 +28,52 @@ const handleCustomerNotFoundError = (err, req, res, next) => {
 }
 
 const handleNoCustomersFoundError = (err, req, res, next) => {
-    err.message = "No customers fround"
+    err.message = "No customers found"
     err.name = "NoCustomersFoundError";
     err.statusCode = StatusCodes.NOT_FOUND;
     err.stack = new Error().stack;
     next(err);
 }
 
+const handleVendorNotFoundError = (err, req, res, next) => {
+    err.message = "Vendor not found"
+    err.name = "VendorNotFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleNoVendorsFoundError = (err, req, res, next) => {
+    err.message = "No vendors found"
+    err.name = "NoVendorsFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleCustomerHasNoReviewsError = (err, req, res, next) => {
+    err.message = "Customer has no reviews"
+    err.name = "CustomerHasNoReviewsError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleCustomerHasNoVendorReviewsError = (err, req, res, next) => {
+    err.message = "Customer has no vendor reviews"
+    err.name = "CustomerHasNoVendorReviewsError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleCustomerHasNoProductReviewsError = (err, req, res, next) => {
+    err.message = "Customer has no product reviews"
+    err.name = "CustomerHasNoProductReviewsError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
 
 
 // Final Error Handling Function for final middleware
@@ -50,4 +89,9 @@ module.exports = {
     handleNoProductsFoundError,
     handleCustomerNotFoundError,
     handleNoCustomersFoundError,
+    handleVendorNotFoundError,
+    handleNoVendorsFoundError,
+    handleCustomerHasNoReviewsError,
+    handleCustomerHasNoVendorReviewsError,
+    handleCustomerHasNoProductReviewsError
 }

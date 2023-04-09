@@ -2340,3 +2340,1023 @@ Timestamp: 2023-04-08T22:12:40.439Z
 Level: info
 Message: Successfully sent response for /customers/6431e6c97c89acb810f3b79b
 
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:36:36.779Z'
+}
+Timestamp: 2023-04-08T22:36:50.930Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:36:50.933Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:37:29.868Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:37:29.881Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:39:04.663Z'
+}
+Timestamp: 2023-04-08T22:39:07.374Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:39:07.378Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:39:10.583Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:39:10.585Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:39:58.269Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:39:58.271Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:40:16.949Z'
+}
+Timestamp: 2023-04-08T22:40:17.958Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:40:17.964Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:40:37.317Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:40:37.327Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:41:00.623Z'
+}
+Timestamp: 2023-04-08T22:41:04.308Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:41:04.311Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:41:06.919Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:41:06.920Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-08T22:41:14.009Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:41:14.013Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:41:40.695Z'
+}
+Timestamp: 2023-04-08T22:41:41.643Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:41:41.646Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:42:20.642Z'
+}
+Timestamp: 2023-04-08T22:42:22.679Z
+Level: info
+Message: Request received for /vendors
+
+Timestamp: 2023-04-08T22:42:22.687Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:43:13.520Z'
+}
+Timestamp: 2023-04-08T22:43:14.440Z
+Level: info
+Message: Request received for /vendors
+
+{
+  message: [
+    {
+      _id: new ObjectId("6431ec65870fc9ee67980006"),
+      name: 'Mraz - Gorczany',
+      slogan: 'Monitored responsive project',
+      description: 'evolve user-centric vortals',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431ec65870fc9ee67980028"),
+        new ObjectId("6431ec65870fc9ee6798001e"),
+        new ObjectId("6431ec65870fc9ee6798003c"),
+        new ObjectId("6431ec65870fc9ee6798002d"),
+        new ObjectId("6431ec65870fc9ee6798000f"),
+        new ObjectId("6431ec65870fc9ee67980023"),
+        new ObjectId("6431ec65870fc9ee67980019"),
+        new ObjectId("6431ec65870fc9ee67980032")
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431ec65870fc9ee67980007"),
+      name: 'Howell, Schmitt and Olson',
+      slogan: 'Operative modular flexibility',
+      description: 'transform end-to-end markets',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431ec65870fc9ee67980037"),
+        new ObjectId("6431ec65870fc9ee67980014")
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431ec65870fc9ee67980008"),
+      name: 'Wilderman - Kerluke',
+      slogan: 'Fully-configurable neutral concept',
+      description: 'embrace global metrics',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431ec65870fc9ee67980009"),
+      name: 'Littel - Morar',
+      slogan: 'Reverse-engineered next generation flexibility',
+      description: 'aggregate cross-media content',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431ec65870fc9ee6798000a"),
+      name: 'Mitchell and Sons',
+      slogan: 'Advanced global system engine',
+      description: 'empower end-to-end niches',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-08T22:43:14.789Z'
+}
+Timestamp: 2023-04-08T22:43:14.805Z
+Level: info
+Message: Successfully sent response for /vendors
+
+Timestamp: 2023-04-08T22:43:24.165Z
+Level: info
+Message: Request received for /vendors/6431ec65870fc9ee67980006
+
+Timestamp: 2023-04-08T22:43:24.210Z
+Level: info
+Message: Successfully sent response for /vendors/6431ec65870fc9ee67980006
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:43:52.670Z'
+}
+Timestamp: 2023-04-08T22:43:53.670Z
+Level: info
+Message: Request received for /vendors/6431ec65870fc9ee67980006
+
+Timestamp: 2023-04-08T22:43:54.008Z
+Level: info
+Message: Successfully sent response for /vendors/6431ec65870fc9ee67980006
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:54:57.061Z'
+}
+Timestamp: 2023-04-08T22:55:02.282Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T22:55:02.450Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T22:56:27.528Z
+Level: info
+Message: Request received for /customers/6431f0bccb44a779cd08a186
+
+Timestamp: 2023-04-08T22:56:27.681Z
+Level: info
+Message: Successfully sent response for /customers/6431f0bccb44a779cd08a186
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T22:57:50.321Z'
+}
+Timestamp: 2023-04-08T22:57:51.898Z
+Level: info
+Message: Request received for /customers/6431f0bccb44a779cd08a186
+
+Timestamp: 2023-04-08T22:57:51.934Z
+Level: info
+Message: Successfully sent response for /customers/6431f0bccb44a779cd08a186
+
+Timestamp: 2023-04-08T22:57:52.841Z
+Level: info
+Message: Request received for /customers/6431f0bccb44a779cd08a186
+
+Timestamp: 2023-04-08T22:57:52.878Z
+Level: info
+Message: Successfully sent response for /customers/6431f0bccb44a779cd08a186
+
+Timestamp: 2023-04-08T22:57:56.081Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T22:57:56.130Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T22:59:42.140Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T22:59:42.207Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T23:00:11.976Z
+Level: info
+Message: Request received for /customers/6431f16b0c3c03537eed6cb5
+
+Timestamp: 2023-04-08T23:00:12.120Z
+Level: info
+Message: Successfully sent response for /customers/6431f16b0c3c03537eed6cb5
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T23:03:59.484Z'
+}
+Timestamp: 2023-04-08T23:04:00.485Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T23:04:00.536Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T23:04:07.417Z
+Level: info
+Message: Request received for /customers/6431f2d38d90824bd6e9c9ab
+
+Timestamp: 2023-04-08T23:04:07.463Z
+Level: info
+Message: Successfully sent response for /customers/6431f2d38d90824bd6e9c9ab
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T23:04:32.060Z'
+}
+Timestamp: 2023-04-08T23:04:32.860Z
+Level: info
+Message: Request received for /customers/6431f2d38d90824bd6e9c9ab
+
+Timestamp: 2023-04-08T23:04:32.995Z
+Level: info
+Message: Successfully sent response for /customers/6431f2d38d90824bd6e9c9ab
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T23:06:30.420Z'
+}
+Timestamp: 2023-04-08T23:06:34.551Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T23:06:34.606Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T23:06:53.844Z
+Level: info
+Message: Request received for /customers/6431f37287571d677341cf23
+
+Timestamp: 2023-04-08T23:06:53.928Z
+Level: info
+Message: Successfully sent response for /customers/6431f37287571d677341cf23
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-08T23:41:53.813Z'
+}
+Timestamp: 2023-04-08T23:42:00.379Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-08T23:42:00.450Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-08T23:42:17.486Z
+Level: info
+Message: Request received for /vendors
+
+{
+  message: [
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6783"),
+      name: 'Shanahan Inc',
+      slogan: 'Adaptive intangible data-warehouse',
+      description: 'redefine plug-and-play platforms',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb67cd"),
+        new ObjectId("6431fbbed4542c46f4bb67c3"),
+        new ObjectId("6431fbbed4542c46f4bb67b9"),
+        new ObjectId("6431fbbed4542c46f4bb67d2"),
+        new ObjectId("6431fbbed4542c46f4bb67a0")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb677f"),
+          rating: 0,
+          title: 'Refined',
+          body: 'Aperiam commodi perferendis deleniti molestias porro qui perferendis in. Cupiditate consectetur quidem maxime modi consequuntur culpa fuga dolorum. Veritatis assumenda temporibus.',
+          _id: new ObjectId("6431fbbed4542c46f4bb694f")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6784"),
+      name: 'Johnson - Fisher',
+      slogan: 'Synergistic homogeneous parallelism',
+      description: 'generate distributed schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb679b"),
+        new ObjectId("6431fbbed4542c46f4bb67e1"),
+        new ObjectId("6431fbbed4542c46f4bb67aa"),
+        new ObjectId("6431fbbed4542c46f4bb67dc"),
+        new ObjectId("6431fbbed4542c46f4bb678c"),
+        new ObjectId("6431fbbed4542c46f4bb67a5"),
+        new ObjectId("6431fbbed4542c46f4bb67c8"),
+        new ObjectId("6431fbbed4542c46f4bb67d7"),
+        new ObjectId("6431fbbed4542c46f4bb67b4"),
+        new ObjectId("6431fbbed4542c46f4bb67af")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 1,
+          title: 'Incredible',
+          body: 'Cum praesentium inventore eius voluptates praesentium itaque maiores iste commodi. Repellendus corrupti quia magnam esse. Quaerat pariatur doloribus. Id optio aliquam. Blanditiis id culpa vero.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6959")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6785"),
+      name: 'Schneider and Sons',
+      slogan: 'Visionary mobile attitude',
+      description: 'brand user-centric schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb6796"),
+        new ObjectId("6431fbbed4542c46f4bb67eb"),
+        new ObjectId("6431fbbed4542c46f4bb67be"),
+        new ObjectId("6431fbbed4542c46f4bb6791"),
+        new ObjectId("6431fbbed4542c46f4bb67e6")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 2,
+          title: 'Fantastic',
+          body: 'Ipsam eaque perferendis consequatur reiciendis error suscipit quisquam. Sunt dolorum quod itaque et animi. Deserunt qui aspernatur impedit in dolorem eos. Aliquam necessitatibus exercitationem iste ab officia omnis quod. Necessitatibus ipsa impedit quia a quos.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6948")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6786"),
+      name: 'Ernser, Tremblay and Crona',
+      slogan: 'Decentralized discrete utilisation',
+      description: 'empower world-class content',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6787"),
+      name: 'Heidenreich Group',
+      slogan: 'Function-based multimedia project',
+      description: 'morph scalable supply-chains',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 4,
+          title: 'Gorgeous',
+          body: 'Consectetur praesentium asperiores vel dicta natus praesentium quo. Ut illum illo molestias eos hic quod voluptatibus natus accusantium. Laboriosam tempora ad. Cumque illo mollitia aliquam rem fuga natus sit.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6950")
+        }
+      ],
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-08T23:42:17.523Z'
+}
+Timestamp: 2023-04-08T23:42:17.535Z
+Level: info
+Message: Successfully sent response for /vendors
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:01:10.971Z'
+}
+Timestamp: 2023-04-09T00:01:22.522Z
+Level: info
+Message: Request received for /customers/reviews
+
+Timestamp: 2023-04-09T00:01:22.529Z
+Level: error
+Message: undefined
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:01:49.311Z'
+}
+Timestamp: 2023-04-09T00:01:50.134Z
+Level: info
+Message: Request received for /customers/reviews
+
+Timestamp: 2023-04-09T00:01:50.139Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-09T00:01:51.125Z
+Level: info
+Message: Request received for /customers/reviews
+
+Timestamp: 2023-04-09T00:01:51.126Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-09T00:01:51.881Z
+Level: info
+Message: Request received for /customers/reviews
+
+Timestamp: 2023-04-09T00:01:51.883Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-09T00:02:08.399Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-09T00:02:08.466Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-09T00:02:18.153Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:02:18.303Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:02:22.206Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:02:22.290Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:02:57.049Z
+Level: info
+Message: Request received for /vendors
+
+{
+  message: [
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6783"),
+      name: 'Shanahan Inc',
+      slogan: 'Adaptive intangible data-warehouse',
+      description: 'redefine plug-and-play platforms',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb67cd"),
+        new ObjectId("6431fbbed4542c46f4bb67c3"),
+        new ObjectId("6431fbbed4542c46f4bb67b9"),
+        new ObjectId("6431fbbed4542c46f4bb67d2"),
+        new ObjectId("6431fbbed4542c46f4bb67a0")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb677f"),
+          rating: 0,
+          title: 'Refined',
+          body: 'Aperiam commodi perferendis deleniti molestias porro qui perferendis in. Cupiditate consectetur quidem maxime modi consequuntur culpa fuga dolorum. Veritatis assumenda temporibus.',
+          _id: new ObjectId("6431fbbed4542c46f4bb694f")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6784"),
+      name: 'Johnson - Fisher',
+      slogan: 'Synergistic homogeneous parallelism',
+      description: 'generate distributed schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb679b"),
+        new ObjectId("6431fbbed4542c46f4bb67e1"),
+        new ObjectId("6431fbbed4542c46f4bb67aa"),
+        new ObjectId("6431fbbed4542c46f4bb67dc"),
+        new ObjectId("6431fbbed4542c46f4bb678c"),
+        new ObjectId("6431fbbed4542c46f4bb67a5"),
+        new ObjectId("6431fbbed4542c46f4bb67c8"),
+        new ObjectId("6431fbbed4542c46f4bb67d7"),
+        new ObjectId("6431fbbed4542c46f4bb67b4"),
+        new ObjectId("6431fbbed4542c46f4bb67af")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 1,
+          title: 'Incredible',
+          body: 'Cum praesentium inventore eius voluptates praesentium itaque maiores iste commodi. Repellendus corrupti quia magnam esse. Quaerat pariatur doloribus. Id optio aliquam. Blanditiis id culpa vero.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6959")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6785"),
+      name: 'Schneider and Sons',
+      slogan: 'Visionary mobile attitude',
+      description: 'brand user-centric schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb6796"),
+        new ObjectId("6431fbbed4542c46f4bb67eb"),
+        new ObjectId("6431fbbed4542c46f4bb67be"),
+        new ObjectId("6431fbbed4542c46f4bb6791"),
+        new ObjectId("6431fbbed4542c46f4bb67e6")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 2,
+          title: 'Fantastic',
+          body: 'Ipsam eaque perferendis consequatur reiciendis error suscipit quisquam. Sunt dolorum quod itaque et animi. Deserunt qui aspernatur impedit in dolorem eos. Aliquam necessitatibus exercitationem iste ab officia omnis quod. Necessitatibus ipsa impedit quia a quos.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6948")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6786"),
+      name: 'Ernser, Tremblay and Crona',
+      slogan: 'Decentralized discrete utilisation',
+      description: 'empower world-class content',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6787"),
+      name: 'Heidenreich Group',
+      slogan: 'Function-based multimedia project',
+      description: 'morph scalable supply-chains',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 4,
+          title: 'Gorgeous',
+          body: 'Consectetur praesentium asperiores vel dicta natus praesentium quo. Ut illum illo molestias eos hic quod voluptatibus natus accusantium. Laboriosam tempora ad. Cumque illo mollitia aliquam rem fuga natus sit.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6950")
+        }
+      ],
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-09T00:02:57.138Z'
+}
+Timestamp: 2023-04-09T00:02:57.173Z
+Level: info
+Message: Successfully sent response for /vendors
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:04:13.252Z'
+}
+Timestamp: 2023-04-09T00:04:14.480Z
+Level: info
+Message: Request received for /vendors
+
+{
+  message: [
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6783"),
+      name: 'Shanahan Inc',
+      slogan: 'Adaptive intangible data-warehouse',
+      description: 'redefine plug-and-play platforms',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb67cd"),
+        new ObjectId("6431fbbed4542c46f4bb67c3"),
+        new ObjectId("6431fbbed4542c46f4bb67b9"),
+        new ObjectId("6431fbbed4542c46f4bb67d2"),
+        new ObjectId("6431fbbed4542c46f4bb67a0")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb677f"),
+          rating: 0,
+          title: 'Refined',
+          body: 'Aperiam commodi perferendis deleniti molestias porro qui perferendis in. Cupiditate consectetur quidem maxime modi consequuntur culpa fuga dolorum. Veritatis assumenda temporibus.',
+          _id: new ObjectId("6431fbbed4542c46f4bb694f")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6784"),
+      name: 'Johnson - Fisher',
+      slogan: 'Synergistic homogeneous parallelism',
+      description: 'generate distributed schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb679b"),
+        new ObjectId("6431fbbed4542c46f4bb67e1"),
+        new ObjectId("6431fbbed4542c46f4bb67aa"),
+        new ObjectId("6431fbbed4542c46f4bb67dc"),
+        new ObjectId("6431fbbed4542c46f4bb678c"),
+        new ObjectId("6431fbbed4542c46f4bb67a5"),
+        new ObjectId("6431fbbed4542c46f4bb67c8"),
+        new ObjectId("6431fbbed4542c46f4bb67d7"),
+        new ObjectId("6431fbbed4542c46f4bb67b4"),
+        new ObjectId("6431fbbed4542c46f4bb67af")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 1,
+          title: 'Incredible',
+          body: 'Cum praesentium inventore eius voluptates praesentium itaque maiores iste commodi. Repellendus corrupti quia magnam esse. Quaerat pariatur doloribus. Id optio aliquam. Blanditiis id culpa vero.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6959")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6785"),
+      name: 'Schneider and Sons',
+      slogan: 'Visionary mobile attitude',
+      description: 'brand user-centric schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb6796"),
+        new ObjectId("6431fbbed4542c46f4bb67eb"),
+        new ObjectId("6431fbbed4542c46f4bb67be"),
+        new ObjectId("6431fbbed4542c46f4bb6791"),
+        new ObjectId("6431fbbed4542c46f4bb67e6")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 2,
+          title: 'Fantastic',
+          body: 'Ipsam eaque perferendis consequatur reiciendis error suscipit quisquam. Sunt dolorum quod itaque et animi. Deserunt qui aspernatur impedit in dolorem eos. Aliquam necessitatibus exercitationem iste ab officia omnis quod. Necessitatibus ipsa impedit quia a quos.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6948")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6786"),
+      name: 'Ernser, Tremblay and Crona',
+      slogan: 'Decentralized discrete utilisation',
+      description: 'empower world-class content',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6787"),
+      name: 'Heidenreich Group',
+      slogan: 'Function-based multimedia project',
+      description: 'morph scalable supply-chains',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 4,
+          title: 'Gorgeous',
+          body: 'Consectetur praesentium asperiores vel dicta natus praesentium quo. Ut illum illo molestias eos hic quod voluptatibus natus accusantium. Laboriosam tempora ad. Cumque illo mollitia aliquam rem fuga natus sit.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6950")
+        }
+      ],
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-09T00:04:14.534Z'
+}
+Timestamp: 2023-04-09T00:04:14.547Z
+Level: info
+Message: Successfully sent response for /vendors
+
+Timestamp: 2023-04-09T00:04:22.425Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:04:22.504Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:04:25.000Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:04:25.054Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:04:36.240Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:04:36.391Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:05:10.333Z'
+}
+Timestamp: 2023-04-09T00:05:12.363Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:05:12.522Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:05:22.585Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:05:22.714Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:06:16.826Z'
+}
+Timestamp: 2023-04-09T00:06:19.771Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:06:20.078Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e
+
+Timestamp: 2023-04-09T00:07:12.493Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:07:12.590Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb677e/reviews
+
+Timestamp: 2023-04-09T00:07:36.591Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-09T00:07:36.629Z
+Level: info
+Message: Successfully sent response for /customers
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:08:07.995Z'
+}
+Timestamp: 2023-04-09T00:08:09.890Z
+Level: info
+Message: Request received for /customers
+
+Timestamp: 2023-04-09T00:08:09.972Z
+Level: info
+Message: Successfully sent response for /customers
+
+Timestamp: 2023-04-09T00:08:22.956Z
+Level: info
+Message: Request received for /vendors
+
+{
+  message: [
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6783"),
+      name: 'Shanahan Inc',
+      slogan: 'Adaptive intangible data-warehouse',
+      description: 'redefine plug-and-play platforms',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb67cd"),
+        new ObjectId("6431fbbed4542c46f4bb67c3"),
+        new ObjectId("6431fbbed4542c46f4bb67b9"),
+        new ObjectId("6431fbbed4542c46f4bb67d2"),
+        new ObjectId("6431fbbed4542c46f4bb67a0")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb677f"),
+          rating: 0,
+          title: 'Refined',
+          body: 'Aperiam commodi perferendis deleniti molestias porro qui perferendis in. Cupiditate consectetur quidem maxime modi consequuntur culpa fuga dolorum. Veritatis assumenda temporibus.',
+          _id: new ObjectId("6431fbbed4542c46f4bb694f")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6784"),
+      name: 'Johnson - Fisher',
+      slogan: 'Synergistic homogeneous parallelism',
+      description: 'generate distributed schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb679b"),
+        new ObjectId("6431fbbed4542c46f4bb67e1"),
+        new ObjectId("6431fbbed4542c46f4bb67aa"),
+        new ObjectId("6431fbbed4542c46f4bb67dc"),
+        new ObjectId("6431fbbed4542c46f4bb678c"),
+        new ObjectId("6431fbbed4542c46f4bb67a5"),
+        new ObjectId("6431fbbed4542c46f4bb67c8"),
+        new ObjectId("6431fbbed4542c46f4bb67d7"),
+        new ObjectId("6431fbbed4542c46f4bb67b4"),
+        new ObjectId("6431fbbed4542c46f4bb67af")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 1,
+          title: 'Incredible',
+          body: 'Cum praesentium inventore eius voluptates praesentium itaque maiores iste commodi. Repellendus corrupti quia magnam esse. Quaerat pariatur doloribus. Id optio aliquam. Blanditiis id culpa vero.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6959")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6785"),
+      name: 'Schneider and Sons',
+      slogan: 'Visionary mobile attitude',
+      description: 'brand user-centric schemas',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [
+        new ObjectId("6431fbbed4542c46f4bb6796"),
+        new ObjectId("6431fbbed4542c46f4bb67eb"),
+        new ObjectId("6431fbbed4542c46f4bb67be"),
+        new ObjectId("6431fbbed4542c46f4bb6791"),
+        new ObjectId("6431fbbed4542c46f4bb67e6")
+      ],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 2,
+          title: 'Fantastic',
+          body: 'Ipsam eaque perferendis consequatur reiciendis error suscipit quisquam. Sunt dolorum quod itaque et animi. Deserunt qui aspernatur impedit in dolorem eos. Aliquam necessitatibus exercitationem iste ab officia omnis quod. Necessitatibus ipsa impedit quia a quos.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6948")
+        }
+      ],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6786"),
+      name: 'Ernser, Tremblay and Crona',
+      slogan: 'Decentralized discrete utilisation',
+      description: 'empower world-class content',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [],
+      __v: 0
+    },
+    {
+      _id: new ObjectId("6431fbbed4542c46f4bb6787"),
+      name: 'Heidenreich Group',
+      slogan: 'Function-based multimedia project',
+      description: 'morph scalable supply-chains',
+      image_url: 'https://loremflickr.com/640/480',
+      inventory: [],
+      reviews: [
+        {
+          customer: new ObjectId("6431fbbed4542c46f4bb6782"),
+          rating: 4,
+          title: 'Gorgeous',
+          body: 'Consectetur praesentium asperiores vel dicta natus praesentium quo. Ut illum illo molestias eos hic quod voluptatibus natus accusantium. Laboriosam tempora ad. Cumque illo mollitia aliquam rem fuga natus sit.',
+          _id: new ObjectId("6431fbbed4542c46f4bb6950")
+        }
+      ],
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-09T00:08:23.339Z'
+}
+Timestamp: 2023-04-09T00:08:23.355Z
+Level: info
+Message: Successfully sent response for /vendors
+
+Timestamp: 2023-04-09T00:09:31.624Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb6782
+
+Timestamp: 2023-04-09T00:09:31.827Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb6782
+
+Timestamp: 2023-04-09T00:09:37.396Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb6782/reviews
+
+Timestamp: 2023-04-09T00:09:37.471Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb6782/reviews
+
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T00:12:56.834Z'
+}
+Timestamp: 2023-04-09T00:13:08.926Z
+Level: info
+Message: Request received for /customers/6431fbbed4542c46f4bb6782/reviews
+
+Timestamp: 2023-04-09T00:13:09.156Z
+Level: info
+Message: Successfully sent response for /customers/6431fbbed4542c46f4bb6782/reviews
+

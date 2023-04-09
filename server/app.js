@@ -5,6 +5,7 @@ const morgan = require("morgan")
 const { handleInternalServerError } = require("./errorhandling/errors.js");
 const productRouter = require("./routers/productRouter.js")
 const customerRouter = require("./routers/customerRouter.js");
+const vendorRouter = require("./routers/vendorRouter.js");
 const { consoleLogger, fileLogger } = require("./errorhandling/logger.js");
 require("dotenv").config()
 
@@ -25,6 +26,7 @@ app.get("/", async (req, res) => {
 // Routers
 app.use("/products", productRouter);
 app.use("/customers", customerRouter);
+app.use("/vendors", vendorRouter);
 
 
 // // Get all testimonials
