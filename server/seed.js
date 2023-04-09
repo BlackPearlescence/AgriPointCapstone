@@ -3,13 +3,12 @@ const {
     Testimonial,
     Phone,
     Contact,
-    RewardTrack,
     Benefit,
     Address,
     ShoppingList,
     Vendor,
     Product,
-    Tag,
+    OrderItem,
     CartItem,
     Order,
     Transaction,
@@ -18,16 +17,18 @@ const {
     RewardsProgram,
     RewardsTransaction,
     BlogPost,
-    Stock, } = require("./schema.js");
+    Stock,
+    RewardStatistics, } = require("./schema.js");
 
 const { getRandomItem, getRandomNumberBasedOnMax } = require("./seedfunctions.js");
-
+// const { Gardeny } = require("./truedata/realseed.js");
+require("./truedata/realseed.js");
 const { faker } = require("@faker-js/faker")
 const mongoose = require("mongoose");
 const async = require("async");
 const e = require("express");
+// const { default: Gardeny } = require("./truedata/realseed.js");
 require("dotenv").config();
-
 
 const { MONGO_CONNECTION_STRING } = process.env
 mongoose.connect(MONGO_CONNECTION_STRING, {
@@ -36,20 +37,22 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
 })
 
 
+
+
 const deleteCollections = async () => {
     await Customer.deleteMany({});
     await Testimonial.deleteMany({});
     await Phone.deleteMany({});
     await Contact.deleteMany({});
-    await RewardTrack.deleteMany({});
+    await RewardStatistics.deleteMany({});
     await Benefit.deleteMany({});
     await Address.deleteMany({});
     await ShoppingList.deleteMany({});
     await Vendor.deleteMany({});
     await Product.deleteMany({});
-    await Tag.deleteMany({});
     await CartItem.deleteMany({});
     await Order.deleteMany({});
+    await OrderItem.deleteMany({});
     await Transaction.deleteMany({});
     await ProductReview.deleteMany({});
     await VendorReview.deleteMany({});
@@ -59,27 +62,136 @@ const deleteCollections = async () => {
     await Stock.deleteMany({});
 }
 
-const createCustomers = async (num) => {
+const createSpecialities = async (num) => {
+    const specialities = [];
+    for (let i = 0; i < num; i++) {
+        specialities.push(faker.commerce.productAdjective())
+    }
+    return specialities
+}
+
+const createTags = async (num) => {
+    const tags = [];
+    for (let i = 0; i < num; i++) {
+        tags.push(faker.commerce.productMaterial())
+    }
+    return tags
+}
+
+const createRewardProgramBenefits = async (num) => {
+    const benefits = [];
+    for (let i = 0; i < num; i++) {
+        benefit = new Benefit({
+            rank: i,
+            titular_description: faker.lorem.sentence(),
+            description: faker.lorem.paragraph(),
+        })
+        benefits.push(benefit)
+    }
+}
+
+const createRewardsPrograms = async (num) => {
+    const rewardsPrograms = [];
+    for (let i = 0; i < num; i++) {
+        benefitList = await createRewardProgramBenefits(getRandomNumberBasedOnMax(5))
+        const rewardsProgram = new RewardsProgram({
+            tier_name: faker.science.chemicalElement(),
+            tier_description: faker.lorem.sentence(),
+            benefits: benefitList,
+            tier_card_url: faker.image.imageUrl(),
+        })
+        rewardsPrograms.push(rewardsProgram)
+    }
+    return rewardsPrograms
+}
+
+const createTestimonials = async (num) => {
+    const testimonials = [];
+    for (let i = 0; i < num; i++) {
+        const testimonial = new Testimonial({
+            title: faker.lorem.sentence(),
+            body: faker.lorem.paragraph(),
+            rating: getRandomNumberBasedOnMax(5),
+        })
+        testimonials.push(testimonial)
+    }
+    return testimonials
+}
+
+
+const createOneRewardStatistics = async () => {
+    const rewardStatistics = new RewardStatistics({
+        tier: faker.science.chemicalElement(),
+        rank: getRandomNumberBasedOnMax(10),
+        point_balance: getRandomNumberBasedOnMax(1000),
+        point_total: getRandomNumberBasedOnMax(1000),
+    })
+    return rewardStatistics
+}
+
+
+const createCustomers = async (num, rewardsPrograms) => {
     const customers = [];
+    const testimonials = await createTestimonials(getRandomNumberBasedOnMax(5))
+    const randomTestimonial = await getRandomItem(testimonials)
     for (let i = 0; i < num; i++) {
         const customer = new Customer({
             first_name: faker.name.firstName(),
             last_name: faker.name.lastName(),
+            email: faker.internet.email(),
+            password: faker.internet.password(),
+            phone: faker.phone.number(),
+            addresses: [new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            })],
+            joined_at: faker.date.past(),
+            avatar_url: faker.image.imageUrl(),
             cart: [],
+            shopping_lists: [],
+            reward_program: await getRandomItem(rewardsPrograms),
+            reward_statistics: new RewardStatistics({
+                tier: faker.lorem.word(),
+                rank: await getRandomNumberBasedOnMax(10),
+                point_balance: await getRandomNumberBasedOnMax(1000),
+                point_total: await getRandomNumberBasedOnMax(1000),
+            }),
+            reward_transactions: [],
+            transactions: [],
+            testimonial: randomTestimonial,
         })
         customers.push(customer)
     }
     return customers
 }
 
+
+
 const createVendors = async (num) => {
     const vendors = [];
+    const specialities = await createSpecialities(getRandomNumberBasedOnMax(5))
     for (let i = 0; i < num; i++) {
         const vendor = new Vendor({
             name: faker.company.companyName(),
             slogan: faker.company.catchPhrase(),
             description: faker.company.bs(),
             image_url: faker.image.imageUrl(),
+            email: faker.internet.email(),
+            phone_numbers: [faker.phone.number()],
+            joined_at: faker.date.past(),
+            specialities: specialities,
+            reviews: [],
+            address: new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            }),
+            blog_posts: [],
             inventory: [],
         })
         vendors.push(vendor)
@@ -105,6 +217,7 @@ const createProductStocks = async (num) => {
 const createProducts = async (num) => {
     const products = [];
     const stocks = await createProductStocks(4);
+    const tags = await createTags(5);
     for (let i = 0; i < num; i++) {
         const product = new Product({
             name: faker.commerce.productName(),
@@ -113,6 +226,8 @@ const createProducts = async (num) => {
             price: faker.commerce.price(),
             image_url: faker.image.imageUrl(),
             stock: stocks,
+            reviews: [],
+            tags: tags,
         })
         products.push(product)
     }
@@ -130,6 +245,7 @@ const assignProductsToCustomers = async (customers, products) => {
             const cartItem = new CartItem({
                 product: getRandomItem(products)._id,
                 quantity: 1,
+                size: getRandomItem(products[0].stock).size_name,
             })
             // Assign CartItem to customer
             // If cartItem is already in customer's cart, increment quantity
@@ -308,6 +424,156 @@ const assignProductsToVendors = async (vendors, products) => {
     return vendorsWithProducts
 }
 
+const createOrders = async (num, customers, products) => {
+    const orders = [];
+    for (let i = 0; i < num; i++) {
+        const order = new Order({
+            order_items: [],
+            placed_at: await faker.date.past(),
+            status: await getRandomItem(['pending', 'fulfilled', 'cancelled']),
+        })
+        console.log("order created")
+        console.log(order)
+        const numProducts = await getRandomNumberBasedOnMax(products.length);
+        for (let i = 0; i < numProducts; i++) {
+            const product = await getRandomItem(products);
+            order.order_items.push(new OrderItem({
+                product: product._id,
+                quantity: await getRandomNumberBasedOnMax(10),
+                price: product.price,
+                size: await getRandomItem(['small', 'medium', 'large']),
+            }))
+        }
+        orders.push(order)
+    }
+    return orders
+}
+
+const createTransactions = async (num, customers, orders) => {
+    const transactions = [];
+    for (let i = 0; i < num; i++) {
+        const transaction = new Transaction({
+            order: await getRandomItem(orders),
+            date: faker.date.past(),
+            total: faker.commerce.price(),
+            payment_method: await getRandomItem(['credit card', 'debit card', 'cash']),
+            status: await getRandomItem(['pending', 'fulfilled', 'cancelled']),
+            shipping_address: new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            }),
+            billing_address: new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            }),
+            notes: faker.lorem.paragraph(),
+        })
+        transactions.push(transaction)
+    }
+    return transactions
+}
+
+const createRewardTransactions = async (num, customers, orders) => {
+    const rewardTransactions = [];
+    for (let i = 0; i < num; i++) {
+        const rewardTransaction = new RewardsTransaction({
+            order: await getRandomItem(orders),
+            date: faker.date.past(),
+            point_total: faker.datatype.number({min: 1, max: 100}),
+            status: await getRandomItem(['pending', 'fulfilled', 'cancelled']),
+            shipping_address: new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            }),
+            billing_address: new Address({
+                address_one: faker.address.streetAddress(),
+                address_two: faker.address.secondaryAddress(),
+                city: faker.address.city(),
+                state: faker.address.state(),
+                zip: faker.address.zipCode(),
+            }),
+            notes: faker.lorem.paragraph(),
+        })
+        rewardTransactions.push(rewardTransaction)
+    }
+    return rewardTransactions
+}
+
+const assignTransactionsToCustomers = async (customers, transactions) => {
+    const customersWithTransactions = [];
+    // While there are still transactions left to assign, assign them to a random customer
+    while(transactions.length > 0) {
+        const customer = await getRandomItem(customers);
+        const transaction = await transactions.pop();
+        if(transactions){
+            customer.transactions.push(transaction)
+            customersWithTransactions.push(customer)
+        }
+        
+    }
+    return customersWithTransactions
+}
+
+const assignRewardTransactionsToCustomers = async (customers, rewardTransactions) => {
+    const customersWithRewardTransactions = [];
+    // While there are still transactions left to assign, assign them to a random customer
+    while(rewardTransactions.length > 0) {
+        const customer = await getRandomItem(customers);
+        const rewardTransaction = await rewardTransactions.pop();
+        if(rewardTransactions){
+            customer.reward_transactions.push(rewardTransaction)
+            customersWithRewardTransactions.push(customer)
+        }
+    }
+    return customersWithRewardTransactions
+}
+
+
+const createVendorBlogPosts = async (num, vendors) => {
+    const blogPosts = [];
+    for (let i = 0; i < num; i++) {
+        const blogPost = new BlogPost({
+            title: faker.lorem.sentence(),
+            heading: faker.lorem.sentence(),
+            description: faker.lorem.paragraph(),
+            post: faker.lorem.paragraphs(),
+            read_duration: faker.datatype.number({min: 1, max: 10}),
+            created_at: faker.date.past(),
+        })
+        blogPosts.push(blogPost)
+    }
+    return blogPosts
+}
+
+const assignBlogPostsToVendors = async (vendors, blogPosts) => {
+    const vendorsWithBlogPosts = [];
+    for(vendor of vendors) {
+        const numBlogPosts = getRandomNumberBasedOnMax(blogPosts.length);
+        for (let i = 0; i < numBlogPosts; i++) {
+            const blogPost = getRandomItem(blogPosts);
+            vendor.blog_posts.push(blogPost._id)
+        }
+        vendorsWithBlogPosts.push(vendor)
+    }
+    return vendorsWithBlogPosts
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -324,18 +590,42 @@ const seed = async () => {
     const shoppingListsWithItems = await assignItemsToShoppingLists(shoppingLists, products);
     const customersWithShoppingLists = await assignShoppingListsToCustomers(customersWithProducts, shoppingListsWithItems);
     
-    const productReviews = await createProductReviews(20, products, customers);
+    const productReviews = await createProductReviews(10, products, customers);
     const productsWithReviews = await assignReviewsToProducts(products, productReviews);
 
-    const vendorReviews = await createVendorReviews(20, vendors, customers);
-    const vendorsWithReviews = await assignReviewsToVendors(vendors, vendorReviews);
-
+    const vendorReviews = await createVendorReviews(10, vendors, customers);
     const vendorsWithProducts = await assignProductsToVendors(vendors, products);
+    const vendorsWithReviews = await assignReviewsToVendors(vendorsWithProducts, vendorReviews);
 
-    await Product.insertMany(products)
-    await Customer.insertMany(customersWithShoppingLists)
-    await Vendor.insertMany(vendorsWithProducts)
+    const orders = await createOrders(10, customers, products);
+    const transactions = await createTransactions(10, customers, orders);
+    const customersWithTransactions = await assignTransactionsToCustomers(customersWithShoppingLists, transactions);
 
+    const rewardOrders = await createOrders(10, customers, products);
+    const rewardTransactions = await createRewardTransactions(20, customers, rewardOrders);
+    const customersWithRewardTransactions = await assignRewardTransactionsToCustomers(customersWithTransactions, rewardTransactions);
+
+    const blogPosts = await createVendorBlogPosts(10, vendors);
+    const vendorsWithBlogPosts = await assignBlogPostsToVendors(vendorsWithReviews, blogPosts);
+
+
+    for (let i = 0; i < productsWithReviews.length; i++) {
+        console.log(productsWithReviews[i])
+      await Product.create(productsWithReviews[i]);
+    }
+
+    for (let i = 0; i < vendorsWithBlogPosts.length; i++) {
+        console.log(vendorsWithBlogPosts[i])
+      await Vendor.create(vendorsWithBlogPosts[i]);
+    }
+
+
+    for (let i = 0; i < customersWithRewardTransactions.length; i++) {
+        console.log(customersWithRewardTransactions[i])
+      await Customer.create(customersWithRewardTransactions[i]);
+    }
+
+    
 
 
     await mongoose.disconnect()
@@ -343,9 +633,4 @@ const seed = async () => {
 
 
 seed()
-
-
-
-
-
 

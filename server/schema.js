@@ -189,25 +189,30 @@ const productReviewSchema = new Schema({
     },
 })
 
-const orderSchema = new Schema ({
-    products: [{
+const orderItemSchema = new Schema({
+    product: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Product"
-    }],
-    placed_at: {
-        type: Date,
+    },
+    quantity: {
+        type: Number,
         required: true,
     },
-    status: {
+    price: {
+        type: Number,
+        required: true,
+    },
+    size: {
         type: String,
         required: true,
     },
 })
 
-const rewardOrderSchema = new Schema ({
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
+
+const orderSchema = new Schema ({
+    order_items: [{
+        type: orderItemSchema,
+        required: true,
     }],
     placed_at: {
         type: Date,
@@ -241,11 +246,11 @@ const transactionSchema = new Schema ({
         required: true,
     },
     shipping_address: {
-        type: String,
+        type: addressSchema,
         required: true,
     },
     billing_address: {
-        type: String,
+        type: addressSchema,
         required: true,
     },
     notes: {
@@ -263,7 +268,7 @@ const transactionSchema = new Schema ({
 
 const rewardsTransactionSchema = new Schema({
     order: {
-        type: rewardOrderSchema,
+        type: orderSchema,
         required: true,
     },
     date: {
@@ -297,7 +302,7 @@ const testimonialSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    body: {
         type: String,
         required: true
     },
@@ -309,10 +314,6 @@ const testimonialSchema = new Schema({
 
 // Main Schemas
 
-
-
-
-
 const cartItemSchema = new Schema({
     product: {
         type: Schema.Types.ObjectId,
@@ -322,10 +323,18 @@ const cartItemSchema = new Schema({
         type: Number,
         required: true
     },
+    size: {
+        type: String,
+        required: true
+    },
 });
 
 const rewardsProgramSchema = new Schema({
     tier_name: {
+        type: String,
+        required: true,
+    },
+    tier_description: {
         type: String,
         required: true,
     },
@@ -350,6 +359,31 @@ const customerSchema = new Schema({
         type: String,
         required: true
     },
+
+    email: {
+        type: String,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    phone: {
+        type: String,
+        required: true,
+    },
+    addresses: [{
+        type: addressSchema,
+        required: true,
+    }],
+    joined_at: {
+        type: Date,
+        required: true,
+    },
+    avatar_url: {
+        type: String,
+        required: false,
+    },
     cart: [{
         type: cartItemSchema,
         required: true.valueOf,
@@ -358,34 +392,8 @@ const customerSchema = new Schema({
         type: shoppingListSchema,
         required: true,
     }],
-
-    joined_at: {
-        type: Date,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    contact: {
-        type: contactSchema,
-        required: true,
-    },
-    address: {
-        type: addressSchema,
-        required: true,
-    },
-    avatar_url: {
-        type: String,
-        required: false,
-    },
-    reward_program: {
-        type: Schema.Types.ObjectId,
-        required: true,
-    },
     reward_statistics: {
         type: rewardStatisticsSchema,
-        required: true,
     },
     reward_transactions: [{
         type: rewardsTransactionSchema,
@@ -400,7 +408,11 @@ const customerSchema = new Schema({
     testimonial: {
         type: testimonialSchema,
         required: false,
-    }
+    },
+    reward_program: {
+        type: Schema.Types.ObjectId,
+        ref: 'RewardsProgram',
+    },
 });
 
 
@@ -427,7 +439,7 @@ const customerSchema = new Schema({
         required: true,
     },
 
-    stock: [{
+    stock: [{   
         type: stockSchema,
         required: true,
     }],
@@ -462,12 +474,12 @@ const vendorSchema = new Schema({
         type: String,
         required: true,
     },
-    inventory: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }],
-    reviews: [{
-        type: vendorReviewSchema,
+    email: {
+        type: String,
+        required: true,
+    },
+    phone_numbers: [{
+        type: String,
         required: true,
         default: [],
     }],
@@ -480,10 +492,12 @@ const vendorSchema = new Schema({
         type: Date,
         required: true,
     },
-    contact: {
-        type: contactSchema,
+    
+    reviews: [{
+        type: vendorReviewSchema,
         required: true,
-    },
+        default: [],
+    }],
     address: {
         type: addressSchema,
         required: true,
@@ -493,26 +507,30 @@ const vendorSchema = new Schema({
         required: true,
         default: [],
     }],
-})
-
-const specialitySchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    vendor: {
+    inventory: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Vendor"
-    }
+        ref: "Product"
+    }],
 })
 
+// const specialitySchema = new Schema({
+//     name: {
+//         type: String,
+//         required: true
+//     },
+//     vendor: {
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: "Vendor"
+//     }
+// })
 
-const tagSchema = new Schema ({
-    name: {
-        type: String,
-        required: true,
-    },
-})
+
+// const tagSchema = new Schema ({
+//     name: {
+//         type: String,
+//         required: true,
+//     },
+// })
 
 
 
@@ -521,17 +539,16 @@ const Testimonial = mongoose.model("Testimonial",testimonialSchema)
 const Stock = mongoose.model("Stock",stockSchema)
 const Phone = mongoose.model("Phone",phoneSchema)
 const Contact = mongoose.model("Contact",contactSchema)
-const RewardTrack = mongoose.model("RewardTrack",rewardTrackSchema)
+const RewardStatistics = mongoose.model("RewardStatistics",rewardStatisticsSchema)
 const Benefit = mongoose.model("Benefit",benefitSchema)
 const Address = mongoose.model("Address",addressSchema)
 const ShoppingList = mongoose.model("ShoppingList",shoppingListSchema)
 const Vendor = mongoose.model("Vendor",vendorSchema)
 const Product = mongoose.model("Product",productSchema)
-const Tag = mongoose.model("Tag",tagSchema)
-const Speciality = mongoose.model("Speciality",specialitySchema)
 
 const CartItem = mongoose.model("CartItem",cartItemSchema)
 const Order = mongoose.model("Order",orderSchema)
+const OrderItem = mongoose.model("OrderItem",orderItemSchema)
 const Transaction = mongoose.model("Transaction",transactionSchema)
 const ProductReview = mongoose.model("ProductReview",productReviewSchema)
 const VendorReview = mongoose.model("VendorReview",vendorReviewSchema)
@@ -544,16 +561,16 @@ module.exports = {
     Stock,
     Phone,
     Contact,
-    RewardTrack,
+    RewardStatistics,
     Benefit,
     Address,
     ShoppingList,
     Vendor,
     Product,
-    Tag,
-    Speciality,
     CartItem,
+    OrderItem,
     Order,
+
     Transaction,
     ProductReview,
     VendorReview,

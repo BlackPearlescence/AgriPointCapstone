@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import { getRandomItem } from "../seedfunctions.js"
+const { faker } = require("@faker-js/faker")
+const { getRandomItem, getRandomNumberBasedOnMax } = require("../seedfunctions.js");
 
 // Gardeny is a class that contains all the data needed to seed the database
 class Gardeny{
@@ -69,6 +69,27 @@ class Gardeny{
             'No Added Salt',
             'No Added Fat',
             'No Added Preservatives',
+            'No Added Flavors',
+            'No Added Colors',
+            'No Added Sweeteners',
+            "Salads",
+            "Soups",
+            "Sauces",
+            "Dips",
+            "Salsas",
+            "Dressings",
+            "Breads",
+        ]
+
+        this.vendorSpecialities = [
+            "Vegetables",
+            "Fruits",
+            "Herbs",
+            "Flowers",
+            "Plant Products",
+            "Meats",
+            "Dairy",
+            "Fish",
         ]
 
         this.jams = [
@@ -526,4 +547,10 @@ class Gardeny{
     getWatermelonLink() { return getRandomItem(this.watermelonLinks()) }
     getCheeseLink() { return getRandomItem(this.cheeseLinks()) }
     getMilkLink() { return getRandomItem(this.milkLinks()) }
+
+    async getVendorSpeciality () { return getRandomItem(this.vendorSpecialities) }
+
 }
+
+module.exports = Gardeny;
+
