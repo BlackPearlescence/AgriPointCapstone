@@ -11,6 +11,33 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
 
 // Subschemas
 
+const blogPostSchema = new Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    heading: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    post: {
+        type: String,
+        required: true,
+    },
+    read_duration: {
+        type: Number,
+        required: true,
+    },
+    created_at: {
+        type: Date,
+        required: true,
+    },
+})
+
 const phoneSchema = new Schema({
     number_type: {
         type: String,
@@ -35,7 +62,7 @@ const contactSchema = new Schema({
     }
 })
 
-const rewardTrackSchema = new Schema({
+const rewardStatisticsSchema = new Schema({
     // Bronze, Silver, Gold, Platinum, Diamond
     tier: {
         type: String,
@@ -162,9 +189,108 @@ const productReviewSchema = new Schema({
     },
 })
 
+const orderSchema = new Schema ({
+    products: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product"
+    }],
+    placed_at: {
+        type: Date,
+        required: true,
+    },
+    status: {
+        type: String,
+        required: true,
+    },
+})
+
+const rewardOrderSchema = new Schema ({
+    products: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product"
+    }],
+    placed_at: {
+        type: Date,
+        required: true,
+    },
+    status: {
+        type: String,
+        required: true,
+    },
+})
+
+const transactionSchema = new Schema ({
+    order: {
+        type: orderSchema,
+        required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
+    },
+    total: {
+        type: Number,
+        required: true,
+    },
+    payment_method: {
+        type: String,
+        required: true,
+    },
+    status: {
+        type: String,
+        required: true,
+    },
+    shipping_address: {
+        type: String,
+        required: true,
+    },
+    billing_address: {
+        type: String,
+        required: true,
+    },
+    notes: {
+        type: String,
+        required: false,
+    }
+})
 
 
-// Main Schemas
+
+
+
+
+
+
+const rewardsTransactionSchema = new Schema({
+    order: {
+        type: rewardOrderSchema,
+        required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
+    },
+    point_total: {
+        type: Number,
+        required: true,
+    },
+    status: {
+        type: String,
+        required: true,
+    },
+    shipping_address: {
+        type: addressSchema,
+        required: true,
+    },
+    billing_address: {
+        type: addressSchema,
+        required: true,
+    },
+    notes: {
+        type: String,
+        required: false,
+    }
+})
 
 const testimonialSchema = new Schema({
     title: {
@@ -179,19 +305,12 @@ const testimonialSchema = new Schema({
         type: Number,
         required: true
     },
-    customer: {
-        type: Schema.Types.ObjectId,
-        ref: "Customer"
-    }
 });
 
-testimonialSchema.pre("find", async (next) => {
-    if (this.options._recursed){
-        return next()
-    }
-    this.populate({ path: "customer", options: {_recursed: true } });
-    next();
-})
+// Main Schemas
+
+
+
 
 
 const cartItemSchema = new Schema({
@@ -204,6 +323,21 @@ const cartItemSchema = new Schema({
         required: true
     },
 });
+
+const rewardsProgramSchema = new Schema({
+    tier_name: {
+        type: String,
+        required: true,
+    },
+    benefits: [{
+        type: benefitSchema,
+        required: true,
+    }],
+    tier_card_url: {
+        type: String,
+        required: true,
+    },
+})
 
 
 
@@ -225,74 +359,50 @@ const customerSchema = new Schema({
         required: true,
     }],
 
-    vendor_reviews: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Vendor"
+    joined_at: {
+        type: Date,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    contact: {
+        type: contactSchema,
+        required: true,
+    },
+    address: {
+        type: addressSchema,
+        required: true,
+    },
+    avatar_url: {
+        type: String,
+        required: false,
+    },
+    reward_program: {
+        type: Schema.Types.ObjectId,
+        required: true,
+    },
+    reward_statistics: {
+        type: rewardStatisticsSchema,
+        required: true,
+    },
+    reward_transactions: [{
+        type: rewardsTransactionSchema,
+        required: true,
+        default: [],
     }],
-    product_reviews: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
+    transactions: [{
+        type: transactionSchema,
+        required: true,
+        default: [],
     }],
-    // joined_at: {
-    //     type: Date,
-    //     required: true,
-    // },
-    // password: {
-    //     type: String,
-    //     required: true
-    // },
-    // contact: {
-    //     type: contactSchema,
-    //     required: true,
-    // },
-    // address: {
-    //     type: addressSchema,
-    //     required: true,
-    // },
-    // avatar_url: {
-    //     type: String,
-    //     required: false,
-    // },
-    // reward_track: {
-    //     type: rewardTrackSchema,
-    //     required: false,
-    // },
-    
-    
-    // specialties : [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Specialty"
-    // }],
-    // reward_transactions: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "RewardTransaction"
-    // }],
-    // transactions: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Transaction"
-    // }],
+    testimonial: {
+        type: testimonialSchema,
+        required: false,
+    }
 });
 
-
-
-
-
-// const cartSchema = new Schema({
-//     customer: {
-//       type: Schema.Types.ObjectId,
-//       ref: 'Customer'
-//     },
-//     items: [{
-//       product: {
-//         type: Schema.Types.ObjectId,
-//         ref: 'Product'
-//       },
-//       quantity: {
-//         type: Number,
-//         required: true
-//       },
-//     }]
-//   });
 
   const productSchema = new Schema({
     name: {
@@ -328,55 +438,11 @@ const customerSchema = new Schema({
         default: [],
     }],
 
-    // tags: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Tag",
-    // }],
-
-    // reviews: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "ProductReview"
-    // }],
-
-    
-    
-    // shopping_lists: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "ShoppingList"
-    // }],
-
-    // vendor: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Vendor"
-    // },
-    // reward_transactions: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "RewardTransaction"
-    // }],
-    // transactions: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Transaction"
-    // }],
+    tags: [{
+        type: String,
+        default: [],
+    }],
 })
-
-// customerSchema.pre("findById",  function(next){
-//     if(this.options._recursed) {
-//         return next();
-//     }
-//     this.populate({path: "cart.product", select: "name price", options: {_recursed: true}}).exec()
-//     next()
-// })
-
-
-
-// shopppingListSchema.pre("find", async (next) => {
-//     if(this.options._recursed) {
-//         return next()
-//     }
-//     this.populates({ path: "items customer", options: {_recursed: true} })
-//     next()
-// })
-
 
 
 const vendorSchema = new Schema({
@@ -404,47 +470,30 @@ const vendorSchema = new Schema({
         type: vendorReviewSchema,
         required: true,
         default: [],
-    }]
-    // specialities: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Specialty"
-    // }],
-    
-    // joined_at: {
-    //     type: Date,
-    //     required: true,
-    // },
-    // contact: {
-    //     type: contactSchema,
-    //     required: true,
-    // },
-    // address: {
-    //     type: addressSchema,
-    //     required: true,
-    // },
-
-   
-    // products: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Product"
-    // }],
-    // reviews: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "VendorReview"
-    // }],
-    // blog_posts: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "BlogPost"
-    // }],
+    }],
+    specialities: [{
+        type: String,
+        required: true,
+        default: [],
+    }],
+    joined_at: {
+        type: Date,
+        required: true,
+    },
+    contact: {
+        type: contactSchema,
+        required: true,
+    },
+    address: {
+        type: addressSchema,
+        required: true,
+    },
+    blog_posts: [{
+        type: blogPostSchema,
+        required: true,
+        default: [],
+    }],
 })
-
-// vendorSchema.pre("find", async (next) => {
-//     if(this.options._recursed){
-//         return next()
-//     }
-//     this.populates({ path: "products reviews blog_posts", options: {_recursed: true}})
-//     next()
-// })
 
 const specialitySchema = new Schema({
     name: {
@@ -458,239 +507,14 @@ const specialitySchema = new Schema({
 })
 
 
-
-// productSchema.virtual('cartItems', {
-//     ref: 'Customer',
-//     localField: '_id',
-//     foreignField: 'cart.product'
-// });
-
-// productSchema.pre("findById", async (next) => {
-//     if(this.options._recursed) {
-//         return next()
-//     }
-//     this.populate({ path: "cart", options: { _recursed: true }});
-//     next();
-// })
-
 const tagSchema = new Schema ({
     name: {
         type: String,
         required: true,
     },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }]
 })
 
 
-
-// cartSchema.pre("find", async (next) => {
-//     if(this.options._recursed) {
-//         return next()
-//     }
-//     this.populate({ path: "product customer", options: {__recursed: true}})
-//     next()
-// })
-
-const orderSchema = new Schema ({
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }],
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Customer"
-    },
-    placed_at: {
-        type: Date,
-        required: true,
-    },
-    status: {
-        type: String,
-        required: true,
-    },
-    transaction:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Transaction"
-    }
-})
-
-const rewardOrderSchema = new Schema ({
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }],
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Customer"
-    },
-    placed_at: {
-        type: Date,
-        required: true,
-    },
-    status: {
-        type: String,
-        required: true,
-    },
-    transaction:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "RewardTransaction"
-    }
-})
-
-// orderSchema.pre("find", async (next) => {
-//     if(this.options._recursed) {
-//         return next()
-//     }
-//     this.populate({ path: "products customer", options: {__recursed: true}})
-//     next()
-// })
-
-const transactionSchema = new Schema ({
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Customer"
-    },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }],
-    order: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Order"
-    }],
-    date: {
-        type: Date,
-        required: true,
-    },
-    total: {
-        type: Decimal128,
-        required: true,
-    },
-    payment_method: {
-        type: String,
-        required: true,
-    },
-    status: {
-        type: String,
-        required: true,
-    },
-    shipping_address: {
-        type: String,
-        required: true,
-    },
-    billing_address: {
-        type: String,
-        required: true,
-    },
-    notes: {
-        type: String,
-        required: false,
-    }
-})
-
-transactionSchema.pre("find", async (next) => {
-    if(this.options._recursed) {
-        return next()
-    }
-    this.populate({ path: "order products customer", options: {__recursed: true}})
-    next()
-})
-
-
-
-
-
-const rewardsProgramSchema = new Schema({
-    tier_name: {
-        type: String,
-        required: true,
-    },
-    benefits: [{
-        type: benefitSchema,
-        required: true,
-    }],
-    tier_card_url: {
-        type: String,
-        required: true,
-    },
-})
-
-const rewardsTransactionSchema = new Schema({
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Customer"
-    },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-    }],
-    order: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Order"
-    }],
-    date: {
-        type: Date,
-        required: true,
-    },
-    total: {
-        type: Number,
-        required: true,
-    },
-    status: {
-        type: String,
-        required: true,
-    },
-    shipping_address: {
-        type: addressSchema,
-        required: true,
-    },
-    billing_address: {
-        type: addressSchema,
-        required: true,
-    },
-    notes: {
-        type: String,
-        required: false,
-    }
-})
-
-// rewardsTransactionSchema.pre("find", async (next) => {
-//     if(this.options._recursed) {
-//         return next()
-//     }
-//     this.populate({ path: "products customer order", options: {__recursed: true}})
-//     next()
-// })
-
-const blogPostSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
-    },
-    heading: {
-        type: String,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
-    post: {
-        type: String,
-        required: true,
-    },
-    read_duration: {
-        type: Number,
-        required: true,
-    },
-    created_at: {
-        type: Date,
-        required: true,
-    },
-})
 
 const Customer = mongoose.model("Customer",customerSchema)
 const Testimonial = mongoose.model("Testimonial",testimonialSchema)
@@ -704,6 +528,8 @@ const ShoppingList = mongoose.model("ShoppingList",shoppingListSchema)
 const Vendor = mongoose.model("Vendor",vendorSchema)
 const Product = mongoose.model("Product",productSchema)
 const Tag = mongoose.model("Tag",tagSchema)
+const Speciality = mongoose.model("Speciality",specialitySchema)
+
 const CartItem = mongoose.model("CartItem",cartItemSchema)
 const Order = mongoose.model("Order",orderSchema)
 const Transaction = mongoose.model("Transaction",transactionSchema)
@@ -725,6 +551,7 @@ module.exports = {
     Vendor,
     Product,
     Tag,
+    Speciality,
     CartItem,
     Order,
     Transaction,
