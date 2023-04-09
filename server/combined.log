@@ -3360,3 +3360,8 @@ Timestamp: 2023-04-09T00:13:09.156Z
 Level: info
 Message: Successfully sent response for /customers/6431fbbed4542c46f4bb6782/reviews
 
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-09T22:02:06.367Z'
+}
