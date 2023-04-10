@@ -47,6 +47,67 @@ class Gardeny{
             "Honeybee Farm",
         ]
 
+        this.farmPrefixes = [
+            'Gardeny',
+            'Green',
+            'Organic',
+            'Harvest',
+            'Farm',
+            'Bountiful',
+            'Nature\'s',
+            'Sunrise',
+            'Rainbow',
+            'Happy',
+            "Heavenstead",
+            "Hillside",
+            "Hilltop",
+            "Honeybee",
+            "Honey",
+            "Honeydew",
+            "Stardew",
+            "Stardust",
+            "Starlight",
+            "Starshine",
+            "Star",
+            "Sunshine",
+            "Sunlight",
+            "Sun",
+            "Moonlight",
+            "Moonshine",
+            "Moon",
+            "Rainbow",
+            "Rain",
+            "Rainy",
+        ]
+
+        this.farmSuffixes = [
+            'Farms',
+            'Acres',
+            'Oasis',
+            'House',
+            'Fresh',
+            'Harvest',
+            'Bounty',
+            'Farm',
+            'Ranch',
+            'Garden',
+            "Gardens",
+            "Grove",
+            "Orchard",
+            "Orchards",
+            "Farmstead",
+            "Farmsteads",
+            "Field",
+            "Fields",
+            "Farmette",
+            "Farmettes",
+            "Valley",
+            "Valleys",
+            "Vineyard",
+            "Vineyards",
+        ]
+
+
         this.productTags = [
             'Organic',
             'Non-GMO',
@@ -90,6 +151,8 @@ class Gardeny{
             "Meats",
             "Dairy",
             "Fish",
+            "Animal Products",
+            "Wines"
         ]
 
         this.jams = [
@@ -101,6 +164,52 @@ class Gardeny{
             'Peach Jam',
             'Plum Jam',
             'Cherry Jam',
+        ]
+
+        this.vendorLinks = [
+            "https://i.imgur.com/VVQTPu9.jpg",
+            "https://i.imgur.com/zfZeyKd.jpg",
+            "https://i.imgur.com/0Nu2EKo.jpg",
+            "https://i.imgur.com/TbnGUlu.jpg",
+            "https://i.imgur.com/5qZ2cw1.jpg",
+            "https://i.imgur.com/IEGSKrD.jpg",
+            "https://i.imgur.com/XimRFcW.jpg",
+            "https://i.imgur.com/8S0hpv3.jpg",
+            "https://i.imgur.com/i6KfPXO.jpg",
+            "https://i.imgur.com/85E1460.jpg",
+            "https://i.imgur.com/ymhgnHx.jpg",
+            "https://i.imgur.com/oyb2PfU.jpg",
+            "https://i.imgur.com/iXcSUnT.jpg",
+            "https://i.imgur.com/uEzeFY0.jpg",
+            "https://i.imgur.com/TFQtcDV.jpg",
+            "https://i.imgur.com/XRJBUoq.jpg",
+            "https://i.imgur.com/KR49PME.jpg",
+            "https://i.imgur.com/GmvyfFd.jpg",
+            "https://i.imgur.com/9vk9Av2.jpg",
+            "https://i.imgur.com/iEZjfI1.jpg",
+            "https://i.imgur.com/Ib4nNyt.jpg",
+            "https://i.imgur.com/OChe0ku.jpg",
+            "https://i.imgur.com/ifbKPvP.jpg",
+            "https://i.imgur.com/yxZt8cp.jpg",
+            "https://i.imgur.com/tchbrjB.jpg",
+            "https://i.imgur.com/AW0I6Pa.jpg",
+            "https://i.imgur.com/tWNnDvH.jpg",
+            "https://i.imgur.com/v7hNHn6.jpg",
+            "https://i.imgur.com/aKOx6Wj.jpg",
+            "https://i.imgur.com/iymnRtd.jpg",
+            "https://i.imgur.com/vLVrDD6.jpg",
+            "https://i.imgur.com/yCKqQzz.jpg",
+            "https://i.imgur.com/0coTENW.jpg",
+            "https://i.imgur.com/OnMSuLZ.jpg",
+            "https://i.imgur.com/uvDifn9.jpg",
+            "https://i.imgur.com/ZqTys7J.jpg",
+            "https://i.imgur.com/NbzQVkg.jpg",
+            "https://i.imgur.com/egivCLt.jpg",
+            "https://i.imgur.com/03iAE6k.jpg",
+            "https://i.imgur.com/e7jVsys.jpg",
+            "https://i.imgur.com/DXzJnxu.jpg",
+            "https://i.imgur.com/57pYcp2.jpg",
+
         ]
 
         this.jamLinks = [
@@ -129,6 +238,18 @@ class Gardeny{
             "https://i.imgur.com/6unEvso.jpg",
         ]
 
+        this.appletypes = [
+            "Granny Smith",
+            "Honeycrisp",
+            "Fuji",
+            "Gala",
+            "Pink Lady",
+            "Golden Delicious",
+            "Red Delicious",
+            "Cortland",
+            "Braeburn",
+        ]
+
         this.bananaLinks = [
             "https://i.imgur.com/4FK00ap.jpg",
             "https://i.imgur.com/Z1y2Jr8.png",
@@ -140,6 +261,14 @@ class Gardeny{
             "https://i.imgur.com/j79D964.jpg",
             "https://i.imgur.com/05lKVQK.jpg",
             "https://i.imgur.com/rHscqqT.jpg",
+        ]
+
+        this.bananaTypes = [
+            "Cavendish",
+            "Lady Finger",
+            "Plantain",
+            "Red Banana",
+            "Saba",
         ]
         
         this.orangeLinks = [
@@ -155,6 +284,17 @@ class Gardeny{
             "https://i.imgur.com/xYVfNb9.jpg"
         ]
 
+        this.orangeTypes = [
+            "Blood Orange",
+            "Cara Cara",
+            "Clementine",
+            "Honey Tangerine",
+            "Mandarin",
+            "Navel Orange",
+            "Valencia Orange",
+            "Tangerine",
+        ]
+
         this.beetLinks = [
             "https://i.imgur.com/NxJnslf.jpg",
             "https://i.imgur.com/kBm8Ftc.jpg",
@@ -165,6 +305,17 @@ class Gardeny{
             "https://i.imgur.com/9JeWmNG.jpg",
             "https://i.imgur.com/l0uZAt7.jpg",
             "https://i.imgur.com/GUsdJRs.jpg",
+        ]
+
+        this.beetTypes = [
+            "Bull's Blood",
+            "Chioggia",
+            "Detroit Dark Red",
+            "Golden",
+            "Red Ace",
+            "Red Ball",
+            "Red Cylindra",
+            "Red Globe",
         ]
 
         this.garlicLinks = [
@@ -484,18 +635,6 @@ class Gardeny{
             "Oat Milk",
             "Coconut Milk",
             "Hemp Milk",
-        ]
-
-        this.appletypes = [
-            "Granny Smith",
-            "Honeycrisp",
-            "Fuji",
-            "Gala",
-            "Pink Lady",
-            "Golden Delicious",
-            "Red Delicious",
-            "Cortland",
-            "Braeburn",
         ]
 
         // These are the quantites that small products such as apples, bottles of milk, eggs etc. will be sold in.

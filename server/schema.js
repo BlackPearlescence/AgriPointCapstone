@@ -453,8 +453,20 @@ const customerSchema = new Schema({
     tags: [{
         type: String,
         default: [],
-    }],
+    }], 
+    vendor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Vendor",
+        default: null,
+    }
 })
+
+productSchema.pre(["find"], function() {
+    this.populate({
+        path: "vendor",
+        select: "name"
+    })
+});
 
 
 const vendorSchema = new Schema({

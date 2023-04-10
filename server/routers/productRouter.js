@@ -36,6 +36,7 @@ router.get("/random", async (req, res, next) => {
         if(num){
             fileLogger.info(`Request received for /products/random?num=${num}`)
             const randomSampleProduct = await Product.aggregate().sample(parseInt(num)).exec()
+            consoleLogger.info(randomSampleProduct)
             res.status(StatusCodes.OK).json(randomSampleProduct)
         } else {
             fileLogger.info("Request received for /products/random")

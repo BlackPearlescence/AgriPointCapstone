@@ -27,6 +27,7 @@ const { faker } = require("@faker-js/faker")
 const mongoose = require("mongoose");
 const async = require("async");
 const e = require("express");
+const { consoleLogger } = require("./errorhandling/logger.js");
 // const { default: Gardeny } = require("./truedata/realseed.js");
 require("dotenv").config();
 
@@ -411,12 +412,13 @@ const assignProductsToVendors = async (vendors, products) => {
     const vendorsWithProducts = [];
     const productsCopy = [...products];
     for(vendor of vendors) {
-        const numProducts = getRandomNumberBasedOnMax(products.length);
+        const numProducts = await getRandomNumberBasedOnMax(products.length);
         for (let i = 0; i < numProducts; i++) {
-            const product = getRandomItem(productsCopy);
+            const product = await getRandomItem(productsCopy);
             if(!product) break;
-            vendor.inventory.push(product._id);
-            console.log("Product pushed")
+            product.vendor = vendor._id;
+            await vendor.inventory.push(product._id);
+            // New property to store the vendor's id
             productsCopy.splice(productsCopy.indexOf(product), 1)
         }
         vendorsWithProducts.push(vendor)
@@ -432,8 +434,6 @@ const createOrders = async (num, customers, products) => {
             placed_at: await faker.date.past(),
             status: await getRandomItem(['pending', 'fulfilled', 'cancelled']),
         })
-        console.log("order created")
-        console.log(order)
         const numProducts = await getRandomNumberBasedOnMax(products.length);
         for (let i = 0; i < numProducts; i++) {
             const product = await getRandomItem(products);
@@ -610,18 +610,18 @@ const seed = async () => {
 
 
     for (let i = 0; i < productsWithReviews.length; i++) {
-        console.log(productsWithReviews[i])
+        // console.log(productsWithReviews[i])
       await Product.create(productsWithReviews[i]);
     }
 
     for (let i = 0; i < vendorsWithBlogPosts.length; i++) {
-        console.log(vendorsWithBlogPosts[i])
+        // console.log(vendorsWithBlogPosts[i])
       await Vendor.create(vendorsWithBlogPosts[i]);
     }
 
 
     for (let i = 0; i < customersWithRewardTransactions.length; i++) {
-        console.log(customersWithRewardTransactions[i])
+        // console.log(customersWithRewardTransactions[i])
       await Customer.create(customersWithRewardTransactions[i]);
     }
 
