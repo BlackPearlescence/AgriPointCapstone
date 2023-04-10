@@ -5,7 +5,7 @@ import ProductContainer from "../components/products/ProductContainer";
 import styles from "./ProductsPage.module.scss";
 import ProductCard from "../components/generalcards/ProductCard";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsBasedOnQuery, nextPage, selectCurrentPage, selectProductData, selectTotalPages } from "../reducers/productSearchSlice";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -19,6 +19,8 @@ const ProductsPage = () => {
     const totalPages = useSelector(selectTotalPages)
     const [searchParams]= useSearchParams();
 
+    const [productType, setProductType] = useState("allproducts")
+
     useEffect(() => {
         const name = searchParams.get("name")
         const page = pageState
@@ -26,6 +28,11 @@ const ProductsPage = () => {
         dispatch(fetchProductsBasedOnQuery(query))
         console.log(name)
     }, [pageState])
+
+    const memoizedCards = useMemo(() => {
+        return productDataState.map(product => <ProductCard key={product._id} product={product}/>)
+    }, [productDataState])
+
 
     // const handleScroll = () => {
     //     if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
@@ -49,8 +56,6 @@ const ProductsPage = () => {
                         <Radio size="lg" value="allproducts" label="All Products" variant="soft" color="success"/>
                         <Radio size="lg" value="fruit" label="Fruit" variant="soft" color="success"/>
                         <Radio size="lg" value="vegetables" label="Vegetables" variant="soft"  color="success"/>
-                        <Radio size="lg" value="eggs" label="Eggs" variant="soft" color="success"/>
-                        <Radio size="lg" value="milk" label="Milk" variant="soft" color="success"/>
                     </RadioGroup>
                 </FilterAccordion>
                 <FilterAccordion heading={"Price Range"}>
@@ -73,7 +78,7 @@ const ProductsPage = () => {
                 </FilterAccordion>
             </FilterSidebar>
             <ProductContainer>
-                {productDataState ? productDataState.map(product => <ProductCard key={product._id} product={product}/>) : null}
+                {productDataState ? memoizedCards : null}
                 {productDataState ? console.log(productDataState) : null}
             </ProductContainer>
             {/** TODO: Page Bar */}
