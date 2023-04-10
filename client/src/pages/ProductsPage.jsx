@@ -18,7 +18,9 @@ const ProductsPage = () => {
 
     useEffect(() => {
         const name = searchParams.get("name")
-        dispatch(fetchProductsBasedOnQuery(name))
+        const page = searchParams.get("page")
+        const query = { name, page }
+        dispatch(fetchProductsBasedOnQuery(query))
         console.log(name)
     }, [])
 

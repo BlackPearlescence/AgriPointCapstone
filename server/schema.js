@@ -438,6 +438,10 @@ const customerSchema = new Schema({
         type: String,
         required: true,
     },
+    vegetation_type: {
+        type: String,
+        required: true,
+    }, 
 
     stock: [{   
         type: stockSchema,

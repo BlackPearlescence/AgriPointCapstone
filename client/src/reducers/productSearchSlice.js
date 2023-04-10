@@ -3,12 +3,13 @@ import axios from "axios";
 
 export const fetchProductsBasedOnQuery =  createAsyncThunk(
     "productSearch/fetchProducts", 
-    async (name) => {
+    async (query) => {
+        const {name, page} = query
         if(!name){
             const resp = await axios.get(`/products`)
             return resp.data
         } else {
-            const resp = await axios.get(`/products?name=${name}`)
+            const resp = await axios.get(`/products?name=${name}&page=${page}&limit=12`)
             return resp.data
         }    
     },
@@ -27,6 +28,9 @@ export const productSearchSlice = createSlice({
     name: "productSearch",
     initialState: {
         productData: [],
+        currentPage: 1,
+        pageSize: 12,
+        totalPages: 0,
         status: "idle",
         error: null,
     },
@@ -38,7 +42,11 @@ export const productSearchSlice = createSlice({
             })
             .addCase(fetchProductsBasedOnQuery.fulfilled, (state, action) => {
                 state.status = "succeeded";
-                state.productData = action.payload;
+                const { pageNumber, pageSize, totalPages, results } = action.payload;
+                state.productData = results;
+                state.currentPage = pageNumber;
+                state.pageSize = pageSize;
+                state.totalPages = totalPages;
                 console.log(state.productData)
             })
             .addCase(fetchProductsBasedOnQuery.rejected, (state, action) => {

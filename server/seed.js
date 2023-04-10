@@ -37,11 +37,53 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
     useUnifiedTopology: true,
 })
 
-// Gardeny Seeder
-const gardeny = new Gardeny();
+const gardeny =   new Gardeny();
+const largeProductStocks = [
+    {
+        size_name: "Small Crate",
+        size_item_count: 2,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+    {
+        size_name: "Medium Crate",
+        size_item_count: 4,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+    {
+        size_name: "Large Crate",
+        size_item_count: 6,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+]
 
+const smallProductStocks = [
+    {
+        size_name: "Half Dozen",
+        size_item_count: 6,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+    {
+        size_name: "Dozen",
+        size_item_count: 12,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+    {
+        size_name: "Two Dozen",
+        size_item_count: 24,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+    {
+        size_name: "Three Dozen",
+        size_item_count: 36,
+        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+    },
+]
 
-
+const loadNewProducts = async () => {
+    // Gardeny Seeder
+   
+    return newProducts
+}
 
 const deleteCollections = async () => {
     await Customer.deleteMany({});
@@ -176,17 +218,20 @@ const createCustomers = async (num, rewardsPrograms) => {
 
 const createVendors = async (num) => {
     const vendors = [];
-    const specialities = await createSpecialities(getRandomNumberBasedOnMax(5))
+    // const specialities = await createSpecialities(getRandomNumberBasedOnMax(5))
     for (let i = 0; i < num; i++) {
+        const newVendor = await gardeny.newVendor()
+        await newVendor
+        console.log(newVendor)
         const vendor = new Vendor({
-            name: faker.company.companyName(),
+            name: newVendor.name,
             slogan: faker.company.catchPhrase(),
             description: faker.company.bs(),
-            image_url: faker.image.imageUrl(),
+            image_url: newVendor.link,
             email: faker.internet.email(),
             phone_numbers: [faker.phone.number()],
             joined_at: faker.date.past(),
-            specialities: specialities,
+            specialities: newVendor.specialities,
             reviews: [],
             address: new Address({
                 address_one: faker.address.streetAddress(),
@@ -205,10 +250,12 @@ const createVendors = async (num) => {
 
 
 // Product stocks represent the number of products available based on size
-const createProductStocks = async (stockList) => {
+const createProductStocks = async () => {
     const stocks = [];
+    // Randomly choose smallstock or largestock
+    const stockList = await getRandomItem([smallProductStocks, largeProductStocks])
     for (singleStock of stockList) {
-        const stock = new Stock({
+        const stock = await new Stock({
             size_name: singleStock.size_name,
             size_item_count: singleStock.size_item_count,
             size_stock: singleStock.size_stock,
@@ -220,19 +267,24 @@ const createProductStocks = async (stockList) => {
 
 const createProducts = async (num) => {
     const products = [];
-    const tags = await createTags(5);
-    for (let i = 0; i < num; i++) {
-        const newProduct = await gardeny.getApple();
+    const newProducts = Array.from({ length: num }, async () => await gardeny.newProduct())
+    console.log(newProducts)
+    for (i = 0; i < num; i++) {
+        const newProduct = await gardeny.newProduct()
+        await newProduct
         const stocks = await createProductStocks(newProduct.stock);
+        const { name, type, link, tags } = newProduct
+        console.log(name,type,link,tags)
         const product = new Product({
-            name: newProduct.name,
-            type: newProduct.type,
+            name: await newProduct.name,
+            type: await newProduct.type,
             description: faker.lorem.paragraph(),
             price: faker.commerce.price(),
-            image_url: newProduct.link,
+            image_url: await newProduct.link,
+            vegetation_type: newProduct.vegetationType,
             stock: stocks,
             reviews: [],
-            tags: newProduct.tags,
+            tags: await newProduct.tags,
         })
         products.push(product)
     }
@@ -579,7 +631,7 @@ const assignBlogPostsToVendors = async (vendors, blogPosts) => {
 
 
 
-
+// 
 
 
 
@@ -588,7 +640,7 @@ const seed = async () => {
     await deleteCollections();
     const customers = await createCustomers(5);
     const vendors = await createVendors(5);
-    const products = await createProducts(20);
+    const products = await createProducts(100);
     const customersWithProducts = await assignProductsToCustomers(customers, products);
     const shoppingLists = await createCustomerShoppingLists(5);
     const shoppingListsWithItems = await assignItemsToShoppingLists(shoppingLists, products);

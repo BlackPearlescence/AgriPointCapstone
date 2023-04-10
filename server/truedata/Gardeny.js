@@ -1,5 +1,6 @@
 const { faker } = require("@faker-js/faker")
 const { getRandomItem, getRandomNumberBasedOnMax } = require("../seedfunctions.js");
+const { consoleLogger } = require("../errorhandling/logger.js");
 
 // Gardeny is a class that contains all the data needed to seed the database
 class Gardeny{
@@ -49,6 +50,20 @@ class Gardeny{
             "Honeydew",
             "Honeybee",
             "Hilltop",
+        ]
+
+        this.productAdjectives = [
+            "Gardeny",
+            "Green",
+            "Organic",
+            "Harvest",
+            "Farm",
+            "Bountiful",
+            "Nature's",
+            "Sunrise",
+            "Rainbow",
+            "Happy",
+            "Heavenstead",
         ]
 
         this.farms = [
@@ -440,7 +455,7 @@ class Gardeny{
             "Thai Hot",
         ]
 
-        this.eggplantsLinks = [
+        this.eggplantLinks = [
             "https://i.imgur.com/oSo7rqC.jpg",
             "https://i.imgur.com/98jtGga.jpg",
             "https://i.imgur.com/HAyPgW4.jpg",
@@ -453,7 +468,7 @@ class Gardeny{
             "https://i.imgur.com/4cAh67d.jpg",
         ]
 
-        this.eggplantsTypes = [
+        this.eggplantTypes = [
             "African Eggplant",
             "Black Beauty Eggplant",
             "Black Eggplant",
@@ -836,22 +851,22 @@ class Gardeny{
             {
                 size_name: "Half Dozen",
                 size_item_count: 6,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
             {
                 size_name: "Dozen",
                 size_item_count: 12,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
             {
                 size_name: "Two Dozen",
                 size_item_count: 24,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
             {
                 size_name: "Three Dozen",
                 size_item_count: 36,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
         ]
 
@@ -860,17 +875,17 @@ class Gardeny{
             {
                 size_name: "Small Crate",
                 size_item_count: 2,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
             {
                 size_name: "Medium Crate",
                 size_item_count: 4,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
             {
                 size_name: "Large Crate",
                 size_item_count: 6,
-                size_stock: faker.datatype.number({ min: 0, max: 10 }),
+                size_stock:  faker.datatype.number({ min: 0, max: 10 }),
             },
         ]
 
@@ -894,247 +909,305 @@ class Gardeny{
         return await tagList
     }
 
+    async getSmallSizes () {
+        return await this.smallProductStocks
+    }
+
+    async getLargeSizes () {
+        return await this.largeProductStocks
+    }
+
     async getApple () {
         return {
-            name: await getRandomItem(this.productNames) + " Apple",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Apple",
             link: await getRandomItem(this.appleLinks),
-            stock: this.smallProductStocks,
+            stock: await this.getSmallSizes(),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.appleTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getBanana () {
         return {
-            name: await getRandomItem(this.productNames) + " Banana",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Banana",
             link: await getRandomItem(this.bananaLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.bananaTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getOrange () {
         return {
-            name: await getRandomItem(this.productNames) + " Orange",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Orange",
             link: await getRandomItem(this.orangeLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.orangeTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getLemon () {
         return {
-            name: await getRandomItem(this.productNames) + " Lemon",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Lemon",
             link: await getRandomItem(this.lemonLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.lemonTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getBeet () {
         return {
-            name: await getRandomItem(this.productNames) + " Beet",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Beet",
             link: await getRandomItem(this.beetLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.beetTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getCarrot () {
         return {
-            name: await getRandomItem(this.productNames) + " Carrot",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Carrot",
             link: await getRandomItem(this.carrotLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.carrotTypes),
+            vegetationType: "vegetable",
         }
     }
 
 
     async getEggplant () {
         return {
-            name: await getRandomItem(this.productNames) + " Eggplant",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Eggplant",
             link: await getRandomItem(this.eggplantLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.eggplantTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getLettuce () {
         return {
-            name: await getRandomItem(this.productNames) + " Lettuce",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Lettuce",
             link: await getRandomItem(this.lettuceLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.lettuceTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getOnion () {
         return {
-            name: await getRandomItem(this.productNames) + " Onion",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Onion",
             link: await getRandomItem(this.onionLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.onionTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getPotato () {
         return {
-            name: await getRandomItem(this.productNames) + " Potato",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Potato",
             link: await getRandomItem(this.potatoLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.potatoTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getTomato () {
         return {
-            name: await getRandomItem(this.productNames) + " Tomato",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Tomato",
             link: await getRandomItem(this.tomatoLinks),
-            stock: this.smallProductStocks,
+            stock: await Promise.all(this.smallProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.tomatoTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getWatermelon () {
         return {
-            name: await getRandomItem(this.productNames) + " Watermelon",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Watermelon",
             link: await getRandomItem(this.watermelonLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.watermelonTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getGarlic () {
         return {
-            name: await getRandomItem(this.productNames) + " Garlic",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Garlic",
             link: await getRandomItem(this.garlicLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.garlicTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getSoybean () {
         return {
-            name: await getRandomItem(this.productNames) + " Soybean",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Soybean",
             link: await getRandomItem(this.soybeanLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.soybeanTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getJalapeno () {
         return {
-            name: await getRandomItem(this.productNames) + " Jalapano",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Jalapano",
             link: await getRandomItem(this.jalapenoLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.jalapenoTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getPea () {
         return {
-            name: await getRandomItem(this.productNames) + " Pea",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Pea",
             link: await getRandomItem(this.peaLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.peaTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getPear () {
         return {
-            name: await getRandomItem(this.productNames) + " Pear",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Pear",
             link: await getRandomItem(this.pearLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.pearTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getCabbage () {
         return {
-            name: await getRandomItem(this.productNames) + " Cabbage",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Cabbage",
             link: await getRandomItem(this.cabbageLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.cabbageTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getGrape () {
         return {
-            name: await getRandomItem(this.productNames) + " Grape",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Grape",
             link: await getRandomItem(this.grapeLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.grapeTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getPomegranate () {
         return {
-            name: await getRandomItem(this.productNames) + " Pomegranate",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Pomegranate",
             link: await getRandomItem(this.pomegranateLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.pomegranateTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getSpinach () {
         return {
-            name: await getRandomItem(this.productNames) + " Spinach",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Spinach",
             link: await getRandomItem(this.spinachLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.spinachTypes),
+            vegetationType: "vegetable",
         }
     }
 
     async getMango () {
         return {
-            name: await getRandomItem(this.productNames) + " Mango",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Mango",
             link: await getRandomItem(this.mangoLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.mangoTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getPineapple () {
         return {
-            name: await getRandomItem(this.productNames) + " Pineapple",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Pineapple",
             link: await getRandomItem(this.pineappleLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.pineappleTypes),
+            vegetationType: "fruit",
         }
     }
 
     async getCorn () {
         return {
-            name: await getRandomItem(this.productNames) + " Corn",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Corn",
             link: await getRandomItem(this.cornLinks),
-            stock: this.largeProductStocks,
+            stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),
             type: await getRandomItem(this.cornTypes),
+            vegetationType: "vegetable",
         }
     }
 
+    newProduct() {
+        const newProduct =  getRandomItem([this.getApple(), this.getBanana(), this.getOrange(), this.getLemon(), this.getBeet(), this.getCarrot(), this.getEggplant(), this.getLettuce(), this.getOnion(), this.getPotato(), this.getGarlic(), this.getSoybean(), this.getJalapeno(), this.getPea(), this.getPear(), this.getCabbage(), this.getGrape(), this.getPomegranate(), this.getSpinach(), this.getMango(), this.getPineapple(), this.getCorn()]);
+        return newProduct;
+    }
+
+    async getRandomSizeSpecialityList() {
+        let specialityList = []
+        let specialityCount = faker.datatype.number({ min: 1, max: 5 })
+        for (let i = 0; i < specialityCount; i++) {
+            const tag = await this.getVendorSpeciality()
+            if (!specialityList.includes(tag)) {
+                specialityList.push(tag)
+            }
+        }
+        return await specialityList
+    }
+
+    async newVendor() {
+        return {
+            name: await getRandomItem(this.farmPrefixes) + " " + await getRandomItem(this.farmSuffixes),
+            link: await getRandomItem(this.vendorLinks),
+            specialities: await this.getRandomSizeSpecialityList(),
+        }
+    }
+
+   
 
 }
 

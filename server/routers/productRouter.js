@@ -5,16 +5,21 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
+const  paginate  = require("../tools/paginate.js")
 // Base /products
 
 // Get all Products or Products by name
 router.get("/", async (req, res, next) => {
-    const { name } = req.query
+    let { name, page, limit } = req.query
     try {
-        if (name) {
-            fileLogger.info(`Request received for /products?name=${name}`)
+        if (name || page || limit) {
+            consoleLogger.info(`Request received for /products?name=${name}`)
+            page = parseInt(page) || 1;
+            limit = parseInt(limit) || 12;
             const productsByName = await Product.find({ name: { $regex: name, $options: "i" } }).exec()
-            res.status(StatusCodes.OK).json(productsByName)
+            const pageResults = await paginate(productsByName, page, limit)
+            consoleLogger.info(pageResults)
+            res.status(StatusCodes.OK).json(pageResults)
         } else {
             fileLogger.info("Request received for /products")
             const allProducts = await Product.find({}).exec()
