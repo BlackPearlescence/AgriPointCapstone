@@ -22,7 +22,7 @@ const {
 
 const { getRandomItem, getRandomNumberBasedOnMax } = require("./seedfunctions.js");
 // const { Gardeny } = require("./truedata/realseed.js");
-require("./truedata/realseed.js");
+require("./truedata/Gardeny.js");
 const { faker } = require("@faker-js/faker")
 const mongoose = require("mongoose");
 const async = require("async");

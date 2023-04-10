@@ -30,6 +30,27 @@ class Gardeny{
             'potato',
         ];
 
+        this.productNames = [
+            "Sunshine",
+            "Sunlight",
+            "Sun",
+            "Moonlight",
+            "Moonshine",
+            "Moon",
+            "Rainbow",
+            "Rain",
+            "Rainy",
+            "Starlight",
+            "Starshine",
+            "Star",
+            "Stardust",
+            "Stardew",
+            "Honey",
+            "Honeydew",
+            "Honeybee",
+            "Hilltop",
+        ]
+
         this.farms = [
             'Gardeny Farms',
             'Green Acres',
@@ -140,6 +161,15 @@ class Gardeny{
             "Salsas",
             "Dressings",
             "Breads",
+            "Sweet",
+            "Savory",
+            "Spicy",
+            "Mild",
+            "Hot",
+            "Cold",
+            "Warm",
+            "Fresh",
+            "Crunchy",
         ]
 
         this.vendorSpecialities = [
@@ -238,7 +268,7 @@ class Gardeny{
             "https://i.imgur.com/6unEvso.jpg",
         ]
 
-        this.appletypes = [
+        this.appleTypes = [
             "Granny Smith",
             "Honeycrisp",
             "Fuji",
@@ -330,6 +360,13 @@ class Gardeny{
             "https://i.imgur.com/u642RKY.jpg",
         ]
 
+        this.garlicTypes = [
+            "Ajo Rojo",
+            "Porcelain",
+            "Silverskin",
+            "Spanish Roja",
+        ]
+
         this.soybeanLinks = [
             "https://i.imgur.com/ZfVyvqo.jpg",
             "https://i.imgur.com/NDkGJTy.jpg",
@@ -341,6 +378,17 @@ class Gardeny{
             "https://i.imgur.com/ht7Vxlf.jpg",
             "https://i.imgur.com/uO32Nb7.jpg",
             "https://i.imgur.com/KUYlLY2.jpg",
+        ]
+
+        this.soybeanTypes = [
+            "Asgrow 2000",
+            "Asgrow 3000",
+            "Asgrow 4000",
+            "Yellow Soybean",
+            "Black Soybean",
+            "Brown Soybean",
+            "Green Soybean",
+            "White Soybean",
         ]
 
         this.tomatoLinks = [
@@ -356,6 +404,20 @@ class Gardeny{
             "https://i.imgur.com/PS778Iu.jpg",
         ]
 
+        this.tomatoTypes = [
+            "Cherry Tomato",
+            "Grape Tomato",
+            "Heirloom Tomato",
+            "Plum Tomato",
+            "Roma Tomato",
+            "Slicing Tomato",
+            "4th of July Tomato",
+            "Black Cherry Tomato",
+            "Black Krim Tomato",
+            "Black Plum Tomato",
+            "Black Zebra Tomato",
+        ]
+
         this.jalapenoLinks = [
             "https://i.imgur.com/srrKVJI.jpg",
             "https://i.imgur.com/mPf2JfN.jpg",
@@ -367,6 +429,15 @@ class Gardeny{
             "https://i.imgur.com/VIpyG8I.jpg",
             "https://i.imgur.com/XUiBisW.jpg",
             "https://i.imgur.com/2gJqXQB.jpg",
+        ]
+
+        this.jalapenoTypes = [
+            "Habanero",
+            "Jalapeno",
+            "Poblano",
+            "Serrano",
+            "Thai Chili",
+            "Thai Hot",
         ]
 
         this.eggplantsLinks = [
@@ -382,6 +453,16 @@ class Gardeny{
             "https://i.imgur.com/4cAh67d.jpg",
         ]
 
+        this.eggplantsTypes = [
+            "African Eggplant",
+            "Black Beauty Eggplant",
+            "Black Eggplant",
+            "Chinese Eggplant",
+            "Japanese Eggplant",
+            "Long Eggplant",
+            "Purple Eggplant",
+        ]
+
         this.lemonLinks = [
             "https://i.imgur.com/BzrfTdc.jpg",
             "https://i.imgur.com/oVTb8kz.jpg",
@@ -393,6 +474,13 @@ class Gardeny{
             "https://i.imgur.com/QszwWIe.jpg",
             "https://i.imgur.com/2bcnvoZ.jpg",
             "https://i.imgur.com/EozxMx8.jpg",
+        ]
+
+        this.lemonTypes = [
+            "Lisbon Lemon",
+            "Meyer Lemon",
+            "Eureka Lemon",
+            "Verna Lemon",
         ]
 
         this.peaLinks = [
@@ -408,6 +496,13 @@ class Gardeny{
             "https://i.imgur.com/6faUG4x.jpg",
         ]
 
+        this.peaTypes = [
+            "Snow Pea",
+            "Sugar Snap Pea",
+            "English Pea",
+            "Shelling Pea",
+        ]
+
         this.pearLinks = [
             "https://i.imgur.com/5kuw4cJ.jpg",
             "https://i.imgur.com/2d0nDmu.jpg",
@@ -419,6 +514,15 @@ class Gardeny{
             "https://i.imgur.com/4TKTpMO.jpg",
             "https://i.imgur.com/LNULrfV.jpg",
             "https://i.imgur.com/GdtWcYN.jpg",
+        ]
+
+        this.pearTypes = [
+            "Asian Pear",
+            "Bartlett Pear",
+            "Bosc Pear",
+            "D'Anjou Pear",
+            "Nashi Pear",
+            "Red Anjou Pear",
         ]
 
         this.cabbageLinks = [
@@ -434,6 +538,14 @@ class Gardeny{
             "https://i.imgur.com/M6b51Qu.jpg",
         ]
 
+        this.cabbageTypes = [
+            "Chinese Cabbage",
+            "Red Cabbage",
+            "Savoy Cabbage",
+            "Napa Cabbage",
+            "Green Cabbage",
+        ]
+
         this.grapeLinks = [
             "https://i.imgur.com/Bt38caa.jpg",
             "https://i.imgur.com/YDJx1dI.jpg",
@@ -447,6 +559,15 @@ class Gardeny{
             "https://i.imgur.com/MYwUt85.jpg",
         ]
 
+        this.grapeTypes = [
+            "Red Seedless Grape",
+            "Green Seedless Grape",
+            "Red Grape",
+            "Green Grape",
+            "Black Grape",
+        ]
+
+
         this.pomegranateLinks = [
             "https://i.imgur.com/0wTLZvC.jpg",
             "https://i.imgur.com/DYo1jlb.jpg",
@@ -458,6 +579,13 @@ class Gardeny{
             "https://i.imgur.com/aMRa3V7.jpg",
             "https://i.imgur.com/Xe617H4.jpg",
             "https://i.imgur.com/9coTW0s.jpg",
+        ]
+
+        this.pomegranateTypes = [
+            "Eversweet Pomegranate",
+            "Kazake Pomegranate",
+            "Purple Heart Pomegranate",
+            "Red Silk Pomegranate",
         ]
 
         this.carrotLinks = [
@@ -473,6 +601,14 @@ class Gardeny{
             "https://i.imgur.com/mJ4evex.jpg",
         ]
 
+        this.carrotTypes = [
+            "Chantenay Carrot",
+            "Danvers Carrot",
+            "Nantes Carrot",
+            "Parisian Carrot",
+            "Purple Haze Carrot",
+        ]
+
         this.watermelonLinks = [
             "https://i.imgur.com/og1GFJq.jpg",
             "https://i.imgur.com/zrBDDYG.jpg",
@@ -484,6 +620,14 @@ class Gardeny{
             "https://i.imgur.com/Ao4SUuZ.jpg",
             "https://i.imgur.com/Y4JeZQp.jpg",
             "https://i.imgur.com/Y38WLjl.jpg",
+        ]
+
+        this.watermelonTypes = [
+            "Crimson Sweet Watermelon",
+            "Honey Dew Watermelon",
+            "Moon and Stars Watermelon",
+            "Orange Flesh Watermelon",
+            "Sugar Baby Watermelon",
         ]
 
         this.potatoLinks = [
@@ -499,6 +643,14 @@ class Gardeny{
             "https://i.imgur.com/sGRJrGC.jpg",
         ]
 
+        this.potatoTypes = [
+            "Adirondack Blue Potato",
+            "All Blue Potato",
+            "All Red Potato",
+            "All White Potato",
+            "Blue Potato",
+        ]
+
         this.spinachLinks = [
             "https://i.imgur.com/nzCmBoA.jpg",
             "https://i.imgur.com/aCv1O7E.jpg",
@@ -510,6 +662,12 @@ class Gardeny{
             "https://i.imgur.com/yvqjHNv.jpg",
             "https://i.imgur.com/n0oewu7.jpg",
             "https://i.imgur.com/hHfxNaC.jpg",
+        ]
+
+        this.spinachTypes = [
+            "Bloomsdale Long Standing Spinach",
+            "Bloomsdale Spinach",
+            "Bloomsdale Winter Spinach",
         ]
 
         this.mangoLinks = [
@@ -525,6 +683,13 @@ class Gardeny{
             "https://i.imgur.com/ET9zJ9b.jpg",
         ]
 
+        this.mangoTypes = [
+            "Ataulfo Mango",
+            "Kent Mango",
+            "Keitt Mango",
+            "Tommy Atkins Mango",
+        ]
+
         this.onionLinks = [
             "https://i.imgur.com/PjACob7.jpg",
             "https://i.imgur.com/nzpWSt7.jpg",
@@ -536,6 +701,12 @@ class Gardeny{
             "https://i.imgur.com/6NN7R0g.jpg",
             "https://i.imgur.com/QA6z4TE.jpg",
             "https://i.imgur.com/D5IPSCJ.jpg",
+        ]
+
+        this.onionTypes = [
+            "Bermuda Onion",
+            "Bulb Onion",
+            "Cipollini Onion",
         ]
 
         this.lettuceLinks = [
@@ -551,6 +722,13 @@ class Gardeny{
             "https://i.imgur.com/CCAixI8.jpg",
         ]
 
+        this.lettuceTypes = [
+            "Buttercrunch Lettuce",
+            "Green Ice Lettuce",
+            "Lollo Rossa Lettuce",
+            "Red Sails Lettuce",
+        ]
+
         this.pineappleLinks = [
             "https://i.imgur.com/aKxYU9C.jpg",
             "https://i.imgur.com/bg6PeFK.jpg",
@@ -564,6 +742,14 @@ class Gardeny{
             "https://i.imgur.com/Aa7uMuq.jpg",
         ]
 
+        this.pineappleTypes = [
+            "Smooth Cayenne Pineapple",
+            "Red Spanish Pineapple",
+            "Queen Pineapple",
+            "Pernambuco Pineapple",
+            "Abacaxi Pineapple",
+        ]
+
         this.cornLinks = [
             "https://i.imgur.com/C5uz801.jpg",
             "https://i.imgur.com/rfpgfLb.jpg",
@@ -575,7 +761,15 @@ class Gardeny{
             "https://i.imgur.com/rqmlyU1.jpg",
             "https://i.imgur.com/GgDuYte.jpg",
             "https://i.imgur.com/7x8mN2h.jpg",
+        ]
 
+        this.cornTypes = [
+            "Blue Hopi Corn",
+            "Ruby Queen Corn",
+            "Golden Bantam Corn",
+            "Black Aztec Corn",
+            "Black Beauty Corn",
+            "Nirvana Hybrid Corn"
         ]
 
         this.cheeseLinks = [
@@ -682,12 +876,265 @@ class Gardeny{
 
     }
 
-    getAppleLink() { return getRandomItem(this.appleLinks()) }
-    getWatermelonLink() { return getRandomItem(this.watermelonLinks()) }
-    getCheeseLink() { return getRandomItem(this.cheeseLinks()) }
-    getMilkLink() { return getRandomItem(this.milkLinks()) }
+    // Functions to return data for each fruit, vegetable, etc.
+    // Each returns an object containing a productName, productLink, and productStock, a set of tags, and a productType
 
-    async getVendorSpeciality () { return getRandomItem(this.vendorSpecialities) }
+    async getVendorSpeciality () { return await getRandomItem(this.vendorSpecialities) }
+
+
+    async getRandomSizeTagList (){
+        let tagList = []
+        let tagCount = faker.datatype.number({ min: 1, max: 5 })
+        for (let i = 0; i < tagCount; i++) {
+            const tag = getRandomItem(this.sizeTags)
+            if (!tagList.includes(tag)) {
+                tagList.push(tag)
+            }
+        }
+        return tagList
+    }
+
+    async getApple () {
+        return {
+            name: await getRandomItem(this.productNames) + " Apple",
+            link: await getRandomItem(this.appleLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.appleTypes),
+        }
+    }
+
+    async getBanana () {
+        return {
+            name: await getRandomItem(this.productNames) + " Banana",
+            link: await getRandomItem(this.bananaLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.bananaTypes),
+        }
+    }
+
+    async getOrange () {
+        return {
+            name: await getRandomItem(this.productNames) + " Orange",
+            link: await getRandomItem(this.orangeLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.orangeTypes),
+        }
+    }
+
+    async getLemon () {
+        return {
+            name: await getRandomItem(this.productNames) + " Lemon",
+            link: await getRandomItem(this.lemonLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.lemonTypes),
+        }
+    }
+
+    async getBeet () {
+        return {
+            name: await getRandomItem(this.productNames) + " Beet",
+            link: await getRandomItem(this.beetLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.beetTypes),
+        }
+    }
+
+    async getCarrot () {
+        return {
+            name: await getRandomItem(this.productNames) + " Carrot",
+            link: await getRandomItem(this.carrotLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.carrotTypes),
+        }
+    }
+
+
+    async getEggplant () {
+        return {
+            name: await getRandomItem(this.productNames) + " Eggplant",
+            link: await getRandomItem(this.eggplantLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.eggplantTypes),
+        }
+    }
+
+    async getLettuce () {
+        return {
+            name: await getRandomItem(this.productNames) + " Lettuce",
+            link: await getRandomItem(this.lettuceLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.lettuceTypes),
+        }
+    }
+
+    async getOnion () {
+        return {
+            name: await getRandomItem(this.productNames) + " Onion",
+            link: await getRandomItem(this.onionLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.onionTypes),
+        }
+    }
+
+    async getPotato () {
+        return {
+            name: await getRandomItem(this.productNames) + " Potato",
+            link: await getRandomItem(this.potatoLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.potatoTypes),
+        }
+    }
+
+    async getTomato () {
+        return {
+            name: await getRandomItem(this.productNames) + " Tomato",
+            link: await getRandomItem(this.tomatoLinks),
+            stock: this.smallProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.tomatoTypes),
+        }
+    }
+
+    async getWatermelon () {
+        return {
+            name: await getRandomItem(this.productNames) + " Watermelon",
+            link: await getRandomItem(this.watermelonLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.watermelonTypes),
+        }
+    }
+
+    async getGarlic () {
+        return {
+            name: await getRandomItem(this.productNames) + " Garlic",
+            link: await getRandomItem(this.garlicLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.garlicTypes),
+        }
+    }
+
+    async getSoybean () {
+        return {
+            name: await getRandomItem(this.productNames) + " Soybean",
+            link: await getRandomItem(this.soybeanLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.soybeanTypes),
+        }
+    }
+
+    async getJalapeno () {
+        return {
+            name: await getRandomItem(this.productNames) + " Jalapano",
+            link: await getRandomItem(this.jalapenoLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.jalapenoTypes),
+        }
+    }
+
+    async getPea () {
+        return {
+            name: await getRandomItem(this.productNames) + " Pea",
+            link: await getRandomItem(this.peaLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.peaTypes),
+        }
+    }
+
+    async getPear () {
+        return {
+            name: await getRandomItem(this.productNames) + " Pear",
+            link: await getRandomItem(this.pearLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.pearTypes),
+        }
+    }
+
+    async getCabbage () {
+        return {
+            name: await getRandomItem(this.productNames) + " Cabbage",
+            link: await getRandomItem(this.cabbageLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.cabbageTypes),
+        }
+    }
+
+    async getGrape () {
+        return {
+            name: await getRandomItem(this.productNames) + " Grape",
+            link: await getRandomItem(this.grapeLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.grapeTypes),
+        }
+    }
+
+    async getPomegranate () {
+        return {
+            name: await getRandomItem(this.productNames) + " Pomegranate",
+            link: await getRandomItem(this.pomegranateLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.pomegranateTypes),
+        }
+    }
+
+    async getSpinach () {
+        return {
+            name: await getRandomItem(this.productNames) + " Spinach",
+            link: await getRandomItem(this.spinachLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.spinachTypes),
+        }
+    }
+
+    async getMango () {
+        return {
+            name: await getRandomItem(this.productNames) + " Mango",
+            link: await getRandomItem(this.mangoLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.mangoTypes),
+        }
+    }
+
+    async getPineapple () {
+        return {
+            name: await getRandomItem(this.productNames) + " Pineapple",
+            link: await getRandomItem(this.pineappleLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.pineappleTypes),
+        }
+    }
+
+    async getCorn () {
+        return {
+            name: await getRandomItem(this.productNames) + " Corn",
+            link: await getRandomItem(this.cornLinks),
+            stock: this.largeProductStocks,
+            tags: await this.getRandomSizeTagList(),
+            type: await getRandomItem(this.cornTypes),
+        }
+    }
+
 
 }
 

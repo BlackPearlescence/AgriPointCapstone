@@ -6,12 +6,12 @@ const ProductCard = ({ product }) => {
         <div className={styles.productCardContainer}>
             <img src="https://i.imgur.com/5l2UobM.jpg" alt="a product image" />
             <span className={styles.productTitle}>{product.name}</span>
-            <span className={styles.priceTag}>${25.00}</span>
+            <span className={styles.priceTag}>${product.price}</span>
             <div className={styles.addToCartContainer}>
                 <button>Add to Cart</button>
                 <input type="number" placeholder="Quantity" min={0}/>
             </div>
-            <a href="#">Shop Burpee Gardens</a>
+            <a href="#">{product.vendor.name}</a>
             <a>Add to List</a>
         </div>
     )

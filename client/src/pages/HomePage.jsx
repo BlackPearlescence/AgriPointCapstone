@@ -14,7 +14,7 @@ import {
     selectGreatProductDealsData,
     selectInterestedProductsData
  } from "../reducers/productHomeSlice";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const HomePage = () => {
 
@@ -26,7 +26,11 @@ const HomePage = () => {
     const flowerProductsState = useSelector(selectFlowerProductsData);
     const greatDealsState = useSelector(selectGreatProductDealsData);
 
-    useEffect(() => {dispatch(fetchHomeProducts())}, [])
+    const memoizedFetchHomeProducts = useMemo(() => {
+        return () => dispatch(fetchHomeProducts())
+    }, [dispatch])
+
+    useEffect(() => {memoizedFetchHomeProducts()}, [memoizedFetchHomeProducts])
 
     // TODO: Create algorithm to display products based on seasonality
     return (
