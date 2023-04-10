@@ -21,7 +21,7 @@ const {
     RewardStatistics, } = require("./schema.js");
 
 const { getRandomItem, getRandomNumberBasedOnMax } = require("./seedfunctions.js");
-// const { Gardeny } = require("./truedata/realseed.js");
+const Gardeny  = require("./truedata/Gardeny.js");
 require("./truedata/Gardeny.js");
 const { faker } = require("@faker-js/faker")
 const mongoose = require("mongoose");
@@ -36,6 +36,9 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
+
+// Gardeny Seeder
+const gardeny = new Gardeny();
 
 
 
@@ -202,13 +205,13 @@ const createVendors = async (num) => {
 
 
 // Product stocks represent the number of products available based on size
-const createProductStocks = async (num) => {
+const createProductStocks = async (stockList) => {
     const stocks = [];
-    for (let i = 0; i < num; i++) {
+    for (singleStock of stockList) {
         const stock = new Stock({
-            size_name: faker.commerce.productAdjective(),
-            size_item_count: faker.datatype.number(),
-            size_stock: faker.datatype.number(),
+            size_name: singleStock.size_name,
+            size_item_count: singleStock.size_item_count,
+            size_stock: singleStock.size_stock,
         })
         stocks.push(stock)
     }
@@ -217,18 +220,19 @@ const createProductStocks = async (num) => {
 
 const createProducts = async (num) => {
     const products = [];
-    const stocks = await createProductStocks(4);
     const tags = await createTags(5);
     for (let i = 0; i < num; i++) {
+        const newProduct = await gardeny.getApple();
+        const stocks = await createProductStocks(newProduct.stock);
         const product = new Product({
-            name: faker.commerce.productName(),
-            type: faker.commerce.productMaterial(),
-            description: faker.commerce.productDescription(),
+            name: newProduct.name,
+            type: newProduct.type,
+            description: faker.lorem.paragraph(),
             price: faker.commerce.price(),
-            image_url: faker.image.imageUrl(),
+            image_url: newProduct.link,
             stock: stocks,
             reviews: [],
-            tags: tags,
+            tags: newProduct.tags,
         })
         products.push(product)
     }

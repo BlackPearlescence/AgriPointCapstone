@@ -13950,3 +13950,4026 @@ Timestamp: 2023-04-10T17:10:31.551Z
 Level: info
 Message: Request received for /products/random
 
+{
+  message: {
+    name: 'Honeybee Apple',
+    link: 'https://i.imgur.com/5sAgUhs.jpg',
+    stock: [
+      { size_name: 'Half Dozen', size_item_count: 6, size_stock: 3 },
+      { size_name: 'Dozen', size_item_count: 12, size_stock: 8 },
+      { size_name: 'Two Dozen', size_item_count: 24, size_stock: 6 },
+      { size_name: 'Three Dozen', size_item_count: 36, size_stock: 10 }
+    ],
+    tags: [
+      Promise { undefined },
+      Promise { undefined },
+      Promise { undefined },
+      Promise { undefined },
+      Promise { undefined }
+    ],
+    type: 'Cortland'
+  },
+  level: 'info',
+  timestamp: '2023-04-10T18:19:46.543Z'
+}
+{
+  message: 'Server is listening on http://localhost:9000!',
+  level: 'info',
+  timestamp: '2023-04-10T18:22:55.653Z'
+}
+Timestamp: 2023-04-10T18:22:57.455Z
+Level: info
+Message: Request received for /products/random?num=6
+
+Timestamp: 2023-04-10T18:22:57.459Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbcc"),
+      name: 'Sun Apple',
+      type: 'Cortland',
+      description: 'Illo facilis sapiente aut aut nobis veritatis nesciunt magni. Ipsa voluptatibus atque. Fugit dicta repellat consequuntur qui ab. A nemo excepturi odio assumenda aliquam voluptatum. Cum dolorem magnam mollitia maxime quasi. Nihil iste perferendis similique amet.',
+      price: 390,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc8")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc9")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbca")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbcb")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Salt', 'Warm', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb84"),
+      name: 'Rain Apple',
+      type: 'Golden Delicious',
+      description: 'Voluptatibus ab consequatur earum hic mollitia enim. Molestiae hic hic inventore eaque quis earum. Maiores corporis ad vitae maxime ipsum. Ratione sed quasi exercitationem ut ipsa laborum repellat. Animi voluptatibus molestiae sint.',
+      price: 279,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb80")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb81")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb82")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb83")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sweet', 'Kosher', 'No Artificial Anything', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb96"),
+      name: 'Honeydew Apple',
+      type: 'Granny Smith',
+      description: 'Qui aut autem molestiae perferendis atque dignissimos commodi sequi doloremque. Laboriosam vero quibusdam nostrum explicabo. Facere hic molestiae possimus libero et. Expedita velit nostrum.',
+      price: 603,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb92")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb93")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb94")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb95")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Sweeteners',
+        'Salads',
+        'No Artificial Ingredients'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb4e"),
+      name: 'Stardew Apple',
+      type: 'Red Delicious',
+      description: 'Nesciunt reprehenderit magni quisquam temporibus cum. Quam quas nulla quasi. Unde accusantium debitis recusandae sapiente. Vitae nihil nisi doloribus.',
+      price: 445,
+      image_url: 'https://i.imgur.com/J7aQWNP.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4a")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4b")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4c")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4d")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Soups', 'Sauces', 'Organic', 'Warm' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.474Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb72"),
+      name: 'Rainy Apple',
+      type: 'Pink Lady',
+      description: 'Aut facilis sit ad saepe dolore eos ad fugit. Temporibus ut delectus velit nisi omnis nemo. Qui repudiandae ipsum culpa dolorem. Dicta quia autem culpa non veritatis est ipsam. Rem praesentium occaecati dolor ad facilis deserunt mollitia optio minima. Rem adipisci illo.',
+      price: 188,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6e")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6f")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb70")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb71")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'No Added Colors', 'Halal' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb45"),
+      name: 'Honeydew Apple',
+      type: 'Golden Delicious',
+      description: 'Sapiente eaque architecto molestias laboriosam. Distinctio sit blanditiis quis molestiae. Animi qui omnis voluptates molestiae quis minus unde tempore distinctio. Quod ad omnis temporibus velit qui fugit eveniet distinctio enim. Fugiat enim asperiores et quae impedit placeat quae et.',
+      price: 535,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb41")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb42")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb43")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb44")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Added Flavors',
+        'Soups',
+        'No Added Sugar',
+        'No Artificial Anything'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.484Z'
+}
+Timestamp: 2023-04-10T18:22:57.837Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:22:57.852Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb84"),
+      name: 'Rain Apple',
+      type: 'Golden Delicious',
+      description: 'Voluptatibus ab consequatur earum hic mollitia enim. Molestiae hic hic inventore eaque quis earum. Maiores corporis ad vitae maxime ipsum. Ratione sed quasi exercitationem ut ipsa laborum repellat. Animi voluptatibus molestiae sint.',
+      price: 279,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb80")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb81")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb82")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb83")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sweet', 'Kosher', 'No Artificial Anything', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.861Z'
+}
+Timestamp: 2023-04-10T18:22:57.870Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbba"),
+      name: 'Honeybee Apple',
+      type: 'Granny Smith',
+      description: 'Beatae nam consequatur molestiae saepe tempore temporibus magnam natus. Nulla fugiat ratione vel totam soluta veritatis corporis. Ipsam tempore aliquam voluptas mollitia quod deleniti vel in. Omnis unde consectetur. Alias aut nulla soluta temporibus iste dolores. Nobis vero ullam minima consequuntur architecto.',
+      price: 72,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb6")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb7")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb8")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb9")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'Gluten Free',
+        'No Artificial Ingredients',
+        'Cold',
+        'Dressings'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb45"),
+      name: 'Honeydew Apple',
+      type: 'Golden Delicious',
+      description: 'Sapiente eaque architecto molestias laboriosam. Distinctio sit blanditiis quis molestiae. Animi qui omnis voluptates molestiae quis minus unde tempore distinctio. Quod ad omnis temporibus velit qui fugit eveniet distinctio enim. Fugiat enim asperiores et quae impedit placeat quae et.',
+      price: 535,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb41")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb42")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb43")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb44")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Added Flavors',
+        'Soups',
+        'No Added Sugar',
+        'No Artificial Anything'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbcc"),
+      name: 'Sun Apple',
+      type: 'Cortland',
+      description: 'Illo facilis sapiente aut aut nobis veritatis nesciunt magni. Ipsa voluptatibus atque. Fugit dicta repellat consequuntur qui ab. A nemo excepturi odio assumenda aliquam voluptatum. Cum dolorem magnam mollitia maxime quasi. Nihil iste perferendis similique amet.',
+      price: 390,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc8")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc9")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbca")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbcb")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Salt', 'Warm', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.873Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb72"),
+      name: 'Rainy Apple',
+      type: 'Pink Lady',
+      description: 'Aut facilis sit ad saepe dolore eos ad fugit. Temporibus ut delectus velit nisi omnis nemo. Qui repudiandae ipsum culpa dolorem. Dicta quia autem culpa non veritatis est ipsam. Rem praesentium occaecati dolor ad facilis deserunt mollitia optio minima. Rem adipisci illo.',
+      price: 188,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6e")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6f")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb70")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb71")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'No Added Colors', 'Halal' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb60"),
+      name: 'Sunlight Apple',
+      type: 'Braeburn',
+      description: 'Ut corporis quis ducimus laudantium beatae rerum molestias. Laborum quibusdam impedit. Esse error hic nihil in. Aliquam eveniet excepturi commodi repellat. Deserunt quod quasi eaque.',
+      price: 143,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5c")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5d")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5e")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5f")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Local' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.886Z'
+}
+Timestamp: 2023-04-10T18:22:57.891Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbc3"),
+      name: 'Star Apple',
+      type: 'Golden Delicious',
+      description: 'Ullam ducimus provident distinctio. Impedit aut odit expedita molestiae praesentium sint pariatur possimus possimus. Aperiam amet a esse dicta debitis voluptatem. Inventore vitae eum ab facere.',
+      price: 71,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbbf")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc0")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc1")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc2")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Soups', 'Vegetarian', 'Local', 'Dips', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb60"),
+      name: 'Sunlight Apple',
+      type: 'Braeburn',
+      description: 'Ut corporis quis ducimus laudantium beatae rerum molestias. Laborum quibusdam impedit. Esse error hic nihil in. Aliquam eveniet excepturi commodi repellat. Deserunt quod quasi eaque.',
+      price: 143,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5c")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5d")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5e")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5f")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Local' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb69"),
+      name: 'Rainbow Apple',
+      type: 'Cortland',
+      description: 'Odit quasi dolorem corporis fuga soluta fuga tempora laboriosam nulla. Sequi ullam ipsa vero dolorem dolores. Sapiente nobis assumenda porro voluptate repudiandae quisquam doloremque. Minima maiores dicta. Sed tempore voluptas fuga delectus. Odio suscipit magnam.',
+      price: 778,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb65")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb66")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb67")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb68")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Colors', 'Non-GMO', 'Fair Trade', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:57.909Z'
+}
+Timestamp: 2023-04-10T18:22:58.205Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:22:58.206Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:22:58.207Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:22:58.211Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.218Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.220Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbba"),
+      name: 'Honeybee Apple',
+      type: 'Granny Smith',
+      description: 'Beatae nam consequatur molestiae saepe tempore temporibus magnam natus. Nulla fugiat ratione vel totam soluta veritatis corporis. Ipsam tempore aliquam voluptas mollitia quod deleniti vel in. Omnis unde consectetur. Alias aut nulla soluta temporibus iste dolores. Nobis vero ullam minima consequuntur architecto.',
+      price: 72,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb6")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb7")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb8")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb9")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'Gluten Free',
+        'No Artificial Ingredients',
+        'Cold',
+        'Dressings'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.223Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbba"),
+      name: 'Honeybee Apple',
+      type: 'Granny Smith',
+      description: 'Beatae nam consequatur molestiae saepe tempore temporibus magnam natus. Nulla fugiat ratione vel totam soluta veritatis corporis. Ipsam tempore aliquam voluptas mollitia quod deleniti vel in. Omnis unde consectetur. Alias aut nulla soluta temporibus iste dolores. Nobis vero ullam minima consequuntur architecto.',
+      price: 72,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb6")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb7")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb8")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb9")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'Gluten Free',
+        'No Artificial Ingredients',
+        'Cold',
+        'Dressings'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.235Z'
+}
+Timestamp: 2023-04-10T18:22:58.238Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:22:58.247Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbf0"),
+      name: 'Honey Apple',
+      type: 'Red Delicious',
+      description: 'Est quidem animi non in necessitatibus dignissimos. Rem accusantium recusandae assumenda in error ipsam saepe. Sequi provident delectus. Quidem ullam ipsum sapiente accusantium facilis excepturi rerum. Doloribus ipsam nihil voluptatem incidunt nobis recusandae ab in ab. Perspiciatis esse non consequatur expedita eaque consequatur explicabo alias.',
+      price: 444,
+      image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbec")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbed")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbee")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbef")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Crunchy', 'No Added Preservatives', 'Soups' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.251Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb7b"),
+      name: 'Honey Apple',
+      type: 'Fuji',
+      description: 'Enim voluptatibus culpa provident rem magni. Reiciendis nesciunt harum mollitia totam ratione. Sit distinctio ea asperiores sapiente et eos nisi. Repellat neque inventore cumque ratione at quae inventore. Aut maiores tempore eveniet exercitationem fuga quae tempore quia. Porro deleniti expedita.',
+      price: 517,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb77")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb78")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb79")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb7a")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Salt', 'Hot', 'Salads', 'No Added Colors', 'Salsas' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb72"),
+      name: 'Rainy Apple',
+      type: 'Pink Lady',
+      description: 'Aut facilis sit ad saepe dolore eos ad fugit. Temporibus ut delectus velit nisi omnis nemo. Qui repudiandae ipsum culpa dolorem. Dicta quia autem culpa non veritatis est ipsam. Rem praesentium occaecati dolor ad facilis deserunt mollitia optio minima. Rem adipisci illo.',
+      price: 188,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6e")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6f")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb70")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb71")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'No Added Colors', 'Halal' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb45"),
+      name: 'Honeydew Apple',
+      type: 'Golden Delicious',
+      description: 'Sapiente eaque architecto molestias laboriosam. Distinctio sit blanditiis quis molestiae. Animi qui omnis voluptates molestiae quis minus unde tempore distinctio. Quod ad omnis temporibus velit qui fugit eveniet distinctio enim. Fugiat enim asperiores et quae impedit placeat quae et.',
+      price: 535,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb41")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb42")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb43")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb44")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Added Flavors',
+        'Soups',
+        'No Added Sugar',
+        'No Artificial Anything'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbc3"),
+      name: 'Star Apple',
+      type: 'Golden Delicious',
+      description: 'Ullam ducimus provident distinctio. Impedit aut odit expedita molestiae praesentium sint pariatur possimus possimus. Aperiam amet a esse dicta debitis voluptatem. Inventore vitae eum ab facere.',
+      price: 71,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbbf")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc0")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc1")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc2")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Soups', 'Vegetarian', 'Local', 'Dips', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:22:58.264Z'
+}
+Timestamp: 2023-04-10T18:23:00.922Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbcc"),
+      name: 'Sun Apple',
+      type: 'Cortland',
+      description: 'Illo facilis sapiente aut aut nobis veritatis nesciunt magni. Ipsa voluptatibus atque. Fugit dicta repellat consequuntur qui ab. A nemo excepturi odio assumenda aliquam voluptatum. Cum dolorem magnam mollitia maxime quasi. Nihil iste perferendis similique amet.',
+      price: 390,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc8")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc9")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbca")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbcb")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Salt', 'Warm', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb84"),
+      name: 'Rain Apple',
+      type: 'Golden Delicious',
+      description: 'Voluptatibus ab consequatur earum hic mollitia enim. Molestiae hic hic inventore eaque quis earum. Maiores corporis ad vitae maxime ipsum. Ratione sed quasi exercitationem ut ipsa laborum repellat. Animi voluptatibus molestiae sint.',
+      price: 279,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb80")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb81")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb82")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb83")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sweet', 'Kosher', 'No Artificial Anything', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb4e"),
+      name: 'Stardew Apple',
+      type: 'Red Delicious',
+      description: 'Nesciunt reprehenderit magni quisquam temporibus cum. Quam quas nulla quasi. Unde accusantium debitis recusandae sapiente. Vitae nihil nisi doloribus.',
+      price: 445,
+      image_url: 'https://i.imgur.com/J7aQWNP.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4a")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4b")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4c")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb4d")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Soups', 'Sauces', 'Organic', 'Warm' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:00.940Z'
+}
+Timestamp: 2023-04-10T18:23:01.262Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:23:01.263Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb72"),
+      name: 'Rainy Apple',
+      type: 'Pink Lady',
+      description: 'Aut facilis sit ad saepe dolore eos ad fugit. Temporibus ut delectus velit nisi omnis nemo. Qui repudiandae ipsum culpa dolorem. Dicta quia autem culpa non veritatis est ipsam. Rem praesentium occaecati dolor ad facilis deserunt mollitia optio minima. Rem adipisci illo.',
+      price: 188,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6e")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6f")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb70")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb71")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'No Added Colors', 'Halal' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb96"),
+      name: 'Honeydew Apple',
+      type: 'Granny Smith',
+      description: 'Qui aut autem molestiae perferendis atque dignissimos commodi sequi doloremque. Laboriosam vero quibusdam nostrum explicabo. Facere hic molestiae possimus libero et. Expedita velit nostrum.',
+      price: 603,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb92")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb93")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb94")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb95")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Sweeteners',
+        'Salads',
+        'No Artificial Ingredients'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.277Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb60"),
+      name: 'Sunlight Apple',
+      type: 'Braeburn',
+      description: 'Ut corporis quis ducimus laudantium beatae rerum molestias. Laborum quibusdam impedit. Esse error hic nihil in. Aliquam eveniet excepturi commodi repellat. Deserunt quod quasi eaque.',
+      price: 143,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5c")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5d")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5e")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5f")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Local' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb69"),
+      name: 'Rainbow Apple',
+      type: 'Cortland',
+      description: 'Odit quasi dolorem corporis fuga soluta fuga tempora laboriosam nulla. Sequi ullam ipsa vero dolorem dolores. Sapiente nobis assumenda porro voluptate repudiandae quisquam doloremque. Minima maiores dicta. Sed tempore voluptas fuga delectus. Odio suscipit magnam.',
+      price: 778,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb65")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb66")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb67")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb68")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Colors', 'Non-GMO', 'Fair Trade', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbe7"),
+      name: 'Sunshine Apple',
+      type: 'Braeburn',
+      description: 'Illum quis aut voluptatem perferendis iure accusamus cupiditate praesentium hic. Pariatur modi distinctio aliquam harum. Odio magni et labore laboriosam adipisci ex doloremque occaecati nostrum. Ipsam sed fugiat ipsum omnis culpa dolore rem ipsum voluptate. Necessitatibus cupiditate eligendi necessitatibus exercitationem harum.',
+      price: 829,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe3")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe4")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe5")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe6")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sauces', 'Vegetarian' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbcc"),
+      name: 'Sun Apple',
+      type: 'Cortland',
+      description: 'Illo facilis sapiente aut aut nobis veritatis nesciunt magni. Ipsa voluptatibus atque. Fugit dicta repellat consequuntur qui ab. A nemo excepturi odio assumenda aliquam voluptatum. Cum dolorem magnam mollitia maxime quasi. Nihil iste perferendis similique amet.',
+      price: 390,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc8")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc9")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbca")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbcb")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Salt', 'Warm', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.280Z'
+}
+Timestamp: 2023-04-10T18:23:01.298Z
+Level: info
+Message: Request received for /products/random?num=3
+
+Timestamp: 2023-04-10T18:23:01.304Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbf0"),
+      name: 'Honey Apple',
+      type: 'Red Delicious',
+      description: 'Est quidem animi non in necessitatibus dignissimos. Rem accusantium recusandae assumenda in error ipsam saepe. Sequi provident delectus. Quidem ullam ipsum sapiente accusantium facilis excepturi rerum. Doloribus ipsam nihil voluptatem incidunt nobis recusandae ab in ab. Perspiciatis esse non consequatur expedita eaque consequatur explicabo alias.',
+      price: 444,
+      image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbec")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbed")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbee")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbef")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Crunchy', 'No Added Preservatives', 'Soups' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.317Z'
+}
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb45"),
+      name: 'Honeydew Apple',
+      type: 'Golden Delicious',
+      description: 'Sapiente eaque architecto molestias laboriosam. Distinctio sit blanditiis quis molestiae. Animi qui omnis voluptates molestiae quis minus unde tempore distinctio. Quod ad omnis temporibus velit qui fugit eveniet distinctio enim. Fugiat enim asperiores et quae impedit placeat quae et.',
+      price: 535,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb41")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb42")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb43")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb44")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Added Flavors',
+        'Soups',
+        'No Added Sugar',
+        'No Artificial Anything'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbe7"),
+      name: 'Sunshine Apple',
+      type: 'Braeburn',
+      description: 'Illum quis aut voluptatem perferendis iure accusamus cupiditate praesentium hic. Pariatur modi distinctio aliquam harum. Odio magni et labore laboriosam adipisci ex doloremque occaecati nostrum. Ipsam sed fugiat ipsum omnis culpa dolore rem ipsum voluptate. Necessitatibus cupiditate eligendi necessitatibus exercitationem harum.',
+      price: 829,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe3")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe4")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe5")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe6")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sauces', 'Vegetarian' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb7b"),
+      name: 'Honey Apple',
+      type: 'Fuji',
+      description: 'Enim voluptatibus culpa provident rem magni. Reiciendis nesciunt harum mollitia totam ratione. Sit distinctio ea asperiores sapiente et eos nisi. Repellat neque inventore cumque ratione at quae inventore. Aut maiores tempore eveniet exercitationem fuga quae tempore quia. Porro deleniti expedita.',
+      price: 517,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb77")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb78")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb79")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb7a")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Salt', 'Hot', 'Salads', 'No Added Colors', 'Salsas' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbba8"),
+      name: 'Stardew Apple',
+      type: 'Braeburn',
+      description: 'Tempora vitae perferendis mollitia libero facere soluta recusandae dignissimos. Deserunt debitis eaque iure nostrum perferendis suscipit numquam. Necessitatibus repudiandae excepturi.',
+      price: 575,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba4")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba5")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba6")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbba7")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Preservatives', 'Non-GMO' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb69"),
+      name: 'Rainbow Apple',
+      type: 'Cortland',
+      description: 'Odit quasi dolorem corporis fuga soluta fuga tempora laboriosam nulla. Sequi ullam ipsa vero dolorem dolores. Sapiente nobis assumenda porro voluptate repudiandae quisquam doloremque. Minima maiores dicta. Sed tempore voluptas fuga delectus. Odio suscipit magnam.',
+      price: 778,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb65")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb66")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb67")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb68")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Colors', 'Non-GMO', 'Fair Trade', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.329Z'
+}
+Timestamp: 2023-04-10T18:23:01.333Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb96"),
+      name: 'Honeydew Apple',
+      type: 'Granny Smith',
+      description: 'Qui aut autem molestiae perferendis atque dignissimos commodi sequi doloremque. Laboriosam vero quibusdam nostrum explicabo. Facere hic molestiae possimus libero et. Expedita velit nostrum.',
+      price: 603,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb92")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb93")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb94")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb95")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Sweeteners',
+        'Salads',
+        'No Artificial Ingredients'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb8d"),
+      name: 'Star Apple',
+      type: 'Braeburn',
+      description: 'Ducimus aliquam in cumque tempore nisi quo tempora. Ipsum magni unde aliquid voluptate. Modi necessitatibus non facilis minus nostrum. Error iste corrupti a culpa saepe. Nemo similique pariatur qui atque sapiente at eveniet fugit.',
+      price: 256,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb89")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8a")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8b")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb8c")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Dips' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.353Z'
+}
+Timestamp: 2023-04-10T18:23:01.649Z
+Level: info
+Message: Request received for /products/random?num=6
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbe7"),
+      name: 'Sunshine Apple',
+      type: 'Braeburn',
+      description: 'Illum quis aut voluptatem perferendis iure accusamus cupiditate praesentium hic. Pariatur modi distinctio aliquam harum. Odio magni et labore laboriosam adipisci ex doloremque occaecati nostrum. Ipsam sed fugiat ipsum omnis culpa dolore rem ipsum voluptate. Necessitatibus cupiditate eligendi necessitatibus exercitationem harum.',
+      price: 829,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe3")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe4")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe5")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe6")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sauces', 'Vegetarian' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb60"),
+      name: 'Sunlight Apple',
+      type: 'Braeburn',
+      description: 'Ut corporis quis ducimus laudantium beatae rerum molestias. Laborum quibusdam impedit. Esse error hic nihil in. Aliquam eveniet excepturi commodi repellat. Deserunt quod quasi eaque.',
+      price: 143,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5c")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5d")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5e")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb5f")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Local' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb96"),
+      name: 'Honeydew Apple',
+      type: 'Granny Smith',
+      description: 'Qui aut autem molestiae perferendis atque dignissimos commodi sequi doloremque. Laboriosam vero quibusdam nostrum explicabo. Facere hic molestiae possimus libero et. Expedita velit nostrum.',
+      price: 603,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb92")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb93")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb94")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb95")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Sweeteners',
+        'Salads',
+        'No Artificial Ingredients'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.664Z'
+}
+Timestamp: 2023-04-10T18:23:01.673Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb84"),
+      name: 'Rain Apple',
+      type: 'Golden Delicious',
+      description: 'Voluptatibus ab consequatur earum hic mollitia enim. Molestiae hic hic inventore eaque quis earum. Maiores corporis ad vitae maxime ipsum. Ratione sed quasi exercitationem ut ipsa laborum repellat. Animi voluptatibus molestiae sint.',
+      price: 279,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb80")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb81")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb82")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb83")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sweet', 'Kosher', 'No Artificial Anything', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb7b"),
+      name: 'Honey Apple',
+      type: 'Fuji',
+      description: 'Enim voluptatibus culpa provident rem magni. Reiciendis nesciunt harum mollitia totam ratione. Sit distinctio ea asperiores sapiente et eos nisi. Repellat neque inventore cumque ratione at quae inventore. Aut maiores tempore eveniet exercitationem fuga quae tempore quia. Porro deleniti expedita.',
+      price: 517,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb77")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb78")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb79")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb7a")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Salt', 'Hot', 'Salads', 'No Added Colors', 'Salsas' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb72"),
+      name: 'Rainy Apple',
+      type: 'Pink Lady',
+      description: 'Aut facilis sit ad saepe dolore eos ad fugit. Temporibus ut delectus velit nisi omnis nemo. Qui repudiandae ipsum culpa dolorem. Dicta quia autem culpa non veritatis est ipsam. Rem praesentium occaecati dolor ad facilis deserunt mollitia optio minima. Rem adipisci illo.',
+      price: 188,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6e")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb6f")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb70")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb71")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'No Added Colors', 'Halal' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:01.687Z'
+}
+Timestamp: 2023-04-10T18:23:02.002Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb69"),
+      name: 'Rainbow Apple',
+      type: 'Cortland',
+      description: 'Odit quasi dolorem corporis fuga soluta fuga tempora laboriosam nulla. Sequi ullam ipsa vero dolorem dolores. Sapiente nobis assumenda porro voluptate repudiandae quisquam doloremque. Minima maiores dicta. Sed tempore voluptas fuga delectus. Odio suscipit magnam.',
+      price: 778,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb65")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb66")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb67")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb68")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Colors', 'Non-GMO', 'Fair Trade', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb7b"),
+      name: 'Honey Apple',
+      type: 'Fuji',
+      description: 'Enim voluptatibus culpa provident rem magni. Reiciendis nesciunt harum mollitia totam ratione. Sit distinctio ea asperiores sapiente et eos nisi. Repellat neque inventore cumque ratione at quae inventore. Aut maiores tempore eveniet exercitationem fuga quae tempore quia. Porro deleniti expedita.',
+      price: 517,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb77")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb78")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb79")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb7a")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Salt', 'Hot', 'Salads', 'No Added Colors', 'Salsas' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb57"),
+      name: 'Honeybee Apple',
+      type: 'Honeycrisp',
+      description: 'Autem quas quas ratione quam aliquam sequi quasi iure. Laboriosam vitae impedit magni similique perspiciatis deserunt. Odio reiciendis illo voluptas molestias. Esse quia reprehenderit tempore fugit animi ipsa mollitia.',
+      price: 934,
+      image_url: 'https://i.imgur.com/5sAgUhs.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb53")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb54")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb55")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb56")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Dressings', 'Crunchy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:02.017Z'
+}
+Timestamp: 2023-04-10T18:23:02.024Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbba"),
+      name: 'Honeybee Apple',
+      type: 'Granny Smith',
+      description: 'Beatae nam consequatur molestiae saepe tempore temporibus magnam natus. Nulla fugiat ratione vel totam soluta veritatis corporis. Ipsam tempore aliquam voluptas mollitia quod deleniti vel in. Omnis unde consectetur. Alias aut nulla soluta temporibus iste dolores. Nobis vero ullam minima consequuntur architecto.',
+      price: 72,
+      image_url: 'https://i.imgur.com/D7YLN22.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb6")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb7")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb8")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb9")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'Gluten Free',
+        'No Artificial Ingredients',
+        'Cold',
+        'Dressings'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:02.040Z'
+}
+Timestamp: 2023-04-10T18:23:02.367Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbe7"),
+      name: 'Sunshine Apple',
+      type: 'Braeburn',
+      description: 'Illum quis aut voluptatem perferendis iure accusamus cupiditate praesentium hic. Pariatur modi distinctio aliquam harum. Odio magni et labore laboriosam adipisci ex doloremque occaecati nostrum. Ipsam sed fugiat ipsum omnis culpa dolore rem ipsum voluptate. Necessitatibus cupiditate eligendi necessitatibus exercitationem harum.',
+      price: 829,
+      image_url: 'https://i.imgur.com/vL1OVTF.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe3")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe4")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe5")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbe6")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Sauces', 'Vegetarian' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbcc"),
+      name: 'Sun Apple',
+      type: 'Cortland',
+      description: 'Illo facilis sapiente aut aut nobis veritatis nesciunt magni. Ipsa voluptatibus atque. Fugit dicta repellat consequuntur qui ab. A nemo excepturi odio assumenda aliquam voluptatum. Cum dolorem magnam mollitia maxime quasi. Nihil iste perferendis similique amet.',
+      price: 390,
+      image_url: 'https://i.imgur.com/BWSTg3f.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc8")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbc9")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbca")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbcb")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Added Sweeteners', 'No Added Salt', 'Warm', 'Dressings' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbb9f"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Unde doloribus autem pariatur deserunt enim quis aut. Libero eum voluptates cumque exercitationem. Aperiam numquam accusamus expedita quas unde. Sequi eaque a voluptatem consequuntur enim praesentium.',
+      price: 506,
+      image_url: 'https://i.imgur.com/fzA8OMa.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9b")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9c")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9d")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbb9e")
+        }
+      ],
+      reviews: [],
+      tags: [
+        'No Artificial Ingredients',
+        'Organic',
+        'Halal',
+        'No Added Preservatives',
+        'Crunchy'
+      ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:02.381Z'
+}
+Timestamp: 2023-04-10T18:23:02.697Z
+Level: info
+Message: Request received for /products/random?num=3
+
+{
+  message: [
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbb1"),
+      name: 'Starlight Apple',
+      type: 'Granny Smith',
+      description: 'Eum error eligendi nam vero ipsa facilis. Officiis velit aut. Veritatis cupiditate voluptate enim incidunt delectus voluptate accusantium similique. Modi nobis aliquid tenetur. Inventore eveniet ut quae.',
+      price: 555,
+      image_url: 'https://i.imgur.com/LbHtBkU.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbad")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbae")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbaf")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbb0")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Hot', 'Vegan' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbd5"),
+      name: 'Stardust Apple',
+      type: 'Golden Delicious',
+      description: 'Nulla et repellendus. Aliquam sunt sed rem impedit. Modi inventore accusantium unde ipsa illum labore labore totam. Voluptates unde officia id. Quae illum voluptatibus vero reiciendis earum totam. Modi ab nostrum.',
+      price: 986,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd1")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd2")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd3")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbd4")
+        }
+      ],
+      reviews: [],
+      tags: [ 'No Preservatives', 'Sweet', 'No Artificial Ingredients' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb33"),
+      __v: 0
+    },
+    {
+      _id: new ObjectId("643453e0be3a6bdeba0dbbde"),
+      name: 'Starshine Apple',
+      type: 'Honeycrisp',
+      description: 'Unde veniam nisi voluptates nobis iste. Corrupti maiores at assumenda iusto ullam placeat. Animi labore magni placeat dolorem alias repellat.',
+      price: 38,
+      image_url: 'https://i.imgur.com/6unEvso.jpg',
+      stock: [
+        {
+          size_name: 'Half Dozen',
+          size_item_count: 6,
+          size_stock: 1,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbda")
+        },
+        {
+          size_name: 'Dozen',
+          size_item_count: 12,
+          size_stock: 0,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdb")
+        },
+        {
+          size_name: 'Two Dozen',
+          size_item_count: 24,
+          size_stock: 9,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdc")
+        },
+        {
+          size_name: 'Three Dozen',
+          size_item_count: 36,
+          size_stock: 4,
+          _id: new ObjectId("643453e0be3a6bdeba0dbbdd")
+        }
+      ],
+      reviews: [],
+      tags: [ 'Savory', 'Sauces', 'Fair Trade', 'Spicy' ],
+      vendor: new ObjectId("643453e0be3a6bdeba0dbb36"),
+      __v: 0
+    }
+  ],
+  level: 'info',
+  timestamp: '2023-04-10T18:23:02.718Z'
+}
+Timestamp: 2023-04-10T18:23:17.849Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-10T18:23:18.105Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-10T18:25:21.203Z
+Level: info
+Message: Request received for /products
+
+Timestamp: 2023-04-10T18:25:21.299Z
+Level: info
+Message: Request received for /products
+

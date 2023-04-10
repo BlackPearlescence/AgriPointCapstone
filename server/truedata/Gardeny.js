@@ -886,12 +886,12 @@ class Gardeny{
         let tagList = []
         let tagCount = faker.datatype.number({ min: 1, max: 5 })
         for (let i = 0; i < tagCount; i++) {
-            const tag = getRandomItem(this.sizeTags)
+            const tag = await getRandomItem(this.productTags)
             if (!tagList.includes(tag)) {
                 tagList.push(tag)
             }
         }
-        return tagList
+        return await tagList
     }
 
     async getApple () {
