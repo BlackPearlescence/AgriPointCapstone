@@ -83,6 +83,14 @@ const handleNoTransactionsFoundError = (err, req, res, next) => {
     next(err);
 }
 
+const handleRandomProductFailure = (err, req, res, next) => {
+    err.message = "Failure to obtain random product(s)"
+    err.name = "RandomProductFailure";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
 
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
@@ -102,5 +110,6 @@ module.exports = {
     handleCustomerHasNoReviewsError,
     handleCustomerHasNoVendorReviewsError,
     handleCustomerHasNoProductReviewsError,
-    handleNoTransactionsFoundError
+    handleNoTransactionsFoundError,
+    handleRandomProductFailure,
 }
