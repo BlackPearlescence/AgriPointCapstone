@@ -25,16 +25,16 @@ const ProductsPage = () => {
         console.log(name)
     }, [pageState])
 
-    const handleScroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-            dispatch(nextPage())
-        };
-    }
+    // const handleScroll = () => {
+    //     if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
+    //         dispatch(nextPage())
+    //     };
+    // }
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    },[pageState])
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // },[pageState])
 
     return (
         <div className={styles.productsPageWrapper}>
