@@ -7,22 +7,34 @@ import ProductCard from "../components/generalcards/ProductCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductsBasedOnQuery, selectProductData } from "../reducers/productSearchSlice";
+import { fetchProductsBasedOnQuery, nextPage, selectCurrentPage, selectProductData } from "../reducers/productSearchSlice";
 import { useParams, useSearchParams } from "react-router-dom";
 
 const ProductsPage = () => {
 
     const dispatch = useDispatch();
     const productDataState = useSelector(selectProductData);
+    const pageState = useSelector(selectCurrentPage)
     const [searchParams]= useSearchParams();
 
     useEffect(() => {
         const name = searchParams.get("name")
-        const page = searchParams.get("page")
+        const page = pageState
         const query = { name, page }
         dispatch(fetchProductsBasedOnQuery(query))
         console.log(name)
-    }, [])
+    }, [pageState])
+
+    const handleScroll = () => {
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
+            dispatch(nextPage())
+        };
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[pageState])
 
     return (
         <div className={styles.productsPageWrapper}>

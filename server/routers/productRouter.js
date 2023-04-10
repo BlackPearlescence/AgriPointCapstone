@@ -14,6 +14,7 @@ router.get("/", async (req, res, next) => {
     try {
         if (name || page || limit) {
             consoleLogger.info(`Request received for /products?name=${name}`)
+            name = name || "";
             page = parseInt(page) || 1;
             limit = parseInt(limit) || 12;
             const productsByName = await Product.find({ name: { $regex: name, $options: "i" } }).exec()
@@ -21,9 +22,12 @@ router.get("/", async (req, res, next) => {
             consoleLogger.info(pageResults)
             res.status(StatusCodes.OK).json(pageResults)
         } else {
+            page = 1;
+            limit = 12;
             fileLogger.info("Request received for /products")
             const allProducts = await Product.find({}).exec()
-            res.status(StatusCodes.OK).json(allProducts)
+            const pageResults = await paginate(allProducts, page, limit)
+            res.status(StatusCodes.OK).json(pageResults)
         }
     } catch (err) {
         fileLogger.error(err)  

@@ -6,7 +6,7 @@ export const fetchProductsBasedOnQuery =  createAsyncThunk(
     async (query) => {
         const {name, page} = query
         if(!name){
-            const resp = await axios.get(`/products`)
+            const resp = await axios.get(`/products?page=${page}&limit=12`)
             return resp.data
         } else {
             const resp = await axios.get(`/products?name=${name}&page=${page}&limit=12`)
@@ -34,7 +34,10 @@ export const productSearchSlice = createSlice({
         status: "idle",
         error: null,
     },
-    reducers: {},
+    reducers: {
+        nextPage: state => { state.currentPage += 1 },
+        prevPage: state => { state.currentPage -= 1 },
+    },
     extraReducers: builder => {
         builder
             .addCase(fetchProductsBasedOnQuery.pending, (state, action) => {
@@ -57,4 +60,8 @@ export const productSearchSlice = createSlice({
 })
 
 export default productSearchSlice.reducer;
+export const { nextPage, prevPage } = productSearchSlice.actions;
 export const selectProductData = state => state.productSearch.productData;
+export const selectCurrentPage = state => state.productSearch.currentPage;
+export const selectPageSize = state => state.productSearch.pageSize;
+export const selectTotalPages = state => state.productSearch.totalPages;
