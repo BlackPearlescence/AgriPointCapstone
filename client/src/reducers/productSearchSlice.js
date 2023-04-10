@@ -35,8 +35,16 @@ export const productSearchSlice = createSlice({
         error: null,
     },
     reducers: {
-        nextPage: state => { state.currentPage += 1 },
-        prevPage: state => { state.currentPage -= 1 },
+        nextPage: state => { 
+            state.currentPage += 1 
+            state.currentPage = state.currentPage > state.totalPages ? state.currentPage = state.totalPages : state.currentPage
+        },
+        prevPage: state => { 
+            state.currentPage -= 1 
+            state.currentPage = state.currentPage < 1 ? state.currentPage = 1 : state.currentPage
+        },
+        resetPage: state => { state.currentPage = 1 },
+        changePage: (state, action) => { state.currentPage = action.payload }
     },
     extraReducers: builder => {
         builder
@@ -60,7 +68,7 @@ export const productSearchSlice = createSlice({
 })
 
 export default productSearchSlice.reducer;
-export const { nextPage, prevPage } = productSearchSlice.actions;
+export const { nextPage, prevPage, resetPage, changePage } = productSearchSlice.actions;
 export const selectProductData = state => state.productSearch.productData;
 export const selectCurrentPage = state => state.productSearch.currentPage;
 export const selectPageSize = state => state.productSearch.pageSize;

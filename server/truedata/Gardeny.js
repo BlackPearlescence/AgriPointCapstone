@@ -1074,7 +1074,7 @@ class Gardeny{
 
     async getJalapeno () {
         return {
-            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Jalapano",
+            name: await getRandomItem(this.productNames) + " " + await getRandomItem(this.productAdjectives) + " " + await " Jalapeno",
             link: await getRandomItem(this.jalapenoLinks),
             stock: await Promise.all(this.largeProductStocks),
             tags: await this.getRandomSizeTagList(),

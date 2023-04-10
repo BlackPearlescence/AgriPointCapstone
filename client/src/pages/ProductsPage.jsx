@@ -7,14 +7,16 @@ import ProductCard from "../components/generalcards/ProductCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductsBasedOnQuery, nextPage, selectCurrentPage, selectProductData } from "../reducers/productSearchSlice";
+import { fetchProductsBasedOnQuery, nextPage, selectCurrentPage, selectProductData, selectTotalPages } from "../reducers/productSearchSlice";
 import { useParams, useSearchParams } from "react-router-dom";
+import PageNavigationBar from "../components/products/PageNavigationBar";
 
 const ProductsPage = () => {
 
     const dispatch = useDispatch();
     const productDataState = useSelector(selectProductData);
     const pageState = useSelector(selectCurrentPage)
+    const totalPages = useSelector(selectTotalPages)
     const [searchParams]= useSearchParams();
 
     useEffect(() => {
@@ -74,6 +76,8 @@ const ProductsPage = () => {
                 {productDataState ? productDataState.map(product => <ProductCard key={product._id} product={product}/>) : null}
                 {productDataState ? console.log(productDataState) : null}
             </ProductContainer>
+            {/** TODO: Page Bar */}
+            <PageNavigationBar totalPages={totalPages} currentPage={pageState}/>
         </div>
     )
 }

@@ -1,0 +1,32 @@
+@use "../../App.scss";
+
+.pageBarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    button {
+        background: App.$alicegreen;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 10px;
+        font-size: App.$large-2;
+        font-family: App.$font-nunito;
+        color: App.$darkspringgreen;
+        cursor: pointer;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    button:hover {
+        background: App.$darkspringgreen;
+        color: App.$white;
+    }
+
+    .activePage {
+        background: App.$darkspringgreen;
+        color: App.$white;
+    }
+}

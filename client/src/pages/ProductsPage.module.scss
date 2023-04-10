@@ -6,7 +6,8 @@
     grid-template-rows: auto;
     grid-template-areas:
                         "b a"
-                        "b c";
+                        "b c"
+                        "b d";
 
     > div:nth-child(1) {
         grid-area: a;
@@ -25,6 +26,10 @@
     > div:nth-child(3) {
         background: App.$alicegreen;
         grid-area: c;
+    }
+    > div:nth-child(4) {
+        background: App.$alicegreen;
+        grid-area: d;
     }
 
 }
