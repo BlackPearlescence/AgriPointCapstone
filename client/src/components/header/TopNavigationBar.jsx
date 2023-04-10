@@ -1,7 +1,7 @@
 import { Badge, Divider, IconButton, Input, Option, Select } from "@mui/joy";
 import styles from "./TopNavigationBar.module.scss";
 import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
 import { showLogin } from "../../reducers/loginSlice";
@@ -12,8 +12,14 @@ const TopNavigationBar = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const [searchQuery, setSearchQuery] = useState("")
 
     const cartState = useSelector(selectCart)
+
+    const handleSearchQuerySubmit = (e) => {
+        e.preventDefault()
+        navigate(`/products?name=${searchQuery}`)
+    }
 
     return(
         <div className={styles.topContainer}>
@@ -22,7 +28,7 @@ const TopNavigationBar = () => {
                 <img className={styles.brandTextLogo} src={require("../../images/FullLogo_Transparent_NoBuffer (2).png")} />
             </div>
            
-            <form className={styles.searchBarContainer}>
+            <form className={styles.searchBarContainer} onSubmit={handleSearchQuerySubmit}>
                 {/** Select is for search by department */}
                 <Input 
                 sx={{ '--Input-decoratorChildHeight': '45px', width: "50rem"}}
@@ -41,7 +47,8 @@ const TopNavigationBar = () => {
                         <Divider orientation="vertical"/>
                         <IconButton sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0, backgroundColor: "#0FD160", color: "white"}} type="submit"><GrSearch/></IconButton>
                     </React.Fragment>
-                }/>
+                }
+                onChange={(e) => setSearchQuery((prevSearchQuery) => e.target.value)}/>
             </form>
             <div className={styles.topLinksContainer}>
                 <a href="#" onClick={() => dispatch(showLogin())}>Log In</a>

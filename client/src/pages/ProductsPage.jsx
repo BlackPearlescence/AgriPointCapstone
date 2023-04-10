@@ -6,22 +6,27 @@ import styles from "./ProductsPage.module.scss";
 import ProductCard from "../components/generalcards/ProductCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProductsBasedOnQuery, selectProductData } from "../reducers/productSearchSlice";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const ProductsPage = () => {
 
-    const [ products, setProducts ] = useState([])
+    const dispatch = useDispatch();
+    const productDataState = useSelector(selectProductData);
+    const [searchParams]= useSearchParams();
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios.get("/products")
-            console.log(result.data)
-            setProducts(result.data)
-        }
-        fetchData();
+        const name = searchParams.get("name")
+        dispatch(fetchProductsBasedOnQuery(name))
+        console.log(name)
     }, [])
 
     return (
         <div className={styles.productsPageWrapper}>
+            <div>
+                <span>Search Results</span>
+            </div>
             <FilterSidebar>
                 <FilterAccordion heading={"Products"}>
                     <RadioGroup defaultValue="allproducts" >
@@ -52,7 +57,8 @@ const ProductsPage = () => {
                 </FilterAccordion>
             </FilterSidebar>
             <ProductContainer>
-                {products ? products.map(product => <ProductCard key={product._id} product={product}/>) : null}
+                {productDataState ? productDataState.map(product => <ProductCard key={product._id} product={product}/>) : null}
+                {productDataState ? console.log(productDataState) : null}
             </ProductContainer>
         </div>
     )
