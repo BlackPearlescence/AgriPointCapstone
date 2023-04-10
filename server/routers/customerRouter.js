@@ -3,7 +3,7 @@ const { consoleLogger, fileLogger } = require("../errorhandling/logger");
 const { Customer, Cart, Product, Vendor, VendorReview, ProductReview } = require("../schema.js");
 const mongoose = require("mongoose");
 const router = express.Router();
-const { handleCustomerNotFoundError, handleNoCustomersFoundError, handleCustomerHasNoProductReviewsError, handleCustomerHasNoReviewsError, handleCustomerHasNoVendorReviewsError } = require("../errorhandling/errors.js");
+const { handleCustomerNotFoundError, handleNoCustomersFoundError, handleCustomerHasNoProductReviewsError, handleCustomerHasNoReviewsError, handleCustomerHasNoVendorReviewsError, handleNoTransactionsFoundError } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
 
 // Base /customers
@@ -46,7 +46,7 @@ router.use(handleCustomerNotFoundError)
 // This middleware establishes a common query for the reviews
 
 
-router.get("/reviews/:id", async (req, res, next) => {
+router.get("/:id/reviews", async (req, res, next) => {
     const { id } = req.params;
     try {
         fileLogger.info(`Request received for /customers/${id}/reviews`);
@@ -66,4 +66,38 @@ router.get("/reviews/:id", async (req, res, next) => {
 })
 
 router.use(handleCustomerHasNoReviewsError)
+
+// Get all transactions for a customer
+router.get("/:id/transactions", async (req, res, next) => {
+    const { id } = req.params;
+    try {
+        fileLogger.info(`Request received for /customers/${id}/transactions`);
+        const customerTransactions = await Customer.findById(id).populate("transactions.order.order_items.product").select("transactions")
+        res.status(StatusCodes.OK).json(customerTransactions);
+        fileLogger.info(`Successfully sent response for /customers/${id}/transactions`);
+    } catch (err) {
+        fileLogger.error(err);
+        next(err)
+    }
+})
+
+router.get("/:id/reviewtransactions", async (req, res, next) => {
+    const { id } = req.params;
+    try {
+        fileLogger.info(`Request received for /customers/${id}/reviewtransactions`);
+        const customerTransactions = await Customer.findById(id).populate("review_transactions.order.order_items.product").select("transactions")
+        res.status(StatusCodes.OK).json(customerTransactions);
+        fileLogger.info(`Successfully sent response for /customers/${id}/reviewtransactions`);
+    } catch (err) {
+        fileLogger.error(err);
+        next(err)
+    }
+})
+
+router.use(handleNoTransactionsFoundError)
+
+
+
+
+
 module.exports = router;

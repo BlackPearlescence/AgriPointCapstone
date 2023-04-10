@@ -75,6 +75,14 @@ const handleCustomerHasNoProductReviewsError = (err, req, res, next) => {
     next(err);
 }
 
+const handleNoTransactionsFoundError = (err, req, res, next) => {
+    err.message = "No transactions found"
+    err.name = "NoTransactionsFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
 
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
@@ -93,5 +101,6 @@ module.exports = {
     handleNoVendorsFoundError,
     handleCustomerHasNoReviewsError,
     handleCustomerHasNoVendorReviewsError,
-    handleCustomerHasNoProductReviewsError
+    handleCustomerHasNoProductReviewsError,
+    handleNoTransactionsFoundError
 }
