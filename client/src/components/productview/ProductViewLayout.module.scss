@@ -11,11 +11,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, calc(100vh/5));
     grid-template-areas:
-                        "a a"
+                        "c a"
                         "c b"
                         "c d"
                         "c e"
-                        "c f";
+                        "c .";
     grid-gap: 10px;
     
     background-color: App.$lighteralicegreen;
@@ -51,6 +51,7 @@
             justify-content: space-around;
             span {
                 color: App.$white;
+                font-size: App.$medium-1;
             }
             .sizeOptionsWrapper {
                 display: grid;
@@ -58,11 +59,11 @@
                 grid-template-rows: auto;
                 grid-gap: 5px;
                 
-                button {
+                .normalSize {
                     background-color: App.$lighterdarkspringgreen;
                     color: App.$white;
                     border-radius: 20px;
-                    padding: 5px;
+                    padding: 20px;
                     border: none;
                     transition: color 0.2s ease, background-color 0.2s ease;
                     &:hover {
@@ -72,6 +73,20 @@
                     }
                     
 
+                }
+
+                .selectedSize {
+                    background-color: App.$white;
+                    color: App.$lighterdarkspringgreen;
+                    border-radius: 20px;
+                    padding: 20px;
+                    border: none;
+                    transition: color 0.2s ease, background-color 0.2s ease;
+                    &:hover {
+                        color: App.$lighterdarkspringgreen;
+                        background-color: App.$white;
+    
+                    }
                 }
 
                 button:hover {
@@ -86,6 +101,7 @@
             justify-content: space-around;
             span {
                 color: App.$white;
+                font-size: App.$medium-1;
             }
 
             button {
@@ -96,8 +112,9 @@
                 border-radius: 100px;
                 margin: 20px;
                 padding: 10px;
-                width: 40px;
-                height: 40px;
+                width: 60px;
+                height: 60px;
+                font-size: App.$medium-1;
 
                 transition: color 0.2s ease, background-color 0.2s ease;
 

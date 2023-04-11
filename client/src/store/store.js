@@ -4,6 +4,7 @@ import loginReducer from "../reducers/loginSlice";
 import cartReducer from "../reducers/cartSlice"
 import productSearchReducer from "../reducers/productSearchSlice"
 import productHomeReducer from "../reducers/productHomeSlice"
+import productViewReducer from "../reducers/productViewSlice"
 
 export default configureStore({
     reducer: {
@@ -11,5 +12,6 @@ export default configureStore({
         cart: cartReducer,
         productSearch: productSearchReducer,
         productHome: productHomeReducer,
+        productView: productViewReducer,
     },
 });

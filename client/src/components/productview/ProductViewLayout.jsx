@@ -1,25 +1,33 @@
 import styles from "./ProductViewLayout.module.scss";
 import { GrCart, GrList } from "react-icons/gr"
 import { BsFillCartPlusFill, BsList } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { pickSize, selectProductInfo, selectSelectedSize } from "../../reducers/productViewSlice";
 
-const ProductViewLayout = ({ children, product }) => {
-    
+const ProductViewLayout = ({ children }) => {
+
+    const dispatch = useDispatch()
+    const product = useSelector(selectProductInfo)
+    const chosenSize = useSelector(selectSelectedSize)
     return(
         <div className={styles.productViewWrapper}>
             <div className={styles.productTitleContainer}>
-                <h1>Some goddamn product</h1>
+                <h1>{product.name}</h1>
             </div>
             <div>
-                <h1>Fourth of July Tomatoes</h1>
+                <h1>{product.type}</h1>
             </div>
             <div className={styles.productImageContainer}>
-                <img src={require("../../images/tomatoes-g9a9044b45_1920.jpg")} alt="a product image" />
+                <img src={product.image_url} alt="a product image" />
             </div>
             <div>
                 <h1>Info + Nutrition</h1>
+                {product.description}
             </div>
             <div>
                 <h1>Tags</h1>
+                {product.tags ? product.tags.map(tag => <span>{tag}</span>) : null}
                 {/* <button>Add to Cart</button>
                 <input type="text" />
                 <button>Add to List</button> */}
@@ -31,10 +39,17 @@ const ProductViewLayout = ({ children, product }) => {
                 <div className={styles.sizeContainer}>
                     <span>Sizes</span>
                     <div className={styles.sizeOptionsWrapper}>
-                        <button>6 ct</button>
+                        {product.stock ? product.stock.map(stockItem => {
+                            if(stockItem.size_name === chosenSize.size_name){
+                                return <button className={styles.selectedSize} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
+                            } else {
+                                return <button className={styles.normalSize} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
+                            }
+                        }) : null}
+                        {/* <button>6 ct</button>
                         <button>12 ct</button>
                         <button>24 ct</button>
-                        <button>48 ct</button>
+                        <button>48 ct</button> */}
                     </div>
                 </div>
                 <div className={styles.qtyContainer}>

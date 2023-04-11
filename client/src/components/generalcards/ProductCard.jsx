@@ -1,12 +1,15 @@
 import { Box } from "@mui/joy";
 import styles from "./ProductCard.module.scss";
 import  Rating from "@mui/material/Rating"
+import { useNavigate } from "react-router-dom";
 
 
 const ProductCard = ({ product }) => {
 
+    const navigate = useNavigate()
+
     return(
-        <div className={styles.productCardContainer}>
+        <div className={styles.productCardContainer} onClick={() => navigate(`/products/${product._id}`)}>
             <img src={product.image_url} alt="a product image" />
             <span className={styles.productTitle}>{product.name}</span>
             <span className={styles.priceTag}>${product.price}</span>

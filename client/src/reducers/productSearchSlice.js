@@ -5,17 +5,12 @@ export const fetchProductsBasedOnQuery =  createAsyncThunk(
     "productSearch/fetchProducts", 
     async (query) => {
         let {name, pageState, productType, priceRange, ratings} = query
-        console.log(query)
-        console.log(priceRange)
         name = name || "";
         pageState = pageState || 1;
-        console.log(pageState)
         productType = productType === "allproducts" || productType === undefined  ? "" : productType;
-        console.log(productType)
         priceRange = priceRange || [0, 1000];
         ratings = ratings || [0, 5];
         const resp = await axios.get(`/products?name=${name}&page=${pageState}&type=${productType}&minprice=${priceRange[0]}&maxprice=${priceRange[1]}&minrating=${ratings[0]}&maxrating=${ratings[1]}&limit=12`)
-        console.log(resp)
         return resp.data
     },
     {
@@ -61,13 +56,11 @@ export const productSearchSlice = createSlice({
             .addCase(fetchProductsBasedOnQuery.fulfilled, (state, action) => {
                 state.status = "succeeded";
                 const { pageNumber, pageSize, totalPages, results, numberOfResults } = action.payload;
-                console.log(results)
                 state.productData = results;
                 state.currentPage = pageNumber;
                 state.pageSize = pageSize;
                 state.totalPages = totalPages;
                 state.numberOfResults = numberOfResults;
-                console.log(state.productData)
             })
             .addCase(fetchProductsBasedOnQuery.rejected, (state, action) => {
                 state.status = "failed";
