@@ -26,13 +26,38 @@ export const productViewSlice = createSlice({
         selectedQuantity: 1,
         status: "idle",
         error: null,
+        isMaxAmount: false,
+        isMinAmount: false,
     },
     reducers: {
         pickSize: (state, action) => {
             state.selectedSize = action.payload;
+            state.selectedQuantity = 1;
+            state.isMaxAmount = false;
+            state.isMinAmount = false;
+            if(state.selectedSize.size_stock === 1) {
+                state.isMaxAmount = true;
+                state.isMinAmount = true;
+            }
         },
-        increaseQuantity: (state, action) => { state.selectedQuantity += 1 },
-        decreaseQuantity: (state, action) => { state.selectedQuantity -= 1 },
+        increaseQuantity: (state, action) => { 
+            if(state.selectedQuantity < state.selectedSize.size_stock){
+                state.isMaxAmount = false;
+                state.isMinAmount = false;
+                state.selectedQuantity += 1 
+            } else{
+                state.isMaxAmount = true;
+            }
+        },
+        decreaseQuantity: (state, action) => { 
+            if(state.selectedQuantity > 1){
+                state.isMinAmount = false;
+                state.isMaxAmount = false;
+                state.selectedQuantity -= 1 
+            } else {
+                state.isMinAmount = true;
+            }
+        },
     },   
     extraReducers: builder => {
         builder
@@ -56,3 +81,5 @@ export const { pickSize, increaseQuantity, decreaseQuantity } = productViewSlice
 export const selectProductInfo = state => state.productView.productInfo;
 export const selectSelectedSize = state => state.productView.selectedSize;
 export const selectSelectedQuantity = state => state.productView.selectedQuantity;
+export const selectIsMinAmount = state => state.productView.isMinAmount;
+export const selectIsMaxAmount = state => state.productView.isMaxAmount;

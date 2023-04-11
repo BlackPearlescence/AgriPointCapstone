@@ -42,7 +42,9 @@ const largeProductStocks = [
     {
         size_name: "Small Crate",
         size_item_count: 2,
-        size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+        // size_stock:  faker.datatype.number({ min: 0, max: 10 }),
+        size_stock:  0,
+
     },
     {
         size_name: "Medium Crate",

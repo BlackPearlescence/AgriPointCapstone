@@ -3,13 +3,16 @@ import { GrCart, GrList } from "react-icons/gr"
 import { BsFillCartPlusFill, BsList } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { pickSize, selectProductInfo, selectSelectedSize } from "../../reducers/productViewSlice";
+import { decreaseQuantity, increaseQuantity, pickSize, selectIsMaxAmount, selectIsMinAmount, selectProductInfo, selectSelectedQuantity, selectSelectedSize } from "../../reducers/productViewSlice";
 
 const ProductViewLayout = ({ children }) => {
 
     const dispatch = useDispatch()
     const product = useSelector(selectProductInfo)
     const chosenSize = useSelector(selectSelectedSize)
+    const currentQuantity = useSelector(selectSelectedQuantity)
+    const isMin = useSelector(selectIsMinAmount)
+    const isMax = useSelector(selectIsMaxAmount)
     return(
         <div className={styles.productViewWrapper}>
             <div className={styles.productTitleContainer}>
@@ -40,7 +43,9 @@ const ProductViewLayout = ({ children }) => {
                     <span>Sizes</span>
                     <div className={styles.sizeOptionsWrapper}>
                         {product.stock ? product.stock.map(stockItem => {
-                            if(stockItem.size_name === chosenSize.size_name){
+                            if(stockItem.size_stock === 0){
+                                return <button disabled className={styles.outOfStock} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
+                            } else if(stockItem.size_name === chosenSize.size_name){
                                 return <button className={styles.selectedSize} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
                             } else {
                                 return <button className={styles.normalSize} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
@@ -55,9 +60,9 @@ const ProductViewLayout = ({ children }) => {
                 <div className={styles.qtyContainer}>
                     <span>Quantity</span>
                     <div className={styles.qtyBtnContainer}>
-                        <button>+</button>
-                        <span>01</span>
-                        <button>-</button>
+                        {isMin ? <button disabled className={styles.quantityThreshold} onClick={() => dispatch(decreaseQuantity())}>-</button> : <button className={styles.quantityBtn} onClick={() => dispatch(decreaseQuantity())}>-</button>}
+                        <span>{currentQuantity}</span>
+                        {isMax ? <button disabled className={styles.quantityThreshold} onClick={() => dispatch(increaseQuantity())}>+</button> : <button className={styles.quantityBtn} onClick={() => dispatch(increaseQuantity())}>+</button>}
                     </div>
                 </div>
                 <div className={styles.addBtnContainer}>

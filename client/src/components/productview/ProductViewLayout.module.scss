@@ -89,6 +89,40 @@
                     }
                 }
 
+                
+
+                @mixin shake {
+                    animation: shake 0.5s;
+                }
+
+                @keyframes shake {
+                    0% {transform: translateX(0);}
+                    10% {transform: translateX(-10px);}
+                    20% {transform: translateX(10px);}
+                    30% {transform: translateX(-10px);}
+                    40% {transform: translateX(10px);}
+                    50% {transform: translateX(-10px);}
+                    60% {transform: translateX(10px);}
+                    70% {transform: translateX(-10px);}
+                    80% {transform: translateX(10px);}
+                    90% {transform: translateX(-10px);}
+                    100% {transform: translateX(0);}
+                }
+
+
+
+                .outOfStock {
+                    background-color: rgb(2, 44, 2);
+                    color: App.$white;
+                    border-radius: 20px;
+                    padding: 20px;
+                    border: none;
+                    &:hover {
+                        @include shake;
+    
+                    }
+                }
+
                 button:hover {
                     cursor: pointer;
                 }
@@ -104,7 +138,7 @@
                 font-size: App.$medium-1;
             }
 
-            button {
+            .quantityBtn {
                 color: App.$white;
                 background-color: App.$lighterdarkspringgreen;
                 // border-color: App.$lighterdarkspringgreen;
@@ -123,6 +157,18 @@
                     background-color: App.$white;
 
                 }
+            }
+            .quantityThreshold {
+                color: App.$white;
+                background-color: rgb(2, 44, 2);
+                // border-color: App.$lighterdarkspringgreen;
+                border: none;
+                border-radius: 100px;
+                margin: 20px;
+                padding: 10px;
+                width: 60px;
+                height: 60px;
+                font-size: App.$medium-1;
             }
 
             button:hover {
