@@ -19,7 +19,6 @@ const ProductsPage = () => {
     const productDataState = useSelector(selectProductData);
     const pageState = useSelector(selectCurrentPage)
     const totalPages = useSelector(selectTotalPages)
-    const filteredProducts = useSelector(selectFilteredProductData)
     const [searchParams]= useSearchParams();
 
     const [productType, setProductType] = useState("allproducts")

@@ -10,25 +10,36 @@ const  paginate  = require("../tools/paginate.js")
 
 // Get all Products or Products by name
 router.get("/", async (req, res, next) => {
-    let { name, page, limit } = req.query
+    let { name, page, type, minprice, maxprice, minrating, maxrating,  limit } = req.query
     try {
-        if (name || page || limit) {
-            consoleLogger.info(`Request received for /products?name=${name}`)
-            name = name || "";
-            page = parseInt(page) || 1;
-            limit = parseInt(limit) || 12;
-            const productsByName = await Product.find({ name: { $regex: name, $options: "i" } }).exec()
-            const pageResults = await paginate(productsByName, page, limit)
-            consoleLogger.info(pageResults)
-            res.status(StatusCodes.OK).json(pageResults)
-        } else {
-            page = 1;
-            limit = 12;
-            fileLogger.info("Request received for /products")
-            const allProducts = await Product.find({}).exec()
-            const pageResults = await paginate(allProducts, page, limit)
-            res.status(StatusCodes.OK).json(pageResults)
-        }
+        // if (name || page || limit) {
+        fileLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
+        name = name || "";
+        page = parseInt(page) || 1;
+        type = type || "";
+        minprice = parseInt(minprice) || 0;
+        maxprice = parseInt(maxprice) || 1000;
+        minrating = parseInt(minrating) || 0;
+        maxrating = parseInt(maxrating) || 5;
+        limit = parseInt(limit) || 12;
+
+        const productsByFilter = await Product.find({ 
+            name: { $regex: name, $options: "i" },
+            price: { $gte: minprice, $lte: maxprice },
+            vegetation_type: { $regex: type, $options: "i" },
+        }).exec();
+        console.log(productsByFilter)
+        const pageResults = await paginate(productsByFilter, page, limit)
+        consoleLogger.info(pageResults)
+        res.status(StatusCodes.OK).json(pageResults)
+        // } else {
+        //     page = 1;
+        //     limit = 12;
+        //     fileLogger.info("Request received for /products")
+        //     const allProducts = await Product.find({}).exec()
+        //     const pageResults = await paginate(allProducts, page, limit)
+        //     res.status(StatusCodes.OK).json(pageResults)
+        // }
     } catch (err) {
         fileLogger.error(err)  
         next(err)

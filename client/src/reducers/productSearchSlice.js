@@ -4,14 +4,18 @@ import axios from "axios";
 export const fetchProductsBasedOnQuery =  createAsyncThunk(
     "productSearch/fetchProducts", 
     async (query) => {
-        let {name, page, productType, priceRange, ratings} = query
+        let {name, pageState, productType, priceRange, ratings} = query
+        console.log(query)
         console.log(priceRange)
         name = name || "";
-        page = page || 1;
-        productType = productType || "";
+        pageState = pageState || 1;
+        console.log(pageState)
+        productType = productType === "allproducts" || productType === undefined  ? "" : productType;
+        console.log(productType)
         priceRange = priceRange || [0, 1000];
         ratings = ratings || [0, 5];
-        const resp = await axios.get(`/products?name=${name}&page=${page}&type=${productType}&minprice=${priceRange[0]}&maxprice=${priceRange[1]}&minrating=${ratings[0]}&maxrating=${ratings[1]}&limit=12`)
+        const resp = await axios.get(`/products?name=${name}&page=${pageState}&type=${productType}&minprice=${priceRange[0]}&maxprice=${priceRange[1]}&minrating=${ratings[0]}&maxrating=${ratings[1]}&limit=12`)
+        console.log(resp)
         return resp.data
     },
     {
@@ -47,7 +51,6 @@ export const productSearchSlice = createSlice({
         resetPage: state => { state.currentPage = 1 },
         changePage: (state, action) => { state.currentPage = action.payload },
         setProductData: (state, action) => { state.productData = action.payload },
-        setFilteredProductData: (state, action) => { state.filteredProductData = action.payload },
     },
     extraReducers: builder => {
         builder
@@ -57,6 +60,7 @@ export const productSearchSlice = createSlice({
             .addCase(fetchProductsBasedOnQuery.fulfilled, (state, action) => {
                 state.status = "succeeded";
                 const { pageNumber, pageSize, totalPages, results } = action.payload;
+                console.log(results)
                 state.productData = results;
                 state.currentPage = pageNumber;
                 state.pageSize = pageSize;
@@ -71,7 +75,7 @@ export const productSearchSlice = createSlice({
 })
 
 export default productSearchSlice.reducer;
-export const { nextPage, prevPage, resetPage, changePage, setProductData, setFilteredProductData } = productSearchSlice.actions;
+export const { nextPage, prevPage, resetPage, changePage, setProductData } = productSearchSlice.actions;
 export const selectProductData = state => state.productSearch.productData;
 export const selectCurrentPage = state => state.productSearch.currentPage;
 export const selectPageSize = state => state.productSearch.pageSize;
