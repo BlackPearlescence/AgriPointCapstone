@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { consoleLogger } = require("./errorhandling/logger");
 const { Schema, Decimal128 } = mongoose
 require("dotenv").config();
 
@@ -415,6 +416,44 @@ const customerSchema = new Schema({
     },
 });
 
+const productStatisticsSchema = new Schema({
+    total_reviews: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    average_rating: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    five_ratings: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    four_ratings: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    three_ratings: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    two_ratings: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    one_ratings: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+})
+
 
   const productSchema = new Schema({
     name: {
@@ -462,15 +501,62 @@ const customerSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Vendor",
         default: null,
-    }
+    },
+
+    statistics: {
+        type: productStatisticsSchema,
+        default: {},
+    },
 })
 
-productSchema.pre(["find"], function() {
+// Populate vendor name when product is retrieved
+productSchema.pre(["find"], function(next) {
     this.populate({
         path: "vendor",
         select: "name"
     })
+    next()
 });
+
+
+// Call whenever a review is added to a product
+productSchema.pre('save', function (next) {
+    if (this.reviews && this.reviews.length > 0) {
+      const sum = this.reviews.reduce((acc, review) => acc + review.rating, 0);
+      consoleLogger.warn("Rating average calculated",sum)
+      this.statistics.average_rating = Math.ceil(sum / this.reviews.length) 
+    } else {
+      this.statistics.average_rating = 0;
+    }
+    next();
+});
+
+// Call this to count the number of reviews for a product
+// Also call this to count the number of reviews for each rating (1 to 5)
+productSchema.pre('save', function (next) {
+    if (this.reviews && this.reviews.length > 0) {
+        const fives = this.reviews.filter(review => review.rating === 5).length;
+        const fours = this.reviews.filter(review => review.rating === 4).length;
+        const threes = this.reviews.filter(review => review.rating === 3).length;
+        const twos = this.reviews.filter(review => review.rating === 2).length;
+        const ones = this.reviews.filter(review => review.rating === 1).length;
+        this.statistics.total_reviews = this.reviews.length;
+        this.statistics.five_ratings = fives;
+        this.statistics.four_ratings = fours;
+        this.statistics.three_ratings = threes;
+        this.statistics.two_ratings = twos;
+        this.statistics.one_ratings = ones;
+    } else {
+        this.statistics.total_reviews = 0;
+        this.statistics.five_ratings = 0;
+        this.statistics.four_ratings = 0;
+        this.statistics.three_ratings = 0;
+        this.statistics.two_ratings = 0;
+        this.statistics.one_ratings = 0;
+    }
+    next();
+});
+
 
 
 const vendorSchema = new Schema({

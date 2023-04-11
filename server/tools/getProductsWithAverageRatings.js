@@ -8,7 +8,7 @@ const getProductsWithAverageRatings = async (products) => {
         const reviewStatistics = await getReviewStatistics(reviews)
         const averageRating = reviewStatistics.averageRating
         const productWithAverageRating = {
-            ...product._doc,
+            ...product._doc ? product._doc : product,
             averageRating: Math.ceil(averageRating)
         }
         productsWithAverageRatings.push(productWithAverageRating)

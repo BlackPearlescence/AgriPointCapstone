@@ -30,9 +30,9 @@ router.get("/", async (req, res, next) => {
             price: { $gte: minprice, $lte: maxprice },
             vegetation_type: { $regex: type, $options: "i" },
         }).exec();
-        const productsWithAverageRatings = await getProductsWithAverageRatings(productsByFilter)
-        consoleLogger.info(productsWithAverageRatings)
-        const pageResults = await paginate(productsWithAverageRatings, page, limit)
+        // const productsWithAverageRatings = await getProductsWithAverageRatings(productsByFilter)
+        // consoleLogger.info(productsWithAverageRatings)
+        const pageResults = await paginate(productsByFilter, page, limit)
         res.status(StatusCodes.OK).json(pageResults)
     } catch (err) {
         fileLogger.error(err)  
@@ -49,13 +49,13 @@ router.get("/random", async (req, res, next) => {
     try {
         if(num){
             fileLogger.info(`Request received for /products/random?num=${num}`)
-            const randomSampleProduct = await Product.aggregate().sample(parseInt(num)).exec()
-            consoleLogger.info(randomSampleProduct)
-            res.status(StatusCodes.OK).json(randomSampleProduct)
+            const randomSampleProducts = await Product.aggregate().sample(parseInt(num)).exec()
+            res.status(StatusCodes.OK).json(randomSampleProducts)
         } else {
             fileLogger.info("Request received for /products/random")
-            const randomSampleProducts = await Product.aggregate().sample(1).exec()
-            res.status(StatusCodes.OK).json(randomSampleProducts)
+            const randomSampleProduct = await Product.aggregate().sample(1).exec()
+            
+            res.status(StatusCodes.OK).json(randomSampleProduct)
         }
     } catch (err) {
         fileLogger.error(err)
