@@ -16,17 +16,17 @@ router.get("/", async (req, res, next) => {
     let { name, page, type, minprice, maxprice, minrating, maxrating,  limit } = req.query
     try {
         // if (name || page || limit) {
-        fileLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
+        consoleLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
         name = name || "";
         page = parseInt(page) || 1;
         type = type || "";
         minprice = parseInt(minprice) || 0;
         maxprice = parseInt(maxprice) || 1000;
-        minrating = parseInt(minrating) === 0 ? 0 : parseInt(minRating) || 0;
-        maxrating = parseInt(maxrating) === 0 ? 0 : parseInt(maxrating) || 5;
+        minrating = parseInt(minrating) === 0 || parseInt(minrating) === undefined ? 0 : parseInt(minrating) || 0;
+        consoleLogger.info(minprice,maxprice)
+        maxrating = parseInt(maxrating) === 0 || parseInt(maxrating) === undefined ? 0 : parseInt(maxrating) || 5;
         limit = parseInt(limit) || 12;
-        consoleLogger.info(minrating)
-        consoleLogger.info(maxrating)
+        consoleLogger.info(name, page, type, minprice, maxprice, minrating, maxrating, limit)
         // if(minrating === 0 && maxrating === 0){
         //     minrating = 0;
         //     maxrating = 1;
