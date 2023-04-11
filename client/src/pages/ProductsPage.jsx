@@ -9,7 +9,7 @@ import  Rating from "@mui/material/Rating"
 import axios from "axios";
 import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductsBasedOnQuery, nextPage, selectCurrentPage, selectFilteredProductData, selectProductData, selectTotalPages, setFilteredProductData, setProductData } from "../reducers/productSearchSlice";
+import { fetchProductsBasedOnQuery, nextPage, resetPage, selectCurrentPage, selectFilteredProductData, selectProductData, selectTotalPages, setFilteredProductData, setProductData } from "../reducers/productSearchSlice";
 import { useParams, useSearchParams } from "react-router-dom";
 import PageNavigationBar from "../components/products/PageNavigationBar";
 
@@ -60,7 +60,17 @@ const ProductsPage = () => {
 
     const handleProductTypeChange = (e) => {
         setProductType(e.target.value)
-        console.log(productType)
+        dispatch(resetPage())
+    }
+
+    const handlePriceRangeChange = (e) => {
+        setPriceRange(e.target.value)
+        dispatch(resetPage())
+    }
+
+    const handleRatingsChange = (e) => {
+        setRatings(e.target.value)
+        dispatch(resetPage())
     }
 
 
@@ -95,10 +105,7 @@ const ProductsPage = () => {
                         <Slider
                             value={priceRange}
                             sx={{ padding: "0px", width: "300px" }}
-                            onChange={(e) => {
-                                setPriceRange(e.target.value)
-                                console.log(priceRange)
-                            }}
+                            onChange={handlePriceRangeChange}
                             min={0}
                             max={1000}
                             step={1}
@@ -112,10 +119,7 @@ const ProductsPage = () => {
                             <Slider
                                 value={ratings}
                                 sx={{ padding: "0px", width: "300px" }}
-                                onChange={(e) => {
-                                    setRatings(e.target.value)
-                                    console.log(priceRange)
-                                }}
+                                onChange={handleRatingsChange}
                                 min={0}
                                 max={5}
                                 step={0.5}
