@@ -2,6 +2,7 @@ const express = require("express");
 const { fileLogger, consoleLogger } = require("../errorhandling/logger");
 const { Product } = require("../schema.js");
 const mongoose = require("mongoose");
+// const { $expr, $eq } = require("mongoose").mongo
 const router = express.Router();
 const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError, handleNoReviewsFoundError, handleRatingStatFailure } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
@@ -21,10 +22,11 @@ router.get("/", async (req, res, next) => {
         type = type || "";
         minprice = parseInt(minprice) || 0;
         maxprice = parseInt(maxprice) || 1000;
-        minrating = parseInt(minrating) || 0;
-        maxrating = parseInt(maxrating) || 5;
+        minrating = parseInt(minrating) === 0 ? 0 : parseInt(minRating) || 0;
+        maxrating = parseInt(maxrating) === 0 ? 0 : parseInt(maxrating) || 5;
         limit = parseInt(limit) || 12;
-        consoleLogger.info(minrating,maxrating)
+        consoleLogger.info(minrating)
+        consoleLogger.info(maxrating)
         // if(minrating === 0 && maxrating === 0){
         //     minrating = 0;
         //     maxrating = 1;
@@ -35,8 +37,15 @@ router.get("/", async (req, res, next) => {
             .where("price").gte(minprice).lte(maxprice)
             .where("vegetation_type", new RegExp(type, "i"))
             .where("statistics.average_rating").gte(minrating).lte(maxrating)
-            .ne("statistics.average_rating", 0)
 
+
+        // if(minrating == 0 && maxrating == 0){
+        //     query.where("statistics.average_rating").equals(0)
+        //     consoleLogger.info("THIS EXECUTED")
+        // } else {
+        //     console.log("WRONG ONE")
+        // }
+        
         const productsByFilter = await query.exec()
         // const productsByFilter = await Product.find({ 
         //     name: { $regex: name, $options: "i" },
