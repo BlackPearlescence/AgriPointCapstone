@@ -34,7 +34,7 @@ const ProductsPage = () => {
         // const priceRange = searchParams.get("pricerange")
         // const ratings = searchParams.get("ratings")
         // const type = searchParams.get("type")
-        const query = { name, pageState }
+        const query = { name, pageState, productType, priceRange, ratings}
         dispatch(fetchProductsBasedOnQuery(query))
         console.log(name)
     }, [pageState])
@@ -85,6 +85,7 @@ const ProductsPage = () => {
     }
 
     const handleSendFilterQuery = (e) => {
+        dispatch(resetPage())
         const name = searchParams.get("name")
         const query = { name, pageState, productType, priceRange, ratings}
         console.log(productType)
@@ -136,7 +137,7 @@ const ProductsPage = () => {
                             sx={{ padding: "0px", width: "300px" }}
                             onChange={handlePriceRangeChange}
                             onMouseUp={handlePriceRangeChosenMouseUp}
-                            min={0}
+                            min={1}
                             max={1000}
                             step={1}
                         />

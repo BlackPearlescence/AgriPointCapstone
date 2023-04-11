@@ -24,13 +24,26 @@ router.get("/", async (req, res, next) => {
         minrating = parseInt(minrating) || 0;
         maxrating = parseInt(maxrating) || 5;
         limit = parseInt(limit) || 12;
+        consoleLogger.info(minrating,maxrating)
+        // if(minrating === 0 && maxrating === 0){
+        //     minrating = 0;
+        //     maxrating = 1;
+        // }
 
-        const productsByFilter = await Product.find({ 
-            name: { $regex: name, $options: "i" },
-            price: { $gte: minprice, $lte: maxprice },
-            vegetation_type: { $regex: type, $options: "i" },
-            "statistics.average_rating": { $gte: minrating, $lte: maxrating }
-        }).exec();
+        const query = Product.find()
+            .where("name", new RegExp(name, "i"))
+            .where("price").gte(minprice).lte(maxprice)
+            .where("vegetation_type", new RegExp(type, "i"))
+            .where("statistics.average_rating").gte(minrating).lte(maxrating)
+            .ne("statistics.average_rating", 0)
+
+        const productsByFilter = await query.exec()
+        // const productsByFilter = await Product.find({ 
+        //     name: { $regex: name, $options: "i" },
+        //     price: { $gte: minprice, $lte: maxprice },
+        //     vegetation_type: { $regex: type, $options: "i" },
+        //     "statistics.average_rating": { $gte: minrating, $lte: maxrating },
+        // }).exec();
         // const productsWithAverageRatings = await getProductsWithAverageRatings(productsByFilter)
         // consoleLogger.info(productsWithAverageRatings)
         const pageResults = await paginate(productsByFilter, page, limit)
