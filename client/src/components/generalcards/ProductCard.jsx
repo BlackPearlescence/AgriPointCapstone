@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
             <span className={styles.productTitle}>{product.name}</span>
             <span className={styles.priceTag}>${product.price}</span>
             <Box>
-                <Rating name="read-only"  value={product.averageRating} min={0} max={5} readOnly/>
+                <Rating name="read-only"  value={product.statistics.average_rating} min={0} max={5} readOnly/>
             </Box>
             <div className={styles.addToCartContainer}>
                 <button>Add to Cart</button>

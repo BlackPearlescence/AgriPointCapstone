@@ -24,7 +24,9 @@ const ProductsPage = () => {
 
     const [productType, setProductType] = useState("allproducts")
     const [priceRange, setPriceRange] = useState([0, 1000])
+    const [priceRangeValue, setPriceRangeValue] = useState([0, 1000])
     const [ratings, setRatings] = useState([0,5])
+    const [ratingsValue, setRatingsValue] = useState([0,5])
     const [sort, setSort] = useState("")  
 
     useEffect(() => {
@@ -37,12 +39,12 @@ const ProductsPage = () => {
         console.log(name)
     }, [pageState])
 
-    useEffect(() => {
-        const name = searchParams.get("name")
-        const query = { name, pageState, productType, priceRange, ratings}
-        console.log(productType)
-        dispatch(fetchProductsBasedOnQuery(query))
-    }, [productType, priceRange, ratings])
+    // useEffect(() => {
+    //     const name = searchParams.get("name")
+    //     const query = { name, pageState, productType, priceRange, ratings}
+    //     console.log(productType)
+    //     dispatch(fetchProductsBasedOnQuery(query))
+    // }, [productType, priceRangeValue, ratingsValue])
     
 
 
@@ -74,6 +76,32 @@ const ProductsPage = () => {
         dispatch(resetPage())
     }
 
+    const handlePriceRangeChosenMouseUp = (e) => {
+        setPriceRangeValue(priceRange)
+    }
+
+    const handleRatingsChosenMouseUp = (e) => {
+        setRatingsValue(ratings)
+    }
+
+    const handleSendFilterQuery = (e) => {
+        const name = searchParams.get("name")
+        const query = { name, pageState, productType, priceRange, ratings}
+        console.log(productType)
+        dispatch(fetchProductsBasedOnQuery(query))
+    }
+
+    const handleResetFilters = (e) => {
+        setProductType("allproducts")
+        setPriceRange([0, 1000])
+        setPriceRangeValue([0, 1000])
+        setRatings([0,5])
+        setRatingsValue([0,5])
+        dispatch(resetPage())
+        const query = { name: searchParams.get("name"), pageState: 1 }
+        dispatch(fetchProductsBasedOnQuery(query))
+    }
+
 
     // const handleScroll = () => {
     //     if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
@@ -91,7 +119,7 @@ const ProductsPage = () => {
             <div>
                 <span>Search Results ({numberOfResults})</span>
             </div>
-            <FilterSidebar>
+            <FilterSidebar handleApplyFilters={handleSendFilterQuery} handleResetFilters={handleResetFilters}>
                 <FilterAccordion heading={"Products"}>
                     <RadioGroup onChange={handleProductTypeChange} >
                         <Radio size="lg" value="allproducts" label="All Products" variant="soft" color="success"/>
@@ -107,6 +135,7 @@ const ProductsPage = () => {
                             value={priceRange}
                             sx={{ padding: "0px", width: "300px" }}
                             onChange={handlePriceRangeChange}
+                            onMouseUp={handlePriceRangeChosenMouseUp}
                             min={0}
                             max={1000}
                             step={1}
@@ -121,6 +150,7 @@ const ProductsPage = () => {
                                 value={ratings}
                                 sx={{ padding: "0px", width: "300px" }}
                                 onChange={handleRatingsChange}
+                                onMouseUp={handleRatingsChosenMouseUp}
                                 min={0}
                                 max={5}
                                 step={1}

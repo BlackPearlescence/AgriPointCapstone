@@ -29,6 +29,7 @@ router.get("/", async (req, res, next) => {
             name: { $regex: name, $options: "i" },
             price: { $gte: minprice, $lte: maxprice },
             vegetation_type: { $regex: type, $options: "i" },
+            "statistics.average_rating": { $gte: minrating, $lte: maxrating }
         }).exec();
         // const productsWithAverageRatings = await getProductsWithAverageRatings(productsByFilter)
         // consoleLogger.info(productsWithAverageRatings)
