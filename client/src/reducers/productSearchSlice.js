@@ -28,6 +28,7 @@ export const productSearchSlice = createSlice({
     name: "productSearch",
     initialState: {
         productData: [],
+        filteredProductData: [],
         currentPage: 1,
         pageSize: 12,
         totalPages: 0,
@@ -44,7 +45,9 @@ export const productSearchSlice = createSlice({
             state.currentPage = state.currentPage < 1 ? state.currentPage = 1 : state.currentPage
         },
         resetPage: state => { state.currentPage = 1 },
-        changePage: (state, action) => { state.currentPage = action.payload }
+        changePage: (state, action) => { state.currentPage = action.payload },
+        setProductData: (state, action) => { state.productData = action.payload },
+        setFilteredProductData: (state, action) => { state.filteredProductData = action.payload },
     },
     extraReducers: builder => {
         builder
@@ -68,8 +71,9 @@ export const productSearchSlice = createSlice({
 })
 
 export default productSearchSlice.reducer;
-export const { nextPage, prevPage, resetPage, changePage } = productSearchSlice.actions;
+export const { nextPage, prevPage, resetPage, changePage, setProductData, setFilteredProductData } = productSearchSlice.actions;
 export const selectProductData = state => state.productSearch.productData;
 export const selectCurrentPage = state => state.productSearch.currentPage;
 export const selectPageSize = state => state.productSearch.pageSize;
 export const selectTotalPages = state => state.productSearch.totalPages;
+export const selectFilteredProductData = state => state.productSearch.filteredProductData;
