@@ -4,14 +4,15 @@ import axios from "axios";
 export const fetchProductsBasedOnQuery =  createAsyncThunk(
     "productSearch/fetchProducts", 
     async (query) => {
-        const {name, page} = query
-        if(!name){
-            const resp = await axios.get(`/products?page=${page}&limit=12`)
-            return resp.data
-        } else {
-            const resp = await axios.get(`/products?name=${name}&page=${page}&limit=12`)
-            return resp.data
-        }    
+        let {name, page, productType, priceRange, ratings} = query
+        console.log(priceRange)
+        name = name || "";
+        page = page || 1;
+        productType = productType || "";
+        priceRange = priceRange || [0, 1000];
+        ratings = ratings || [0, 5];
+        const resp = await axios.get(`/products?name=${name}&page=${page}&type=${productType}&minprice=${priceRange[0]}&maxprice=${priceRange[1]}&minrating=${ratings[0]}&maxrating=${ratings[1]}&limit=12`)
+        return resp.data
     },
     {
         pending: (state, action) => {
@@ -44,7 +45,9 @@ export const productSearchSlice = createSlice({
             state.currentPage = state.currentPage < 1 ? state.currentPage = 1 : state.currentPage
         },
         resetPage: state => { state.currentPage = 1 },
-        changePage: (state, action) => { state.currentPage = action.payload }
+        changePage: (state, action) => { state.currentPage = action.payload },
+        setProductData: (state, action) => { state.productData = action.payload },
+        setFilteredProductData: (state, action) => { state.filteredProductData = action.payload },
     },
     extraReducers: builder => {
         builder
@@ -68,8 +71,9 @@ export const productSearchSlice = createSlice({
 })
 
 export default productSearchSlice.reducer;
-export const { nextPage, prevPage, resetPage, changePage } = productSearchSlice.actions;
+export const { nextPage, prevPage, resetPage, changePage, setProductData, setFilteredProductData } = productSearchSlice.actions;
 export const selectProductData = state => state.productSearch.productData;
 export const selectCurrentPage = state => state.productSearch.currentPage;
 export const selectPageSize = state => state.productSearch.pageSize;
 export const selectTotalPages = state => state.productSearch.totalPages;
+export const selectFilteredProductData = state => state.productSearch.filteredProductData;
