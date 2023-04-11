@@ -35,9 +35,11 @@ export const productViewSlice = createSlice({
             state.selectedQuantity = 1;
             state.isMaxAmount = false;
             state.isMinAmount = false;
-            if(state.selectedSize.size_stock === 1) {
-                state.isMaxAmount = true;
+            if(state.selectedQuantity - 1 ===  0){
                 state.isMinAmount = true;
+            }
+            if(state.selectedQuantity + 1 > state.selectedSize.size_stock) {
+                state.isMaxAmount = true;
             }
         },
         increaseQuantity: (state, action) => { 
@@ -45,6 +47,9 @@ export const productViewSlice = createSlice({
                 state.isMaxAmount = false;
                 state.isMinAmount = false;
                 state.selectedQuantity += 1 
+                if(state.selectedQuantity + 1 > state.selectedSize.size_stock) {
+                    state.isMaxAmount = true;
+                }
             } else{
                 state.isMaxAmount = true;
             }
@@ -54,6 +59,9 @@ export const productViewSlice = createSlice({
                 state.isMinAmount = false;
                 state.isMaxAmount = false;
                 state.selectedQuantity -= 1 
+                if(state.selectedQuantity - 1 ===  0) {
+                    state.isMinAmount = true;
+                }
             } else {
                 state.isMinAmount = true;
             }

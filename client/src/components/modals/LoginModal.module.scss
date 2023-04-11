@@ -1,5 +1,92 @@
+@use "../../App.scss";
 
 .loginModalContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .loginFormContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        background-color: App.$white;
+        border-radius: 10px;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .loginHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: App.$large-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-bottom: 5px solid App.$lighterdarkspringgreen;
+        width: 100%;
+    }
+
+    .loginField {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // width: 100%;
+        padding: 20px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+        span {
+            margin-right: 30px;
+            margin-top: 10px;
+        }
+        input {
+            margin: 10px;
+        }
+    }
+
+    .loginBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 20px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$white;
+        font-family: App.$font-nunito;
+        background-color: App.$darkspringgreen;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: App.$lighterdarkspringgreen;
+        }
+    }
+
+    .switchToRegisterLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: App.$lighterdarkspringgreen;
+        }
+    }
 }

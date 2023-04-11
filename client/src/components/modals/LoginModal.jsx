@@ -12,18 +12,21 @@ const LoginModal = () => {
     return (
         <Modal centered size="md" show={loginShownState} onShow={() => dispatch(showLogin())} onHide={() => dispatch(hideLogin())}>
             <div className={styles.loginModalContainer}>
-                <span>Log into your Account</span>
-                <div>
-                    <span>Email Address or Username</span>
-                    <input type="text" />
-                </div>
-                <div>
-                    <span>Password</span>
-                    <input type="password" />
-                </div>
-                <button>Log in</button>
+                <div className={styles.loginHeader}>Log into your Account</div>
+                <form className={styles.loginFormContainer}>
+                    <div className={styles.loginField}>   
+                        <span>Email Address</span>
+                        <span>Password</span>
+                    </div>
+                    <div className={styles.loginField}>
+                        <input type="text" />
+                        <input type="password" />
+                    </div>
+                </form>
+                
+                <button className={styles.loginBtn}>Log in</button>
                 {/* <button>Log in with Google</button> */}
-                <a href="#" onClick={() => dispatch(switchToRegister())}>Don't have an account? Register here. </a>
+                <a href="#" className={styles.switchToRegisterLink} onClick={() => dispatch(switchToRegister())}>Don't have an account? Register here. </a>
             </div>
         </Modal>
     )
