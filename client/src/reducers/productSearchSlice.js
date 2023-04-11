@@ -36,6 +36,7 @@ export const productSearchSlice = createSlice({
         currentPage: 1,
         pageSize: 12,
         totalPages: 0,
+        numberOfResults: 0,
         status: "idle",
         error: null,
     },
@@ -59,12 +60,13 @@ export const productSearchSlice = createSlice({
             })
             .addCase(fetchProductsBasedOnQuery.fulfilled, (state, action) => {
                 state.status = "succeeded";
-                const { pageNumber, pageSize, totalPages, results } = action.payload;
+                const { pageNumber, pageSize, totalPages, results, numberOfResults } = action.payload;
                 console.log(results)
                 state.productData = results;
                 state.currentPage = pageNumber;
                 state.pageSize = pageSize;
                 state.totalPages = totalPages;
+                state.numberOfResults = numberOfResults;
                 console.log(state.productData)
             })
             .addCase(fetchProductsBasedOnQuery.rejected, (state, action) => {
@@ -80,4 +82,4 @@ export const selectProductData = state => state.productSearch.productData;
 export const selectCurrentPage = state => state.productSearch.currentPage;
 export const selectPageSize = state => state.productSearch.pageSize;
 export const selectTotalPages = state => state.productSearch.totalPages;
-export const selectFilteredProductData = state => state.productSearch.filteredProductData;
+export const selectNumberOfResults = state => state.productSearch.numberOfResults;

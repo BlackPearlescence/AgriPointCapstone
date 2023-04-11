@@ -3,6 +3,7 @@ const paginate = (results, pageNumber, pageSize) => {
     const end = pageNumber * pageSize;
     const pageResults = results.slice(start, end);
     return {
+        numberOfResults: results.length,
         results: pageResults,
         pageNumber,
         pageSize,

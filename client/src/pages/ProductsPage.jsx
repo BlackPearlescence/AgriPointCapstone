@@ -9,7 +9,7 @@ import  Rating from "@mui/material/Rating"
 import axios from "axios";
 import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductsBasedOnQuery, nextPage, resetPage, selectCurrentPage, selectFilteredProductData, selectProductData, selectTotalPages, setFilteredProductData, setProductData } from "../reducers/productSearchSlice";
+import { fetchProductsBasedOnQuery, nextPage, resetPage, selectCurrentPage, selectFilteredProductData, selectNumberOfResults, selectProductData, selectTotalPages, setFilteredProductData, setProductData } from "../reducers/productSearchSlice";
 import { useParams, useSearchParams } from "react-router-dom";
 import PageNavigationBar from "../components/products/PageNavigationBar";
 
@@ -19,6 +19,7 @@ const ProductsPage = () => {
     const productDataState = useSelector(selectProductData);
     const pageState = useSelector(selectCurrentPage)
     const totalPages = useSelector(selectTotalPages)
+    const numberOfResults = useSelector(selectNumberOfResults)
     const [searchParams]= useSearchParams();
 
     const [productType, setProductType] = useState("allproducts")
@@ -88,7 +89,7 @@ const ProductsPage = () => {
     return (
         <div className={styles.productsPageWrapper}>
             <div>
-                <span>Search Results</span>
+                <span>Search Results ({numberOfResults})</span>
             </div>
             <FilterSidebar>
                 <FilterAccordion heading={"Products"}>
