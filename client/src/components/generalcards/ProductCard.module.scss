@@ -34,9 +34,16 @@
 
     .productTitle {
         font-size: App.$medium-1;
+        font-weight: 600;
 
     }
     .priceTag {
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    .storeLink {
         font-size: App.$small-3;
     }
     

@@ -3,7 +3,7 @@ const { fileLogger, consoleLogger } = require("../errorhandling/logger");
 const { Product } = require("../schema.js");
 const mongoose = require("mongoose");
 const router = express.Router();
-const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError } = require("../errorhandling/errors.js");
+const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError, handleNoReviewsFoundError, handleRatingStatFailure } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
 const  paginate  = require("../tools/paginate.js")
 // Base /products
@@ -86,5 +86,53 @@ router.get("/:id", async (req, res, next) => {
 })
 
 router.use(handleNoProductsFoundError)
+
+// Get reviews for a single product
+router.get("/:id/reviews", async (req, res, next) => {
+    const { id } = req.params
+    try {
+        fileLogger.info(`Request received for /products/${id}/reviews`)
+        const productReviews = await Product.findById(id).select("reviews").exec()
+        res.status(StatusCodes.OK).json(productReviews)
+    } catch (err) {
+        fileLogger.error(err)
+        next(err)
+    }
+})
+
+router.use(handleNoReviewsFoundError)
+
+// Calculate rating and review statistics for a single produc
+router.get("/:id/reviews/stats", async (req, res, next) => {
+    const { id } = req.params
+    try {
+        consoleLogger.info(`Request received for /products/${id}/reviews/stats`)
+        Product.aggregate([
+            { $match: { _id: mongoose.Types.ObjectId(id) } },
+            { $project: { _id: 0, reviews: 1 } },
+            { $unwind: "$reviews" },
+            {
+              $group: {
+                _id: null,
+                averageRating: { $avg: "$reviews.rating" },
+                numberOfReviews: { $sum: 1 }
+              }
+            }
+          ])
+          .exec((err, result) => {
+            if (err) {
+              console.error(err);
+              next(err);
+            } else {
+              res.status(200).json(result);
+            }
+          });
+    } catch (err) {
+        fileLogger.error(err)
+        next(err)
+    }
+})
+
+router.use(handleRatingStatFailure)
 
 module.exports = router;

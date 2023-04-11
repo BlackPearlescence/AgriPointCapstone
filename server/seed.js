@@ -367,8 +367,8 @@ const createProductReviews = async (num, products, customers) => {
     const reviews = [];
     for (let i = 0; i < num; i++) {
         const review = new ProductReview({
-            customer: getRandomItem(customers)._id,
-            rating: getRandomNumberBasedOnMax(5),
+            customer: await getRandomItem(customers)._id,
+            rating: await getRandomNumberBasedOnMax(5),
             title: faker.commerce.productAdjective(),
             body: faker.lorem.paragraph(),
             image_url: faker.image.imageUrl(),
@@ -382,9 +382,9 @@ const createProductReviews = async (num, products, customers) => {
 const assignReviewsToProducts = async (products, reviews) => {
     const productsWithReviews = [];
     for(product of products) {
-        const numReviews = getRandomNumberBasedOnMax(reviews.length);
+        const numReviews = await getRandomNumberBasedOnMax(reviews.length);
         for (let i = 0; i < numReviews; i++) {
-            const review = getRandomItem(reviews);
+            const review = await getRandomItem(reviews);
             if(!product.reviews.some(review => review.equals(review))) {
                 product.reviews.push(review)
             }
