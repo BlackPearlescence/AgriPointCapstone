@@ -123,7 +123,7 @@ const ProductsPage = () => {
                                 onChange={handleRatingsChange}
                                 min={0}
                                 max={5}
-                                step={0.5}
+                                step={1}
                             />
                         <h3>{ratings[1]}</h3>               
                     </Box>

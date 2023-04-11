@@ -382,12 +382,18 @@ const createProductReviews = async (num, products, customers) => {
 const assignReviewsToProducts = async (products, reviews) => {
     const productsWithReviews = [];
     for(product of products) {
-        const numReviews = await getRandomNumberBasedOnMax(reviews.length);
+        let numReviews = 0;
+        if(reviews.length > 10){
+            numReviews = await getRandomNumberBasedOnMax(10);
+        } else {
+            numReviews = await getRandomNumberBasedOnMax(reviews.length);
+        }
+        // const numReviews = await getRandomNumberBasedOnMax(reviews.length);
         for (let i = 0; i < numReviews; i++) {
-            const review = await getRandomItem(reviews);
-            if(!product.reviews.some(review => review.equals(review))) {
+            const review = reviews.pop()
+            // if(!product.reviews.some(review => review.equals(review))) {
                 product.reviews.push(review)
-            }
+            // }
         }
         productsWithReviews.push(product)
     }
@@ -646,7 +652,7 @@ const seed = async () => {
     const shoppingListsWithItems = await assignItemsToShoppingLists(shoppingLists, products);
     const customersWithShoppingLists = await assignShoppingListsToCustomers(customersWithProducts, shoppingListsWithItems);
     
-    const productReviews = await createProductReviews(10, products, customers);
+    const productReviews = await createProductReviews(200, products, customers);
     const productsWithReviews = await assignReviewsToProducts(products, productReviews);
 
     const vendorReviews = await createVendorReviews(10, vendors, customers);
