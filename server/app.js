@@ -3,50 +3,33 @@ const { Customer, Testimonial } = require("./schema.js")
 const mongoose = require("mongoose");
 const morgan = require("morgan")
 const { handleInternalServerError } = require("./errorhandling/errors.js");
+
+// Routers
 const productRouter = require("./routers/productRouter.js")
 const customerRouter = require("./routers/customerRouter.js");
 const vendorRouter = require("./routers/vendorRouter.js");
+const authRouter = require("./routers/authRouter.js")
+
 const { consoleLogger, fileLogger } = require("./errorhandling/logger.js");
 require("dotenv").config()
+
+// Authentication Middleware
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const JWTStrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
+const cookieParser = require("cookie-parser");
 
 
-// Local Strategy
-passport.use(new LocalStrategy(Customer.authenticate()));
 
-// JWT Strategy
-passport.use(new JWTStrategy({
-    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey: "allmyhatersmademewhoiamtodayakingofthisworld"
-}, (jwtPayload, done) => {
-    Customer.findById(jwtPayload.sub)
-        .then((customer) => {
-            if (user) {
-                return done(null, user)
-            } else {
-                return done(null, false)
-            }
-        })
-        .catch(err => done(err, false))
-}));
 
-// Register a new user with passport-local-mmongoose
 
-const newCustomer = new User({ username: "johndoe" });
-Customer.register(newCustomer, "password", (err, customer) => {
-    if(err) {
-        consoleLogger.error("Error registering new user: " + err);
-    } else {
-        consoleLogger.info("User registered: " + customer);
-    }
-});
 
 const { MONGO_CONNECTION_STRING } = process.env
 const app = express()
 app.use(morgan("dev"))
+app.use(express.json())
+
 
 
 mongoose.connect(MONGO_CONNECTION_STRING,{
@@ -62,6 +45,7 @@ app.get("/", async (req, res) => {
 app.use("/products", productRouter);
 app.use("/customers", customerRouter);
 app.use("/vendors", vendorRouter);
+app.use("/auth", authRouter);
 
 
 // // Get all testimonials

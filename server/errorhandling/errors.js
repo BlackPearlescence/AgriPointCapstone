@@ -107,6 +107,22 @@ const handleRatingStatFailure = (err, req, res, next) => {
     next(err);
 }
 
+const handleBadRegistrationDetailsError = (err, req, res, next) => {
+    err.message = "Bad registration details"
+    err.name = "BadRegistrationDetailsError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
+const handleInvalidCredentialsError = (err, req, res, next) => {
+    err.message = "Invalid credentials"
+    err.name = "InvalidCredentialsError";
+    err.statusCode = StatusCodes.UNAUTHORIZED;
+    err.stack = new Error().stack;
+    next(err);
+}
+
 
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
@@ -130,4 +146,6 @@ module.exports = {
     handleRandomProductFailure,
     handleNoReviewsFoundError,
     handleRatingStatFailure,
+    handleInvalidCredentialsError,
+    handleBadRegistrationDetailsError
 }

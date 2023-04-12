@@ -5,8 +5,10 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const { handleCustomerNotFoundError, handleNoCustomersFoundError, handleCustomerHasNoProductReviewsError, handleCustomerHasNoReviewsError, handleCustomerHasNoVendorReviewsError, handleNoTransactionsFoundError } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
+const verifyToken = require("../tools/verifyToken.js");
 
 // Base /customers
+
 
 // Get all customers
 router.get("/", async (req, res, next) => {
@@ -23,6 +25,18 @@ router.get("/", async (req, res, next) => {
 
 router.use(handleNoCustomersFoundError)
 
+
+
+// Get specific customer profile
+router.get("/profile", verifyToken, async (req, res, next) => {
+    try {
+        const customer = await Customer.findById(req.customerId)
+        res.status(StatusCodes.OK).json(customer)
+    } catch (err) {
+        fileLogger.error(err)
+        next(err)
+    }
+})  
 
 // Get customer by id
 router.get("/:id", async (req, res, next) => {
