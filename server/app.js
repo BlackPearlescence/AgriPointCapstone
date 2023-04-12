@@ -8,6 +8,41 @@ const customerRouter = require("./routers/customerRouter.js");
 const vendorRouter = require("./routers/vendorRouter.js");
 const { consoleLogger, fileLogger } = require("./errorhandling/logger.js");
 require("dotenv").config()
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const JWTStrategy = require("passport-jwt").Strategy;
+const ExtractJWT = require("passport-jwt").ExtractJwt;
+
+
+// Local Strategy
+passport.use(new LocalStrategy(Customer.authenticate()));
+
+// JWT Strategy
+passport.use(new JWTStrategy({
+    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+    secretOrKey: "allmyhatersmademewhoiamtodayakingofthisworld"
+}, (jwtPayload, done) => {
+    Customer.findById(jwtPayload.sub)
+        .then((customer) => {
+            if (user) {
+                return done(null, user)
+            } else {
+                return done(null, false)
+            }
+        })
+        .catch(err => done(err, false))
+}));
+
+// Register a new user with passport-local-mmongoose
+
+const newCustomer = new User({ username: "johndoe" });
+Customer.register(newCustomer, "password", (err, customer) => {
+    if(err) {
+        consoleLogger.error("Error registering new user: " + err);
+    } else {
+        consoleLogger.info("User registered: " + customer);
+    }
+});
 
 const { MONGO_CONNECTION_STRING } = process.env
 const app = express()

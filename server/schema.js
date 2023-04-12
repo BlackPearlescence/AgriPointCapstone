@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 const { consoleLogger } = require("./errorhandling/logger");
 const { Schema, Decimal128 } = mongoose
 require("dotenv").config();
@@ -354,32 +355,32 @@ const rewardsProgramSchema = new Schema({
 const customerSchema = new Schema({
     first_name: {
         type: String,
-        required: true
+        required: false
     },
     last_name: {
         type: String,
-        required: true
+        required: false
     },
 
-    email: {
+    username: {
         type: String,
         required: true,
+        unique: true
     },
     password: {
         type: String,
-        required: true
     },
     phone: {
         type: String,
-        required: true,
+        required: false,
     },
     addresses: [{
         type: addressSchema,
-        required: true,
+        required: false,
     }],
     joined_at: {
         type: Date,
-        required: true,
+        default: Date.now(),
     },
     avatar_url: {
         type: String,
@@ -388,10 +389,12 @@ const customerSchema = new Schema({
     cart: [{
         type: cartItemSchema,
         required: true.valueOf,
+        default: [],
     }],
     shopping_lists: [{
         type: shoppingListSchema,
         required: true,
+        default: [],
     }],
     reward_statistics: {
         type: rewardStatisticsSchema,
@@ -415,6 +418,8 @@ const customerSchema = new Schema({
         ref: 'RewardsProgram',
     },
 });
+
+customerSchema.plugin(passportLocalMongoose)
 
 const productStatisticsSchema = new Schema({
     total_reviews: {
