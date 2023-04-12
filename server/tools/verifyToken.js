@@ -1,17 +1,25 @@
 // Verify Token Middleware
 
+const { consoleLogger } = require("../errorhandling/logger");
+const jwt = require("jsonwebtoken");
+
 const verifyToken = (req, res, next) => {
     const token = req.cookies.jwt;
+    consoleLogger.info(token)
     if (!token) {
         return res.status(StatusCodes.UNAUTHORIZED).json({ message: "No token provided" })
     }
-    jwt.verify(token, "allmyhatersmademewhoiamtodayakingofthisworld", (err, decoded) => {
-        if (err) {
+    try {
+        const decoded = jwt.verify(token, "allmyhatersmademewhoiamtodayakingofthisworld", { ignoreExpiration: false });
+        req.customerId = decoded.sub
+        next()
+    } catch (err) {
+        if (err.name === "TokenExpiredError") {
+            return res.status(StatusCodes.UNAUTHORIZED).json({ message: "Token expired" })
+        } else {
             return res.status(StatusCodes.UNAUTHORIZED).json({ message: "Invalid token" })
         }
-        req.customerId = decoded.sub;
-        next();
-    });
+    }
 }
 
 

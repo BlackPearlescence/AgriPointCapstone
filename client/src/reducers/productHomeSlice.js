@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import instance from "../webinstance/instance.js";
+import axios from "axios";
 
 export const fetchHomeProducts = createAsyncThunk(
     // TODO: fetch products based on real queries with real data

@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Map as ImmutableMap } from "immutable";
 
 export const cartSlice = createSlice({
     name: "cart",
     initialState: {
         cartShown: false,
         checkoutShown: false,
-        myCart: new Map(),
+        myCart: [],
     },
 
     reducers: {
@@ -22,22 +23,22 @@ export const cartSlice = createSlice({
             state.cartShown = true;
         },
         addToCart: (state, action) => {
-            const { id, quantity = 1 } = action.payload;
-            const existingItem =  state.myCart.get(id);
-            if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                state.items.set(id, action.payload);
-            }
+            // const { id, quantity = 1 } = action.payload;
+            // const existingItem = state.getIn(["myCart", id])  ;
+            // if (existingItem) {
+            //     state.setIn(["myCart", id], quantity)
+            // } else {
+            //     state.setIn(["myCart", id], quantity)
+            // }
         },
         removeFromCart: (state, action) => {
-            const { id } = action.payload;  
-            state.cart.delete(id);
+            // const { id } = action.payload;  
+            // state.deleteIn(["myCart", id]);
         },
         updateCartItemQuantity: (state, action) => {
-            const { id, quantity } = action.payload;
-            const existingItem = state.items.get(id);
-            state.myCart.set(id, quantity);
+            // const { id, quantity } = action.payload;
+            // const existingItem = state.getIn(["myCart", id]);
+            // state.getIn(["myCart", id], quantity)
         }
     }
 });

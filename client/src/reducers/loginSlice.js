@@ -1,10 +1,49 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import instance from "../webinstance/instance.js";
+import Cookies from "js-cookie";
+
+export const makeLogoutRequest = createAsyncThunk(
+    "login/makeLogoutRequest",
+    async () => {
+        const token = Cookies.get("jwt")
+        const resp = await instance.post("/auth/logout", { token });
+        console.log(resp)
+        Cookies.remove("jwt");
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        },
+    }
+);
+
+export const makeLoginCheckRequest = createAsyncThunk(
+    "login/makeLoginCheckRequest",
+    async () => {
+        const resp = await instance.get("/auth/check");
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        },
+    }
+);
 
 export const makeRegistrationRequest = createAsyncThunk(
     "login/makeRegistrationRequest",
     async (registrationData) => {
-        const resp = await axios.post("/auth/register", registrationData);
+        const resp = await instance.post("/auth/register", registrationData);
         return resp.data;
     },
     {
@@ -24,7 +63,8 @@ export const makeLoginRequest = createAsyncThunk(
     "login/makeLoginRequest",
     async (loginData, { rejectWithValue }) => {
         try {
-            const resp = await axios.post("/auth/login", loginData);
+            const resp = await instance.post("/auth/login", loginData);
+            Cookies.set("agrishoptoken", resp.data.token, { expires: 1 })
             return resp.data;
         } catch (err) {
             console.log(err)
@@ -53,7 +93,7 @@ export const loginSlice = createSlice({
         loginShown: false,
         registerShown: false,
         loggedIn: false,
-        loginDetails: {},
+        customerDetails: {},
         status: "idle",
         error: null,
     },
@@ -82,8 +122,8 @@ export const loginSlice = createSlice({
         },
         [makeLoginRequest.fulfilled]: (state, action) => {
             state.status = "succeeded";
-            state.loginDetails = action.payload;
-            console.log(state.loginDetails)
+            state.customerDetails = action.payload;
+            console.log(state.customerDetails)
             state.loginShown = false;
             state.loggedIn = true;
         },
@@ -91,6 +131,22 @@ export const loginSlice = createSlice({
             state.status = "failed";
             state.error = action.payload;
             console.log(action)
+        },
+        [makeLoginCheckRequest.fulfilled]: (state, action) => {
+            state.status = "succeeded";
+            state.customerDetails = action.payload;
+            state.loggedIn = true;
+        },
+        [makeLogoutRequest.fulfilled]: (state, action) => {
+            state.status = "succeeded";
+            state.customerDetails = {};
+            state.loggedIn = false;
+            console.log(state.loggedIn)
+        },
+        [makeLogoutRequest.rejected]: (state, action) => {
+            state.status = "failed";
+            state.error = action.payload;
+            console.log(state.error)
         }
     }
 });
@@ -103,3 +159,4 @@ export const selectRegisterShown = state => state.login.registerShown;
 export const selectLoggedIn = state => state.login.loggedIn;
 export const selectErrorMessage = state => state.login.error;
 export const selectLoginError = state => state.login.error;
+export const selectCustomerDetails = state => state.login.customerDetails; 

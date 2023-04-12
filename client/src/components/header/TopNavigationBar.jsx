@@ -4,9 +4,10 @@ import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
-import { selectLoggedIn, showLogin } from "../../reducers/loginSlice";
+import { makeLogoutRequest, selectCustomerDetails, selectLoggedIn, showLogin } from "../../reducers/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCart, showCart } from "../../reducers/cartSlice";
+import Cookies from "js-cookie";
 
 const TopNavigationBar = () => {
 
@@ -15,12 +16,19 @@ const TopNavigationBar = () => {
     const [searchQuery, setSearchQuery] = useState("")
 
     const cartState = useSelector(selectCart)
-    const isLoggedInstate = useSelector(selectLoggedIn)
+    const isLoggedInState = useSelector(selectLoggedIn)
+    const customerDetails = useSelector(selectCustomerDetails)
 
     const handleSearchQuerySubmit = (e) => {
         e.preventDefault()
         navigate(`/products?name=${searchQuery}`)
     }
+
+    const handleLogout = () => {
+        dispatch(makeLogoutRequest())
+        navigate("/home")
+    }
+   
 
     return(
         <div className={styles.topContainer}>
@@ -52,8 +60,9 @@ const TopNavigationBar = () => {
                 onChange={(e) => setSearchQuery((prevSearchQuery) => e.target.value)}/>
             </form>
             <div className={styles.topLinksContainer}>
-                {isLoggedInstate}
-                <a href="#" onClick={() => dispatch(showLogin())}>Log In</a>
+                {isLoggedInState ? <a href="#" onClick={() => handleLogout()}>Hi, {customerDetails.first_name}</a> :
+                <a href="#" onClick={() => dispatch(showLogin())}>Sign In</a>}
+                
                 <a href="#" >Orders</a>
                 <a href="#"><GrNotification size="30"/></a>
                 <a href="#" onClick={() => dispatch(showCart())}><Badge badgeContent={cartState.size}><GrCart size="30"/></Badge></a>

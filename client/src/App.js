@@ -11,10 +11,23 @@ import ProductViewPage from './pages/ProductViewPage';
 import LoginModal from './components/modals/LoginModal';
 import RegisterModal from './components/modals/RegisterModal';
 import CartSidebar from './components/cart/CartSidebar';
+import Cookies from 'js-cookie';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import jwtDecode from 'jwt-decode';
+import { makeLoginCheckRequest } from './reducers/loginSlice';
 
 function App() {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+
+  // Check if user is logged in already
+  useEffect(() => {
+    dispatch(makeLoginCheckRequest())
+  },[])
+
 
   const MainSiteLayout = () => {
     return (

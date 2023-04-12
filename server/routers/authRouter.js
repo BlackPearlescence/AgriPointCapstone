@@ -10,6 +10,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const { handleInvalidCredentialsError, handleBadRegistrationDetailsError } = require("../errorhandling/errors.js");
 const { consoleLogger } = require("../errorhandling/logger.js");
+const verifyToken = require("../tools/verifyToken.js");
 
 const router = express.Router();
 
@@ -34,6 +35,19 @@ passport.use(new JWTStrategy({
 
 
 router.use(cookieParser());
+
+// Check if user is logged in already
+router.get("/check", verifyToken,  async (req, res, next) => {
+    const customerId = req.customerId;
+    consoleLogger.info(customerId)
+    try {
+        const customer = await Customer.findById(customerId)
+        res.status(StatusCodes.OK).json({ message: "User is logged in.", ...customer })
+    } catch (err) {
+        consoleLogger.error("didnt work")
+        next(err)
+    }
+})
 
 
 // Registration
@@ -88,9 +102,9 @@ router.post("/login", async (req, res, next) => {
             next(err)
         } else {
             consoleLogger.info("User logged in successfully")
-            const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "1h" });
+            const token = jwt.sign({ sub: customer._id, exp: Math.floor(Date.now() / 1000) + (60 * 60) }, "allmyhatersmademewhoiamtodayakingofthisworld");
             res.cookie("jwt", token, { httpOnly: true, sameSite: true });
-            res.status(StatusCodes.OK).json({ message: "User logged in successfully." })
+            res.status(StatusCodes.OK).json({ message: "User logged in successfully.", token})
         }
     } catch(err) {
         next(err)
@@ -98,6 +112,11 @@ router.post("/login", async (req, res, next) => {
 })
 
 router.use(handleInvalidCredentialsError)
+
+router.post("/logout", async (req, res, next) => {
+    const token = req.cookies.jwt;
+    consoleLogger.info(token)
+})
 
 
 module.exports = router;
