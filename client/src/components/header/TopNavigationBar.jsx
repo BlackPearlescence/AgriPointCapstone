@@ -4,7 +4,7 @@ import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
-import { showLogin } from "../../reducers/loginSlice";
+import { selectLoggedIn, showLogin } from "../../reducers/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCart, showCart } from "../../reducers/cartSlice";
 
@@ -15,6 +15,7 @@ const TopNavigationBar = () => {
     const [searchQuery, setSearchQuery] = useState("")
 
     const cartState = useSelector(selectCart)
+    const isLoggedInstate = useSelector(selectLoggedIn)
 
     const handleSearchQuerySubmit = (e) => {
         e.preventDefault()
@@ -51,6 +52,7 @@ const TopNavigationBar = () => {
                 onChange={(e) => setSearchQuery((prevSearchQuery) => e.target.value)}/>
             </form>
             <div className={styles.topLinksContainer}>
+                {isLoggedInstate}
                 <a href="#" onClick={() => dispatch(showLogin())}>Log In</a>
                 <a href="#" >Orders</a>
                 <a href="#"><GrNotification size="30"/></a>

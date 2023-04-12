@@ -9,11 +9,50 @@
 
     .registerFormContainer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         padding: 20px;
+    }
+
+    .registerFormControlsContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .checkBoxContainer {
+        font-family: App.$font-nunito;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 1px solid App.$lighterdarkspringgreen;
+        border-radius: 10px;
+        background-color: App.$white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+        .checkBox {
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                transform: scale(1.9)
+            }
+
+            label {
+                padding: 20px;
+            }
+        }
     }
 
     .fieldLabelContainer {

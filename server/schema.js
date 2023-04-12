@@ -351,15 +351,31 @@ const rewardsProgramSchema = new Schema({
 })
 
 
+const rewardInformationSchema = new Schema({
+    reward_statistics: {
+        type: rewardStatisticsSchema,
+    },
+    reward_transactions: [{
+        type: rewardsTransactionSchema,
+        required: true,
+        default: [],
+    }],
+    reward_program: {
+        type: Schema.Types.ObjectId,
+        ref: 'RewardsProgram',
+    },
+})
+
+
 
 const customerSchema = new Schema({
     first_name: {
         type: String,
-        required: false
+        required: true
     },
     last_name: {
         type: String,
-        required: false
+        required: true
     },
 
     username: {
@@ -368,7 +384,7 @@ const customerSchema = new Schema({
         unique: true
     },
     password: {
-        type: String,
+        type: String, 
     },
     phone: {
         type: String,
@@ -396,14 +412,7 @@ const customerSchema = new Schema({
         required: true,
         default: [],
     }],
-    reward_statistics: {
-        type: rewardStatisticsSchema,
-    },
-    reward_transactions: [{
-        type: rewardsTransactionSchema,
-        required: true,
-        default: [],
-    }],
+    
     transactions: [{
         type: transactionSchema,
         required: true,
@@ -413,10 +422,22 @@ const customerSchema = new Schema({
         type: testimonialSchema,
         required: false,
     },
-    reward_program: {
-        type: Schema.Types.ObjectId,
-        ref: 'RewardsProgram',
+    reward_information: {
+        type: rewardInformationSchema,
+        required: false,
+        default: {},
     },
+    // verified : {
+    //     type: Boolean,
+    //     required: true,
+    // }
+
+    // agreed_to_terms: {
+    //     type: Boolean,
+    //     required: true,
+    //     default: false,
+    // },
+    
 });
 
 customerSchema.plugin(passportLocalMongoose)

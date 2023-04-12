@@ -13,9 +13,6 @@ const { consoleLogger } = require("../errorhandling/logger.js");
 
 const router = express.Router();
 
-
-
-
 // Local Strategy
 passport.use(new LocalStrategy(Customer.authenticate()));
 
@@ -41,9 +38,9 @@ router.use(cookieParser());
 
 // Registration
 router.post("/register", async (req, res, next) => {
-    const { username, password } = req.body
+    const { username, password, first_name, last_name } = req.body
     consoleLogger.info(`Registering user ${username}...`)
-    Customer.register(new Customer({ username }), password, (err) => {
+    Customer.register(new Customer({ username, first_name, last_name }), password, (err) => {
         if (err) {
             res.status(StatusCodes.BAD_REQUEST).json({ message: "Invalid registration details" })
         } else {
@@ -84,9 +81,13 @@ router.post("/login", async (req, res, next) => {
     try {
         const customer = await Customer.findOne({ username });
         const authenticated = await customer.authenticate(password);
-        if (!customer || !authenticated) {
+        consoleLogger.info(authenticated)
+        console.log(authenticated)
+        if (!customer || !authenticated.user) {
+            err.message(authenticated.error)
             next(err)
         } else {
+            consoleLogger.info("User logged in successfully")
             const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "1h" });
             res.cookie("jwt", token, { httpOnly: true, sameSite: true });
             res.status(StatusCodes.OK).json({ message: "User logged in successfully." })
