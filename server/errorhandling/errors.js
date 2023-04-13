@@ -123,6 +123,14 @@ const handleInvalidCredentialsError = (err, req, res, next) => {
     next(err);
 }
 
+const handleLogoutFailureError = (err, req, res, next) => {
+    err.message = "Failure to Log Out";
+    err.name = "LogoutFailureError";
+    err.statusCode = StatusCodes.UNAUTHORIZED;
+    err.stack = new Error().stack;
+    next(err);
+}
+
 
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
@@ -130,6 +138,7 @@ const handleInternalServerError = (err, req, res, next) => {
     err.message = err.message || "Internal Server Error"
     next(err)
 }
+
 
 module.exports = {
     handleInternalServerError,
@@ -147,5 +156,6 @@ module.exports = {
     handleNoReviewsFoundError,
     handleRatingStatFailure,
     handleInvalidCredentialsError,
-    handleBadRegistrationDetailsError
+    handleBadRegistrationDetailsError,
+    handleLogoutFailureError
 }

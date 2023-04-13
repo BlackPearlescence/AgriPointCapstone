@@ -1,14 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { StatusCodes } = require("http-status-codes");
-const { Customer } = require("../schema.js");
+const { Customer, BlacklistToken } = require("../schema.js");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const JWTStrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-const { handleInvalidCredentialsError, handleBadRegistrationDetailsError } = require("../errorhandling/errors.js");
+const { handleInvalidCredentialsError, handleBadRegistrationDetailsError, handleLogoutFailureError } = require("../errorhandling/errors.js");
 const { consoleLogger } = require("../errorhandling/logger.js");
 const verifyToken = require("../tools/verifyToken.js");
 
@@ -102,8 +102,8 @@ router.post("/login", async (req, res, next) => {
             next(err)
         } else {
             consoleLogger.info("User logged in successfully")
-            const token = jwt.sign({ sub: customer._id, exp: Math.floor(Date.now() / 1000) + (60 * 60) }, "allmyhatersmademewhoiamtodayakingofthisworld");
-            res.cookie("jwt", token, { httpOnly: true, sameSite: true });
+            const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "10s" } );
+            res.cookie("agrijwt", token, { httpOnly: true, sameSite: true });
             res.status(StatusCodes.OK).json({ message: "User logged in successfully.", token})
         }
     } catch(err) {
@@ -113,10 +113,21 @@ router.post("/login", async (req, res, next) => {
 
 router.use(handleInvalidCredentialsError)
 
-router.post("/logout", async (req, res, next) => {
-    const token = req.cookies.jwt;
-    consoleLogger.info(token)
+router.post("/logout", verifyToken, async (req, res, next) => {
+    try {
+        const token = req.cookies.agrijwt;
+        res.clearCookie("agrijwt")
+
+        consoleLogger.info(token)
+        await BlacklistToken.create({ token })
+        res.status(StatusCodes.OK).json({ message: "User logged out successfully", token })
+    } catch (err) {
+        next(err)
+    }
+   
 })
+
+router.use(handleLogoutFailureError)
 
 
 module.exports = router;

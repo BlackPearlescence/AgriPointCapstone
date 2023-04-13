@@ -6,10 +6,10 @@ import Cookies from "js-cookie";
 export const makeLogoutRequest = createAsyncThunk(
     "login/makeLogoutRequest",
     async () => {
-        const token = Cookies.get("jwt")
+        const token = Cookies.get("agrijwt")
         const resp = await instance.post("/auth/logout", { token });
         console.log(resp)
-        Cookies.remove("jwt");
+        Cookies.remove("agrijwt");
         return resp.data;
     },
     {

@@ -366,6 +366,19 @@ const rewardInformationSchema = new Schema({
     },
 })
 
+const blacklistTokenSchema = new Schema({
+    token: {
+        type: String,
+        required: true
+    },
+    invalidated_at: {
+        type: Date,
+        required: true,
+        default: Date.now(),
+        expires: 3600
+    }
+})
+
 
 
 const customerSchema = new Schema({
@@ -683,6 +696,7 @@ const VendorReview = mongoose.model("VendorReview",vendorReviewSchema)
 const RewardsProgram = mongoose.model("RewardsProgram",rewardsProgramSchema)
 const RewardsTransaction = mongoose.model("RewardsTransaction",rewardsTransactionSchema)
 const BlogPost = mongoose.model("BlogPost",blogPostSchema)
+const BlacklistToken = mongoose.model("BlacklistToken",blacklistTokenSchema)
 module.exports = {
     Customer,
     Testimonial,
@@ -705,4 +719,6 @@ module.exports = {
     RewardsProgram,
     RewardsTransaction,
     BlogPost,
+
+    BlacklistToken,
 }
