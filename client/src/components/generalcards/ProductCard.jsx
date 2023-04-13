@@ -14,14 +14,14 @@ const ProductCard = ({ product }) => {
             <span className={styles.productTitle}>{product.name}</span>
             <span className={styles.priceTag}>${product.price}</span>
             <Box>
-                <Rating name="read-only"  value={product.statistics.average_rating} min={0} max={5} readOnly/>
+                <Rating name="read-only" sx={{ fontSize:30 }}   value={product.statistics.average_rating} min={0} max={5} readOnly/>
             </Box>
-            <div className={styles.addToCartContainer}>
+            {/* <div className={styles.addToCartContainer}>
                 <button>Add to Cart</button>
                 <input type="number" placeholder="Quantity" min={0}/>
-            </div>
+            </div> */}
             <a href="#" className={styles.storeLink}>Check out {product.vendor.name}</a>
-            <a>Add to List</a>
+            <a className={styles.addToList}>Add to List</a>
         </div>
     )
 }

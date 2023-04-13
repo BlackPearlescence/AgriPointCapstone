@@ -4,7 +4,7 @@ const { Product } = require("../schema.js");
 const mongoose = require("mongoose");
 // const { $expr, $eq } = require("mongoose").mongo
 const router = express.Router();
-const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError, handleNoReviewsFoundError, handleRatingStatFailure } = require("../errorhandling/errors.js");
+const { handleProductNotFoundError, handleRandomProductFailure, handleNoProductsFoundError, handleNoReviewsFoundError, handleRatingStatFailure, handleNoRecentResultsFoundError } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
 const  paginate  = require("../tools/paginate.js");
 const getReviewStatistics = require("../tools/getReviewStatistics");
@@ -88,6 +88,27 @@ router.get("/random", async (req, res, next) => {
 
 router.use(handleRandomProductFailure)
 
+// Get most recent fruits or vegetables
+router.get("/recent", async (req, res, next) => {
+    consoleLogger.info("Request received for /products/recent")
+    const { type = "", amount = 1 } = req.query
+    consoleLogger.info(req.query)
+    try {
+        const mostRecentResults = await Product.find()
+                                                .where("vegetation_type", new RegExp(type, "i"))
+                                                .sort({ added_at: -1 })
+                                                .limit(parseInt(amount))
+                                                .exec()
+        consoleLogger.info(mostRecentResults)
+        res.status(StatusCodes.OK).json(mostRecentResults)
+    } catch (err) {
+        fileLogger.error(err)
+        next(err)
+    }
+})
+
+router.use(handleNoRecentResultsFoundError)
+
 
 // Get Product at ID
 router.get("/:id", async (req, res, next) => {
@@ -103,6 +124,8 @@ router.get("/:id", async (req, res, next) => {
 })
 
 router.use(handleNoProductsFoundError)
+
+
 
 // Get reviews for a single product
 router.get("/:id/reviews", async (req, res, next) => {

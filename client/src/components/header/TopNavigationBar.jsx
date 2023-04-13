@@ -1,12 +1,12 @@
 import { Badge, Divider, IconButton, Input, Option, Select } from "@mui/joy";
 import styles from "./TopNavigationBar.module.scss";
 import { GrNotification, GrCart, GrSearch, GrDown } from "react-icons/gr";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
 import { makeLogoutRequest, selectCustomerDetails, selectLoggedIn, showLogin } from "../../reducers/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectMyCart, showCart } from "../../reducers/cartSlice";
+import { clearCart, getCart, selectMyCart, showCart } from "../../reducers/cartSlice";
 import Cookies from "js-cookie";
 
 const TopNavigationBar = () => {
@@ -26,8 +26,13 @@ const TopNavigationBar = () => {
 
     const handleLogout = () => {
         dispatch(makeLogoutRequest())
+        dispatch(clearCart())
         navigate("/home")
     }
+
+    
+
+
    
 
     return(
@@ -65,7 +70,7 @@ const TopNavigationBar = () => {
                 
                 <a href="#" >Orders</a>
                 <a href="#"><GrNotification size="30"/></a>
-                <a href="#" onClick={() => dispatch(showCart())}><Badge badgeContent={cartState.size}><GrCart size="30"/></Badge></a>
+                <a href="#" onClick={() => dispatch(showCart())}><Badge badgeContent={cartState.length}><GrCart size="30"/></Badge></a>
             </div>
         </div>
     )

@@ -146,6 +146,10 @@ export const loginSlice = createSlice({
         [makeLogoutRequest.rejected]: (state, action) => {
             state.status = "failed";
             state.error = action.payload;
+            state.loggedIn = false;
+            state.customerDetails = {};
+
+
             console.log(state.error)
         }
     }

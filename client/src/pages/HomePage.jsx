@@ -7,21 +7,21 @@ import styles from "./HomePage.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { 
     fetchHomeProducts, 
-    selectNewProductsData, 
     selectCheeseProductsData,
-    selectInSeasonProductsData,
     selectFlowerProductsData,
     selectGreatProductDealsData,
-    selectInterestedProductsData
+    selectInterestedProductsData,
+    selectNewVeggiesData,
+    selectNewFruitsData
  } from "../reducers/productHomeSlice";
 import { useEffect, useMemo } from "react";
 
 const HomePage = () => {
 
     const dispatch = useDispatch();
-    const inSeasonState = useSelector(selectInSeasonProductsData);
+    const newFruitsState = useSelector(selectNewFruitsData);
     const interestedState = useSelector(selectInterestedProductsData);
-    const newProductsState = useSelector(selectNewProductsData);
+    const newVeggiesState = useSelector(selectNewVeggiesData);
     const cheeseProductsState = useSelector(selectCheeseProductsData);
     const flowerProductsState = useSelector(selectFlowerProductsData);
     const greatDealsState = useSelector(selectGreatProductDealsData);
@@ -38,13 +38,13 @@ const HomePage = () => {
             <HomeHero />
             <ContentDisplayContainer>
                 <ContentDisplaySection heading={"In Season!"}>
-                    {inSeasonState ? inSeasonState.map(product => <ProductCard key={product._id} product={product}/>) : null}
+                    {newFruitsState ? newFruitsState.map(product => <ProductCard key={product._id} product={product}/>) : null}
                 </ContentDisplaySection>
-                <ContentDisplaySection heading={"Things you might be interested in..."}>
+                <ContentDisplaySection heading={"New Fruits!"}>
                     {interestedState ? interestedState.map(product => <ProductCard key={product._id} product={product}/>) : null}
                 </ContentDisplaySection>
-                <ContentDisplaySection heading={"New Products"}>
-                    {newProductsState ? newProductsState.map(product => <ProductCard key={product._id} product={product}/>) : null}
+                <ContentDisplaySection heading={"...and New Veggies!"}>
+                    {newVeggiesState ? newVeggiesState.map(product => <ProductCard key={product._id} product={product}/>) : null}
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Vendor Spotlight"}>

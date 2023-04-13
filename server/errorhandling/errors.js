@@ -131,6 +131,14 @@ const handleLogoutFailureError = (err, req, res, next) => {
     next(err);
 }
 
+const handleNoRecentResultsFoundError = (err, req, res, next) => {
+    err.message = "No recent results found"
+    err.name = "NoRecentResultsFoundError";
+    err.statusCode = StatusCodes.NOT_FOUND;
+    err.stack = new Error().stack;
+    next(err);
+}
+
 
 
 // Final Error Handling Function for final middleware
@@ -158,5 +166,6 @@ module.exports = {
     handleRatingStatFailure,
     handleInvalidCredentialsError,
     handleBadRegistrationDetailsError,
-    handleLogoutFailureError
+    handleLogoutFailureError,
+    handleNoRecentResultsFoundError
 }

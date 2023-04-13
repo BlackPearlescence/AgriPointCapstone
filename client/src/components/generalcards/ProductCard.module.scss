@@ -33,7 +33,7 @@
     }
 
     .productTitle {
-        font-size: App.$medium-1;
+        font-size: App.$medium-2;
         font-weight: 600;
 
     }
@@ -44,7 +44,13 @@
     }
 
     .storeLink {
-        font-size: App.$small-3;
+        font-size: App.$medium-1;
+    }
+
+    .addToList {
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 5px;
     }
     
     img {

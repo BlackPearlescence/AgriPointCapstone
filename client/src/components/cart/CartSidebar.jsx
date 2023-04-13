@@ -22,12 +22,9 @@ const CartSidebar = () => {
             <div className={styles.cartHeader}>My Cart</div>
             {cartState ? cartState.map((cartItem) => {
                 return(
-                    <CartItemCard />
+                    <CartItemCard cartItem={cartItem.product} />
                 )
             }) : null}
-            <CartItemCard />
-            <CartItemCard />
-            <CartItemCard />
         </Offcanvas> 
     )
 }

@@ -6,18 +6,18 @@ export const fetchHomeProducts = createAsyncThunk(
     // TODO: fetch products based on real queries with real data
     'productHome/fetchHomeProducts',
     async () => {
-        const inSeasonReq = axios.get("/products/random?num=6");
-        const interestedReq = axios.get("/products/random?num=3");
-        const newProductsReq = axios.get("/products/random?num=3");
-        const greatDealsReq = axios.get("/products/random?num=6");
-        const flowersReq = axios.get("/products/random?num=3");
-        const cheesesReq = axios.get("/products/random?num=3");
-        const responses = await axios.all([inSeasonReq, interestedReq, newProductsReq, greatDealsReq, flowersReq, cheesesReq ]);
-        const [inSeasonResp, interestedResp, newProductsResp, greatDealsResp, flowersResp, cheesesResp] = responses;
+        const newFruitsReq = axios.get("/products/recent?type=fruit&amount=6");
+        const interestedReq =axios.get("/products/recent?type=fruit&amount=3");
+        const newVeggiesReq = axios.get("/products/recent?type=vegetable&amount=3");
+        const greatDealsReq =axios.get("/products/recent?type=fruit&amount=6");
+        const flowersReq = axios.get("/products/recent?type=fruit&amount=3");
+        const cheesesReq = axios.get("/products/recent?type=fruit&amount=3");
+        const responses = await axios.all([newFruitsReq,interestedReq, newVeggiesReq,greatDealsReq,flowersReq,cheesesReq]);
+        const [newFruitsResp, interestedResp, newVeggiesResp, greatDealsResp, flowersResp, cheesesResp] = responses;
         return {
-            inSeasonProductsData: inSeasonResp.data,
+            newFruitsData: newFruitsResp.data,
             interestedProductsData: interestedResp.data,
-            newProductsData: newProductsResp.data,
+            newVeggiesData: newVeggiesResp.data,
             greatProductDealsData: greatDealsResp.data,
             flowerProductsData: flowersResp.data,
             cheeseProductsData: cheesesResp.data,
@@ -36,9 +36,9 @@ export const fetchHomeProducts = createAsyncThunk(
 export const productHomeSlice = createSlice({
     name: 'productHome',
     initialState: {
-        inSeasonProductsData: [], 
+        newFruitsData: [], 
         interestedProductsData: [],
-        newProductsData: [],
+        newVeggiesData: [],
         greatProductDealsData: [],
         flowerProductsData: [],
         cheeseProductsData: [],
@@ -53,9 +53,9 @@ export const productHomeSlice = createSlice({
             })
             .addCase(fetchHomeProducts.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.inSeasonProductsData = action.payload.inSeasonProductsData;
+                state.newFruitsData = action.payload.newFruitsData;
                 state.interestedProductsData = action.payload.interestedProductsData;
-                state.newProductsData = action.payload.newProductsData;
+                state.newVeggiesData = action.payload.newVeggiesData;
                 state.greatProductDealsData = action.payload.greatProductDealsData;
                 state.flowerProductsData = action.payload.flowerProductsData;
                 state.cheeseProductsData = action.payload.cheeseProductsData;
@@ -68,9 +68,9 @@ export const productHomeSlice = createSlice({
 })
 
 export default productHomeSlice.reducer;
-export const selectInSeasonProductsData = state => state.productHome.inSeasonProductsData;
+export const selectNewFruitsData = state => state.productHome.newFruitsData;
 export const selectInterestedProductsData = state => state.productHome.interestedProductsData;
-export const selectNewProductsData = state => state.productHome.newProductsData;
+export const selectNewVeggiesData = state => state.productHome.newVeggiesData;
 export const selectGreatProductDealsData = state => state.productHome.greatProductDealsData;
 export const selectFlowerProductsData = state => state.productHome.flowerProductsData;
 export const selectCheeseProductsData = state => state.productHome.cheeseProductsData;

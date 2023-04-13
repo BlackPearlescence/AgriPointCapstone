@@ -13,20 +13,29 @@ import RegisterModal from './components/modals/RegisterModal';
 import CartSidebar from './components/cart/CartSidebar';
 import Cookies from 'js-cookie';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import jwtDecode from 'jwt-decode';
-import { makeLoginCheckRequest } from './reducers/loginSlice';
+import { makeLoginCheckRequest, selectCustomerDetails, selectLoggedIn } from './reducers/loginSlice';
+import { getCart } from './reducers/cartSlice';
 
 function App() {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const loggedInState = useSelector(selectLoggedIn)
+  const customerDetailsState = useSelector(selectCustomerDetails)
 
 
   // Check if user is logged in already
   useEffect(() => {
     dispatch(makeLoginCheckRequest())
   },[])
+
+
+  // Immediately get customer's cart if they are logged in
+  useEffect(() => {
+    dispatch(getCart(customerDetailsState._id))
+  },[loggedInState])
 
 
   const MainSiteLayout = () => {

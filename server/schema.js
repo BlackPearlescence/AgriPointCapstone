@@ -493,6 +493,29 @@ const productStatisticsSchema = new Schema({
     },
 })
 
+const saleSchema = new Schema({
+    discount: {
+        type: Number,
+        min: 0,
+        max: 1,
+        required: true,
+    },
+
+    sale_start: {
+        type: Date,
+        required: true,
+    },
+
+    sale_end: {
+        type: Date,
+        required: true,
+    },
+    sale_type: {
+        type: String,
+        required: true,
+    },
+})
+
 
   const productSchema = new Schema({
     name: {
@@ -546,6 +569,14 @@ const productStatisticsSchema = new Schema({
         type: productStatisticsSchema,
         default: {},
     },
+    added_at: {
+        type: Date,
+        default: Date.now(),
+    },
+    sale: {
+        type: saleSchema,
+        default: null,
+    }
 })
 
 // Populate vendor name when product is retrieved

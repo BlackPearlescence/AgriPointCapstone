@@ -87,7 +87,7 @@ router.get("/:id/cart", async (req, res, next) => {
     const { id } = req.params;
     try {
         fileLogger.info(`Request received for /customers/${id}/cart`);
-        const customerCart = await Customer.findById(id).select("_id cart")
+        const customerCart = await Customer.findById(id).select("_id cart").populate("cart.product")
         res.status(StatusCodes.OK).json(customerCart.cart);
         fileLogger.info(`Successfully sent response for /customers/${id}/cart`);
     } catch (err) {
