@@ -87,7 +87,7 @@ const rewardStatisticsSchema = new Schema({
 
 const benefitSchema = new Schema({
     rank: {
-        type: String,
+        type: Number,
         required: true,
     },
     titular_description: {
@@ -437,7 +437,7 @@ const customerSchema = new Schema({
     },
     reward_information: {
         type: rewardInformationSchema,
-        required: false,
+        required: true,
         default: {},
     },
     // verified : {
@@ -681,6 +681,7 @@ const Stock = mongoose.model("Stock",stockSchema)
 const Phone = mongoose.model("Phone",phoneSchema)
 const Contact = mongoose.model("Contact",contactSchema)
 const RewardStatistics = mongoose.model("RewardStatistics",rewardStatisticsSchema)
+const RewardInformation = mongoose.model("RewardInformation",rewardInformationSchema)
 const Benefit = mongoose.model("Benefit",benefitSchema)
 const Address = mongoose.model("Address",addressSchema)
 const ShoppingList = mongoose.model("ShoppingList",shoppingListSchema)
@@ -704,6 +705,7 @@ module.exports = {
     Phone,
     Contact,
     RewardStatistics,
+    RewardInformation,
     Benefit,
     Address,
     ShoppingList,

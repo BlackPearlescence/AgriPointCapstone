@@ -132,6 +132,7 @@ const handleLogoutFailureError = (err, req, res, next) => {
 }
 
 
+
 // Final Error Handling Function for final middleware
 const handleInternalServerError = (err, req, res, next) => {
     err.statusCode = err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;

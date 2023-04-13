@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { LoginModal } from "../modals/LoginModal"
 import { makeLogoutRequest, selectCustomerDetails, selectLoggedIn, showLogin } from "../../reducers/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCart, showCart } from "../../reducers/cartSlice";
+import { selectMyCart, showCart } from "../../reducers/cartSlice";
 import Cookies from "js-cookie";
 
 const TopNavigationBar = () => {
@@ -15,7 +15,7 @@ const TopNavigationBar = () => {
     const dispatch = useDispatch()
     const [searchQuery, setSearchQuery] = useState("")
 
-    const cartState = useSelector(selectCart)
+    const cartState = useSelector(selectMyCart)
     const isLoggedInState = useSelector(selectLoggedIn)
     const customerDetails = useSelector(selectCustomerDetails)
 

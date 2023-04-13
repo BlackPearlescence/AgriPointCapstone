@@ -1,5 +1,31 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { Map as ImmutableMap } from "immutable";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const getCart = createAsyncThunk(
+    "cart/getCart",
+    async (customerId) => {
+        const resp = await axios.get(`/customers/${customerId}/cart`);
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+
+)
+
+// export const addToCart = createAsyncThunk(
+//     "cart/addToCart",
+//     async (product) => {
+//         const resp = await axios.post("")
+//     }
+// )
+
 
 export const cartSlice = createSlice({
     name: "cart",
@@ -23,13 +49,13 @@ export const cartSlice = createSlice({
             state.cartShown = true;
         },
         addToCart: (state, action) => {
-            // const { id, quantity = 1 } = action.payload;
-            // const existingItem = state.getIn(["myCart", id])  ;
-            // if (existingItem) {
-            //     state.setIn(["myCart", id], quantity)
-            // } else {
-            //     state.setIn(["myCart", id], quantity)
-            // }
+            const { id, quantity = 1 } = action.payload;
+            const existingItem = state.myCart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                state.myCart.push({ id, quantity });
+            }
         },
         removeFromCart: (state, action) => {
             // const { id } = action.payload;  
@@ -39,6 +65,11 @@ export const cartSlice = createSlice({
             // const { id, quantity } = action.payload;
             // const existingItem = state.getIn(["myCart", id]);
             // state.getIn(["myCart", id], quantity)
+        }
+    },
+    extraReducers: {
+        [getCart.fulfilled]: (state, action) => {
+            state.myCart = action.payload;
         }
     }
 });
@@ -58,4 +89,4 @@ export const {
 export default cartSlice.reducer;
 export const selectCartShown = state => state.cart.cartShown;
 export const selectCheckoutShown = state => state.cart.checkoutShown;
-export const selectCart = state => state.cart.myCart;
+export const selectMyCart = state => state.cart.myCart;

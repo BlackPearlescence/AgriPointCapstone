@@ -94,7 +94,7 @@ router.get("/:id", async (req, res, next) => {
     const { id } = req.params
     try {
         fileLogger.info(`Request received for /products/${id}`)
-        const productAtId = await Product.findById(id)
+        const productAtId = await Product.findById(id).exec()
         res.status(StatusCodes.OK).json(productAtId)
     } catch (err) {
         fileLogger.error(err)

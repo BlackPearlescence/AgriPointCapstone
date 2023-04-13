@@ -104,7 +104,7 @@ router.post("/login", async (req, res, next) => {
             consoleLogger.info("User logged in successfully")
             const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "10s" } );
             res.cookie("agrijwt", token, { httpOnly: true, sameSite: true });
-            res.status(StatusCodes.OK).json({ message: "User logged in successfully.", token})
+            res.status(StatusCodes.OK).json({ message: "User logged in successfully.", customer})
         }
     } catch(err) {
         next(err)
