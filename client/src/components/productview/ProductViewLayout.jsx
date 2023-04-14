@@ -4,33 +4,47 @@ import { BsFillCartPlusFill, BsList } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decreaseQuantity, increaseQuantity, pickSize, selectIsMaxAmount, selectIsMinAmount, selectProductInfo, selectSelectedQuantity, selectSelectedSize } from "../../reducers/productViewSlice";
+import { addToCart, getCart, showCart } from "../../reducers/cartSlice";
+import { selectCustomerDetails } from "../../reducers/loginSlice";
 
 const ProductViewLayout = ({ children }) => {
 
     const dispatch = useDispatch()
-    const product = useSelector(selectProductInfo)
+    const productInfo = useSelector(selectProductInfo)
     const chosenSize = useSelector(selectSelectedSize)
     const currentQuantity = useSelector(selectSelectedQuantity)
     const isMin = useSelector(selectIsMinAmount)
     const isMax = useSelector(selectIsMaxAmount)
+    const customerDetails = useSelector(selectCustomerDetails)
+
+    const handleAddProductToCart = () => {
+        const size_name = chosenSize.size_name
+        const size_item_count = chosenSize.size_item_count
+        const quantity = currentQuantity
+        const customer = customerDetails._id
+        const product = productInfo._id
+        const productChoice = { customer, product, size_name, size_item_count, quantity }
+        dispatch(addToCart(productChoice))
+    }
+
     return(
         <div className={styles.productViewWrapper}>
             <div className={styles.productTitleContainer}>
-                <h1>{product.name}</h1>
+                <h1>{productInfo.name}</h1>
             </div>
             <div>
-                <h1>{product.type}</h1>
+                <h1>{productInfo.type}</h1>
             </div>
             <div className={styles.productImageContainer}>
-                <img src={product.image_url} alt="a product image" />
+                <img src={productInfo.image_url} alt="a product image" />
             </div>
             <div>
                 <h1>Info + Nutrition</h1>
-                {product.description}
+                {productInfo.description}
             </div>
             <div>
                 <h1>Tags</h1>
-                {product.tags ? product.tags.map(tag => <span>{tag}</span>) : null}
+                {productInfo.tags ? productInfo.tags.map(tag => <span>{tag}</span>) : null}
                 {/* <button>Add to Cart</button>
                 <input type="text" />
                 <button>Add to List</button> */}
@@ -42,7 +56,7 @@ const ProductViewLayout = ({ children }) => {
                 <div className={styles.sizeContainer}>
                     <span>Sizes</span>
                     <div className={styles.sizeOptionsWrapper}>
-                        {product.stock ? product.stock.map(stockItem => {
+                        {productInfo.stock ? productInfo.stock.map(stockItem => {
                             if(stockItem.size_stock === 0){
                                 return <button disabled className={styles.outOfStock} onClick={() => dispatch(pickSize(stockItem))}>{stockItem.size_name}</button>
                             } else if(stockItem.size_name === chosenSize.size_name){
@@ -66,7 +80,7 @@ const ProductViewLayout = ({ children }) => {
                     </div>
                 </div>
                 <div className={styles.addBtnContainer}>
-                    <button className={styles.cartBtn} ><BsFillCartPlusFill /> <span>Add to Cart</span></button>
+                    <button className={styles.cartBtn} onClick={handleAddProductToCart}><BsFillCartPlusFill /> <span>Add to Cart</span></button>
                     <button className={styles.listBtn}><BsList /><span>Add to List</span></button>
                 </div>
             </div>

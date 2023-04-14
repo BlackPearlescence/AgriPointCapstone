@@ -134,7 +134,8 @@ export const loginSlice = createSlice({
         },
         [makeLoginCheckRequest.fulfilled]: (state, action) => {
             state.status = "succeeded";
-            state.customerDetails = action.payload;
+            console.log(action.payload)
+            state.customerDetails = action.payload.customer;
             state.loggedIn = true;
         },
         [makeLogoutRequest.fulfilled]: (state, action) => {

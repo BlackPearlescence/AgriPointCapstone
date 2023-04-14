@@ -22,8 +22,8 @@ export const getCart = createAsyncThunk(
 export const addToCart = createAsyncThunk(
     "cart/addToCart",
     async (addToCartPayload) => {
-        const { productId, customerId, quantity } = addToCartPayload;
-        const resp = await axios.post(`/customers/${customerId}/cart`,{ productId, quantity });
+        const { product, customer, quantity, size_name, size_item_count } = addToCartPayload;
+        const resp = await axios.post(`/customers/${customer}/cart`,{ product, quantity, size_name, size_item_count });
         return resp.data;
     },
     {
@@ -40,8 +40,8 @@ export const addToCart = createAsyncThunk(
 export const removeFromCart = createAsyncThunk(
     "cart/removeFromCart",
     async (removeFromCartPayload) => {
-        const { productId, customerId } = removeFromCartPayload;
-        const resp = await axios.delete(`/customers/${customerId}/cart/${productId}`);
+        const { product, customer } = removeFromCartPayload;
+        const resp = await axios.delete(`/customers/${customer}/cart/${product}`);
         return resp.data;
     },
     {
@@ -58,8 +58,8 @@ export const removeFromCart = createAsyncThunk(
 export const updateCartItemQuantity = createAsyncThunk(
     "cart/updateCartItemQuantity",
     async (updateCartItemQuantityPayload) => {
-        const { productId, customerId, quantity } = updateCartItemQuantityPayload;
-        const resp = await axios.put(`/customers/${customerId}/cart/${productId}`, { quantity });
+        const { product, customer, quantity } = updateCartItemQuantityPayload;
+        const resp = await axios.patch(`/customers/${customer}/cart/${product}`, { quantity });
         return resp.data;
     },
     {
@@ -101,9 +101,13 @@ export const cartSlice = createSlice({
     },
     extraReducers: {
         [getCart.fulfilled]: (state, action) => {
+            console.log("Get Cart")
+            console.log(action.payload)
             state.myCart = action.payload;
         },
         [addToCart.fulfilled]: (state, action) => {
+            console.log("Add to Cart")
+            console.log(action.payload)
             state.myCart = action.payload;
         },
         [removeFromCart.fulfilled]: (state, action) => {
@@ -111,7 +115,7 @@ export const cartSlice = createSlice({
         },
         [updateCartItemQuantity.fulfilled]: (state, action) => {
             state.myCart = action.payload;
-        }
+        },
     }
 });
 

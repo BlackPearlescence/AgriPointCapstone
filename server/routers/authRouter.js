@@ -39,10 +39,11 @@ router.use(cookieParser());
 // Check if user is logged in already
 router.get("/check", verifyToken,  async (req, res, next) => {
     const customerId = req.customerId;
-    consoleLogger.info(customerId)
+    consoleLogger.info("MYCUSTOMER: " + customerId)
     try {
         const customer = await Customer.findById(customerId)
-        res.status(StatusCodes.OK).json({ message: "User is logged in.", ...customer })
+        consoleLogger.info(customer)
+        res.status(StatusCodes.OK).json({ message: "User is logged in.", customer })
     } catch (err) {
         consoleLogger.error("didnt work")
         next(err)
@@ -102,7 +103,7 @@ router.post("/login", async (req, res, next) => {
             next(err)
         } else {
             consoleLogger.info("User logged in successfully")
-            const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "10s" } );
+            const token = jwt.sign({ sub: customer._id }, "allmyhatersmademewhoiamtodayakingofthisworld", { expiresIn: "1h" } );
             res.cookie("agrijwt", token, { httpOnly: true, sameSite: true });
             res.status(StatusCodes.OK).json({ message: "User logged in successfully.", customer})
         }

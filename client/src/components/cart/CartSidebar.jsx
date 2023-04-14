@@ -13,18 +13,24 @@ const CartSidebar = () => {
     const cartState = useSelector(selectMyCart)
     const customerDetailsState = useSelector(selectCustomerDetails)
 
-    useEffect(() => {
-        dispatch(getCart(customerDetailsState._id))
-    },[cartShownState])
+    // useEffect(() => {
+    //     dispatch(showCart())
+    // },[cartState])
 
     return (
         <Offcanvas className={styles.cartContainer} show={cartShownState} onHide={() => dispatch(hideCart())} onShow={() => dispatch(showCart())} placement="end">
             <div className={styles.cartHeader}>My Cart</div>
-            {cartState ? cartState.map((cartItem) => {
+            {cartState.length > 0 && cartState.map((cartItem) => {
                 return(
-                    <CartItemCard cartItem={cartItem.product} />
+                    <CartItemCard cartItem={cartItem} />
                 )
-            }) : null}
+            }) }
+            { cartState.length === 0 ?  <div className={styles.emptyCart}>Your cart is empty</div> : 
+            <div className={styles.cartFooter}>Total: ${cartState.length > 0 && cartState.reduce(
+                (accumulator, cartItem) => {
+                    return accumulator + cartItem.size_item_count * cartItem.quantity * cartItem.product.price
+                },0)}</div>}
+            
         </Offcanvas> 
     )
 }

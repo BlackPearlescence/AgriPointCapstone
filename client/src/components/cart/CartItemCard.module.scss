@@ -24,4 +24,65 @@
         flex-direction: column;
         justify-content: space-around;
     }
+
+    .productTitle {
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+    }
+    .priceField {
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+    }
+
+    .sizeField {
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+    }
+
+    .quantityPicker {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        border: 1px solid App.$lighterdarkspringgreen;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+    }
+
+    // Its a button
+    .removeFromCart {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        border: 1px solid App.$lighterdarkspringgreen;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        font-family: App.$font-nunito;
+        background-color: App.$white;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: App.$lighterdarkspringgreen;
+            color: App.$white;
+        }
+    }
 }

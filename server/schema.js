@@ -325,10 +325,14 @@ const cartItemSchema = new Schema({
         type: Number,
         required: true
     },
-    size: {
+    size_name: {
         type: String,
         required: true
     },
+    size_item_count: {
+        type: Number,
+        required: true
+    }
 });
 
 const rewardsProgramSchema = new Schema({
@@ -450,11 +454,25 @@ const customerSchema = new Schema({
     //     required: true,
     //     default: false,
     // },
+    cart_total: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
     
 });
 
 customerSchema.plugin(passportLocalMongoose)
 
+
+// Calculate the cart total 
+// customerSchema.post("findOneAndUpdate", function(next) {
+//     this.cart_total = this.cart.reduce((acc, item) => {
+//         consoleLogger.info(stock_size)
+//         return acc + (item.product.price * item.quantity)
+//     }, 0);
+//     next();
+// })
 const productStatisticsSchema = new Schema({
     total_reviews: {
         type: Number,

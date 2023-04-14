@@ -32,6 +32,7 @@ export const productViewSlice = createSlice({
     reducers: {
         pickSize: (state, action) => {
             state.selectedSize = action.payload;
+            console.log(state.selectedSize)
             state.selectedQuantity = 1;
             state.isMaxAmount = false;
             state.isMinAmount = false;

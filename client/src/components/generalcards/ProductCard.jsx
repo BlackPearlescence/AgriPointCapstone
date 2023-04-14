@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
         <div className={styles.productCardContainer} onClick={() => navigate(`/products/${product._id}`)}>
             <img src={product.image_url} alt="a product image" />
             <span className={styles.productTitle}>{product.name}</span>
-            <span className={styles.priceTag}>${product.price}</span>
+            <span className={styles.priceTag}>Unit Price: ${product.price}</span>
             <Box>
                 <Rating name="read-only" sx={{ fontSize:30 }}   value={product.statistics.average_rating} min={0} max={5} readOnly/>
             </Box>
