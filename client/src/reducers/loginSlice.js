@@ -148,8 +148,6 @@ export const loginSlice = createSlice({
             state.error = action.payload;
             state.loggedIn = false;
             state.customerDetails = {};
-
-
             console.log(state.error)
         }
     }

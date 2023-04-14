@@ -19,12 +19,59 @@ export const getCart = createAsyncThunk(
 
 )
 
-// export const addToCart = createAsyncThunk(
-//     "cart/addToCart",
-//     async (product) => {
-//         const resp = await axios.post("")
-//     }
-// )
+export const addToCart = createAsyncThunk(
+    "cart/addToCart",
+    async (addToCartPayload) => {
+        const { productId, customerId, quantity } = addToCartPayload;
+        const resp = await axios.post(`/customers/${customerId}/cart`,{ productId, quantity });
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+)
+
+export const removeFromCart = createAsyncThunk(
+    "cart/removeFromCart",
+    async (removeFromCartPayload) => {
+        const { productId, customerId } = removeFromCartPayload;
+        const resp = await axios.delete(`/customers/${customerId}/cart/${productId}`);
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+)
+
+export const updateCartItemQuantity = createAsyncThunk(
+    "cart/updateCartItemQuantity",
+    async (updateCartItemQuantityPayload) => {
+        const { productId, customerId, quantity } = updateCartItemQuantityPayload;
+        const resp = await axios.put(`/customers/${customerId}/cart/${productId}`, { quantity });
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+)
 
 
 export const cartSlice = createSlice({
@@ -51,27 +98,18 @@ export const cartSlice = createSlice({
         clearCart: state => {
             state.myCart = [];
         },
-        addToCart: (state, action) => {
-            const { id, quantity = 1 } = action.payload;
-            const existingItem = state.myCart.find(item => item.id === id);
-            if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                state.myCart.push({ id, quantity });
-            }
-        },
-        removeFromCart: (state, action) => {
-            // const { id } = action.payload;  
-            // state.deleteIn(["myCart", id]);
-        },
-        updateCartItemQuantity: (state, action) => {
-            // const { id, quantity } = action.payload;
-            // const existingItem = state.getIn(["myCart", id]);
-            // state.getIn(["myCart", id], quantity)
-        }
     },
     extraReducers: {
         [getCart.fulfilled]: (state, action) => {
+            state.myCart = action.payload;
+        },
+        [addToCart.fulfilled]: (state, action) => {
+            state.myCart = action.payload;
+        },
+        [removeFromCart.fulfilled]: (state, action) => {
+            state.myCart = action.payload;
+        },
+        [updateCartItemQuantity.fulfilled]: (state, action) => {
             state.myCart = action.payload;
         }
     }
@@ -84,9 +122,6 @@ export const {
     hideCheckout,
     proceedToCheckout,
     revertToCart,
-    addToCart,
-    removeFromCart,
-    updateCartItemQuantity,
     clearCart,
 } = cartSlice.actions;
 

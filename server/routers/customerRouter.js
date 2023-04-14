@@ -6,8 +6,26 @@ const router = express.Router();
 const { handleCustomerNotFoundError, handleNoCustomersFoundError, handleCustomerHasNoProductReviewsError, handleCustomerHasNoReviewsError, handleCustomerHasNoVendorReviewsError, handleNoTransactionsFoundError, handleInvalidCredentialsError } = require("../errorhandling/errors.js");
 const { StatusCodes } = require("http-status-codes");
 const verifyToken = require("../tools/verifyToken.js");
+const cartRouter = require("./customerrouters/cartRouter.js");
 
 // Base /customers
+
+
+
+router.param("id", async (req, res, next, id) => {
+    try {
+        req.id = id;
+        next()
+    } catch (err) {
+        fileLogger.error(err);
+        next(err)
+    }
+})
+
+router.use("/:id/cart", cartRouter)
+
+
+// Customer's by Id
 
 
 // Get all customers
@@ -38,6 +56,9 @@ router.get("/profile", verifyToken, async (req, res, next) => {
     }
 })  
 
+
+
+
 // Get customer by id
 router.get("/:id", async (req, res, next) => {
     const { id } = req.params;
@@ -56,6 +77,8 @@ router.get("/:id", async (req, res, next) => {
 })
 
 router.use(handleCustomerNotFoundError)
+
+
 
 // A customer's reviews can be filtered by type (vendor, product, or both)
 // This middleware establishes a common query for the reviews
@@ -82,47 +105,7 @@ router.get("/:id/reviews", async (req, res, next) => {
 
 router.use(handleCustomerHasNoReviewsError)
 
-// Get the customer's cart
-router.get("/:id/cart", async (req, res, next) => {
-    const { id } = req.params;
-    try {
-        fileLogger.info(`Request received for /customers/${id}/cart`);
-        const customerCart = await Customer.findById(id).select("_id cart").populate("cart.product")
-        res.status(StatusCodes.OK).json(customerCart.cart);
-        fileLogger.info(`Successfully sent response for /customers/${id}/cart`);
-    } catch (err) {
-        fileLogger.error(err);
-        next(err)
-    }
-})
 
-
-// Add to a customer's cart
-router.post("/:id/cart", async (req, res, next) => {
-    const { id } = req.params;
-    const { product, quantity = 1, size = "small"  } = req.body;
-    try {
-        fileLogger.info(`Request received for /customers/${id}/cart`);
-        const customerCart = await Customer.findById(id).select("_id cart")
-        // consoleLogger.info(customerCart)
-        const productInCart = customerCart.cart.find(item => item.product._id == product)
-        // consoleLogger.info(productInCart)
-        if (productInCart) {
-            productInCart.quantity += quantity
-            consoleLogger.info(productInCart)
-
-        } else { 
-            customerCart.cart.push({ product, quantity, size })
-            // consoleLogger.info(customerCart)
-        }
-        await customerCart.save()
-        res.status(StatusCodes.OK).json(customerCart);
-        fileLogger.info(`Successfully sent response for /customers/${id}/cart`);
-    } catch (err) {
-        fileLogger.error(err);
-        next(err)
-    }
-})
 
 router.use(handleInvalidCredentialsError)
 
@@ -154,6 +137,7 @@ router.get("/:id/reviewtransactions", async (req, res, next) => {
 })
 
 router.use(handleNoTransactionsFoundError)
+
 
 
 
