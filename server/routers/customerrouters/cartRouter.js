@@ -28,37 +28,24 @@ router.post("/", async (req, res, next) => {
     const { product, quantity = 1, size = "small"  } = req.body;
     consoleLogger.info(customerId)
     try {
-        const customerCart = await Customer.findById(customerId).select("_id cart").populate("cart.product")
+        const customerCart = await Customer.findById(customerId).select("_id cart")
         const productInCart = customerCart.cart.find(item => item.product == product)
+        consoleLogger.info(productInCart)
         if (!productInCart) {
 
-            const customerCart = await Customer.findOneAndUpdate(
+            await Customer.findOneAndUpdate(
                 { _id: customerId },
                 { $push : { cart: { product: product, quantity: quantity, size: size } } },
                 { new: true}
             )
-        // fileLogger.info(`Request received for /customers/${customerId}/cart`);
-        // // consoleLogger.info("blah")
-
-        // const customerCart = await Customer.findById(customerId).select("_id cart").populate("cart.product")
-        // consoleLogger.info(customerCart)
-        // const productInCart = customerCart.cart.find(item => item.product == product)
-        // // consoleLogger.info(productInCart)
-        // if (productInCart) {
-        //     // consoleLogger.info("blah")
-        //     productInCart.quantity += quantity
-        //     consoleLogger.info(productInCart)
-
-        // } else { 
-        //     // consoleLogger.info("blah")
-        //     customerCart.cart.push(new CartItem({ 
-        //         product: product, 
-        //         quantity: quantity, 
-        //         size: size 
-        //     }))
-        //     consoleLogger.info(customerCart)
-        // }
-        // await customerCart.save()
+        } else {
+            consoleLogger.info("blah")  
+            await Customer.findOneAndUpdate(
+                { _id: customerId, "cart.product": product },
+                { $inc: { "cart.$.quantity": quantity } },
+                { new: true }
+            )
+        }
         res.status(StatusCodes.OK).json(customerCart);
         fileLogger.info(`Successfully sent response for /customers/${customerId}/cart`);
     } catch (err) {
@@ -67,25 +54,47 @@ router.post("/", async (req, res, next) => {
     }
 })
 
-// Delete from a customer's cart
-router.delete("/:productId", async (req, res, next) => {
-    const { id, cartId } = req.params;
+// Update a customer's cart
+router.patch("/:productId", async (req, res, next) => {
+    const customerId = req.id
+    const productId = req.params.productId
+    const { quantity = 1, size = "small" } = req.body;
+
     try {
-        fileLogger.info(`Request received for /customers/${id}/cart/${cartId}`);
-        const customerCart = await Customer.findById(id).select("_id cart")
-        customerCart.cart = customerCart.cart.filter(item => item._id != cartId)
-        await customerCart.save()
+        fileLogger.info(`Request received for /customers/${customerId}/cart/${productId}`);
+        const customerCart = await Customer.findOneAndUpdate(
+            { _id: customerId, "cart.product": productId },
+            { $set: { "cart.$.quantity": quantity, "cart.$.size": size } },
+            { new: true }
+        )
         res.status(StatusCodes.OK).json(customerCart);
-        fileLogger.info(`Successfully sent response for /customers/${id}/cart/${cartId}`);
     } catch (err) {
         fileLogger.error(err);
         next(err)
     }
 })
 
-// Update a customer's cart
-router.put("/:productId", async (req, res, next) => {
-    const { id, cartId } = req.params;
+
+// Delete from a customer's cart
+// Return an error if the product is not in the cart
+router.delete("/:productId", async (req, res, next) => {
+    const customerId = req.id
+    const productId = req.params.productId
+    try {
+        fileLogger.info(`Request received for /customers/${customerId}/cart/${productId}`);
+
+        const customerCart = await Customer.findOneAndUpdate(
+            { _id: customerId },
+            { $pull: { cart: { product: productId } } },
+            { new: true, returnOriginal: false }
+        )
+
+        res.status(StatusCodes.OK).json(customerCart);
+    } catch (err) {
+        fileLogger.error(err);
+        next(err)
+    }
 })
+
 
 module.exports = router;
