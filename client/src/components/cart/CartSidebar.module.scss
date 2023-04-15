@@ -54,3 +54,48 @@
     color: App.$darkspringgreen;
     font-family: App.$font-nunito;
 }
+
+.proceedToCheckoutBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: App.$darkspringgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: App.$medium-1;
+    font-weight: 600;
+    color: App.$white;
+    font-family: App.$font-nunito;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: App.$lighterdarkspringgreen;
+    }
+}
+
+.clearCartBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: App.$white;
+    border: 1px solid App.$lighterdarkspringgreen;
+    border-radius: 5px;
+    font-size: App.$medium-1;
+    font-weight: 600;
+    color: App.$darkspringgreen;
+    font-family: App.$font-nunito;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: App.$lighterdarkspringgreen;
+        color: App.$white;
+    }
+}

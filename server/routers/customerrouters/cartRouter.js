@@ -99,5 +99,22 @@ router.delete("/:productId", async (req, res, next) => {
     }
 })
 
+// Delete all items from a customer's cart
+router.delete("/", async (req, res, next) => {
+    const customerId = req.id
+    try {
+        fileLogger.info(`Request received for /customers/${customerId}/cart`);
+        const customerCart = await Customer.findOneAndUpdate(
+            { _id: customerId },
+            { $set: { cart: [] } },
+            { new: true, returnOriginal: false }
+        )
+        res.status(StatusCodes.OK).json(customerCart.cart);
+    } catch (err) {
+        fileLogger.error(err);
+        next(err)
+    }
+})
+
 
 module.exports = router;

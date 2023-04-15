@@ -1,6 +1,6 @@
 import { Offcanvas } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux";
-import { getCart, hideCart, selectCartShown, selectMyCart, showCart } from "../../reducers/cartSlice";
+import { deleteAllCartItems, getCart, hideCart, selectCartShown, selectMyCart, showCart } from "../../reducers/cartSlice";
 import CartItemCard from "./CartItemCard";
 import styles from "./CartSidebar.module.scss";
 import { useEffect } from "react";
@@ -17,6 +17,12 @@ const CartSidebar = () => {
     //     dispatch(showCart())
     // },[cartState])
 
+    const handleRemoveAllFromCart = () => {
+        const customer = customerDetailsState._id
+        dispatch(deleteAllCartItems(customer))
+        dispatch(getCart(customerDetailsState._id))
+    }
+
     return (
         <Offcanvas className={styles.cartContainer} show={cartShownState} onHide={() => dispatch(hideCart())} onShow={() => dispatch(showCart())} placement="end">
             <div className={styles.cartHeader}>My Cart</div>
@@ -30,6 +36,9 @@ const CartSidebar = () => {
                 (accumulator, cartItem) => {
                     return accumulator + cartItem.size_item_count * cartItem.quantity * cartItem.product.price
                 },0)}</div>}
+                { cartState.length > 0 && <button  className={styles.proceedToCheckoutBtn}>Proceed to Checkout</button>}
+                { cartState.length > 0 && <button onClick={handleRemoveAllFromCart} className={styles.clearCartBtn}>Clear Cart</button>}
+               
             
         </Offcanvas> 
     )

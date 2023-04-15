@@ -73,6 +73,23 @@ export const updateCartItemQuantity = createAsyncThunk(
     }
 )
 
+export const deleteAllCartItems = createAsyncThunk(
+    "cart/deleteAllCartItems",
+    async (customerId) => {
+        const resp = await axios.delete(`/customers/${customerId}/cart`);
+        return resp.data;
+    },
+    {
+        pending: (state, action) => {
+            state.status = "loading";
+        },
+        rejected: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+)
+
 
 export const cartSlice = createSlice({
     name: "cart",
@@ -116,6 +133,9 @@ export const cartSlice = createSlice({
         [updateCartItemQuantity.fulfilled]: (state, action) => {
             state.myCart = action.payload;
         },
+        [deleteAllCartItems.fulfilled]: (state, action) => {
+            state.myCart = action.payload;
+        }
     }
 });
 
