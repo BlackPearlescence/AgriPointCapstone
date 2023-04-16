@@ -355,7 +355,7 @@ const createProducts = async (num) => {
             name: myProduct.name
         })
 
-        consoleLogger.info(stripeProduct)
+        // consoleLogger.info(stripeProduct)
 
         const stripePrice = await stripe.prices.create({
             product: stripeProduct.id,
@@ -363,7 +363,7 @@ const createProducts = async (num) => {
             currency: 'usd',
         })
 
-        consoleLogger.info(stripePrice)
+        // consoleLogger.info(stripePrice)
 
         const product = new Product({
             stripe_product_id: stripeProduct.id,

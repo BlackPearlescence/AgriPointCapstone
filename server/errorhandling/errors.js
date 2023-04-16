@@ -1,5 +1,5 @@
 const { StatusCodes } = require("http-status-codes");
-const { consoleLogger } = require("./logger");
+const {  } = require("./logger");
 
 
 // 404s

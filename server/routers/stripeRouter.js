@@ -18,13 +18,19 @@ router.get("/create-payment-intent/:customerId", async (req, res, next) => {
     const customerId = req.params.customerId
     try{
         const customer = await Customer.findById(customerId).populate("cart.product")
+        console.log(customer)
+        const stripeCustomer = await stripe.customers.retrieve(customer.stripe_id)
+        console.log(stripeCustomer)
         const customerCart = customer.cart
-        consoleLogger.error(customerCart)
+        // consoleLogger.error(customerCart)
         const amount = customerCart.reduce((acc, item) => acc + item.product.price, 0)
-        consoleLogger.error(amount)
+        // consoleLogger.error(amount)
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount * 100,
-            currency: "usd"
+            currency: "usd",
+            receipt_email: customer.username,
+            description: "5% of your purchase will be donated directly to the hardworking farmers who grew your food!",
+            customer: customer.stripe_id
         })
         res.status(200).json({ clientSecret: paymentIntent.client_secret })
     } catch (err) {
@@ -33,4 +39,6 @@ router.get("/create-payment-intent/:customerId", async (req, res, next) => {
 })
 
 
-module.exports = router
+
+
+module.exports = router;

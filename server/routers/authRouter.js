@@ -60,16 +60,15 @@ router.post("/register", async (req, res, next) => {
     try {
         consoleLogger.info(username)
         const existingCustomers = await stripe.customers.list({email: username})
-        let customer;
-        if(existingCustomers.data.length > 0) {
-            customer = await stripe.customers.create({
-                email: username,
-                name: first_name + last_name,
-            })
-        }
+        const customer = await stripe.customers.create({
+            email: username,
+            name: first_name +  " " + last_name,
+        })
+        consoleLogger.info(customer)
+        console.log(customer)
         
         consoleLogger.info(customer)
-        Customer.register(new Customer({ username, first_name, last_name }), password);
+        Customer.register(new Customer({ username, first_name, last_name, stripe_id: customer.id }), password);
         consoleLogger.info("User registered successfully")
         res.status(StatusCodes.OK).json({ message: "User registered successfully.", customer })
     } catch (err) {

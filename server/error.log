@@ -10400,3 +10400,4358 @@ Message: undefined
   timestamp: '2023-04-16T16:22:47.207Z'
 }
 { message: 47, level: 'error', timestamp: '2023-04-16T16:22:47.209Z' }
+Timestamp: 2023-04-16T19:39:41.900Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:39:45.115Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:39:45.204Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:39:51.895Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:39:52.089Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:10.883Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:11.171Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:21.213Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:21.602Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:23.369Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:23.674Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:27.005Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:40:27.101Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:40:39.105Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:40:39.108Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:40:42.544Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:40:42.545Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:40:52.110Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:40:52.111Z' }
+Timestamp: 2023-04-16T19:50:45.420Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:50:45.698Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:51:03.529Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:51:03.536Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:51:06.294Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:51:06.297Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T19:51:16.906Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T19:51:16.909Z' }
+Timestamp: 2023-04-16T19:54:25.561Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:54:25.953Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:30.944Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:31.329Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:41.727Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:41.802Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:50.901Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:58:51.153Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:13.159Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:13.649Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:35.909Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:38.012Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:41.605Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T19:59:41.701Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:06:51.255Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:06:51.600Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:44:52.919Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:44:54.688Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:45:00.748Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:45:01.253Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:45:37.498Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:45:37.500Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:45:40.985Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:45:40.987Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:45:44.330Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:45:44.332Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:45:46.200Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:45:46.201Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:45:49.560Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:45:49.562Z' }
+Timestamp: 2023-04-16T20:46:42.174Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:46:42.645Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:48:29.855Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:48:29.864Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:48:31.131Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:48:31.132Z' }
+Timestamp: 2023-04-16T20:48:59.041Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:48:59.259Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:51:08.610Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:51:08.614Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:51:13.669Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:51:13.671Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:51:25.278Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:51:25.279Z' }
+Timestamp: 2023-04-16T20:51:41.631Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:51:41.923Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:52:48.511Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:52:48.516Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:52:52.764Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:52:52.765Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:52:57.001Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:52:57.002Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:53:01.620Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:53:01.621Z' }
+Timestamp: 2023-04-16T20:53:46.352Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:53:46.396Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:55:31.204Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:55:31.218Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:55:33.711Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:55:33.717Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T20:55:38.121Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T20:55:38.124Z' }
+Timestamp: 2023-04-16T20:55:55.921Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T20:55:56.102Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:01:26.147Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:01:26.150Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:04:27.793Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:04:27.798Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:05:06.935Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:05:06.937Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:05:23.840Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:05:23.844Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:05:35.412Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:05:35.421Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:05:48.721Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:05:48.722Z' }
+Timestamp: 2023-04-16T21:05:52.110Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:05:52.154Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:05:54.741Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:05:54.744Z' }
+Timestamp: 2023-04-16T21:06:08.776Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:06:09.123Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:09:35.386Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:09:35.390Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:09:42.722Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:09:42.723Z' }
+Timestamp: 2023-04-16T21:10:02.703Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:10:03.059Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:11:30.725Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:12:19.373Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:12:19.376Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:12:22.371Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:12:22.373Z' }
+Timestamp: 2023-04-16T21:12:42.605Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:12:43.119Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:17:50.138Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:17:50.141Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:18:01.576Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:18:01.577Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:18:59.861Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:18:59.865Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:19:35.971Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:19:35.973Z' }
+Timestamp: 2023-04-16T21:20:22.551Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:20:23.202Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:20:29.665Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:20:29.667Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:20:41.729Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:20:41.732Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:21:00.541Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:21:00.542Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:21:03.733Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:21:03.735Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:21:05.725Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:21:05.726Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:22:15.514Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:22:15.523Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:23:51.903Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:23:51.961Z' }
+Timestamp: 2023-04-16T21:24:20.805Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:24:21.133Z
+Level: error
+Message: undefined
+
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:27:51.814Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:27:51.817Z' }
+{
+  message: [
+    {
+      product: {
+        _id: new ObjectId("643afe5d468b4ee4fa8087c4"),
+        stripe_product_id: 'prod_NigRk6Z1CqqEma',
+        stripe_price_id: 'price_1MxF52KaXe3UUdkti9OYK22O',
+        name: 'Honeydew Gardeny  Apple',
+        type: 'Honeycrisp',
+        description: 'Placeat consequatur non quibusdam beatae. Velit veniam laborum voluptatum possimus repellendus officia corrupti dolores. Esse facilis vero consequuntur corporis dicta dicta. Autem quaerat quidem ipsum error id. Aut consectetur et assumenda.',
+        price: 47,
+        image_url: 'https://i.imgur.com/Ov4F2v8.jpg',
+        vegetation_type: 'fruit',
+        stock: [
+          {
+            size_name: 'Small Crate',
+            size_item_count: 2,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c0")
+          },
+          {
+            size_name: 'Medium Crate',
+            size_item_count: 4,
+            size_stock: 1,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c1")
+          },
+          {
+            size_name: 'Large Crate',
+            size_item_count: 6,
+            size_stock: 0,
+            _id: new ObjectId("643afe5c468b4ee4fa8087c2")
+          }
+        ],
+        reviews: [
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Aspernatur quisquam culpa cupiditate. Dicta at explicabo ut esse. Autem neque ea.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921d")
+          },
+          {
+            rating: 4,
+            title: 'Handcrafted',
+            body: 'Fuga harum cupiditate sint tempore itaque. Odio illo unde dolorum quos neque. Ipsa eius voluptatibus sint occaecati quo maiores pariatur. Dolorum beatae error quod.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921c")
+          },
+          {
+            rating: 0,
+            title: 'Incredible',
+            body: 'Eos harum eveniet itaque. Quam doloribus fuga ut eos ratione culpa quisquam rem. Dolorem id molestiae eum ratione eligendi aut. Explicabo consequuntur vel aperiam occaecati amet molestias atque nulla earum.',
+            image_url: 'https://loremflickr.com/640/480',
+            _id: new ObjectId("643aff11468b4ee4fa80921b")
+          }
+        ],
+        tags: [ 'Spicy', 'Dips', 'No Added Salt' ],
+        vendor: {
+          _id: new ObjectId("643afe4f468b4ee4fa8086ea"),
+          name: 'Sunrise Ranch'
+        },
+        statistics: {
+          total_reviews: 3,
+          average_rating: 3,
+          five_ratings: 0,
+          four_ratings: 2,
+          three_ratings: 0,
+          two_ratings: 0,
+          one_ratings: 0,
+          _id: new ObjectId("643afe5d468b4ee4fa8087c3")
+        },
+        added_at: 2023-04-15T19:43:01.015Z,
+        sale: null,
+        __v: 0
+      },
+      quantity: 2,
+      size_name: 'Medium Crate',
+      size_item_count: 4,
+      _id: new ObjectId("643b3eb158b249c77aa4aa71")
+    }
+  ],
+  level: 'error',
+  timestamp: '2023-04-16T21:27:55.560Z'
+}
+{ message: 47, level: 'error', timestamp: '2023-04-16T21:27:55.566Z' }
+Timestamp: 2023-04-16T21:28:13.182Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:28:13.260Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:30:54.944Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:30:55.115Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:40:39.259Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:40:39.412Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:42:33.804Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:42:34.419Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:44:00.561Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:45:27.263Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:45:27.358Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:45:58.542Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:46:00.154Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:50:57.878Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:51:34.475Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:51:35.206Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:54:05.863Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T21:54:06.323Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:03:49.239Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:03:49.568Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:04:13.532Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:04:13.741Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:06:37.267Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:06:37.398Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:09:16.874Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:09:17.193Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:09:58.956Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:09:59.098Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:15:05.707Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:18:06.057Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:40:50.443Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-16T22:40:50.653Z
+Level: error
+Message: undefined
+

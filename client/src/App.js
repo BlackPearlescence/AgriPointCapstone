@@ -21,6 +21,7 @@ import CheckoutModal from './components/checkout/CheckoutModal';
 import { Elements } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { getStripePublishableKey, selectClientSecret, selectStripePromise } from './reducers/stripeSlice';
+import CheckoutSuccessPage from './components/checkout/CheckoutSuccessPage';
 
 function App() {
 
@@ -109,6 +110,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:productId" element={<ProductViewPage />} />
+            <Route path="/thankyou" element={<CheckoutSuccessPage />} />
         </Route>
       </Routes>
       <LoginModal />
