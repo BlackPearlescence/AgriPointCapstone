@@ -11,9 +11,7 @@ const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 router.post("/", express.json({ type: "application/json" }), (req, res) => {
     // const sig = req.headers["stripe-signature"];
-
     let event;
-
     try {
         event =  req.body;
     } catch (err) {
