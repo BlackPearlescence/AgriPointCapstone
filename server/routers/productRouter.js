@@ -16,17 +16,17 @@ router.get("/", async (req, res, next) => {
     let { name, page, type, minprice, maxprice, minrating, maxrating,  limit } = req.query
     try {
         // if (name || page || limit) {
-        consoleLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
+        fileLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
         name = name || "";
         page = parseInt(page) || 1;
         type = type || "";
         minprice = parseInt(minprice) || 0;
         maxprice = parseInt(maxprice) || 1000;
         minrating = parseInt(minrating) === 0 || parseInt(minrating) === undefined ? 0 : parseInt(minrating) || 0;
-        consoleLogger.info(minprice,maxprice)
+        // consoleLogger.info(minprice,maxprice)
         maxrating = parseInt(maxrating) === 0 || parseInt(maxrating) === undefined ? 0 : parseInt(maxrating) || 5;
         limit = parseInt(limit) || 12;
-        consoleLogger.info(name, page, type, minprice, maxprice, minrating, maxrating, limit)
+        // consoleLogger.info(name, page, type, minprice, maxprice, minrating, maxrating, limit)
         // if(minrating === 0 && maxrating === 0){
         //     minrating = 0;
         //     maxrating = 1;
@@ -90,16 +90,16 @@ router.use(handleRandomProductFailure)
 
 // Get most recent fruits or vegetables
 router.get("/recent", async (req, res, next) => {
-    consoleLogger.info("Request received for /products/recent")
+    fileLogger.info("Request received for /products/recent")
     const { type = "", amount = 1 } = req.query
-    consoleLogger.info(req.query)
+    // consoleLogger.info(req.query)
     try {
         const mostRecentResults = await Product.find()
                                                 .where("vegetation_type", new RegExp(type, "i"))
                                                 .sort({ added_at: -1 })
                                                 .limit(parseInt(amount))
                                                 .exec()
-        consoleLogger.info(mostRecentResults)
+        // consoleLogger.info(mostRecentResults)
         res.status(StatusCodes.OK).json(mostRecentResults)
     } catch (err) {
         fileLogger.error(err)

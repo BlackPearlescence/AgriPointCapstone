@@ -32,6 +32,7 @@ const e = require("express");
 const { consoleLogger } = require("./errorhandling/logger.js");
 // const { default: Gardeny } = require("./truedata/realseed.js");
 require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const { MONGO_CONNECTION_STRING } = process.env
 mongoose.connect(MONGO_CONNECTION_STRING, {
@@ -110,6 +111,20 @@ const deleteCollections = async () => {
     await RewardsTransaction.deleteMany({});
     await BlogPost.deleteMany({});
     await Stock.deleteMany({});
+}
+
+const deleteAllStripeProducts = async () => {
+    const products = await stripe.products.list()
+    for await (const product of products.data) {
+        await stripe.products.update(product.id, { active: false })
+    }
+}
+
+const deleteAllStripePrices = async () => {
+    const prices = await stripe.prices.list()
+    for await (const price of prices.data) {
+        await stripe.prices.update(price.id, { active: false })
+    }
 }
 
 const createSpecialities = async (num) => {
@@ -323,16 +338,37 @@ const createProducts = async (num) => {
         const stocks = await createProductStocks(newProduct.stock);
         const { name, type, link, tags } = newProduct
         console.log(name,type,link,tags)
-        const product = new Product({
+
+        const myProduct = {
             name: await newProduct.name,
             type: await newProduct.type,
             description: faker.lorem.paragraph(),
-            price: faker.commerce.price(),
+            price: faker.commerce.price(20, 50),
             image_url: await newProduct.link,
             vegetation_type: newProduct.vegetationType,
             stock: stocks,
             reviews: [],
             tags: await newProduct.tags,
+        }
+
+        const stripeProduct = await stripe.products.create({
+            name: myProduct.name
+        })
+
+        consoleLogger.info(stripeProduct)
+
+        const stripePrice = await stripe.prices.create({
+            product: stripeProduct.id,
+            unit_amount: myProduct.price * 100,
+            currency: 'usd',
+        })
+
+        consoleLogger.info(stripePrice)
+
+        const product = new Product({
+            stripe_product_id: stripeProduct.id,
+            stripe_price_id: stripePrice.id, 
+            ...myProduct
         })
         products.push(product)
     }
@@ -352,7 +388,8 @@ const assignProductsToCustomers = async (customers, products) => {
             const cartItem = new CartItem({
                 product: randomProduct._id,
                 quantity: 1,
-                size: await getRandomItem(['small', 'medium', 'large']),
+                size_name: await getRandomItem(['small', 'medium', 'large']),
+                size_item_count: await getRandomItem([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
             })
             // Assign CartItem to customer
             // If cartItem is already in customer's cart, increment quantity
@@ -668,9 +705,11 @@ const assignBlogPostsToVendors = async (vendors, blogPosts) => {
 
 const seed = async () => {
     await deleteCollections();
+    await deleteAllStripePrices();
+    await deleteAllStripeProducts();
     const customers = await createCustomers(5);
     const vendors = await createVendors(5);
-    const products = await createProducts(100);
+    const products = await createProducts(300);
     const customersWithProducts = await assignProductsToCustomers(customers, products);
     const shoppingLists = await createCustomerShoppingLists(5);
     const shoppingListsWithItems = await assignItemsToShoppingLists(shoppingLists, products);

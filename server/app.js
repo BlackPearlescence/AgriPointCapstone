@@ -9,6 +9,7 @@ const productRouter = require("./routers/productRouter.js")
 const customerRouter = require("./routers/customerRouter.js");
 const vendorRouter = require("./routers/vendorRouter.js");
 const authRouter = require("./routers/authRouter.js")
+const stripeRouter = require("./routers/stripeRouter.js")
 
 const { consoleLogger, fileLogger } = require("./errorhandling/logger.js");
 require("dotenv").config()
@@ -48,6 +49,7 @@ app.use("/products", productRouter);
 app.use("/customers", customerRouter);
 app.use("/vendors", vendorRouter);
 app.use("/auth", authRouter);
+app.use("/stripe", stripeRouter);
 
 
 // // Get all testimonials
