@@ -23,11 +23,7 @@ router.get("/create-payment-intent/:customerId", async (req, res, next) => {
         console.log(stripeCustomer)
         const customerCart = customer.cart
         // consoleLogger.error(customerCart)
-<<<<<<< HEAD
-        const amount = customerCart.reduce((acc, item) => acc + item.product.price * item.quantity, 0)
-=======
         const amount = customerCart.reduce((acc, item) => acc + item.product.price, 0)
->>>>>>> origin/feature/stripe
         // consoleLogger.error(amount)
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount * 100,

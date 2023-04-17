@@ -1,28 +1,16 @@
 const express = require("express");
-<<<<<<< HEAD
-const { consoleLogger, fileLogger } = require("../errorhandling/logger");
-=======
 const { consoleLogger } = require("../errorhandling/logger");
->>>>>>> origin/feature/stripe
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const router = express.Router();
 const { StatusCodes } = require("http-status-codes");
-<<<<<<< HEAD
-const { Product, Customer, Order, Transaction, Address, OrderItem } = require("../schema");
-=======
 const { Product, Customer } = require("../schema");
->>>>>>> origin/feature/stripe
 const mongoose = require("mongoose");
 
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 
-<<<<<<< HEAD
-router.post("/", express.json({ type: "application/json" }),  async (req, res) => {
-=======
-router.post("/", express.json({ type: "application/json" }), (req, res) => {
->>>>>>> origin/feature/stripe
+router.post("/", express.json({ type: "application/json" }), async (req, res) => {
     // const sig = req.headers["stripe-signature"];
     let event;
     try {
@@ -38,7 +26,6 @@ router.post("/", express.json({ type: "application/json" }), (req, res) => {
     switch(event.type) {
         case "payment_intent.succeeded":
             const paymentIntent = event.data.object;
-<<<<<<< HEAD
             const myCustomer = await Customer.findOne({ stripe_id: paymentIntent.customer }).populate("cart.product")
             consoleLogger.info(myCustomer)
             console.log(myCustomer)
@@ -84,12 +71,6 @@ router.post("/", express.json({ type: "application/json" }), (req, res) => {
             await Customer.findByIdAndUpdate(myCustomer._id, { $push: { transactions: newTransaction._id }})
 
             fileLogger.info("Saved new transaction: " + newTransaction._id)
-=======
-            consoleLogger.info(paymentIntent)
-            console.log(paymentIntent)
-            const myCustomer = Customer.findOne({ stripe_id: paymentIntent.customer })
-            consoleLogger.info(myCustomer)
->>>>>>> origin/feature/stripe
             break;
         case "payment_intent.payment_failed":
             break;
