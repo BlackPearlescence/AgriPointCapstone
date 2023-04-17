@@ -386,6 +386,10 @@ const blacklistTokenSchema = new Schema({
 
 
 const customerSchema = new Schema({
+    stripe_id: {
+        type: String,
+        required: false
+    },
     first_name: {
         type: String,
         required: true
@@ -536,6 +540,14 @@ const saleSchema = new Schema({
 
 
   const productSchema = new Schema({
+    stripe_product_id: {
+        type: String,
+        required: true,
+    },
+    stripe_price_id: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true

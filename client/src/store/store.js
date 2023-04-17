@@ -5,6 +5,7 @@ import cartReducer from "../reducers/cartSlice"
 import productSearchReducer from "../reducers/productSearchSlice"
 import productHomeReducer from "../reducers/productHomeSlice"
 import productViewReducer from "../reducers/productViewSlice"
+import stripeReducer from "../reducers/stripeSlice"
 
 export default configureStore({
     reducer: {
@@ -13,5 +14,6 @@ export default configureStore({
         productSearch: productSearchReducer,
         productHome: productHomeReducer,
         productView: productViewReducer,
+        stripe: stripeReducer,
     },
 });
