@@ -37,11 +37,16 @@ const ProductViewPage = () => {
     return(
         <div className={styles.productViewPageContainer}>
             <ProductViewLayout />
-            <ProductReviewLayout>
-                {productReviews.reviews && productReviews.reviews.map(review => {
-                    return <ProductReviewCard review={review} />
-                })}
-            </ProductReviewLayout>
+            <div className={styles.reviewSectionContainer}>
+                <ProductReviewChartDisplay />
+                <ProductReviewLayout>
+                    {productReviews.reviews && productReviews.reviews.map(review => {
+                        return <ProductReviewCard review={review} />
+                    })}
+                </ProductReviewLayout>
+
+            </div>
+            
         </div>
     )
 }

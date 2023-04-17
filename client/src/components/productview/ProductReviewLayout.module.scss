@@ -26,3 +26,33 @@
         margin-bottom: 10px;
     }
 }
+
+.addReviewCard {
+    // background-color: App.$jadewaterpalacegreen;
+    background: App.$jadewaterpalacegradient;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    height: 380px;
+    width: 400px;
+    margin: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+    }
+    
+
+    h3 {
+        color: App.$darkspringgreen;
+        font-size: App.$large-3;
+        font-weight: 600;
+        padding: 10px;
+    }
+}
