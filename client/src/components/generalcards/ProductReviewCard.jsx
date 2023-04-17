@@ -5,7 +5,7 @@ const ProductReviewCard = () => {
 
     return (
         <div className={styles.productReviewCardContainer}>
-            <h3>Something</h3>
+            <h3>PRODUCT REVIEW TITLE</h3>
             <p>Bafeagkeagkeaopgjeaopgjeiojgoieajgoieajgoieajgoieajgoeaijoeiaj</p>
         </div>
     )

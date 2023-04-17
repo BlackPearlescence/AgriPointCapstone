@@ -454,8 +454,9 @@ const assignShoppingListsToCustomers = async (customers, shoppingLists) => {
 const createProductReviews = async (num, products, customers) => {
     const reviews = [];
     for (let i = 0; i < num; i++) {
+        const randomCustomer = await getRandomItem(customers)
         const review = new ProductReview({
-            customer: await getRandomItem(customers)._id,
+            customer: randomCustomer._id,
             rating: await getRandomNumberBasedOnMax(5),
             title: faker.commerce.productAdjective(),
             body: faker.lorem.paragraph(),
