@@ -8,6 +8,7 @@ import { makeLogoutRequest, selectCustomerDetails, selectLoggedIn, showLogin } f
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart, selectMyCart, showCart } from "../../reducers/cartSlice";
 import Cookies from "js-cookie";
+import { changePage } from "../../reducers/productSearchSlice";
 
 const TopNavigationBar = () => {
 
@@ -21,6 +22,7 @@ const TopNavigationBar = () => {
 
     const handleSearchQuerySubmit = (e) => {
         e.preventDefault()
+        dispatch(changePage(1))
         navigate(`/products?name=${searchQuery}`)
     }
 

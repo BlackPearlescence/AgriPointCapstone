@@ -27,7 +27,7 @@ router.post("/", async (req, res, next) => {
     const customerId = req.id
     const { product, quantity = 1, size_name, size_item_count   } = req.body;
     // consoleLogger.info(customerId)
-    consoleLogger.info("product" + product)
+    // consoleLogger.info("product" + product)
     try {
         const customerCart = await Customer.findById(customerId).select("_id cart")
         const productInCart = customerCart.cart.find(item => item.product == product && item.size_name == size_name)
@@ -40,14 +40,14 @@ router.post("/", async (req, res, next) => {
                 { new: true}
             )
         } else {
-            consoleLogger.info("blah")  
+            // consoleLogger.info("blah")  
             result = await Customer.findOneAndUpdate(
                 { _id: customerId, "cart" : { $elemMatch: { product: product, size_name: size_name } }},
                 { $inc: { "cart.$.quantity": quantity } },
                 { new: true }
             )
         }
-        consoleLogger.info(result)
+        // consoleLogger.info(result)
         res.status(StatusCodes.OK).json(result.cart);
         fileLogger.info(`Successfully sent response for /customers/${customerId}/cart`);
     } catch (err) {

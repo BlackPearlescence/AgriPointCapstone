@@ -11,6 +11,8 @@ const cookieParser = require("cookie-parser");
 const { handleInvalidCredentialsError, handleBadRegistrationDetailsError, handleLogoutFailureError } = require("../errorhandling/errors.js");
 const { consoleLogger } = require("../errorhandling/logger.js");
 const verifyToken = require("../tools/verifyToken.js");
+require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const router = express.Router();
 
@@ -51,17 +53,28 @@ router.get("/check", verifyToken,  async (req, res, next) => {
 })
 
 
-// Registration
+// Registration and creating customer with Stripe
 router.post("/register", async (req, res, next) => {
     const { username, password, first_name, last_name } = req.body
     consoleLogger.info(`Registering user ${username}...`)
-    Customer.register(new Customer({ username, first_name, last_name }), password, (err) => {
-        if (err) {
-            res.status(StatusCodes.BAD_REQUEST).json({ message: "Invalid registration details" })
-        } else {
-            res.status(StatusCodes.CREATED).json({ message: "User registered successfully." })
-        }
-    });
+    try {
+        consoleLogger.info(username)
+        const existingCustomers = await stripe.customers.list({email: username})
+        const customer = await stripe.customers.create({
+            email: username,
+            name: first_name +  " " + last_name,
+        })
+        consoleLogger.info(customer)
+        console.log(customer)
+        
+        consoleLogger.info(customer)
+        Customer.register(new Customer({ username, first_name, last_name, stripe_id: customer.id }), password);
+        consoleLogger.info("User registered successfully")
+        res.status(StatusCodes.OK).json({ message: "User registered successfully.", customer })
+    } catch (err) {
+        next(err)
+    }
+    
 });
 
 // router.use(handleBadRegistrationDetailsError)

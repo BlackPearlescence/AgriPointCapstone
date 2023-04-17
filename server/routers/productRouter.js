@@ -1,5 +1,5 @@
 const express = require("express");
-const { fileLogger, consoleLogger } = require("../errorhandling/logger");
+const { fileLogger,  } = require("../errorhandling/logger");
 const { Product } = require("../schema.js");
 const mongoose = require("mongoose");
 // const { $expr, $eq } = require("mongoose").mongo
@@ -16,17 +16,17 @@ router.get("/", async (req, res, next) => {
     let { name, page, type, minprice, maxprice, minrating, maxrating,  limit } = req.query
     try {
         // if (name || page || limit) {
-        consoleLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
+        fileLogger.info(`Request received for /products?name=${name}?page=${page}?type=${type}?minprice=${minprice}?maxprice=${maxprice}?minrating=${minrating}?maxrating=${maxrating}?limit=${limit}`)
         name = name || "";
         page = parseInt(page) || 1;
         type = type || "";
         minprice = parseInt(minprice) || 0;
         maxprice = parseInt(maxprice) || 1000;
         minrating = parseInt(minrating) === 0 || parseInt(minrating) === undefined ? 0 : parseInt(minrating) || 0;
-        consoleLogger.info(minprice,maxprice)
+        // .info(minprice,maxprice)
         maxrating = parseInt(maxrating) === 0 || parseInt(maxrating) === undefined ? 0 : parseInt(maxrating) || 5;
         limit = parseInt(limit) || 12;
-        consoleLogger.info(name, page, type, minprice, maxprice, minrating, maxrating, limit)
+        // .info(name, page, type, minprice, maxprice, minrating, maxrating, limit)
         // if(minrating === 0 && maxrating === 0){
         //     minrating = 0;
         //     maxrating = 1;
@@ -41,7 +41,7 @@ router.get("/", async (req, res, next) => {
 
         // if(minrating == 0 && maxrating == 0){
         //     query.where("statistics.average_rating").equals(0)
-        //     consoleLogger.info("THIS EXECUTED")
+        //     .info("THIS EXECUTED")
         // } else {
         //     console.log("WRONG ONE")
         // }
@@ -54,7 +54,7 @@ router.get("/", async (req, res, next) => {
         //     "statistics.average_rating": { $gte: minrating, $lte: maxrating },
         // }).exec();
         // const productsWithAverageRatings = await getProductsWithAverageRatings(productsByFilter)
-        // consoleLogger.info(productsWithAverageRatings)
+        // .info(productsWithAverageRatings)
         const pageResults = await paginate(productsByFilter, page, limit)
         res.status(StatusCodes.OK).json(pageResults)
     } catch (err) {
@@ -90,16 +90,16 @@ router.use(handleRandomProductFailure)
 
 // Get most recent fruits or vegetables
 router.get("/recent", async (req, res, next) => {
-    consoleLogger.info("Request received for /products/recent")
+    fileLogger.info("Request received for /products/recent")
     const { type = "", amount = 1 } = req.query
-    consoleLogger.info(req.query)
+    // .info(req.query)
     try {
         const mostRecentResults = await Product.find()
                                                 .where("vegetation_type", new RegExp(type, "i"))
                                                 .sort({ added_at: -1 })
                                                 .limit(parseInt(amount))
                                                 .exec()
-        consoleLogger.info(mostRecentResults)
+        // .info(mostRecentResults)
         res.status(StatusCodes.OK).json(mostRecentResults)
     } catch (err) {
         fileLogger.error(err)
@@ -152,7 +152,7 @@ router.use(handleNoReviewsFoundError)
 // router.get("/:id/reviews/stats", async (req, res, next) => {
 //     const { id } = req.params
 //     try {
-//         consoleLogger.info(`Request received for /products/${id}/reviews/stats`)
+//         .info(`Request received for /products/${id}/reviews/stats`)
 //         const 
 //     } catch (err) {
 //         fileLogger.error(err)

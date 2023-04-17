@@ -1,8 +1,22 @@
+import { useSelector } from "react-redux";
 import LandingHero from "../components/landing/LandingHero";
 import TestimonialList from "../components/landing/TestimonialList";
 import styles from "./LandingPage.module.scss"
+import { selectLoggedIn } from "../reducers/loginSlice";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+
+    const loggedInState = useSelector(selectLoggedIn)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(loggedInState){
+            navigate("/home")
+            // window.location.href = "/home"
+        }
+    })
 
     return(
         <div className={styles.landingPageContainer}>

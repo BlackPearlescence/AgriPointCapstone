@@ -1,10 +1,11 @@
 import { Offcanvas } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAllCartItems, getCart, hideCart, selectCartShown, selectMyCart, showCart } from "../../reducers/cartSlice";
+import { deleteAllCartItems, getCart, hideCart, proceedToCheckout, selectCartShown, selectCheckoutShown, selectMyCart, showCart, showCheckout } from "../../reducers/cartSlice";
 import CartItemCard from "./CartItemCard";
 import styles from "./CartSidebar.module.scss";
 import { useEffect } from "react";
 import { selectCustomerDetails } from "../../reducers/loginSlice";
+import { createPaymentIntent } from "../../reducers/stripeSlice";
 
 const CartSidebar = () => {
 
@@ -12,6 +13,7 @@ const CartSidebar = () => {
     const cartShownState = useSelector(selectCartShown)
     const cartState = useSelector(selectMyCart)
     const customerDetailsState = useSelector(selectCustomerDetails)
+    const checkoutShownState = useSelector(selectCheckoutShown)
 
     // useEffect(() => {
     //     dispatch(showCart())
@@ -21,6 +23,11 @@ const CartSidebar = () => {
         const customer = customerDetailsState._id
         dispatch(deleteAllCartItems(customer))
         dispatch(getCart(customerDetailsState._id))
+    }
+
+    const handleCheckoutSession = () => {
+        dispatch(createPaymentIntent(customerDetailsState._id))
+        dispatch(proceedToCheckout())
     }
 
     return (
@@ -36,7 +43,7 @@ const CartSidebar = () => {
                 (accumulator, cartItem) => {
                     return accumulator + cartItem.size_item_count * cartItem.quantity * cartItem.product.price
                 },0)}</div>}
-                { cartState.length > 0 && <button  className={styles.proceedToCheckoutBtn}>Proceed to Checkout</button>}
+                { cartState.length > 0 && <button onClick={handleCheckoutSession} className={styles.proceedToCheckoutBtn}>Proceed to Checkout</button>}
                 { cartState.length > 0 && <button onClick={handleRemoveAllFromCart} className={styles.clearCartBtn}>Clear Cart</button>}
                
             
