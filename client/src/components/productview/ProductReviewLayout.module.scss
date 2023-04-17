@@ -1,0 +1,8 @@
+@use "../App.scss";
+
+.productReviewContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: App.$lighterdarkspringgreen;
+    margin-bottom: 10px;
+}

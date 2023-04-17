@@ -1,0 +1,10 @@
+@use "../App.scss";
+
+.productReviewCardContainer {
+    background-color: App.$white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    height: 500px;
+    width: auto;
+    margin: 10px;
+    border-radius: 10px;
+}

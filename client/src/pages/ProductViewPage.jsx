@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductInfo, pickSize, selectProductInfo } from "../reducers/productViewSlice";
+import ProductReviewLayout from "../components/productview/ProductReviewLayout";
+import ProductReviewCard from "../components/generalcards/ProductReviewCard";
 
 
 const ProductViewPage = () => {
@@ -33,6 +35,9 @@ const ProductViewPage = () => {
     return(
         <div className={styles.productViewPageContainer}>
             <ProductViewLayout />
+            <ProductReviewLayout>
+                <ProductReviewCard />
+            </ProductReviewLayout>
         </div>
     )
 }
