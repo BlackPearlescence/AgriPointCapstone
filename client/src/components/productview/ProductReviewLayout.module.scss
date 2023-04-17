@@ -4,17 +4,19 @@
     display: flex;
     flex-direction: row;
     overflow: scroll;
+    // overflow: hidden;
     justify-content: space-between;
 }
 
 .productReviewParentContainer {
     background-color: App.$lighterdarkspringgreen;
     margin-bottom: 10px;
-    width: 100%;
+    // fit the remaining space
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    justify-content: space-between;
     // align-items: center;
     padding: 10px;
 

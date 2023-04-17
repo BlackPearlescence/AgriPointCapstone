@@ -1,1 +1,17 @@
 @use "../../App.scss";
+
+.chartDisplayContainer {
+    background-color: App.$lighterdarkspringgreen;
+    margin-bottom: 10px;
+    // padding: 100px;
+    // width: 400px;
+    // height: 600px;
+}
+
+.chartDisplayTitle {
+    color: App.$white;
+    font-size: App.$extralarge-3;
+    font-family: App.$font-nunito;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

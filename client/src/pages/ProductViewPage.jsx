@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProductInfo, fetchProductReviews, pickSize, selectProductInfo, selectProductReviews } from "../reducers/productViewSlice";
 import ProductReviewLayout from "../components/productview/ProductReviewLayout";
 import ProductReviewCard from "../components/generalcards/ProductReviewCard";
+import ProductReviewChartDisplay from "../components/productview/ProductReviewChartDisplay";
 
 
 const ProductViewPage = () => {
@@ -20,6 +21,7 @@ const ProductViewPage = () => {
     useEffect(() => {
         dispatch(fetchProductInfo(productId))
         dispatch(fetchProductReviews(productId))
+        console.log(productReviews)
     }, [productId])
 
      useEffect(() => {
@@ -38,7 +40,7 @@ const ProductViewPage = () => {
         <div className={styles.productViewPageContainer}>
             <ProductViewLayout />
             <div className={styles.reviewSectionContainer}>
-                <ProductReviewChartDisplay />
+                <ProductReviewChartDisplay reviewStatistics={productReviews.reviewStatistics} />
                 <ProductReviewLayout>
                     {productReviews.reviews && productReviews.reviews.map(review => {
                         return <ProductReviewCard review={review} />
