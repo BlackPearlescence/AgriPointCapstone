@@ -36,6 +36,32 @@ const ProductViewPage = () => {
         <div className={styles.productViewPageContainer}>
             <ProductViewLayout />
             <ProductReviewLayout>
+                {productInfo.reviews && productInfo.reviews.map(review => {
+                    return <ProductReviewCard review={review} />
+                })}
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
+                <ProductReviewCard />
                 <ProductReviewCard />
             </ProductReviewLayout>
         </div>

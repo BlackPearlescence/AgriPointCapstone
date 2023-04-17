@@ -3,6 +3,26 @@
 .productReviewContainer {
     display: flex;
     flex-direction: row;
+    overflow: scroll;
+    justify-content: space-between;
+}
+
+.productReviewParentContainer {
     background-color: App.$lighterdarkspringgreen;
     margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+    padding: 10px;
+
+    h2 {
+        color: App.$white;
+        font-size: App.$extralarge-3;
+        font-family: App.$font-nunito;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
 }

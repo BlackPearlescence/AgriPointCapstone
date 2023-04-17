@@ -1,10 +1,141 @@
 @use "../App.scss";
 
+// .productReviewCardWrapper {
+//     background-color: App.$white;
+//     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+//     height: 500px;
+//     // width: 600px;
+//     margin: 10px;
+//     border-radius: 10px;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-template-rows: auto;
+//     grid-template-areas: "a b b b"
+//                          "a c c c"
+//                          "d d d d"
+//                          "e e e e"
+//                          "e e e e";
+// }
+
+// .productReviewCardWrapper :nth-child(1) {
+//     grid-area: a;
+//     width: 200px;
+//     height: 200px;
+//     border-radius: 500px;
+// }
+
+// .productReviewCardWrapper :nth-child(2) {
+//     grid-area: b;
+//     width: 100px;
+// }
+
+// .productReviewCardWrapper :nth-child(3) {
+//     grid-area: c;
+//     width: 100px;
+// }
+
+// .productReviewCardWrapper :nth-child(4) {
+//     grid-area: d;
+// }
+
+// .productReviewCardWrapper :nth-child(5) {
+//     grid-area: e;
+// }
+
 .productReviewCardContainer {
     background-color: App.$white;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    height: 500px;
-    width: auto;
-    margin: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    height: 380px;
+    width: 400px;
+    margin: 50px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    .reviewTitle {
+        color: App.$lighterdarkspringgreen;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 320px;
+    }
+
+    .customerNameText {
+        color: App.$lighterdarkspringgreen;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        inline-size: 210px;
+    }
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+        margin: 10px;
+        width: 300px;
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // white-space: nowrap;
+        // inline-size: 350px;
+        // overflow-wrap: break-word;
+        padding: 5px;
+        text-align: justify;
+        // display: inline-block
+
+    }
+    
+
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 500px;
+        margin-left: 10px;
+    }
 }
+
+.reviewHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img {
+        margin-right: 30px;
+    }
+
+    margin-bottom: 20px;
+}
+
+.reviewHeaderTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// Make the text body compact instead of taking all the length
+// Wrap the text body in a div and set the width to 100px
+
+
+// .reviewBody {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     max-width: 10px;
+//     margin: 20px;
+//     height: 500px;
+//     padding: 1px;
+    
+// }

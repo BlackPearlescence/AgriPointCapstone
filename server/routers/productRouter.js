@@ -115,7 +115,7 @@ router.get("/:id", async (req, res, next) => {
     const { id } = req.params
     try {
         fileLogger.info(`Request received for /products/${id}`)
-        const productAtId = await Product.findById(id).exec()
+        const productAtId = await Product.findById(id).populate().exec()
         res.status(StatusCodes.OK).json(productAtId)
     } catch (err) {
         fileLogger.error(err)
@@ -132,7 +132,7 @@ router.get("/:id/reviews", async (req, res, next) => {
     const { id } = req.params
     try {
         fileLogger.info(`Request received for /products/${id}/reviews`)
-        const productReviewsById = await Product.findById(id).select("reviews").exec()
+        const productReviewsById = await Product.findById(id).select("reviews").populate("reviews.customer").exec()
         const productReviews = productReviewsById.reviews
         const reviewStatistics = await getReviewStatistics(productReviews)
         const reviewResults = {
