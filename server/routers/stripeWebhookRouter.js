@@ -4,7 +4,8 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const router = express.Router();
 const { StatusCodes } = require("http-status-codes");
-const { Product } = require("../schema");
+const { Product, Customer } = require("../schema");
+const mongoose = require("mongoose");
 
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
@@ -27,6 +28,8 @@ router.post("/", express.json({ type: "application/json" }), (req, res) => {
             const paymentIntent = event.data.object;
             consoleLogger.info(paymentIntent)
             console.log(paymentIntent)
+            const myCustomer = Customer.findOne({ stripe_id: paymentIntent.customer })
+            consoleLogger.info(myCustomer)
             break;
         case "payment_intent.payment_failed":
             break;
