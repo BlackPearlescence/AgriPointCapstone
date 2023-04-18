@@ -11,6 +11,7 @@ const vendorRouter = require("./routers/vendorRouter.js");
 const authRouter = require("./routers/authRouter.js")
 const stripeRouter = require("./routers/stripeRouter.js")
 const stripeWebhookRouter = require("./routers/stripeWebhookRouter.js");
+const emailRouter = require("./routers/emailRouter.js")
 
 const { consoleLogger, fileLogger } = require("./errorhandling/logger.js");
 require("dotenv").config()
@@ -49,6 +50,7 @@ app.use("/vendors", vendorRouter);
 app.use("/auth", authRouter);
 app.use("/stripe", stripeRouter);
 app.use("/webhook", stripeWebhookRouter);
+app.use("/email", emailRouter);
 
 
 // // Get all testimonials

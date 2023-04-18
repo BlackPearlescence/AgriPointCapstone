@@ -1,7 +1,18 @@
+import { useState } from "react";
 import styles from "./Footer.module.scss"
 import { SocialIcon } from 'react-social-icons';
+import axios from "axios";
 
 const Footer = () => {
+    
+    const [ email, setEmail ] = useState("");
+
+    const handleNewsletterSubscriptionSubmit = (e) => {
+        e.preventDefault();
+        console.log(email);
+        const resp = axios.post("/email/send-newsletter-confirmation-no-auth", { username: email });
+        console.log(resp)
+    }
 
     return (
         <div className={styles.footerContainer}>
@@ -11,8 +22,8 @@ const Footer = () => {
                     Receive a weekly newsletter with new,
                     trending vendors and products.
                 </span>
-                <form className={styles.subscribeFormContainer}>
-                    <input className={styles.subscribeEmail} type="text" placeholder="Email Address" />
+                <form onSubmit={handleNewsletterSubscriptionSubmit} className={styles.subscribeFormContainer}>
+                    <input onChange={(e) => setEmail(e.target.value)} value={email} className={styles.subscribeEmail} type="text" placeholder="Email Address" />
                     <input className={styles.subscribeSubmit} type="submit" value="Subscribe" />
                 </form>
             </div>
