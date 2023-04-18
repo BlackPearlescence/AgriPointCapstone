@@ -1,12 +1,22 @@
+import { useDispatch } from "react-redux";
 import styles from "./ProductReviewCard.module.scss";
 import  Rating from "@mui/material/Rating"
+import { setExpandedReview, showReviewModal } from "../../reducers/productReviewSlice";
 
 
 
 const ProductReviewCard = ({ review }) => {
 
+    const dispatch = useDispatch()
+
+    const handleReviewClick = () => {
+        dispatch(setExpandedReview(review))
+        dispatch(showReviewModal())
+    }
+
+
     return (
-        <div className={styles.productReviewCardContainer}>
+        <div className={styles.productReviewCardContainer} onClick={handleReviewClick}>
             <div className={styles.reviewHeaderContainer}>
                 <img src={review.customer.avatar_url} alt="a user picture"/>
                 <div className={styles.reviewHeaderTextContainer}>

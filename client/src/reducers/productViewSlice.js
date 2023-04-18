@@ -18,29 +18,29 @@ export const fetchProductInfo = createAsyncThunk(
     }
 );
 
-export const fetchProductReviews = createAsyncThunk(
-    "productView/fetchProductReviews",
-    async (productId) => {
-        const resp = await axios.get(`/products/${productId}/reviews`);
-        return resp.data;
-    },
-    {
-        pending: (state, action) => {
-            state.status = "loading";
-        },
-        rejected: (state, action) => {
-            state.status = "failed";
-            state.error = action.error.message;
-        },
-    }
-);
+// export const fetchProductReviews = createAsyncThunk(
+//     "productView/fetchProductReviews",
+//     async (productId) => {
+//         const resp = await axios.get(`/products/${productId}/reviews`);
+//         return resp.data;
+//     },
+//     {
+//         pending: (state, action) => {
+//             state.status = "loading";
+//         },
+//         rejected: (state, action) => {
+//             state.status = "failed";
+//             state.error = action.error.message;
+//         },
+//     }
+// );
 
 
 export const productViewSlice = createSlice({
     name: "productView",
     initialState: {
         productInfo: {},
-        productReviews: [],
+        // productReviews: [],
         selectedSize: {},
         selectedQuantity: 1,
         status: "idle",
@@ -100,18 +100,18 @@ export const productViewSlice = createSlice({
                 state.status = "failed";
                 state.error = action.error.message;
             });
-        builder
-            .addCase(fetchProductReviews.pending, (state, action) => {
-                state.status = "loading";
-            })
-            .addCase(fetchProductReviews.fulfilled, (state, action) => {
-                state.status = "succeeded";
-                state.productReviews = action.payload;
-            })
-            .addCase(fetchProductReviews.rejected, (state, action) => {
-                state.status = "failed";
-                state.error = action.error.message;
-            });
+        // builder
+        //     .addCase(fetchProductReviews.pending, (state, action) => {
+        //         state.status = "loading";
+        //     })
+        //     .addCase(fetchProductReviews.fulfilled, (state, action) => {
+        //         state.status = "succeeded";
+        //         state.productReviews = action.payload;
+        //     })
+        //     .addCase(fetchProductReviews.rejected, (state, action) => {
+        //         state.status = "failed";
+        //         state.error = action.error.message;
+        //     });
     }
 })
 
@@ -123,4 +123,4 @@ export const selectSelectedSize = state => state.productView.selectedSize;
 export const selectSelectedQuantity = state => state.productView.selectedQuantity;
 export const selectIsMinAmount = state => state.productView.isMinAmount;
 export const selectIsMaxAmount = state => state.productView.isMaxAmount;
-export const selectProductReviews = state => state.productView.productReviews;
+// export const selectProductReviews = state => state.productView.productReviews;

@@ -1,0 +1,58 @@
+@use "../App.scss";
+
+.reviewModalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    img {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+        border-radius: 150px;
+        margin-right: 60px
+    }
+}
+
+.reviewHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reviewRatingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.reviewTitle {
+    color: App.$darkspringgreen;
+    font-size: App.$extralarge-3;
+    font-family: App.$font-nunito;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reviewBodyText {
+    padding: 40px;
+    color: App.$darkspringgreen;
+    font-size: App.$medium-3;
+    font-family: App.$font-nunito;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reviewerNameText {
+    color: App.$darkspringgreen;
+    font-size: App.$medium-3;
+    font-family: App.$font-nunito;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

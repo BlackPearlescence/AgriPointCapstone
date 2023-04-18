@@ -6,6 +6,7 @@ import productSearchReducer from "../reducers/productSearchSlice"
 import productHomeReducer from "../reducers/productHomeSlice"
 import productViewReducer from "../reducers/productViewSlice"
 import stripeReducer from "../reducers/stripeSlice"
+import productReviewReducer from "../reducers/productReviewSlice"
 
 export default configureStore({
     reducer: {
@@ -15,5 +16,6 @@ export default configureStore({
         productHome: productHomeReducer,
         productView: productViewReducer,
         stripe: stripeReducer,
+        productReview: productReviewReducer,
     },
 });

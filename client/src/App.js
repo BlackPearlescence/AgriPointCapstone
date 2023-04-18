@@ -22,6 +22,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { getStripePublishableKey, selectClientSecret, selectStripePromise } from './reducers/stripeSlice';
 import CheckoutSuccessPage from './components/checkout/CheckoutSuccessPage';
+import ViewReviewModal from './components/modals/ViewReviewModal';
 
 function App() {
 
@@ -115,6 +116,7 @@ function App() {
       </Routes>
       <LoginModal />
       <RegisterModal />
+      <ViewReviewModal />
       {clientSecretState && (
         <Elements stripe={stripePromiseState} options={options}>
           <CheckoutModal />
