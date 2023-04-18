@@ -15878,3 +15878,43 @@ Timestamp: 2023-04-17T23:55:09.941Z
 Level: error
 Message: undefined
 
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.140Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.141Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.141Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.141Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.425Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.425Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.426Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T00:01:44.430Z'
+}
