@@ -14,7 +14,7 @@ const BottomNavigationBar = () => {
             <a href="#">Veggies</a>
             <a href="#">Dairy</a>
             <a href="#">Eggs</a>
-            <a href="#">Flowers</a>
+            <a href="#">Events</a>
             <a href="#">Rewards</a>
             <a href="#">Deals</a>
             <a href="#">Vendors</a>
