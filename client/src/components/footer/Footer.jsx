@@ -12,6 +12,7 @@ const Footer = () => {
         console.log(email);
         const resp = axios.post("/email/send-newsletter-confirmation-no-auth", { username: email });
         console.log(resp)
+        console.log(resp.data)
     }
 
     return (

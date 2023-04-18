@@ -23,6 +23,17 @@ const JWTStrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const cookieParser = require("cookie-parser");
 
+// Jobs
+const agenda = require("./jobs/agenda.js");
+const { cartReminder } = require("./jobs/emailJobs.js");
+
+
+
+(async () => {
+    await agenda.define("remind about cart", cartReminder)
+    await agenda.start();
+    await agenda.every("2 hours", "remind about cart");
+})()
 
 
 const { MONGO_CONNECTION_STRING } = process.env
