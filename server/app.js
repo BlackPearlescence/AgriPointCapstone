@@ -24,9 +24,6 @@ const cookieParser = require("cookie-parser");
 
 
 
-
-
-
 const { MONGO_CONNECTION_STRING } = process.env
 const app = express()
 app.use(morgan("dev"))
