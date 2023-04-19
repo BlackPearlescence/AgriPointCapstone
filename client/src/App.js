@@ -24,6 +24,7 @@ import { getStripePublishableKey, selectClientSecret, selectStripePromise } from
 import CheckoutSuccessPage from './components/checkout/CheckoutSuccessPage';
 import ViewReviewModal from './components/modals/ViewReviewModal';
 import AddReviewModal from './components/modals/AddReviewModal';
+import OrdersPage from './pages/OrdersPage';
 
 function App() {
 
@@ -113,6 +114,7 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:productId" element={<ProductViewPage />} />
             <Route path="/thankyou" element={<CheckoutSuccessPage />} />
+            <Route path="/orders" element={<OrdersPage />} />
         </Route>
       </Routes>
       <LoginModal />

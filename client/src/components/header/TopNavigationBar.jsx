@@ -70,7 +70,7 @@ const TopNavigationBar = () => {
                 {isLoggedInState ? <a href="#" onClick={() => handleLogout()}>Hi, {customerDetails.first_name}</a> :
                 <a href="#" onClick={() => dispatch(showLogin())}>Sign In</a>}
                 
-                <a href="#" >Orders</a>
+                {isLoggedInState && <a href="#" onClick={() => navigate("/orders")} >Orders</a>}
                 <a href="#"><GrNotification size="30"/></a>
                 <a href="#" onClick={() => dispatch(showCart())}><Badge badgeContent={cartState.length}><GrCart size="30"/></Badge></a>
             </div>
