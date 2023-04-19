@@ -33,6 +33,29 @@ export const fetchHomeProducts = createAsyncThunk(
         }
     }
 )
+
+export const fetchHomeVendors = createAsyncThunk(
+    'productHome/fetchHomeVendors',
+    async () => {
+        const vendorSpotlightReq = await axios.get(`/vendors?limit=3`);
+        const newVendorsReq = await axios.get(`/vendors?limit=6`);
+        const responses = await axios.all([vendorSpotlightReq, newVendorsReq]);
+        const [vendorSpotlightResp, newVendorsResp] = responses;
+        return {
+            vendorSpotlightData: vendorSpotlightResp.data,
+            newVendorsData: newVendorsResp.data,
+        };
+    },
+    {
+        pending: (state, action) => {
+            state.status = 'loading';
+        },
+        rejected: (state, action) => {
+            state.status = 'failed';
+            state.error = action.error.message;
+        }
+    }
+)
 export const productHomeSlice = createSlice({
     name: 'productHome',
     initialState: {
@@ -42,6 +65,8 @@ export const productHomeSlice = createSlice({
         greatProductDealsData: [],
         flowerProductsData: [],
         cheeseProductsData: [],
+        vendorSpotlightData: [],
+        newVendorsData: [],
         status: 'idle',
         error: null,
     },
@@ -64,6 +89,19 @@ export const productHomeSlice = createSlice({
                 state.status = 'failed';
                 state.error = action.error.message;
             })
+            .addCase(fetchHomeVendors.pending, (state, action) => {
+                state.status = 'loading';
+            })
+            .addCase(fetchHomeVendors.fulfilled, (state, action) => {
+                state.status = 'succeeded';
+                console.log(action.payload)
+                state.vendorSpotlightData = action.payload.vendorSpotlightData;
+                state.newVendorsData = action.payload.newVendorsData;
+            })
+            .addCase(fetchHomeVendors.rejected, (state, action) => {
+                state.status = 'failed';
+                state.error = action.error.message;
+            })
     }
 })
 
@@ -74,3 +112,5 @@ export const selectNewVeggiesData = state => state.productHome.newVeggiesData;
 export const selectGreatProductDealsData = state => state.productHome.greatProductDealsData;
 export const selectFlowerProductsData = state => state.productHome.flowerProductsData;
 export const selectCheeseProductsData = state => state.productHome.cheeseProductsData;
+export const selectNewVendorsData = state => state.productHome.newVendorsData;
+export const selectVendorSpotlightData = state => state.productHome.vendorSpotlightData;

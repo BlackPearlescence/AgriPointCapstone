@@ -10,9 +10,10 @@ const { StatusCodes } = require("http-status-codes");
 
 // Get all vendors
 router.get("/", async (req, res, next) => {
+    const limit = parseInt(req.query.limit) || 10;
     try {
         fileLogger.info("Request received for /vendors")
-        const vendors = await Vendor.find({});
+        const vendors = await Vendor.find({}).limit(limit).exec();
         consoleLogger.info(vendors)
         res.status(StatusCodes.OK).json(vendors);
         fileLogger.info("Successfully sent response for /vendors")

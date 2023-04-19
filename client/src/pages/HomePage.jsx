@@ -12,7 +12,11 @@ import {
     selectGreatProductDealsData,
     selectInterestedProductsData,
     selectNewVeggiesData,
-    selectNewFruitsData
+    selectNewFruitsData,
+    selectVendorsHomeData,
+    fetchHomeVendors,
+    selectVendorSpotlightData,
+    selectNewVendorsData
  } from "../reducers/productHomeSlice";
 import { useEffect, useMemo } from "react";
 
@@ -25,12 +29,18 @@ const HomePage = () => {
     const cheeseProductsState = useSelector(selectCheeseProductsData);
     const flowerProductsState = useSelector(selectFlowerProductsData);
     const greatDealsState = useSelector(selectGreatProductDealsData);
+    const vendorSpotlightState = useSelector(selectVendorSpotlightData)
+    const newVendorsState = useSelector(selectNewVendorsData)
 
     const memoizedFetchHomeProducts = useMemo(() => {
         return () => dispatch(fetchHomeProducts())
     }, [dispatch])
 
     useEffect(() => {memoizedFetchHomeProducts()}, [memoizedFetchHomeProducts])
+
+    useEffect(() => {
+        dispatch(fetchHomeVendors())
+    },[])
 
     // TODO: Create algorithm to display products based on seasonality
     return (
@@ -48,9 +58,7 @@ const HomePage = () => {
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Vendor Spotlight"}>
-                    <VendorCard />
-                    <VendorCard />
-                    <VendorCard />
+                    {vendorSpotlightState && vendorSpotlightState.map(vendor => <VendorCard key={vendor._id} vendor={vendor}/>)}
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"Great Deals!"}>
@@ -66,12 +74,7 @@ const HomePage = () => {
                 </ContentDisplaySection>
 
                 <ContentDisplaySection heading={"New Vendors"}>
-                    <VendorCard />
-                    <VendorCard />
-                    <VendorCard />
-                    <VendorCard />
-                    <VendorCard />
-                    <VendorCard />
+                    {newVendorsState && newVendorsState.map(vendor => <VendorCard key={vendor._id} vendor={vendor}/>)}
                 </ContentDisplaySection>
             </ContentDisplayContainer>
         </div>
