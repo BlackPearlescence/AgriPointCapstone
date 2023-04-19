@@ -10,7 +10,7 @@ import axios from "axios";
 import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsBasedOnQuery, nextPage, resetPage, selectCurrentPage, selectFilteredProductData, selectNumberOfResults, selectProductData, selectTotalPages, setFilteredProductData, setProductData } from "../reducers/productSearchSlice";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import PageNavigationBar from "../components/products/PageNavigationBar";
 
 const ProductsPage = () => {
@@ -27,7 +27,9 @@ const ProductsPage = () => {
     const [priceRangeValue, setPriceRangeValue] = useState([0, 1000])
     const [ratings, setRatings] = useState([0,5])
     const [ratingsValue, setRatingsValue] = useState([0,5])
-    const [sort, setSort] = useState("")  
+    const [sort, setSort] = useState("")
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const name = searchParams.get("name")
@@ -101,6 +103,7 @@ const ProductsPage = () => {
         dispatch(resetPage())
         const query = { name: searchParams.get("name"), pageState: 1 }
         dispatch(fetchProductsBasedOnQuery(query))
+        navigate("/products")
     }
 
 

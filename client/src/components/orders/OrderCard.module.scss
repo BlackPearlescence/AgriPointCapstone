@@ -1,0 +1,65 @@
+@use "../../App.scss";
+
+.orderCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 450px;
+    // Create a realistic card border like a paper card
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 30px;
+    color: App.$darkspringgreen;
+    background-color: App.$white;
+    font-family: App.$font-nunito;
+    font-weight: 600;
+
+    transition: color 1s ease, background-color 0.5s ease;
+
+    &:hover {
+        color: App.$white;
+        background: App.$darkspringgreen;
+        cursor: pointer;
+    }
+
+    .orderCardHeader {
+        padding: 20px;
+        font-size: App.$medium-2;
+    }
+    
+
+    .orderCardDataContainer {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+
+        .orderCardInformation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: App.$medium-1;
+
+            span {
+                margin: 20px;
+            }
+        }
+
+        .orderCardContentsWrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+            img {
+                object-fit: cover;
+                width: 100px;
+                height: 100px;
+                display: flex;
+            }
+        }
+
+
+    }
+    
+}

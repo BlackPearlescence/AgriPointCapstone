@@ -2,6 +2,9 @@ import { useSelector } from "react-redux";
 import { selectLoggedIn } from "../reducers/loginSlice";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
+import OrdersContainer from "../components/orders/OrdersContainer";
+import OrderCard from "../components/orders/OrderCard";
+import styles from "./OrdersPage.module.scss";
 
 
 const OrdersPage = () => {
@@ -16,8 +19,16 @@ const OrdersPage = () => {
     },[])
     return (
         <div>
-            <h3>My Orders</h3>
-
+            <h3 className={styles.myOrdersHeader}>My Orders</h3>
+            <OrdersContainer>
+                <OrderCard />
+                <OrderCard />
+                <OrderCard />
+                <OrderCard />
+                <OrderCard />
+                <OrderCard />
+                <OrderCard />
+            </OrdersContainer>
         </div>
     )
 }
