@@ -16906,3 +16906,61 @@ Message: undefined
   level: 'error',
   timestamp: '2023-04-18T16:44:19.111Z'
 }
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:03.111Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:03.391Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:04.078Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:04.556Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:05.011Z'
+}
+{
+  message: 'Invalid rating',
+  level: 'error',
+  timestamp: '2023-04-18T16:47:05.446Z'
+}
+Timestamp: 2023-04-18T17:05:27.326Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:29:00.545Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:29:00.679Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:29:01.158Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:29:01.369Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:30:21.278Z
+Level: error
+Message: undefined
+
+Timestamp: 2023-04-18T18:30:21.625Z
+Level: error
+Message: undefined
+

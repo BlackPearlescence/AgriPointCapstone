@@ -32,7 +32,7 @@ const { cartReminder } = require("./jobs/emailJobs.js");
 (async () => {
     await agenda.define("remind about cart", cartReminder)
     await agenda.start();
-    await agenda.every("2 hours", "remind about cart");
+    await agenda.every("24 hours", "remind about cart");
 })()
 
 
