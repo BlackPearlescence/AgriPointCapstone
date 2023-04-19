@@ -1,0 +1,64 @@
+@use '../../App.scss';
+
+.addReviewFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 500px;
+
+    * {
+        font-family: App.$font-nunito;
+    }
+
+    .addReviewHeading {
+        padding-top: 10px;
+        font-size: App.$extralarge-1;
+        font-weight: 800;
+        color: App.$darkspringgreen;
+    }
+
+    .newReviewTitleInput {
+        width: 400px;
+        height: 40px;
+        margin-top: 20px;
+        border: 1px solid App.$darkspringgreen;
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+    }
+
+    .newReviewBodyInput {
+        width: 400px;
+        height: 200px;
+        margin-top: 20px;
+        border: 1px solid App.$darkspringgreen;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        color: App.$darkspringgreen;
+    }
+
+    .newReviewSubmitBtn {
+        width: 400px;
+        height: 60px;
+        margin-top: 20px;
+        border: 1px solid App.$darkspringgreen;
+        border-radius: 5px;
+        background-color: App.$darkspringgreen;
+        color: App.$white;
+        font-size: App.$medium-1;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: App.$white;
+            color: App.$darkspringgreen;
+        }
+    }
+}
+

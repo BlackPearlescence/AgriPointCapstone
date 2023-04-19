@@ -1,6 +1,6 @@
 const express = require("express");
 const { fileLogger,  } = require("../errorhandling/logger");
-const { Product } = require("../schema.js");
+const { Product, ProductReview, Customer } = require("../schema.js");
 const mongoose = require("mongoose");
 // const { $expr, $eq } = require("mongoose").mongo
 const router = express.Router();
@@ -147,6 +147,30 @@ router.get("/:id/reviews", async (req, res, next) => {
 })
 
 router.use(handleNoReviewsFoundError)
+
+// Post a review for a single product
+router.post("/:productId/reviews", async (req, res, next) => {
+    const productId = req.params.productId
+    try {
+        const product = await Product.findById(productId).exec()
+        
+        const newProductReview = new ProductReview({
+            customer: req.body.customer,
+            rating: req.body.rating,
+            title: req.body.title,
+            body: req.body.body,
+            image_url: req.body.image_url
+        })
+
+        product.reviews.push(newProductReview)
+        await newProductReview.save()
+        await product.save()
+
+        res.status(StatusCodes.CREATED).json(newProductReview)
+    } catch (err) {
+        next(err)
+    }
+})
 
 // Calculate rating and review statistics for a single produc
 // router.get("/:id/reviews/stats", async (req, res, next) => {

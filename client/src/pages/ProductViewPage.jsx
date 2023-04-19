@@ -34,6 +34,13 @@ const ProductViewPage = () => {
         }
     }, [productInfo.stock])
 
+    // // Whenever the status of the creation of the product changes, we want to fetch the product reviews again
+    // useEffect(() => {
+    //     dispatch(fetchProductReviews(productId))
+    // }, [productReviews.createStatus])
+
+
+
 
   
 

@@ -18,9 +18,9 @@ const ProductReviewCard = ({ review }) => {
     return (
         <div className={styles.productReviewCardContainer} onClick={handleReviewClick}>
             <div className={styles.reviewHeaderContainer}>
-                <img src={review.customer.avatar_url} alt="a user picture"/>
+                <img src={review.customer ? review.customer.avatar_url : "https://i.pravatar.cc/400?img=70"} alt="a user picture"/>
                 <div className={styles.reviewHeaderTextContainer}>
-                    <span className={styles.customerNameText}>{review.customer.first_name}  {review.customer.last_name[0]}.</span>
+                    <span className={styles.customerNameText}>{review.customer && review.customer.first_name}  {review.customer && review.customer.last_name[0]}.</span>
                     <Rating sx={{ fontSize: 30}} name="read-only" defaultValue={review.rating} max={5} readOnly/>
                 </div>
             </div>
