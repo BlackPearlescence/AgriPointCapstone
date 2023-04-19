@@ -37,7 +37,7 @@ const AddReviewModal = () => {
             productId: productInfoState._id
         }
         dispatch(addProductReview(newReview))
-        dispatch(fetchProductReviews(productInfoState._id))
+        dispatch(hideCreateReviewModal())
         console.log(newReview)
     }
 

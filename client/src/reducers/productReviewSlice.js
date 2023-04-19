@@ -85,3 +85,4 @@ export const selectReviewModalShow = (state) => state.productReview.reviewModalS
 export const selectExpandedReview = (state) => state.productReview.expandedReview;
 export const selectCreateReviewModalShow = (state) => state.productReview.reviewCreateModalShow;
 export const selectFetchProductReviewsStatus = (state) => state.productReview.status;
+export const selectCreateProductReviewStatus = (state) => state.productReview.createStatus;

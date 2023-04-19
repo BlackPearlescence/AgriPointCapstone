@@ -8,7 +8,7 @@ import { fetchProductInfo, pickSize, selectProductInfo } from "../reducers/produ
 import ProductReviewLayout from "../components/productview/ProductReviewLayout";
 import ProductReviewCard from "../components/generalcards/ProductReviewCard";
 import ProductReviewChartDisplay from "../components/productview/ProductReviewChartDisplay";
-import { fetchProductReviews, selectProductReviews, showReviewModal } from "../reducers/productReviewSlice";
+import { fetchProductReviews, selectCreateProductReviewStatus, selectProductReviews, showReviewModal } from "../reducers/productReviewSlice";
 
 
 const ProductViewPage = () => {
@@ -18,6 +18,7 @@ const ProductViewPage = () => {
     const dispatch = useDispatch()
     const productInfo = useSelector(selectProductInfo)
     const productReviews = useSelector(selectProductReviews)
+    const productReviewCreationStatusState = useSelector(selectCreateProductReviewStatus)
 
     useEffect(() => {
         dispatch(fetchProductInfo(productId))
@@ -34,10 +35,10 @@ const ProductViewPage = () => {
         }
     }, [productInfo.stock])
 
-    // // Whenever the status of the creation of the product changes, we want to fetch the product reviews again
-    // useEffect(() => {
-    //     dispatch(fetchProductReviews(productId))
-    // }, [productReviews.createStatus])
+    // Whenever the status of the creation of the product changes, we want to fetch the product reviews again
+    useEffect(() => {
+        dispatch(fetchProductReviews(productId))
+    }, [productReviewCreationStatusState])
 
 
 
