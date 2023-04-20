@@ -219,10 +219,11 @@ const orderSchema = new Schema ({
     placed_at: {
         type: Date,
         required: true,
+        default: Date.now,
     },
     status: {
         type: String,
-        required: true,
+        required: false,
     },
 })
 
@@ -234,6 +235,7 @@ const transactionSchema = new Schema ({
     date: {
         type: Date,
         required: true,
+        default: Date.now,
     },
     total: {
         type: Number,
@@ -283,7 +285,7 @@ const rewardsTransactionSchema = new Schema({
     },
     status: {
         type: String,
-        required: true,
+        required: false,
     },
     shipping_address: {
         type: addressSchema,

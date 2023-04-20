@@ -4,10 +4,13 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const router = express.Router();
 const { StatusCodes } = require("http-status-codes");
-const { Product, Customer } = require("../schema");
+const { Product, Customer, OrderItem, Transaction, Order, Address } = require("../schema");
 const mongoose = require("mongoose");
+const { fileLogger } = require("../errorhandling/logger");
+
 
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
 
 
 router.post("/", express.json({ type: "application/json" }), async (req, res) => {
@@ -35,7 +38,7 @@ router.post("/", express.json({ type: "application/json" }), async (req, res) =>
                     product: item.product._id,
                     quantity: item.quantity,
                     price: item.product.price,
-                    size_name: item.size_name,
+                    size: item.size_name,
                 }))
             }
             const newOrder = new Order({
