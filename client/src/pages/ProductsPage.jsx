@@ -23,8 +23,8 @@ const ProductsPage = () => {
     const [searchParams]= useSearchParams();
 
     const [productType, setProductType] = useState("allproducts")
-    const [priceRange, setPriceRange] = useState([0, 1000])
-    const [priceRangeValue, setPriceRangeValue] = useState([0, 1000])
+    const [priceRange, setPriceRange] = useState([0, 100])
+    const [priceRangeValue, setPriceRangeValue] = useState([0, 100])
     const [ratings, setRatings] = useState([0,5])
     const [ratingsValue, setRatingsValue] = useState([0,5])
     const [sort, setSort] = useState("")
@@ -96,8 +96,8 @@ const ProductsPage = () => {
 
     const handleResetFilters = (e) => {
         setProductType("allproducts")
-        setPriceRange([0, 1000])
-        setPriceRangeValue([0, 1000])
+        setPriceRange([0, 100])
+        setPriceRangeValue([0, 100])
         setRatings([0,5])
         setRatingsValue([0,5])
         dispatch(resetPage())
@@ -141,7 +141,7 @@ const ProductsPage = () => {
                             onChange={handlePriceRangeChange}
                             onMouseUp={handlePriceRangeChosenMouseUp}
                             min={1}
-                            max={1000}
+                            max={100}
                             step={1}
                         />
                         <h3>${priceRange[1]}</h3>
